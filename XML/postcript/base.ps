@@ -1,0 +1,867 @@
+%!
+%%Pages: 1
+%
+% Base.ps
+%
+% A Postscript file for printing characters and spellists (and
+% maybe other things).
+%
+% Generally the data should be able to be appended after %Page: 1 1 mark,
+% but before trailer
+%
+
+%
+% Font information
+/fontsize 8 def
+/lineskill fontsize 1 add def
+/titlefontsize 16 def
+/normalfont /Times-Roman findfont fontsize scalefont def
+/boldfont /Times-Bold findfont fontsize scalefont def
+/italicfont /Times-Italic findfont fontsize scalefont def
+/titlefont /Helvitica findfont titlefontsize scalefont def
+
+%/Em /italicfont setfont def
+
+/wordbreak ( ) def
+
+% This may not be used
+/spacewidth normalfont setfont wordbreak stringwidth pop def
+
+% 
+% Page infomation
+/topofpage 800 def
+/pagewidth 595 def
+/marginwidth 20 def
+
+/parindent -5 def
+
+%
+% Functions
+/newpage {
+        /yline topofpage def
+        /leftmargin marginwidth def
+        /rightmargin pagewidth marginwidth sub 2 div def
+} def
+/newcol {
+        /yline topofpage def 
+        /leftmargin rightmargin marginwidth add def
+        /rightmargin pagewidth marginwidth sub def
+} def
+
+/newline {
+        /wordcount 0 def
+        /yline yline lineskill sub def
+        leftmargin yline moveto
+        /currentpos leftmargin def
+        mark
+} def
+
+%%%
+% substitute
+%%%
+% Substitutes all occurances of a substring in a string
+% (string) (search) (replace) substitute (string)
+%%%
+/substitute {
+        /replacement exch def
+        /searchstr exch def
+        /string exch def
+        
+        /diff searchstr length replacement length sub def
+
+        % Begin loop...
+        {
+                string searchstr search
+                % String found:
+                {
+                        /prefix exch def
+                        /match exch def
+                        /post exch def
+         
+                        % Make room for the new array
+                        /moved 
+                                string 
+                                prefix length searchstr length add
+                                post length getinterval
+                        def
+                        string
+                                prefix length replacement length add
+                                moved putinterval
+                        % Copy in replacement
+                        string prefix length replacement putinterval
+                        % Space out any surplus
+                        diff 0 gt {
+                                1 1 diff {
+                                        /loopcounter exch def
+                                        string
+                                                string length loopcounter sub
+                                                32 put
+                                } for
+                        } if
+                }
+                % Not found
+                {
+                        pop
+                        % not found
+                        exit % Exit loop
+                } ifelse
+        } loop
+
+        % return the string
+        string
+} def
+
+%%%
+% splitwords
+%%%
+% Splits an array of strings (and others) into individual words
+% split on spaces
+% [ (string) /normalfont (string) ... ] splitwords [ (word) (word)...]
+%%%
+/splitwords {
+        /inputarray exch def
+        
+        mark % start the output array
+        
+        % Loop over each element
+        inputarray {
+                /sw_string exch def
+                sw_string type /stringtype ne {
+                        sw_string
+                } {
+                        sw_string splitstring
+                } ifelse
+        } forall
+
+        ] % close the array
+} def
+%%%
+% splitstring
+%%%
+% Splits a single string into words based on the array
+% (multiple words) splitstring (multiple) (words)
+%%
+/splitstring {
+        /ss_string exch def
+
+        {
+                ss_string wordbreak search {
+                        /nextword exch def pop
+                        /ss_string exch def 
+                
+                        % If it is length 0 throw it away
+                        nextword length 0 ne {
+                                nextword
+                        } if
+                }
+                {
+                        pop exit
+                } ifelse
+        } loop
+
+        % Put the last item if it is longer then 0
+        ss_string length 0 ne {
+                ss_string
+        } if
+} def
+
+%%%
+% print
+%%%
+% Formats a string, justifies it, then displays it
+% [<printingarray>] printjustify -
+%%%
+/print { 
+        /inputstring exch def 
+      
+        % Start the paragraph (including indent)
+        /wordcount 0 def
+        /currentpos leftmargin parindent add def
+        [ % Start the newline
+        currentfont % So we can recover it
+        currentpos yline moveto
+        
+        
+        inputstring { printfunc } forall
+        rightmargin printline
+} def
+/printfunc {
+        /string exch def
+       
+        string type /stringtype ne {
+                string cvx exec setfont 
+        } {
+                /wordcount wordcount 1 add def
+                /thiswidth string stringwidth pop def
+       
+                /currentpos currentpos thiswidth add 
+                        ( ) stringwidth pop add def
+       
+                currentpos rightmargin gt {
+                        currentpos thiswidth sub printline 
+                        /currentpos currentpos thiswidth add spacewidth add def
+                } if
+        } ifelse
+        string
+} def
+/printline {
+        /pl_linewidth exch def
+        
+        ] % Close the array
+
+        /pl_array exch def
+        rightmargin pl_linewidth ne {
+                /pl_space rightmargin pl_linewidth sub 
+                wordcount 1 sub div def
+        } {
+                /pl_space 0 def
+        } ifelse
+        
+        pl_array {  
+                /pl_string exch def
+                pl_string type /stringtype ne {
+                        pl_string cvx exec setfont 
+                } {
+                        pl_string show
+                        ( ) show
+                        pl_space  0 rmoveto
+                } ifelse
+        } forall
+
+        newline
+        % save the current font for the next line
+        currentfont
+        
+} def
+
+%
+% printtitle
+%
+% Prints the Spell list name - centered in current column
+% (name) [printtitle] -
+/printtitle {
+        /title exch def
+        
+        titlefont setfont
+        title stringwidth
+        pop 2 div 
+        leftmargin rightmargin add 2 div
+        exch sub
+        yline moveto title show
+        /yline yline titlefontsize 2 add sub def 
+        normalfont setfont
+} def
+
+
+% Spell list summary
+%
+% printsummary
+% (lvl) (spellname) (aoe) (Duration) (Range) (Type)
+/printsummary {
+        /spelltype exch def
+        /spellrange exch def
+        /spellduration exch def
+        /spellarea exch def
+        /spellname exch def
+        /spelllvl exch def
+
+        /lvlwidth 15 def
+        /namewidth 100 def
+        /areawidth 50 def
+        /durwidth 50 def
+        /rangewidth 30 def
+        /typewidth 15 def
+        
+
+        /lvlstart 20 def  % leftmargin
+        /namestart lvlstart lvlwidth add def 
+        /areastart namestart namewidth add def 
+        /durstart areastart areawidth add def
+        /rangestart durstart durwidth add def
+        /typestart rangestart rangewidth add def
+
+        (6) spelllvl eq 
+        (11) spelllvl eq 
+        (16) spelllvl eq 
+        (21) spelllvl eq  or or or
+        {  /yline yline fontsize 2 div sub def } if
+
+
+        lvlstart lvlwidth spelllvl justifyright % Should be justify right
+        currentfont
+        boldfont setfont
+        namestart 4 add yline moveto spellname show % Note different
+        setfont % restore previous font
+        areastart areawidth spellarea justifyword
+        durstart durwidth spellduration justifyword
+        rangestart rangewidth spellrange justifyword
+        typestart typewidth spelltype justifyword
+
+        /yline yline fontsize 1 add sub def
+
+} def
+/beginspellsummary {
+        /yline yline 3 sub def
+        boldfont setfont
+        (Lvl) (Name) (Area Of Effect) (Duration) (Range) (Type) printsummary
+        normalfont setfont
+        /yline yline 1 sub def
+} def
+/endspellsummary {
+        /yline yline fontsize sub def
+
+} def
+% 
+% Justifies a single word or phrase in a box 
+% Will not overlap other justifyword printings
+% (pos) (width) (word) [justifyword] -
+/justifyword {
+        /word exch def
+        /boxwidth exch def
+        /pos exch def 
+        
+        % Fixme
+        /thiswidth word stringwidth pop def
+        pos boxwidth 2 div add % Center of box
+        thiswidth 2 div sub % position correctly
+        yline moveto
+        word show
+} def
+
+% Justifies a single word or phrase in a box 
+% Will not overlap other justifyword printings
+% (pos) (width) (word) [justifyright] -
+/justifyright {
+        /word exch def
+        /boxwidth exch def
+        /pos exch def 
+        
+        % Fixme
+        /thiswidth word stringwidth pop def
+        pos boxwidth add % Center of box
+        thiswidth sub % position correctly
+        yline moveto
+        word show
+} def
+
+
+% Set some basic state
+normalfont setfont
+
+%%Page: 1 1
+newpage
+
+
+  
+
+    % The spell list name
+    (Sand Law) printtitle
+    
+    % The spellist summary table
+    beginspellsummary
+    
+    (1)
+    (Sandwalking )
+    (caster)
+    (10 min/lvl)
+    (self)
+    (U)
+    printsummary
+  
+    (2)
+    (Erase Tracks )
+    (20' Radius)
+    (C)
+    (self)
+    (U)
+    printsummary
+  
+    (3)
+    (Dig I )
+    (20'Rx20'Deep)
+    (P)
+    (100')
+    (F)
+    printsummary
+  
+    (4)
+    (Churning Dust )
+    (10'x10'x5')
+    (1 round/lvl)
+    (50')
+    (E)
+    printsummary
+  
+    (5)
+    (Sand Dune I )
+    (50'x20')
+    (P)
+    (50')
+    (E)
+    printsummary
+  
+    (6)
+    (Shelter )
+    (5'x10'x5')
+    (12 hours)
+    (touch)
+    (F)
+    printsummary
+  
+    (7)
+    (Dig II )
+    (20'Rx40'Pit)
+    (P)
+    (150')
+    (F)
+    printsummary
+  
+    (8)
+    (Sand Tower )
+    (30'x5'R)
+    (1 round/lvl (C.))
+    (self)
+    (E)
+    printsummary
+  
+    (9)
+    (Breathe Sand )
+    (1 person)
+    (1 hour/lvl)
+    (touch)
+    (U)
+    printsummary
+  
+    (10)
+    (Sand Carries )
+    (20'R)
+    (10 min/lvl(special))
+    (self)
+    (F)
+    printsummary
+  
+    (11)
+    (Dig III )
+    (30'Rx60')
+    (P)
+    (200')
+    (F)
+    printsummary
+  
+    (12)
+    (Sand Blast )
+    ()
+    (-)
+    (100')
+    (BE)
+    printsummary
+  
+    (13)
+    (Quicksand )
+    (1000 cu')
+    (1 min/lvl)
+    (100')
+    (E)
+    printsummary
+  
+    (14)
+    (Sand Dune II )
+    (100'x40')
+    (P)
+    (100')
+    (E)
+    printsummary
+  
+    (15)
+    (Burrow )
+    (caster)
+    (1 round/lvl)
+    (self)
+    (E)
+    printsummary
+  
+    (16)
+    (Earth to Sand )
+    (10K cu')
+    (P)
+    (touch)
+    (F)
+    printsummary
+  
+    (17)
+    (Sanding )
+    (1 target)
+    ()
+    (100')
+    (DE)
+    printsummary
+  
+    (18)
+    (Bury )
+    (1 target)
+    (P)
+    (200')
+    (E)
+    printsummary
+  
+    (19)
+    (Sand Castle )
+    (see below)
+    (24 hours)
+    (50')
+    (E)
+    printsummary
+  
+    (20)
+    (Sand Storm )
+    (100'R)
+    (1 min/lvl)
+    (500')
+    (E)
+    printsummary
+  
+    (25)
+    (Harden )
+    (1000'cu or special)
+    (P)
+    (touch)
+    (F)
+    printsummary
+  
+    (30)
+    (Stone to Sand )
+    (1K/10K cu')
+    (P)
+    (touch)
+    (F)
+    printsummary
+  
+    (50)
+    (Spread Desert )
+    (1 mile R)
+    (P)
+    (self)
+    (F)
+    printsummary
+   
+    endspellsummary
+    
+    % Spell descriptions 
+    
+    [(1.) 
+        /boldfont (Sandwalking)
+        /normalfont (\320)
+        
+    ( 
+          The caster can walk on sand as if it were packed earth. He
+          leaves no traces.  
+        )
+  
+    (
+          Second paragraph
+        )
+  ]
+        splitwords print
+  
+    [(2.) 
+        /boldfont (Erase Tracks)
+        /normalfont (\320)
+        
+    (
+          Erases all tracks, including those made by others, behind the
+          caster in a 20' wide swath as long as he concentrates.
+        )
+  ]
+        splitwords print
+  
+    [(3.) 
+        /boldfont (Dig I)
+        /normalfont (\320)
+        
+    (
+          Will make an up to 20' deep pit in sand. The pit is dug conically
+          so that the sides do not collapse, even without magic. Normally,
+          wind and shifting earth will cause the pit to be filled in in a
+          matter of days.
+        )
+  ]
+        splitwords print
+  
+    [(4.) 
+        /boldfont (Churning Dust)
+        /normalfont (\320)
+        
+    (
+          Causes a 10' by 10' by 5' wall of churning sand and dust to rise.
+          Gives 80 to missile attacks, -40 to melee attacks and visibility
+          is limited (-50 to visual skills/checks).
+        )
+  ]
+        splitwords print
+  
+    [(5.) 
+        /boldfont (Sand Dune I)
+        /normalfont (\320)
+        
+    (
+          Will throw up a sand dune, 10' high in the middle, 10'-20' wide
+          and 30' to 50' long, sloping away at the ends. The dune has
+          equally sloping sides, although an Easy Spell Mastery can make one
+          side steeper than the other.
+        )
+  ]
+        splitwords print
+  
+    [(6.) 
+        /boldfont (Shelter)
+        /normalfont (\320)
+        
+    (
+          Will make an foxhole in sand, 5' by 10', 5' high and a 3' opening.
+          It will hold during sandstorms. The walls are insulating, so the
+          experienced desert-traveller will make it early in the morning so
+          it keeps cool during the day, or early in the evening, so it stays
+          warm during night,
+        )
+  ]
+        splitwords print
+  
+    [(7.) 
+        /boldfont (Dig II)
+        /normalfont (\320)
+        
+    (
+          As ) /italicfont (Dig I) /normalfont (, but the pit will be 40' deep.
+        )
+  ]
+        splitwords print
+  
+    [(8.) 
+        /boldfont (Sand Tower)
+        /normalfont (\320)
+        
+    (
+          The spell forms a cylinder of sand, 30' tall and 5' wide. If the
+          caster casts it under his feet, it will carry him up with it. It
+          will hold for the duration without concentration, but if it is
+          attacked or in other ways being actively weakened, concentration
+          will be needed to keep it from collapsing.
+        )
+  ]
+        splitwords print
+  
+    [(9.) 
+        /boldfont (Breathe Sand)
+        /normalfont (\320)
+        
+    (
+          Allows target to breathe under sand as if in air. The target must
+          have a mouth cover,  to stop mouth filling with sand.
+        )
+  ]
+        splitwords print
+  
+    [(10.) 
+        /boldfont (Sand Carries)
+        /normalfont (\320)
+        
+    (
+          This will  make the surface of the sand around the caster in a 20'
+          radius harden enough to carry a pack animal with a rider. As the
+          caster moves, new areas will be subjected to the spell for the
+          duration (10 min/lvl). This hardness will last for 1 round/level.
+          All tracks will be erased when the effect wears off.
+        )
+  ]
+        splitwords print
+  
+    [(11.) 
+        /boldfont (Dig III)
+        /normalfont (\320)
+        
+    ( 
+          As ) /italicfont (Dig I) /normalfont (, except pit will be 60' deep.
+        )
+  ]
+        splitwords print
+  
+    [(12.) 
+        /boldfont (Sand Blast)
+        /normalfont (\320)
+        
+    (
+          Gathers up sand and hurls it at a target; attack is resolved on
+          Water Ball attack table.
+        )
+  ]
+        splitwords print
+  
+    [(13.) 
+        /boldfont (Quicksand)
+        /normalfont (\320)
+        
+    (
+          This will make a 10' by 10' patch of sand into quicksand. It will
+          be roughly 10' deep, if the sand goes that deep. The time needed
+          to form the quicksand varies from 3 rounds to 20 minutes,
+          depending on the amount of water nearby and the air moisture.
+          Spells from Water Law or similar lists can cut the time
+          considerably, though not under 3 rounds. (If the full time
+          required is not spent, the fraction of time taken is proportional
+          to the depth of the quicksand.) The water will evaporate according
+          to local conditions.
+        )
+  ]
+        splitwords print
+  
+    [(14.) 
+        /boldfont (Sand Dune II)
+        /normalfont (\320)
+        
+    (
+          As ) /italicfont (Sand Dune I) /normalfont (, except dune is 20' high, 20'-40' wide
+          and 50' to 100' long.
+        )
+  ]
+        splitwords print
+  
+    [(15.) 
+        /boldfont (Burrow)
+        /normalfont (\320)
+        
+    (
+          Allows caster to dig through sand at a rate of 5'/round. The
+          tunnel will be 5' wide. It will hold for the duration of the
+          spell.
+        )
+  ]
+        splitwords print
+  
+    [(16.) 
+        /boldfont (Earth to Sand)
+        /normalfont (\320)
+        
+    (
+          This spell will turn 10,000 cubic feet of earth to sand. The spell
+          will draw the water out of the earth; the caster must give a
+          location for the water to be deposited, otherwise it will pool on
+          top of the sand.
+        )
+  ]
+        splitwords print
+  
+    [(17.) 
+        /boldfont (Sanding)
+        /normalfont (\320)
+        
+    (
+          The caster directs a stream of sand onto the target. The stream
+          can cover a circle with a radius of 2'. If used offensively, the
+          attack is resolved on the Fire Bolt table, with Unbalancing
+          criticals instead of Heat. The damage given is divided between the
+          target himself and the armor he's wearing.  Every round the stream
+          is centered on the target counts as a new attack.
+        )
+  ]
+        splitwords print
+  
+    [(18.) 
+        /boldfont (Bury)
+        /normalfont (\320)
+        
+    (
+          This spell will  bury the target at a rate of 100 cubic feet per
+          round. The target must fit inside a circle with a radius of 50'.
+          The caster must concentrate each round; otherwise the target will
+          stop sinking. The spell can sink the target 40' below ground
+          level, but only if there is sand down that far. Is the target
+          cannot sink anymore, further concentration will heap sand onto the
+          target until a 40' tall sand hill has built up.
+        )
+  ]
+        splitwords print
+  
+    [(19.) 
+        /boldfont (Sand Castle)
+        /normalfont (\320)
+        
+    (
+          This spell allows the caster to make a number of sandwalls. The
+          caster can make sandwalls of 15' height, 2' thick and up to 200'
+          long in any shape; OR, the caster can cast the spell on up to four
+          sand dunes created by Sand Dune spells, in which case the dunes
+          are shaped into walls that are double the height of the dune, same
+          length and 5' thick.
+        )
+  ]
+        splitwords print
+  
+    [(20.) 
+        /boldfont (Sand Storm)
+        /normalfont (\320)
+        
+    (
+          A sand storm is created in the area of effect. At it's most
+          effective, when cast in a desert, visibility is 2', speed is
+          reduced to a tenth, all missile attacks suffer a 100 penalty, all
+          melee Attacks a 50 penalty and everyone in the area must make a RR
+          vs 1st level or suffer an A Heat Critical. In other terrains, the
+          effectiveness of the spell lessens: Half effect in plains, quarter
+          effect in grasslands, hills or mountains, no effect in swamps or
+          at sea. A Sheer Folly Spell Mastery might make the spell work in a
+          snowfield, creating a Snow Storm with the same effects, except
+          Cold instead of Heat Criticals.  Finally, if spell is cast in a
+          natural sandstorm, the effect is at least doubled, the details are
+          left to the GMs imagination. 
+        )
+  ]
+        splitwords print
+  
+    [(25.) 
+        /boldfont (Harden)
+        /normalfont (\320)
+        
+    (
+          A mass of sand is compressed into sandstone. This is done by
+          drawing more sand in, so the volume remains the same. The volume
+          of effect is 1000 cubic feet unless it is cast on something
+          created by a lower level spell on this list within a minute after
+          the target has reached the desired form, in which case it works on
+          the entire structure. For Shelter, Burrow and the Dig spells, this
+          spells compresses the surrounding sand  to a depth of one foot.
+        )
+  ]
+        splitwords print
+  
+    [(30.) 
+        /boldfont (Stone to Sand)
+        /normalfont (\320)
+        
+    (
+          Turns 1000 cubic feet of stone to sand unless cast on sandstone in
+          which case 10,000 cubic feet crumbles becomes sand again.
+        )
+  ]
+        splitwords print
+  
+    [(50.) 
+        /boldfont (Spread Desert)
+        /normalfont (\320)
+        
+    (
+          Sets the area of effect (1 mile radius around caster) on the way
+          to become a desert. Water evaporates, streams are led underground,
+          grass dies, roots wither, etc. Larger growths and trees might get
+          a RR on the GMs discretion.  If the area is tended by an animist,
+          druid, nature deity or something similar, the entire area gets a
+          RR, using the level of the animist etc. If it is tended by a
+          skilled gardenerer without magical skills, the area gets a RR
+          using level. This spell does not keep the area dry after the spell
+          is cast. If it rains frequently and heavily, the area will become
+          a large mud hole.
+        )
+  ]
+        splitwords print
+  
+
+showpage

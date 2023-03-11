@@ -1,0 +1,356 @@
+<?xml version='1.0'?>
+
+<!DOCTYPE spelllist SYSTEM
+        "/home/nash/work/rolemaster/XML/spelllist/spelllist.dtd">
+
+
+<spelllist>
+    <name>Sand Law</name>
+    <listtype>Magician Additional Base</listtype>
+    <author>P.H. Bongo (phb-ml@hotpop.com)</author>
+    <author>edited by Brett Nash</author>
+    <spell>
+        <level>1</level>
+        <name>Sandwalking</name>
+        <areaofeffect>caster</areaofeffect>
+        <duration>10 min/lvl</duration>
+        <range>self</range>
+        <type>U</type>
+        <description> 
+          The caster can walk on sand as if it were packed earth. He
+          leaves no traces.  
+        </description>
+        <description>
+          Second paragraph
+        </description>
+    </spell>
+    <spell>
+        <level>2</level>
+        <name>Erase Tracks</name>
+        <areaofeffect>20' Radius</areaofeffect>
+        <duration>C</duration>
+        <range>self</range>
+        <type>U</type>
+        <description>
+          Erases all tracks, including those made by others, behind the
+          caster in a 20' wide swath as long as he concentrates.
+        </description>
+    </spell>
+    <spell>
+        <level>3</level>
+        <name>Dig I</name>
+        <areaofeffect>20'Rx20'Deep</areaofeffect>
+        <duration>P</duration> 
+        <range>100'</range> 
+        <type>F</type> 
+        <description>
+          Will make an up to 20' deep pit in sand. The pit is dug conically
+          so that the sides do not collapse, even without magic. Normally,
+          wind and shifting earth will cause the pit to be filled in in a
+          matter of days.
+        </description>
+    </spell>
+    <spell>
+        <level>4</level>
+        <name>Churning Dust</name>
+        <areaofeffect>10'x10'x5'</areaofeffect>
+        <duration>1 round/lvl</duration>
+        <range>50'</range>
+        <type>E</type>
+        <description>
+          Causes a 10' by 10' by 5' wall of churning sand and dust to rise.
+          Gives 80 to missile attacks, -40 to melee attacks and visibility
+          is limited (-50 to visual skills/checks).
+        </description>
+    </spell>
+    <spell>
+        <level>5</level>
+        <name>Sand Dune I</name>
+        <areaofeffect>50'x20'</areaofeffect>
+        <duration>P</duration>
+        <range>50'</range>
+        <type>E</type>
+        <description>
+          Will throw up a sand dune, 10' high in the middle, 10'-20' wide
+          and 30' to 50' long, sloping away at the ends. The dune has
+          equally sloping sides, although an Easy Spell Mastery can make one
+          side steeper than the other.
+        </description>
+    </spell>
+    <spell>
+        <level>6</level>
+        <name>Shelter</name>
+        <areaofeffect>5'x10'x5'</areaofeffect>
+        <duration>12 hours</duration>
+        <range>touch</range>
+        <type>F</type>
+        <description>
+          Will make an foxhole in sand, 5' by 10', 5' high and a 3' opening.
+          It will hold during sandstorms. The walls are insulating, so the
+          experienced desert-traveller will make it early in the morning so
+          it keeps cool during the day, or early in the evening, so it stays
+          warm during night,
+        </description>
+    </spell>
+    <spell>
+        <level>7</level>
+        <name>Dig II</name>
+        <areaofeffect>20'Rx40'Pit</areaofeffect>
+        <duration>P</duration>
+        <range>150'</range>
+        <type>F</type>
+        <description>
+          As <ref>Dig I</ref>, but the pit will be 40' deep.
+        </description>
+    </spell>
+    <spell>
+        <level>8</level>
+        <name>Sand Tower</name>
+        <areaofeffect>30'x5'R</areaofeffect>
+        <duration>1 round/lvl (C.)</duration>
+        <range>self</range>
+        <type>E</type>
+        <description>
+          The spell forms a cylinder of sand, 30' tall and 5' wide. If the
+          caster casts it under his feet, it will carry him up with it. It
+          will hold for the duration without concentration, but if it is
+          attacked or in other ways being actively weakened, concentration
+          will be needed to keep it from collapsing.
+        </description>
+    </spell>
+    <spell>
+        <level>9</level>
+        <name>Breathe Sand</name>
+        <areaofeffect>1 person</areaofeffect>
+        <duration>1 hour/lvl</duration>
+        <range>touch</range>
+        <type>U</type>
+        <description>
+          Allows target to breathe under sand as if in air. The target must
+          have a mouth cover,  to stop mouth filling with sand.
+        </description>
+    </spell>
+    <spell>
+        <level>10</level>
+        <name>Sand Carries</name>
+        <areaofeffect>20'R</areaofeffect>
+        <duration>10 min/lvl(special)</duration>
+        <range>self</range>
+        <type>F</type>
+        <description>
+          This will  make the surface of the sand around the caster in a 20'
+          radius harden enough to carry a pack animal with a rider. As the
+          caster moves, new areas will be subjected to the spell for the
+          duration (10 min/lvl). This hardness will last for 1 round/level.
+          All tracks will be erased when the effect wears off.
+        </description> 
+    </spell>
+    <spell> 
+        <level>11</level> 
+        <name>Dig III</name> 
+        <areaofeffect>30'Rx60'</areaofeffect>
+        <duration>P</duration> 
+        <range>200'</range>
+        <type>F</type>
+        <description> 
+          As <ref>Dig I</ref>, except pit will be 60' deep.
+        </description>
+    </spell>
+    <spell>
+        <level>12</level>
+        <name>Sand Blast</name>
+        <duration>-</duration> 
+        <range>100'</range> 
+        <type>BE</type> 
+        <description>
+          Gathers up sand and hurls it at a target; attack is resolved on
+          Water Ball attack table.
+        </description>
+    </spell>
+    <spell>
+        <level>13</level>
+        <name>Quicksand</name>
+        <areaofeffect>1000 cu'</areaofeffect>
+        <duration>1 min/lvl</duration>
+        <range>100'</range>
+        <type>E</type>
+        <description>
+          This will make a 10' by 10' patch of sand into quicksand. It will
+          be roughly 10' deep, if the sand goes that deep. The time needed
+          to form the quicksand varies from 3 rounds to 20 minutes,
+          depending on the amount of water nearby and the air moisture.
+          Spells from Water Law or similar lists can cut the time
+          considerably, though not under 3 rounds. (If the full time
+          required is not spent, the fraction of time taken is proportional
+          to the depth of the quicksand.) The water will evaporate according
+          to local conditions.
+        </description>
+    </spell>
+    <spell>
+        <level>14</level>
+        <name>Sand Dune II</name>
+        <areaofeffect>100'x40'</areaofeffect>
+        <duration>P</duration>
+        <range>100'</range>
+        <type>E</type>
+        <description>
+          As <ref>Sand Dune I</ref>, except dune is 20' high, 20'-40' wide
+          and 50' to 100' long.
+        </description>
+    </spell>
+    <spell>
+        <level>15</level>
+        <name>Burrow</name>
+        <areaofeffect>caster</areaofeffect>
+        <duration>1 round/lvl</duration>
+        <range>self</range>
+        <type>E</type>
+        <description>
+          Allows caster to dig through sand at a rate of 5'/round. The
+          tunnel will be 5' wide. It will hold for the duration of the
+          spell.
+        </description>
+    </spell>
+    <spell>
+        <level>16</level>
+        <name>Earth to Sand</name>
+        <areaofeffect>10K cu'</areaofeffect>
+        <duration>P</duration>
+        <range>touch</range>
+        <type>F</type>
+        <description>
+          This spell will turn 10,000 cubic feet of earth to sand. The spell
+          will draw the water out of the earth; the caster must give a
+          location for the water to be deposited, otherwise it will pool on
+          top of the sand.
+        </description>
+    </spell>
+    <spell>
+        <level>17</level>
+        <name>Sanding</name>
+        <areaofeffect>1 target</areaofeffect>
+        <duration></duration>
+        <range>100'</range>
+        <type>DE</type>
+        <description>
+          The caster directs a stream of sand onto the target. The stream
+          can cover a circle with a radius of 2'. If used offensively, the
+          attack is resolved on the Fire Bolt table, with Unbalancing
+          criticals instead of Heat. The damage given is divided between the
+          target himself and the armor he's wearing.  Every round the stream
+          is centered on the target counts as a new attack.
+        </description>
+    </spell>
+    <spell>
+        <level>18</level>
+        <name>Bury</name>
+        <areaofeffect>1 target</areaofeffect>
+        <duration>P</duration>
+        <range>200'</range>
+        <type>E</type>
+        <description>
+          This spell will  bury the target at a rate of 100 cubic feet per
+          round. The target must fit inside a circle with a radius of 50'.
+          The caster must concentrate each round; otherwise the target will
+          stop sinking. The spell can sink the target 40' below ground
+          level, but only if there is sand down that far. Is the target
+          cannot sink anymore, further concentration will heap sand onto the
+          target until a 40' tall sand hill has built up.
+        </description>
+    </spell>
+    <spell>
+        <level>19</level>
+        <name>Sand Castle</name>
+        <areaofeffect>see below</areaofeffect>
+        <duration>24 hours</duration>
+        <range>50'</range>
+        <type>E</type>
+        <description>
+          This spell allows the caster to make a number of sandwalls. The
+          caster can make sandwalls of 15' height, 2' thick and up to 200'
+          long in any shape; OR, the caster can cast the spell on up to four
+          sand dunes created by Sand Dune spells, in which case the dunes
+          are shaped into walls that are double the height of the dune, same
+          length and 5' thick.
+        </description>
+    </spell>
+    <spell>
+        <level>20</level>
+        <name>Sand Storm</name>
+        <areaofeffect>100'R</areaofeffect>
+        <duration>1 min/lvl</duration>
+        <range>500'</range>
+        <type>E</type>
+        <description>
+          A sand storm is created in the area of effect. At it's most
+          effective, when cast in a desert, visibility is 2', speed is
+          reduced to a tenth, all missile attacks suffer a 100 penalty, all
+          melee Attacks a 50 penalty and everyone in the area must make a RR
+          vs 1st level or suffer an A Heat Critical. In other terrains, the
+          effectiveness of the spell lessens: Half effect in plains, quarter
+          effect in grasslands, hills or mountains, no effect in swamps or
+          at sea. A Sheer Folly Spell Mastery might make the spell work in a
+          snowfield, creating a Snow Storm with the same effects, except
+          Cold instead of Heat Criticals.  Finally, if spell is cast in a
+          natural sandstorm, the effect is at least doubled, the details are
+          left to the GMs imagination. 
+        </description>
+    </spell>
+    <spell>
+        <level>25</level>
+        <name>Harden</name> 
+        <areaofeffect>1000'cu or special</areaofeffect>
+        <duration>P</duration>
+        <range>touch</range>
+        <type>F</type>
+        <description>
+          A mass of sand is compressed into sandstone. This is done by
+          drawing more sand in, so the volume remains the same. The volume
+          of effect is 1000 cubic feet unless it is cast on something
+          created by a lower level spell on this list within a minute after
+          the target has reached the desired form, in which case it works on
+          the entire structure. For Shelter, Burrow and the Dig spells, this
+          spells compresses the surrounding sand  to a depth of one foot.
+        </description>
+    </spell>
+    <spell> 
+        <level>30</level>
+        <name>Stone to Sand</name> 
+        <areaofeffect>1K/10K cu'</areaofeffect> 
+        <duration>P</duration>
+        <range>touch</range>
+        <type>F</type>
+        <description>
+          Turns 1000 cubic feet of stone to sand unless cast on sandstone in
+          which case 10,000 cubic feet crumbles becomes sand again.
+        </description>
+    </spell>
+    <spell>
+        <level>50</level>
+        <name>Spread Desert</name>
+        <areaofeffect>1 mile R</areaofeffect>
+        <duration>P</duration>
+        <range>self</range>
+        <type>F</type>
+        <description>
+          Sets the area of effect (1 mile radius around caster) on the way
+          to become a desert. Water evaporates, streams are led underground,
+          grass dies, roots wither, etc. Larger growths and trees might get
+          a RR on the GMs discretion.  If the area is tended by an animist,
+          druid, nature deity or something similar, the entire area gets a
+          RR, using the level of the animist etc. If it is tended by a
+          skilled gardenerer without magical skills, the area gets a RR
+          using level. This spell does not keep the area dry after the spell
+          is cast. If it rains frequently and heavily, the area will become
+          a large mud hole.
+        </description>
+    </spell>
+    <notes>
+        <note>
+          All spells require that there is enough sand, dust or loose earth
+          present to perform the effects (except Earth to Sand, Stone to
+          Sand and Spread Desert)
+        </note>
+    </notes>
+</spelllist>
+

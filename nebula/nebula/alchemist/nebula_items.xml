@@ -1,0 +1,189 @@
+<?xml version='1.0' ?>
+<items>
+	<item id="23">
+		<skills>
+			<category>
+				<skill>
+					<name>Some urban skill</name>
+					<normal>+5</normal>
+				</skill>
+				<magic>+10</magic>
+				<ranks>+2</ranks>
+				<name>Urban</name>
+			</category>
+		</skills>
+		<effects>
+			<hitpoints>
+				<absorber>
+					<amount>50</amount>
+				</absorber>
+				<multiplier>*2</multiplier>
+			</hitpoints>
+			<attack-as>dagger</attack-as>
+			<resistance>
+				<poison>+5</poison>
+			</resistance>
+			<range-mod unit="m">
+				<all>+20</all>
+				<nonmagic/>
+			</range-mod>
+			<special>
+				<description>
+					The description of the effet.
+					Generally because it has no influence on the character.
+					As Arms Destroyer or Weapon Slayer.
+				</description>
+				<name>An effect name</name>
+			</special>
+			<damage>
+				<magic>*2</magic>
+				<normal>+20</normal>
+			</damage>
+			<range-mod unit="">
+				<extreme>
+					+10
+				</extreme>
+				<magic/>
+			</range-mod>
+			<initiative>
+				<nonmagic/>
+				<bonus>+5</bonus>
+			</initiative>
+			<protect-as>
+				<magic/>
+				<shield><db><normal>40</normal></db></shield>
+				<at>1</at>
+			</protect-as>
+			<critical>
+				<add/>
+				<type>slaying</type>
+				<against>paladin</against>
+				<inflict/>
+			</critical>
+			<critical>
+				<negation/>
+				<level>A</level>
+				<chance>30</chance>
+				<receive/>
+				<replace/>
+				<dice>+20</dice>
+				<level>-2</level>
+				<key>evil only</key>
+			</critical>
+		</effects>
+		<name>Sample Object</name>
+		<description>This is a foolish object with all the item structure</description>
+		<weight unit="kg">20</weight>
+		<size>10x10 inches</size>
+		<value unit="GP">10</value>
+		<type>
+			<container />
+			<misc>
+				<name>A misc type name. Mainly for sorting purpose</name>
+			</misc>
+			<gem />
+			<poison />
+			<herb />
+			<armor>
+				<manoeuver>
+					<quickness>-20</quickness>
+					<missile>-20</missile>
+					<maximum>-130
+					</maximum>
+					<minimum>
+						-25
+					</minimum>
+				</manoeuver>
+				<at>20</at>
+			</armor>
+			<weapon>
+				<strength>
+					<wooden/>
+					<value>65-75</value>
+				</strength>
+				<breakage>1,2,3,4,5,6,7</breakage>
+				<fumble>
+					<normal>1-8</normal>
+					<magic></magic>
+				</fumble>
+				<reloading>
+					<round num="3"><normal>0</normal></round>
+					<round num="2"><normal>10</normal></round>
+					<round num="1"><normal>30</normal></round>
+					<round num="0"><normal>na</normal></round>
+				</reloading>
+				<range unit="m">
+					<extreme/>
+					<long/>
+					<medium/>
+					<short/>
+					<pointblank/>
+				</range>
+				<categ>missile</categ>
+			</weapon>
+			<shield>
+				<db versus="melee">
+					<rear>0</rear>
+					<surprised>10</surprised>
+					<normal>20</normal>
+				</db>
+				<db versus="missile">
+					<normal>15</normal>
+					<rear>0</rear>
+					<surprised>10</surprised>
+				</db>
+			</shield>
+		</type>
+		<spells>
+			<multiplier>
+				<times>2</times>
+			</multiplier>
+			<adder>
+				<number>1</number>
+			</adder>
+			<spelllist>
+				<name>name of the spell list</name>
+				<constant />
+				<spell>
+					<name>name of the spell</name>
+				</spell>
+				<cast-as>
+					<level>10</level>
+				</cast-as>
+			</spelllist>
+			<spelllist>
+				<name>name of the spell list</name>
+				<daily />
+				<spell>
+					<name>name of the spell</name>
+				</spell>
+				<level>3</level>
+				<cast-as>
+					<level>10</level>
+				</cast-as>
+			</spelllist>
+			<spelllist>
+				<name>name of the spell list</name>
+				<cast-as>
+					<level>10</level>
+				</cast-as>
+				<spell>
+					<name>name of the spell</name>
+				</spell>
+				<charges>20</charges>
+			</spelllist>
+		</spells>
+		<intelligence>
+			<alignment>neutral</alignment>
+			<purpose>doing nothing</purpose>
+			<level>Legendary Artifact</level>
+		</intelligence>
+	</item>
+	<item id="2">
+		<name>Shield of Wonders</name>
+		<type>
+			<shield />
+		</type>
+	</item>
+
+</items>

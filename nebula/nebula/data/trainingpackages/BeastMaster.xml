@@ -1,0 +1,87 @@
+<?xml version='1.0' ?>
+
+<!-- Beastmaster Training package -->
+
+<trainingpackage>
+        <data>
+                <fixed>
+                        <trainingpackage>Beastmaster</trainingpackage>
+                </fixed>
+        </data>
+        <stats>
+                <stat>
+                        <name>Empathy</name>
+                        <statgain />
+                </stat>
+        </stats>
+        <skills>
+                <category>
+                        <name>Athletic • Endurance</name>
+                        <ranks>2</ranks>
+                </category>
+                <category>
+                        <name>Lore • General</name>
+                        <ranks>2</ranks>
+                        <skill>
+                                <name>Fauna Lore</name>
+                                <ranks>2</ranks>
+                        </skill>
+                        <skill> 
+                                <name>Flora Lore</name>
+                                <ranks>2</ranks>
+                        </skill>
+                </category>
+                <category>
+                        <name>Outdoor • Animal</name>
+                        <ranks>4</ranks>
+                        <!-- The skills are all really options -->
+                </category>
+                <category>
+                        <name>Outdoor • Enviromental</name>
+                        <ranks>2</ranks>
+                </category>
+                <category>
+                        <name>Spells • Mentalism TP</name>
+                        <skill>
+                                <name>Animal Bonding</name>
+                                <class></class> <!-- set non-restricted -->
+                                <ranks>3</ranks>
+                        </skill>
+                </category>
+                <category>
+                        <name>Subterfuge • Stealth</name>
+                        <ranks>1</ranks>
+                        <skill>
+                                <name>Hiding</name>
+                                <ranks>1</ranks>
+                        </skill>
+                        <skill>
+                                <name>Stalking</name>
+                                <ranks>1</ranks>
+                        </skill>
+                </category>
+        </skills>
+        <choices>
+                <choice>
+                        <ranks>2</ranks>
+                        <group>Athletic • Endurance</group>
+                </choice>
+                <choice>
+                        <ranks>2</ranks>
+                        <group>Outdoor • Animal/Animal Handling (By Animal Type)</group>
+                </choice>
+                <choice>
+                        <ranks>2</ranks>
+                        <group>Outdoor • Animal/Animal Healing (By Animal Type)</group>
+                </choice>
+                <choice>
+                        <ranks>2</ranks>
+                        <option>Outdoor • Animal/Animal Training (By Animal Type)</option>
+                        <option>Outdoor • Animal/Animal Mastery (By Animal Type)</option>
+                </choice>
+                <choice>
+                        <ranks>2</ranks>
+                        <group>Outdoor • Animal</group>
+                </choice>
+        </choices>
+</trainingpackage>

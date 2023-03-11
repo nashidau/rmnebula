@@ -1,0 +1,162 @@
+<!--#set var="TITLE" value="Rolemaster XML: Spelllist" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Spell lists</h1>
+
+<p>Rolemaster uses spellists, grouping logically related spells together.
+Characters tend to have a lot of spells in the system (particularly pure
+spell users), hence the need to have copies of the spelllists available in
+some way.  Most players use photocopies, or hand written lists of spells to
+do this.</p>
+
+</p>As an alternative I have produced a XML DTD to describe spell lists.
+This is basically complete - there are very few spelllists that will not fit
+neatly into this template.</p>
+
+<p>The DTD for spelllists is called <a
+href="spelllist.dtd">spelllist.dtd</a>.  Additionally there is a
+XSLT to convert it to HTML, see below for options when using this XSLT.
+</p>
+
+<h2>Spelllist.xsl</h2>
+
+<p>Spellist.xsl will convert a XML spellist into a HTML version of the
+spellist.  The default appearance is similar to that used by ICE in the
+various RM source books.  Alternatively the XSLT paramater
+<tt>condensed</tt> can be set to <tt>1</tt> resulting in a more condensed
+version.  Additionally the paramater <tt>knownlevel</tt> can be set to spell
+level which results in a tick next any known levels.</p>
+
+<h2>benttonash.xsl</h2>
+
+<p>I've added a XSLT to transform data in 
+<a href="http://www.pvv.org/~bcd/rolemaster/">Bent Dalagers</a> 'list'
+format into my own.  A number of examples are below.
+</p>
+
+<p>This XSLT is now avaiable: <a
+href="benttonash.xsl">benttonash.xsl</a>.</p>
+
+<h2>Version History</h2>
+
+<p>Please note this is the version history of the DTD, and XSLTs.  Thus
+changes may not affect all programs.</p>
+
+<ul>
+        <li>28th August 2002: <br />
+                <a href="spelllisttops.xsl">spelllisttops.xsl</a> produces
+                        usable lists<br />
+        
+        <li>16th August 2002:  <br />
+                Added spell references.<br />
+                Can now have multiple paragraphs of descriptions.<br />
+                (Note HTML output is broken).
+                </li>
+                
+        <li>13th August 2002: Version 1.0.2: <br />
+                Added spell annotations at the suggestion on Bent
+                Dalager.<br />
+                Additionally added rrmod tag.<br />
+                Added 'annotations' paramater to spelllist.xsl<br />
+        </li>        
+        <li>12th August 2002: Version 1.0.1: <br />
+                Added links to other parts of the document - ie short name
+                links to full descripton.  <br />
+                Condensed version titles are now highlighted.
+        </li>
+        <li>11th August 2002: Version 1.0: <br />
+                Released first public version<br />
+        </li>
+        </li>
+</ul>
+
+
+<h2>Future work</h2>
+
+<p>For the XML format a few things could be improved.  For instance the
+format for description could include a few html style markup options to
+allow more clarity in the descriptions, as well as links to other spells.
+Also a few things are not directly supported, and should be, such as RR Mods
+for spells.  Fine tuning of fields such as author, editor and the like
+should be added.  These should all be fully backwards compatible to the
+previous version of the DTD, so documents produced using the current DTD
+should work unmodified.</p>
+
+<p>The XSLs should also allow paramaters for maximum displayed level (a
+first level caster probably doesn't need to see the 50th level spell), as
+well as options to display SCSM bonuses and OBs with the spells.</p>
+
+<p>Also an XSL to convert to postscript and/or pdf is in the works.
+A version to produce text would also be nice - especically for use on
+mailing lists and the like.</p>
+
+<p>A text description of the format would be nice for people to use and read
+online for producing their own spelllists.</p>
+
+<p>The XSLT should be cleaned up to import the large slabs of html
+externally - I'm not sure it is worth the bother on a document of its
+size.</p>
+
+<h2>Examples</h2>
+
+<p>The following examples are provided:</p>
+
+<ul>
+<li>Sand Law (by P.H.Bongo in XML format:
+        <a href="examples/sandlaw.xml">sandlaw.xml</a>.</li>
+<li>Sand Law in standard html format: 
+<a href="examples/sandlaw.html">sandlaw.html</a>.
+</li>
+<li>Sand Law  in condensed format: 
+<a href="examples/sandlawcondensed.html">sandlawcondensed.html</a>.
+</li>
+<li>Sand Law in standard format generated for a magician who knows the list
+to 10th level:
+<a href="examples/sandlaw10.html">sandlaw10.html</a>.
+</li>
+<li>Seeming Memories (from ICE, Mentalism Companion) to 10th level, by an
+enchanter who knows it to 5th level: 
+<a href="examples/seeming_memories.html">seeming_memories.html</a>.
+</li>
+</ul>
+
+<p><b>Bent Dalagers Reann lists:</b>  Note these are work in progress, so
+may/will change in the future.  If you are interested in using these see
+<a href="http://www.pvv.org/~bcd/rolemaster/index.html">Bent's site</a>.
+</p>
+
+<p>
+
+<ul>
+  <li>Bents original format: 
+	  <a href="examples/alterdreams.bent.xml">alterdreams.bent.xml</a>,   
+  	<a href="examples/dream_traveller.bent.xml">dream_traveller.bent.xml</a>,
+	  <a href="examples/dream_reality.bent.xml">dream_reality.bent.xml</a>
+    &amp;
+	  <a href="examples/dream_walls.bent.xml">dream_walls.bent.xml</a>
+	</li>
+  <li>After converting to my format (and manually adding author tag):
+  	<a href="examples/alterdreams.nash.xml">alterdreams.nash.xml</a>
+	  <a href="examples/dream_reality.nash.xml">dream_reality.nash.xml</a>
+  	<a href="examples/dream_traveller.nash.xml">dream_traveller.nash.xml</a>
+	  <a href="examples/dream_walls.nash.xml">dream_walls.nash.xml</a>
+  </li>
+
+  <li>Converting these to the standard HTML format:
+  	<a href="examples/alterdreams.html">alterdreams.html</a>
+	  <a href="examples/dream_reality.html">dream_reality.html</a>
+  	<a href="examples/dream_traveller.html">dream_traveller.html</a>
+	  <a href="examples/dream_walls.html">dream_walls.html</a>
+	</li>
+
+  <li>Converting these to the condensed HTML format:
+  	<a href="examples/alterdreams.condensed.html">alterdreams.condensed.html</a>
+	  <a href="examples/dream_reality.condensed.html">dream_reality.condensed.html</a>
+  	<a href="examples/dream_traveller.condensed.html">dream_traveller.condensed.html</a>
+	  <a href="examples/dream_walls.condensed.html">dream_walls.condensed.html</a>
+	</li>
+</ul>
+
+<p>Thanks to P.H. Bongo for <em>Sand Law</em> used in the first 3 examples.  Thanks to Bent Dalager for the four <em>Dream</em> lists.</p>
+
+<!--#include virtual="/.include/tail.shtml" -->

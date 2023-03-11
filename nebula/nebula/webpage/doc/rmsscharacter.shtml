@@ -1,0 +1,107 @@
+<!--#set var="TITLE" value="Nebula: XML Character Format" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Character Format</h1>
+
+<blockquote><em>Please note that this project is work in progress.  At the
+time of writing this document the item &amp; other sections were
+undefined in the DTD.</em></blockquote>
+
+<p>Support for this format is currently under way in both <em>ACG</em>
+and <em>Nebula</em>.   For information on these projects try the links
+pages.</p>
+
+<h2>Index</h2>
+
+<ul>
+  <li><a href="#meta">Meta Information</a></li>
+  <li><a href="#root">Root Element</a></li>
+  <li><a href="#data">Data Section</a></li>
+  <li><a href="#stats">Stats</a></li>
+  <li><a href="#cats">Categories</a></li>
+  <li><a href="#skills">Skills</a></li>
+  <li><a href="#items">Items</a></li>
+  <li><a href="#other">Other</a></li>
+</ul>
+
+<h2><a name="meta"></a>Meta Information</h2>
+
+<pre>
+&lt?xml version='1.0'?&gt
+&lt!--?xml-stylesheet type="text/css" href="rmsscharacter.css"?--&gt
+&lt!DOCTYPE rmsscharacter SYSTEM 
+        "http://www.nash.nu/Rolemaster/Nebula/xml/rmsscharacter.dtd"&gt
+</pre>
+
+<p>Basic information on the class.  Aside from the xml decleration (required
+in all XML documents) no other element is required.  The DTD decleration is
+strongly recommended, as is the CSS.</p>
+
+<h2><a name="root"></a>Root Element</h2>
+
+<pre>&lt;rmsscharacter id="neb-0001"&gt;</pre>
+
+<p>The root element.  The <code>id</code> attribute is a global identifier,
+and is thus unique for every charactter.  The method of allocating these is
+up to the individual program.</p>
+
+<h2><a name="data"></a>Data Section</h2>
+
+<pre>
+&lt;data&gt;
+        &lt;name&gt;Evant&lt;/name&gt;
+</pre>
+
+<p>This section defines basic information about the character.  In addition
+it hosts a lot of derived information, as well as basic background
+information. The first required attribute is <code>name</code> which
+contains the characters name.  The other fields are:</p>
+<ul>
+  <li><a href="#player">player</a></li>
+  <li><a href="#campaign">campaign</a></li>
+  <li><a href="#fixed">fixed</a></li>
+  <li><a href="#experience">experience</a></li>
+  <li><a href="#defensive">defensive</a></li>
+  <li><a href="#resistances">resistances</a></li>
+  <li><a href="#raceinfo">raceinfo</a></li>
+  <li><a href="#appearance">appearance</a></li>
+  <li><a href="#role">role</ a></li>
+  <li><a href="#background">background</a></li>
+</ul>
+
+
+<h3><a name="player"></a>Player</h3>
+
+<pre>
+        &lt;player&gt;
+                &lt;name&gt;Nash&lt;/name&gt;
+                &lt;email&gt;nash@nash.nu&lt;/email&gt;
+                &lt;application&gt;Nebula&lt;/application&gt;
+        &lt;/player&gt;
+</pre>
+
+<p>Player information.  The only required field is the name field.  Email if
+entered should be a valid edmail address, without <code>&lt;</code> or
+<code>&gt;</code>.  The application is simple what program created the file.
+</p>
+
+<h3><a name="campaign"></a>Campaign</h3>
+<h3><a name="fixed"></a>Fixed</h3>
+<h3><a name="experience"></a>Experience</h3>
+<h3><a name="defensive"></a>Defensive</h3>
+<h3><a name="resistances"></a>Resistances</h3>
+<h3><a name="raceinfo"></a>Raceinfo</h3>
+<h3><a name="appearance"></a>Appearance</h3>
+<h3><a name="role"></a>Role</h3>
+<h3><a name="background"></a>Background</h3>
+
+
+<h2><a name="stats"></a>Stats</h2>
+<h2><a name="cats"></a>Categories</h2>
+<h2><a name="skills"></a>Skills</h2>
+<h2><a name="items"></a>Items</h2>
+<h2><a name="other"></a>Other</h2>
+
+
+<!--#include virtual="/.include/tail.shtml" -->
+

@@ -1,0 +1,1267 @@
+<?xml version='1.0' ?>
+
+<!-- This is the base genre file for World Builder
+  It contains:
+        * basic list of skills from RMSS, 
+        * A 'home' region for regions
+        * The base realms
+
+  This is part of the Nebula project.  See elsewhere in this distribution
+  for copywrite details
+-->
+<rmssgenre>
+
+<regions>
+    <region>
+        <name>PC Home</name>
+        <description>The place your PC's call home. 
+You should add regions appropriate to your world.</description>
+    </region>
+</regions>
+
+<realms>
+    <realm>
+        <name>Channeling</name>
+        <description>  </description>
+    </realm>
+    <realm>
+        <name>Essence</name>
+        <description> </description>
+        <realm>
+    	    <name>Nomenist</name>
+            <description> </description>
+        </realm>
+        <realm>
+            <name>Somaticist</name>
+            <description> </description>
+        </realm>
+        <realm>
+            <name>Catalyst Casters</name>
+            <description>Casters who use catalysts of some
+            sort</description>
+            <realm>
+                <name>Somaticist</name>
+                <description> </description>
+            </realm>
+            <realm>
+                <name>Herbalist</name>
+                <description> </description>
+            </realm>
+            <realm>
+                <name>Corpist</name>
+                <description> </description>
+            </realm>
+        </realm>
+    </realm> <!-- close essence -->
+    <realm>
+        <name>Mentalism</name>
+        <description> </description>
+    </realm>
+    
+</realms>
+
+        <skills>
+                <category><name>Armor &#x2022; Heavy</name><statbonuses>St+Ag+St</statbonuses><progression>Standard</progression> 
+                        <skill><name>Plate</name></skill>
+                </category><category><name>Armor &#x2022; Light</name><statbonuses>Ag+St+Ag</statbonuses><progression>Standard</progression>
+                        <skill><name>Soft Leather</name></skill>
+                        <skill><name>Rigid Leather</name></skill>
+                </category><category><name>Armor &#x2022; Medium</name><statbonuses>St+Ag+St</statbonuses><progression>Standard</progression>
+                        <skill><name>Chain</name></skill>
+                </category><category><name>Artistic &#x2022; Active</name><statbonuses>Pr+Em+Ag</statbonuses><progression>Standard</progression>
+                        <skill><name>Acting</name></skill>
+                        <skill><name>Dancing</name></skill>
+                        <skill><name>Mimery</name></skill>
+                        <skill><name>Mimicry</name></skill>
+                        <skillgroup>
+                                <name>Play Instrument (By Instrument)</name>
+                                <skill><name>Lute</name></skill>
+                                <skill><name>Flute</name></skill>
+                                <skill><name>Organ</name></skill>
+                        </skillgroup>
+                        <skill><name>Poetic Improvisation</name></skill>
+                        <skill><name>Singing</name></skill>
+                        <skill><name>Tale Telling</name></skill>
+                        <skill><name>Ventriloquism</name></skill>
+                </category><category><name>Artistic &#x2022; Passive</name><statbonuses>Em+In+Pr</statbonuses><progression>Standard</progression>
+                        <skill><name>Music</name></skill>
+                        <skill><name>Painting</name></skill>
+                        <skill><name>Poetry</name></skill>
+                        <skill><name>Sculpting</name></skill>
+                </category>
+                <category>
+                        <name>Athletic &#x2022; Brawn</name>
+                        <statbonuses>St+Co+Ag</statbonuses>
+                        <progression>Standard</progression>
+                        <skillgroup>
+                                <name>Athletic Games - Brawn (By Game)</name>
+                                <skill><name>Arm wrestling</name></skill>
+                                <skill><name>Caber Toss</name></skill>
+                        </skillgroup>
+                        <skill><name>Jumping</name></skill>
+                        <skill><name>Power-Striking</name></skill>
+                        <skill><name>Power Throwing</name></skill>
+                        <skill><name>Weight Lifting</name></skill>
+                </category>
+                <category>
+                        <name>Athletic &#x2022; Endurance</name>
+                        <statbonuses>Co+Ag+St</statbonuses>
+                        <progression>Standard</progression>
+                        <skillgroup>
+                                <name>Athletic Games - Endurance (By Game)</name>
+                                <skill><name>Cricket</name></skill>
+                        </skillgroup>
+                        <skill><name>Distance Running</name></skill>
+                        <skill><name>Rowing</name></skill>
+                        <skill><name>Scaling</name></skill>
+                        <skill><name>Sprinting</name></skill>
+                        <skill><name>Swimming</name></skill>
+                </category>
+                <category>
+                        <name>Athletic &#x2022; Gymnastics</name>
+                        <statbonuses>Ag+Qu+Ag</statbonuses>
+                        <progression>Standard</progression>
+                        <skill><name>Acrobatics</name></skill>
+                        <skillgroup>
+                                <name>Athletic Games - Gymnastic (By Game)</name>
+                                <skill><name>Vaulting</name></skill>
+                        </skillgroup>
+                        <skill><name>Climbing</name></skill>
+                        <skill><name>Contortions</name></skill>
+                        <skill><name>Diving</name></skill>
+                        <skill><name>Flying/Gliding</name></skill>
+                        <skill><name>Juggling</name></skill>
+                        <skill><name>Pole-Vaulting</name></skill>
+                        <skill><name>Rappeling</name></skill>
+                        <skill><name>Skating</name></skill>
+                        <skill><name>Skiing</name></skill>
+                        <skill><name>Stilt Walking</name></skill>
+                        <skill><name>Surfing</name></skill>
+                        <skill><name>Tightrope-walking</name></skill>
+                        <skill><name>Tumbling</name></skill>
+                </category><category><name>Awareness &#x2022; Perceptions</name><statbonuses>In+SD+In</statbonuses><progression>Limited</progression>
+                        <skill><name>Alertness</name></skill>
+                        <skill><name>Sense Ambush</name></skill>
+                </category><category><name>Awareness &#x2022; Searching</name><statbonuses>In+Re+SD</statbonuses><progression>Standard</progression>
+                        <skill><name>Detect Traps</name></skill>
+                        <skill><name>Lie Perception</name></skill>
+                        <skill><name>Locate Hidden</name></skill>
+                        <skill><name>Observation</name></skill>
+                        <skill><name>Poison Perception</name></skill>
+                        <skill><name>Reading Tracks</name></skill>
+                        <skill><name>Surveillance</name></skill>
+                        <skill><name>Tracking</name></skill>
+                </category><category><name>Awareness &#x2022; Senses</name><statbonuses>In+SD+In</statbonuses><progression>Standard</progression>
+                        <skill><name>Direction Sense</name></skill>
+                        <skill>
+                                <name>Reality Awareness</name>
+                                <class>Restricted</class>
+                        </skill>
+                        <skillgroup>
+                                <name>Situational Awareness (By Situation)</name>
+                                <skill><name>Combat</name></skill>
+                                <skill><name>Familiar</name></skill>
+                                <skill><name>Feinting</name></skill>
+                                <skill><name>Scouting</name></skill>
+                                <skill><name>Sleep</name></skill>
+                                <skill><name>Urban</name></skill>
+                        </skillgroup>
+                        <skill>
+                                <name>Spatial Location Awareness</name>
+                                <class>Restricted</class>
+                        </skill>
+                        <skillgroup>
+                                <name>Sense Awareness (By Sense)</name>
+                                <skill><name>Sight</name></skill>
+                                <skill><name>Hearing</name></skill>
+                                <skill><name>Smell</name></skill>
+                                <skill><name>Taste</name></skill>
+                                <skill><name>Touch</name></skill>
+                                <skill><name>Other</name></skill>
+                        </skillgroup>
+                        <skill><name>Time Sense</name></skill>
+                </category>
+                <category>
+                    <name>Body Development</name>
+                    <statbonuses>Co+SD+Co</statbonuses>
+                    <progression>Racial</progression>
+                    <skill>
+                        <name>Body Development</name>
+                    </skill>
+                </category>
+                <category>
+                        <name>Combat Maneuvers</name>
+                        <statbonuses>Ag+Qu+SD</statbonuses>
+                        <progression>Combined</progression>
+                        <skill>
+                                <name>Adrenal Deflecting</name>
+                                <class>Restricted</class>
+                        </skill>
+                        <skill>
+                                <name>Blind Fighting</name>
+                                <class>Restricted</class>
+                        </skill>
+                        <skill>
+                                <name>Missile Deflecting</name>
+                                <class>Restricted</class>        
+                        </skill>
+                        <skill><name>Mounted Combat</name></skill>
+                        <skill><name>Quickdraw</name></skill>
+                        <skillgroup>
+                                <name>Reverse Stroke (By Weapon Category)</name>
+                                <skill><name>1H Concussion</name></skill>
+                                <skill><name>1H Edged</name></skill>
+                                <skill><name>2 Handed</name></skill>
+                                <skill><name>Pole Arms</name></skill>
+                        </skillgroup>
+                        <skill><name>Subdual</name></skill>
+                        <skill><name>Swashbuckling</name></skill>
+                        <skill>
+                                <name>Tumbling Evasion</name>
+                                <class>Restricted</class>
+                        </skill>
+                        <skillgroup>
+                                <name>Two-weapon Fighting (By Weapon Combination)</name>
+                                <skill><name>A combination</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Weapon Style - Advanced (By Style)[R]</name>
+                                <skill><name>A style (cost)</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Weapon Style - Basic (By Style)</name>
+                                <skill><name>A style (cost)</name></skill>
+                        </skillgroup>
+                </category>
+                <category>
+                        <name>Communications</name>
+                        <statbonuses>Re+Me+Em</statbonuses>
+                        <progression>Standard</progression>
+                        <skillgroup>
+                                <name>Language Spoken</name>
+                                <skill><name>Common</name></skill>
+                                <skill><name>Elvish</name></skill>
+                                <skill><name>Dwarvish</name></skill>
+                                <skill><name>Halfling</name></skill>
+                                <skill><name>Orc</name></skill>
+                                <skill><name>Black speech</name></skill>
+                                <skill><name>North speech</name></skill>
+                                <skill><name>South speech</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Language Written</name>
+                                <skill><name>Common</name></skill>
+                                <skill><name>Elvish</name></skill>
+                                <skill><name>Dwarvish</name></skill>
+                                <skill><name>Halfling</name></skill>
+                                <skill><name>Orc</name></skill>
+                                <skill><name>Black speech</name></skill>
+                                <skill><name>North speech</name></skill>
+                                <skill><name>South speech</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Dead Language Spoken</name>
+                                <skill><name>A dead language</name><class>Restricted</class></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Dead Language Written</name>
+                                <skill><name>A dead language</name><class>Restricted</class></skill>
+                        </skillgroup>
+                        <skill><name>Lip Reading</name></skill>
+                        <skillgroup>
+                                <name>Magical Language</name><class>Restricted</class>
+                                <skill><name>A magical language</name></skill>
+                        </skillgroup>
+                        <skill><name>Signalling</name></skill>
+                </category>
+                <category>
+                        <name>Crafts</name>
+                        <statbonuses>Ag+Me+SD</statbonuses>
+                        <progression>Combined</progression>
+                        <skill><name>Baking</name></skill>
+                        <skill><name>Drafting</name></skill>
+                        <skill><name>Cooking</name></skill>
+                        <skill><name>Fletching</name></skill>
+                        <skill><name>Horticulture</name></skill>
+                        <skill><name>Leather Crafts</name></skill>
+                        <skill><name>Metal-crafts</name></skill>
+                        <skill><name>Rope Mastery</name></skill>
+                        <skill><name>Scribing</name></skill>
+                        <skill><name>Service</name></skill>
+                        <skill><name>Sewing/Weaving</name></skill>
+                        <skill><name>Skinning</name></skill>
+                        <skill><name>Stone-crafts</name></skill>
+                        <skill><name>Trapping</name></skill>
+                        <skill><name>Wood-crafts</name></skill>
+                </category><category><name>Directed Spells</name><statbonuses>Ag+SD+Ag</statbonuses><progression>Standard</progression>
+                        <skill><name>Fire Bolt</name></skill>
+                        <skill><name>Ice Bolt</name></skill>
+                        <skill><name>Lightning Bolt</name></skill>
+                        <skill><name>Mana Bolt</name></skill>
+                        <skill><name>Nether Bolt</name></skill>
+                        <skill><name>Plasma Bolt</name></skill>
+                        <skill><name>Shock Bolt</name></skill>
+                        <skill><name>Void Bolt</name></skill>
+                        <skill><name>Water Bolt</name></skill>
+                </category><category><name>Influence</name><statbonuses>Pr+Em+In</statbonuses><progression>Standard</progression>
+                        <skill><name>Bribery</name></skill>
+                        <skill><name>Diplomacy</name></skill>
+                        <skill><name>Duping</name></skill>
+                        <skill><name>Interrogation</name></skill>
+                        <skill><name>Leadership</name></skill>
+                        <skill><name>Propaganda</name></skill>
+                        <skill><name>Public Speaking</name></skill>
+                        <skill><name>Seduction</name></skill>
+                        <skill><name>Teaching</name></skill>
+                        <skill><name>Trading</name></skill>
+                </category><category><name>Lore &#x2022; General</name><statbonuses>Me+Re+Me</statbonuses><progression>Standard</progression>
+                        <skillgroup>
+                                <name>Culture Lore (By Culture/Race)</name>
+                                <skill><name>Common men</name></skill>
+                                <skill><name>Mixed men</name></skill>
+                                <skill><name>High men</name></skill>
+                                <skill><name>Wood elves</name></skill>
+                                <skill><name>Grey elves</name></skill>
+                                <skill><name>High elves</name></skill>
+                                <skill><name>Dwarfs</name></skill>
+                                <skill><name>Halflings</name></skill>
+                                <skill><name>Common orcs</name></skill>
+                                <skill><name>Greater orcs</name></skill>
+                                <skill><name>Half-orcs</name></skill>
+                        </skillgroup>
+                        <skill><name>Fauna Lore</name></skill>
+                        <skill><name>Flora Lore</name></skill>
+                        <skill><name>Heraldry</name></skill>
+                        <skillgroup>
+                                <name>History (By Region/Group/Planet/Society/City)</name>
+                                <skill><name>World History</name></skill>
+                        </skillgroup>
+                        <skill><name>Martial Arts Style Lore</name></skill>
+                        <skill><name>Philosophy</name></skill>
+                        <skillgroup><name>Region Lore (By Region)</name>
+                                <skill><name>A region</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Religion (By Pantheon/Religion)</name>
+                                <skill><name>A religion</name></skill>
+                        </skillgroup>
+                        <skill><name>Weapon Style Lore</name></skill>
+                </category><category><name>Lore &#x2022; Magical</name><statbonuses>Me+Re+Me</statbonuses><progression>Standard</progression>
+                        <skill><name>Artifact Lore</name></skill>
+                        <skill><name>Circle Lore</name></skill>
+                        <skillgroup>
+                                <name>Divination Lore (By Divination Method)</name>
+                                <skill><name>Tarot</name></skill>
+                                <skill><name>Runes</name></skill>
+                        </skillgroup>
+                        <skill><name>Dream Lore</name></skill>
+                        <skill><name>Dreamworld Lore</name></skill>
+                        <skill><name>Glyph Lore</name></skill>
+                        <skill><name>Planar Lore</name></skill>
+                        <skill><name>Spell Lore</name></skill>
+                        <skill><name>Symbol Lore</name></skill>
+                        <skill><name>Undead Lore</name></skill>
+                        <skill><name>Warding Lore</name></skill>
+                </category><category><name>Lore &#x2022; Obscure</name><statbonuses>Me+Re+Me</statbonuses><progression>Standard</progression>
+                        <skill><name>Demon Lore (Void)</name></skill>
+                        <skill><name>Demon Lore (Essence)</name></skill>
+                        <skill><name>Demon Lore (Outer Void)</name></skill>
+                        <skill><name>Dragon Lore</name></skill>
+                        <skill><name>Faerie Lore</name></skill>
+                        <skillgroup>
+                                <name>Vital Points Lore (By General Type)</name>
+                                <skill><name>Humanoid Vital Points</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Xeno-Lores (By Alien Skill)</name>
+                                <skill><name>Elemental Fishing</name></skill>
+                        </skillgroup>
+                </category>
+                <category>
+                        <name>Lore &#x2022; Technical</name>
+                        <statbonuses>Me+Re+Me</statbonuses>
+                        <progression>Standard</progression>
+                        <skill><name>Corpus Lore</name></skill>
+                        <skill><name>Herb Lore</name></skill>
+                        <skill><name>Lock Lore</name></skill>
+                        <skill><name>Metal Lore</name></skill>
+                        <skill><name>Poison Lore</name></skill>
+                        <skill><name>Stone Lore</name></skill>
+                </category>
+                <category>
+                        <name>Martial Arts Combat Maneuvers</name>
+                        <statbonuses>Ag+Qu+SD</statbonuses>
+                        <progression>Combined</progression>
+                        <skill><name>Adrenal Deflecting</name></skill>
+                        <skill><name>Adrenal Evasion</name></skill>
+                        <skill><name>Blind Fighting</name></skill>
+                        <skillgroup>
+                                <name>Martial Arts Style - Advanced (By Style)[R]</name>
+                                <skill><name>A matial art (cost)</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Martial Arts Style - Basic (By Style)</name>
+                                <skill><name>A matial art (cost)</name></skill>
+                        </skillgroup>
+                </category>
+                        <category>
+                        <name>Martial Arts &#x2022; Strikes</name>
+                        <statbonuses>St+Ag+St</statbonuses>
+                        <progression>Standard</progression>
+                        <skill><name>Boxing</name></skill>
+                        <skill><name>Martial Arts Striking</name></skill>
+                        <skill><name>Nerve Strikes</name></skill>
+                        <skill><name>Tackling</name></skill>
+                </category><category><name>Martial Arts &#x2022; Sweeps</name><statbonuses>Ag+St+Ag</statbonuses><progression>Standard</progression>
+                        <skill><name>Blocking</name></skill>
+                        <skill><name>Locking Holds</name></skill>
+                        <skill><name>Martial Arts Sweeps</name></skill>
+                        <skill><name>Wrestling</name></skill>
+                </category><category><name>Outdoor &#x2022; Animal</name><statbonuses>Em+Ag+Em</statbonuses><progression>Standard</progression>
+                        <skillgroup>
+                                <name>Animal Handling (By Animal Type)</name>
+                                <skill><name>Equine</name></skill>
+                                <skill><name>Feline</name></skill>
+                                <skill><name>Canine</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Animal Healing (By Animal Type)</name>
+                                <skill><name>Equine</name></skill>
+                                <skill><name>Feline</name></skill>
+                                <skill><name>Canine</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Animal Mastery (By Animal Type)[R]</name>
+                                <skill><name>Equine</name></skill>
+                                <skill><name>Feline</name></skill>
+                                <skill><name>Canine</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Animal Training (By Animal Type)</name>
+                                <skill><name>Equine</name></skill>
+                                <skill><name>Feline</name></skill>
+                                <skill><name>Canine</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Animal Driving (By Animal Type)</name>
+                                <skill><name>Equine</name></skill>
+                                <skill><name>Feline</name></skill>
+                                <skill><name>Canine</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Familiar Mastery (By Familiar)</name>
+                                <skill><name>Spot</name></skill> 
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Herding (By Animal Type)</name>
+                                <skill><name>Equine</name></skill>
+                                <skill><name>Bovine</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Riding (By Mount Type)</name>
+                                <skill><name>Equine</name></skill>
+                                <skill><name>Camal</name></skill>
+                        </skillgroup>
+                </category>
+                <category>
+                        <name>Outdoor &#x2022; Environmental</name>
+                        <statbonuses>SD+In+Me</statbonuses>
+                        <progression>Standard</progression>
+                        <skill><name>Caving</name></skill>
+                        <skill><name>Foraging</name></skill>
+                        <skill><name>Hunting</name></skill>
+                        <skill><name>Stargazing</name></skill>
+                        <skillgroup>
+                                <name>Survival (By Environment)</name>
+                                <skill><name>Temperate Forest</name></skill>
+                                <skill><name>Jungle</name></skill>
+                                <skill><name>Mountain</name></skill>
+                        </skillgroup>
+                        <skill><name>Weather Watching</name></skill>
+                </category>
+                <category><name>Power Awareness</name><statbonuses>Em+In+Pr</statbonuses><progression>Standard</progression>
+                        <skill><name>Attunement</name></skill>
+                        <skillgroup>
+                                <name>Divination (By divination method)</name>
+                                <skill><name>Tarot</name></skill>
+                                <skill><name>Runes</name></skill>
+                        </skillgroup>
+                        <skill><name>Power Perception</name><class>Restricted</class></skill>
+                        <skill><name>Read Runes</name></skill>
+                </category>
+                <category>
+                        <name>Power Manipulation</name>
+                        <statbonuses>Em+In+Pr</statbonuses>
+                        <progression>Combined</progression>
+                        <skill><name>Channeling</name></skill>
+                        <skill><name>Mental Control - Assault</name></skill>
+                        <skill><name>Mental Control - Defence</name></skill>
+                        <skillgroup>
+                                <name>Magic Ritual</name>
+                                <skill><name>Ess: Charm</name></skill>
+                                <skill><name>Ess: Control</name></skill>
+                                <skill><name>Ess: Creation</name></skill>
+                                <skill><name>Ess: Dark</name></skill>
+                                <skill><name>Ess: Detection</name></skill>
+                                <skill><name>Ess: Earth</name></skill>
+                                <skill><name>Ess: Enhancement</name></skill>
+                                <skill><name>Ess: Enchant - Perm</name></skill>
+                                <skill><name>Ess: Enchant - Var</name></skill>
+                                <skill><name>Ess: Inorganic</name></skill>
+                                <skill><name>Ess: Light</name></skill>
+                                <skill><name>Ess: Movement</name></skill>
+                                <skill><name>Ess: Obfuscation</name></skill>
+                                <skill><name>Ess: Organic</name></skill>
+                                <skill><name>Ess: Personal</name></skill>
+                                <skill><name>Ess: Protection</name></skill>
+                                <skill><name>Ess: Scrying</name></skill>
+                                <skill><name>Ess: Summons</name></skill>
+                                <skill><name>Ess: Water</name></skill>
+                                <skill><name>Ess: Wind</name></skill>
+                                <skill><name>Ment: Self</name></skill>
+                                <skill><name>Ment: Other Intelligent</name></skill>
+                                <skill><name>Ment: Animals</name></skill>
+                                <skill><name>Ment: Inanimate</name></skill>
+                                <skill><name>Ment: Surroundings</name></skill>
+                        </skillgroup>
+                        <skill><name>Spell Artistry</name></skill>
+                        <skillgroup>
+                                <name>Spell Mastery (By Spell List)</name>
+                                <skill><name>Repulsions</name></skill>
+                        </skillgroup>
+                        <skill><name>Spell Trickery</name></skill>
+                        <skill><name>Summoning</name></skill>
+                        <skill><name>Targeting</name></skill>
+                        <skill><name>Transcend Armor</name><class>Restricted</class></skill>
+                </category>
+                <category>
+                        <name>Power Point Development</name>
+                        <statbonuses>realm</statbonuses>
+                        <progression>R</progression>
+                        <skill><name>Power Point Development</name></skill>
+                </category>
+                <category>
+                        <name>Science/Analytic &#x2022; Basic</name>
+                        <statbonuses>Re+Me+Re</statbonuses>
+                        <progression>Standard</progression>
+                        <skill><name>Basic Maths</name></skill>
+                        <skill><name>Research</name></skill>
+                </category>
+                <category>
+                        <name>Science/Analytic &#x2022; Specialised</name>
+                        <statbonuses>Re+Me+Re</statbonuses>
+                        <progression>Combined</progression>
+                        <skill><name>Advanced Math</name></skill>
+                        <skillgroup>
+                                <name>Anthropology (By Race/Culture)</name>
+                                <skill><name>Rhakaan</name></skill>
+                        </skillgroup>
+                        <skill><name>Alchemy</name></skill>
+                        <skill><name>Astronomy</name></skill>
+                        <skill><name>Biochemistry</name></skill>
+                        <skillgroup>
+                                <name>Psychology (By Race)</name>
+                                <skill><name>Nymph</name></skill>
+                        </skillgroup>
+                </category>
+                <category><name>Self Control</name><statbonuses>SD+Pr+SD</statbonuses><progression>Standard</progression>
+                        <skill><name>Adrenal Balance</name></skill>
+                        <skill><name>Adrenal Concentration</name></skill>
+                        <skill><name>Adrenal Landing</name></skill>
+                        <skill><name>Adrenal Leaping</name></skill>
+                        <skillgroup>
+                                <name>Adrenal Quickdraw (By Weapon type)</name>
+                                <skill><name>1H Concussion</name></skill>
+                                <skill><name>1H Edged</name></skill>
+                                <skill><name>2 Handed</name></skill>
+                                <skill><name>Pole Arms</name></skill>
+                        </skillgroup>
+                        <skill><name>Adrenal Speed</name></skill>
+                        <skill><name>Adrenal Stabilisation</name><class>Restricted</class></skill>
+                        <skill><name>Adrenal Strength</name></skill>
+                        <skill><name>Cleansing Trance</name><class>Restricted</class></skill>
+                        <skill><name>Control Lycanthropy</name><class>Restricted</class></skill>
+                        <skill><name>Death Trance</name><class>Restricted</class></skill>
+                        <skill><name>Dream Control</name></skill>
+                        <skill><name>Dreamworld Control</name></skill>
+                        <skill><name>Frenzy</name></skill>
+                        <skill><name>Healing Trance</name></skill>
+                        <skill><name>Meditation</name></skill>
+                        <skill><name>Mnemonics</name></skill>
+                        <skill><name>Sleep Trance</name></skill>
+                        <skill><name>Spell Concentration</name></skill>
+                        <skill><name>Stunned Manoeuvring</name></skill>
+                </category><category><name>Special Attacks</name><statbonuses>St+Ag+SD</statbonuses><progression>Combined</progression>
+                        <skill><name>Brawling</name></skill>
+                        <skillgroup>
+                                <name>Disarm Foe - Armed</name>
+                                <skill><name>1H Concussion</name></skill>
+                                <skill><name>1H Edged</name></skill>
+                                <skill><name>2 Handed</name></skill>
+                                <skill><name>Pole Arms</name></skill>
+                        </skillgroup>
+                        
+                        <skillgroup><name>Disarm Foe - Unarmed</name>
+                                <skill><name>1H Concussion</name></skill>
+                                <skill><name>1H Edged</name></skill>
+                                <skill><name>2 Handed</name></skill>
+                                <skill><name>Pole Arms</name></skill>
+                        </skillgroup>
+                        <skill><name>Feint - Armed</name></skill>
+                        <skill><name>Feint - Unarmed</name></skill>
+                        <skill><name>Jousting</name></skill>
+                        <skillgroup>
+                                <name>Racial Attack (By Natural Racial Attack)[R]</name>
+                                <skill><name>Claw</name></skill>
+                                <skill><name>Horn</name></skill>
+                        </skillgroup>
+                </category><category><name>Special Defences</name><statbonuses>none</statbonuses><progression>Combined</progression>
+                        <skill><name>Adrenal Defence</name></skill>
+                        <skill><name>Adrenal Toughness</name><class>Restricted</class></skill>
+                        <skill><name>Adrenal Resistance</name><class>Restricted</class></skill>
+                </category><category><name>Spells &#x2022; Open Arcane</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Arcane Barriers</name></skill>
+                        <skill><name>Arcane Forces</name></skill>
+                        <skill><name>Arcane Senses</name></skill>
+                        <skill><name>Arcane Shield</name></skill>
+                        <skill><name>Arcane Signs</name></skill>
+                        <skill><name>Detection Law</name></skill>
+                        <skill><name>Power Manipulation</name></skill>
+                        <skill><name>Realm Lore</name></skill>
+                        <skill><name>Spell Inhibitions</name></skill>
+                        <skill><name>Spell Triggers</name></skill>
+                </category><category><name>Spells &#x2022; Closed Arcane</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Arcane Healing</name></skill>
+                        <skill><name>Arcane Summons</name></skill>
+                        <skill><name>Arcane Missions</name></skill>
+                        <skill><name>Aura Lore</name></skill>
+                        <skill><name>Bladerunes</name></skill>
+                        <skill><name>Fire Manipulation</name></skill>
+                        <skill><name>Gargoyle Mastery</name></skill>
+                        <skill><name>Light Manipulation</name></skill>
+                        <skill><name>Nature Manipulation</name></skill>
+                        <skill><name>Power Mastery</name></skill>
+                        <skill><name>Shifting Law</name></skill>
+                </category><category><name>Spells &#x2022; Open Essence</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Air Mastery</name></skill>
+                        <skill><name>Allurement</name></skill>
+                        <skill><name>Delving Ways</name></skill>
+                        <skill><name>Detecting Ways</name></skill>
+                        <skill><name>Elemental Shields</name></skill>
+                        <skill><name>Essence Hand</name></skill>
+                        <skill><name>Essence Perceptions</name></skill>
+                        <skill><name>Fey Conjury</name></skill>
+                        <skill><name>Lesser Illusions</name></skill>
+                        <skill><name>Physical Enhancement</name></skill>
+                        <skill><name>Rune Mastery</name></skill>
+                        <skill><name>Shadow Mastery</name></skill>
+                        <skill><name>Sound Mastery</name></skill>
+                        <skill><name>Spell Wall</name></skill>
+                        <skill><name>Sustain Body</name></skill>
+                        <skill><name>Unbarring Ways</name></skill>
+                </category><category><name>Spells &#x2022; Closed Essence</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Circle Mastery</name></skill>
+                        <skill><name>Counterspells</name></skill>
+                        <skill><name>Dispelling Ways</name></skill>
+                        <skill><name>Earth Mastery</name></skill>
+                        <skill><name>Elemental Summons</name></skill>
+                        <skill><name>Familiar Mastery</name></skill>
+                        <skill><name>Fire Mastery</name></skill>
+                        <skill><name>Gate Mastery</name></skill>
+                        <skill><name>Invisible Ways</name></skill>
+                        <skill><name>Light Mastery</name></skill>
+                        <skill><name>Living Change</name></skill>
+                        <skill><name>Lofty Bridge</name></skill>
+                        <skill><name>Magic Staff</name></skill>
+                        <skill><name>Matter Shaping</name></skill>
+                        <skill><name>Mechanism's Way</name></skill>
+                        <skill><name>Rapid Ways</name></skill>
+                        <skill><name>Shield Mastery</name></skill>
+                        <skill><name>Spell Enhancement</name></skill>
+                        <skill><name>Spell Reins</name></skill>
+                        <skill><name>Spirit Mastery</name></skill>
+                        <skill><name>Water Mastery</name></skill>
+                </category><category><name>Spells &#x2022; Essence TP</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Arachnemancy</name><class>Restricted</class></skill>
+                        <skill><name>Brewing Lore</name><class>Restricted</class></skill>
+                        <skill><name>Corpist Casting</name><class>Restricted</class></skill>
+                        <skill><name>Crystalist Casting</name><class>Restricted</class></skill>
+                        <skill><name>Glass/Ceramic Crafting</name><class>Restricted</class></skill>
+                        <skill><name>Guildcraft Mastery</name><class>Restricted</class></skill>
+                        <skill><name>Hearth Magic</name><class>Restricted</class></skill>
+                        <skill><name>Herbalist Casting</name><class>Restricted</class></skill>
+                        <skill><name>Item Enchantments</name><class>Restricted</class></skill>
+                        <skill><name>Magical Ropes</name><class>Restricted</class></skill>
+                        <skill><name>Mending Ways</name><class>Restricted</class></skill>
+                        <skill><name>Metal Crafting</name><class>Restricted</class></skill>
+                        <skill><name>Mirror Magic</name><class>Restricted</class></skill>
+                        <skill><name>Nomenist Casting</name><class>Restricted</class></skill>
+                        <skill><name>Ocean Law</name><class>Restricted</class></skill>
+                        <skill><name>Predictions</name><class>Restricted</class></skill>
+                        <skill><name>Stone Crafting</name><class>Restricted</class></skill>
+                        <skill><name>Structure Wardings</name><class>Restricted</class></skill>
+                        <skill><name>Traveller's Ways</name><class>Restricted</class></skill>
+                        <skill><name>Wood Crafting</name><class>Restricted</class></skill>
+                </category><category><name>Spells &#x2022; Open Channeling</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Barrier Law</name></skill>
+                        <skill><name>Concussion's Ways</name></skill>
+                        <skill><name>Detection Mastery</name></skill>
+                        <skill><name>Light's Way</name></skill>
+                        <skill><name>Lofty Movements</name></skill>
+                        <skill><name>Nature's Ways</name></skill>
+                        <skill><name>Purifications</name></skill>
+                        <skill><name>Sound's Ways</name></skill>
+                        <skill><name>Spell Defence</name></skill>
+                        <skill><name>Weather Ways</name></skill>
+                </category><category><name>Spells &#x2022; Closed Channeling</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Blood Law</name></skill>
+                        <skill><name>Bone Law</name></skill>
+                        <skill><name>Calm Spirits</name></skill>
+                        <skill><name>Creations</name></skill>
+                        <skill><name>Locating Ways</name></skill>
+                        <skill><name>Lore</name></skill>
+                        <skill><name>Muscle Law</name></skill>
+                        <skill><name>Nerve Law</name></skill>
+                        <skill><name>Organ Law</name></skill>
+                        <skill><name>Sacred Grounds</name></skill>
+                        <skill><name>Symbolic Ways</name></skill>
+                </category><category><name>Spells &#x2022; Channeling TP</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Perimeter Wardings</name><class>Restricted</class></skill>
+                </category><category><name>Spells &#x2022; Open Mentalism</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Anticipations</name></skill>
+                        <skill><name>Attack Avoidance</name></skill>
+                        <skill><name>Brilliance</name></skill>
+                        <skill><name>Cloaking</name></skill>
+                        <skill><name>Damage Resistance</name></skill>
+                        <skill><name>Delving</name></skill>
+                        <skill><name>Detections</name></skill>
+                        <skill><name>Illusions</name></skill>
+                        <skill><name>Self Healing</name></skill>
+                        <skill><name>Spell Resistance</name></skill>
+                </category><category><name>Spells &#x2022; Closed Mentalism</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Gas Manipulation</name></skill>
+                        <skill><name>Liquid Manipulation</name></skill>
+                        <skill><name>Mind Mastery</name></skill>
+                        <skill><name>Mind's Door</name></skill>
+                        <skill><name>Movement</name></skill>
+                        <skill><name>Sense Mastery</name></skill>
+                        <skill><name>Shifting</name></skill>
+                        <skill><name>Solid Manipulation</name></skill>
+                        <skill><name>Speed</name></skill>
+                        <skill><name>Telekinesis</name></skill>
+                </category><category><name>Spells &#x2022; Mentalism TP</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Animal Bonding</name><class>Restricted</class></skill>
+                        <skill><name>Body Shifting</name><class>Restricted</class></skill>
+                        <skill><name>Charades</name><class>Restricted</class></skill>
+                        <skill><name>Dream Law</name><class>Restricted</class></skill>
+                        <skill><name>Dream Lore</name><class>Restricted</class></skill>
+                        <skill><name>Dream Travel</name><class>Restricted</class></skill>
+                        <skill><name>Houri's Beguilement</name><class>Restricted</class></skill>
+                        <skill><name>Houri's Kisses</name><class>Restricted</class></skill>
+                        <skill><name>Knowledge Mastery</name><class>Restricted</class></skill>
+                        <skill><name>Medical Law</name><class>Restricted</class></skill>
+                        <skill><name>Mind Shifting</name><class>Restricted</class></skill>
+                        <skill><name>Physics</name><class>Restricted</class></skill>
+                        <skill><name>Sailing Mastery</name><class>Restricted</class></skill>
+                        <skill><name>Seas Mastery</name><class>Restricted</class></skill>
+                </category><category><name>Spells &#x2022; Animist Channeling Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Animal Mastery</name></skill>
+                        <skill><name>Herb mastery</name></skill>
+                        <skill><name>Nature's Lore</name></skill>
+                        <skill><name>Nature's Move/Senses</name></skill>
+                        <skill><name>Nature's Protection</name></skill>
+                        <skill><name>Plant Mastery</name></skill>
+                </category><category><name>Spells &#x2022; Cleric Channeling Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Channels</name></skill>
+                        <skill><name>Communal Ways</name></skill>
+                        <skill><name>Life Mastery</name></skill>
+                        <skill><name>Protections</name></skill>
+                        <skill><name>Repulsions</name></skill>
+                        <skill><name>Summons</name></skill>
+                </category><category><name>Spells &#x2022; Illusionist Essence Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Feel-Taste-Smell</name></skill>
+                        <skill><name>Guises</name></skill>
+                        <skill><name>Illusion Mastery</name></skill>
+                        <skill><name>Light Molding</name></skill>
+                        <skill><name>Mind Sense Molding</name></skill>
+                        <skill><name>Sound Molding</name></skill>
+                </category><category><name>Spells &#x2022; Magician Essence Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Earth Law</name></skill>
+                        <skill><name>Fire Law</name></skill>
+                        <skill><name>Ice Law</name></skill>
+                        <skill><name>Light Law</name></skill>
+                        <skill><name>Water Law</name></skill>
+                        <skill><name>Wind Law</name></skill>
+                </category><category><name>Spells &#x2022; Lay Healer Mentalism Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Blood Mastery</name></skill>
+                        <skill><name>Bone Mastery</name></skill>
+                        <skill><name>Concussion Mastery</name></skill>
+                        <skill><name>Muscle Mastery</name></skill>
+                        <skill><name>Nerve/Organ Mastery</name></skill>
+                        <skill><name>Prosthetics</name></skill>
+                </category><category><name>Spells &#x2022; Mentalist Mentalism Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Mind Attack</name></skill>
+                        <skill><name>Mind Control</name></skill>
+                        <skill><name>Mind Merge</name></skill>
+                        <skill><name>Presence</name></skill>
+                        <skill><name>Sense Control</name></skill>
+                </category><category><name>Spells &#x2022; Arcanist Arcane Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Mana Law</name></skill>
+                        <skill><name>Power Focus</name></skill>
+                        <skill><name>Power's Master</name></skill>
+                        <skill><name>Spell Shaping</name></skill>
+                        <skill><name>Void Law</name></skill>
+                        <skill><name>Wards</name></skill>
+                </category><category><name>Spells &#x2022; Wizard Arcane Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Faith Breaker</name></skill>
+                        <skill><name>Mind Breaker</name></skill>
+                        <skill><name>Spell Bane</name></skill>
+                        <skill><name>Spell Coordination</name></skill>
+                        <skill><name>Spell Hand</name></skill>
+                        <skill><name>Spell Shield</name></skill>
+                </category><category><name>Spells &#x2022; Healer Mentalism-Channeling Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Blood Ways</name></skill>
+                        <skill><name>Bone Ways</name></skill>
+                        <skill><name>Cleansing</name></skill>
+                        <skill><name>Muscle Ways</name></skill>
+                        <skill><name>Organ Ways</name></skill>
+                        <skill><name>Surface Ways</name></skill>
+                </category><category><name>Spells &#x2022; Mystic Mentalism-Essence Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Confusing Ways</name></skill>
+                        <skill><name>Gas Alteration</name></skill>
+                        <skill><name>Hiding</name></skill>
+                        <skill><name>Liquid Alteration</name></skill>
+                        <skill><name>Mystical Change</name></skill>
+                        <skill><name>Solid Alteration</name></skill>
+                </category><category><name>Spells &#x2022; Sorcerer Channeling-Essence Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Flesh Destruction</name></skill>
+                        <skill><name>Fluid Destruction</name></skill>
+                        <skill><name>Gas Destruction</name></skill>
+                        <skill><name>Mind Destruction</name></skill>
+                        <skill><name>Solid Destruction</name></skill>
+                        <skill><name>Soul Destruction</name></skill>
+                </category><category><name>Spells &#x2022; Paladin Channeling Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Communion</name></skill>
+                        <skill><name>Exorcism</name></skill>
+                        <skill><name>Holy Arms</name></skill>
+                        <skill><name>Holy Healing</name></skill>
+                        <skill><name>Holy Shields</name></skill>
+                        <skill><name>Inspiring Ways</name></skill>
+                </category><category><name>Spells &#x2022; Ranger Channeling Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Inner Walls</name></skill>
+                        <skill><name>Moving Ways</name></skill>
+                        <skill><name>Nature's Guises</name></skill>
+                        <skill><name>Nature's Summons</name></skill>
+                        <skill><name>Nature's Way</name></skill>
+                        <skill><name>Path Mastery</name></skill>
+                </category><category><name>Spells &#x2022; Dabbler Essence Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Concealment Mastery</name></skill>
+                        <skill><name>Influences</name></skill>
+                        <skill><name>Mechanisms</name></skill>
+                        <skill><name>Movement Mastery</name></skill>
+                        <skill><name>Senses</name></skill>
+                        <skill><name>Thieving Law</name></skill>
+                </category><category><name>Spells &#x2022; Monk Essence Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Body Reins</name></skill>
+                        <skill><name>Body Renewal</name></skill>
+                        <skill><name>Evasions</name></skill>
+                        <skill><name>Mind Over Matter</name></skill>
+                        <skill><name>Monk's Bridge</name></skill>
+                        <skill><name>Monk's Sense</name></skill>
+                </category><category><name>Spells &#x2022; Bard Mentalism Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Controlling Songs</name></skill>
+                        <skill><name>Entertaining Ways</name></skill>
+                        <skill><name>Item Lore</name></skill>
+                        <skill><name>Lores</name></skill>
+                        <skill><name>Sound Control</name></skill>
+                        <skill><name>Sound Projection</name></skill>
+                </category><category><name>Spells &#x2022; Magent Mentalism Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Assassination Mastery</name></skill>
+                        <skill><name>Disguises</name></skill>
+                        <skill><name>Escapes</name></skill>
+                        <skill><name>Gathering Secrets</name></skill>
+                        <skill><name>Misdirections</name></skill>
+                        <skill><name>Poison Mastery</name></skill>
+                </category><category><name>Spells &#x2022; Chaotic Arcane Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Arcane Motions</name></skill>
+                        <skill><name>Arcane Senses</name></skill>
+                        <skill><name>Changes</name></skill>
+                        <skill><name>Hand of Chaos</name></skill>
+                </category><category><name>Spells &#x2022; Magehunter Arcane Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Amplifications</name></skill>
+                        <skill><name>Containing Ways</name></skill>
+                        <skill><name>Hunter's Call</name></skill>
+                        <skill><name>Power Lore</name></skill>
+                        <skill><name>Spell Protection</name></skill>
+                        <skill><name>Spell Tracker</name></skill>
+                </category><category><name>Spells &#x2022; Seer Mentalism Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Far Visions</name></skill>
+                        <skill><name>Future Visions</name></skill>
+                        <skill><name>Mind Visions</name></skill>
+                        <skill><name>Past Visions</name></skill>
+                        <skill><name>Vision Borrowing</name></skill>
+                        <skill><name>Vision Guard</name></skill>
+                </category><category><name>Spells &#x2022; Astrologer Mentalism-Channeling Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Far Voice</name></skill>
+                        <skill><name>Holy Vision</name></skill>
+                        <skill><name>Starlights</name></skill>
+                        <skill><name>Starlore</name></skill>
+                        <skill><name>Starsense</name></skill>
+                        <skill><name>Way of the Voice</name></skill>
+                </category><category><name>Spells &#x2022; Enchanter Mentalism-Essence Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Seeming Defences</name></skill>
+                        <skill><name>Seeming Enhancement</name></skill>
+                        <skill><name>Seeming Law</name></skill>
+                        <skill><name>Seeming Mastery</name></skill>
+                        <skill><name>Seeming Memories</name></skill>
+                        <skill><name>Seeming Projection</name></skill>
+                </category><category><name>Spells &#x2022; Armsmaster Mentalism Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Armoury Mastery</name></skill>
+                        <skill><name>Battle Law</name></skill>
+                        <skill><name>Fortress Law</name></skill>
+                        <skill><name>Martial Law</name></skill>
+                        <skill><name>Warriors Law</name></skill>
+                        <skill><name>Weapon Mastery</name></skill>
+                </category><category><name>Spells &#x2022; Runemage Essence Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Commanding Will</name></skill>
+                        <skill><name>Inscriptions</name></skill>
+                        <skill><name>Nomenclature Mastery</name></skill>
+                        <skill><name>Physical Manipulations</name></skill>
+                        <skill><name>Symbolism</name></skill>
+                        <skill><name>Warding ways</name></skill>
+                </category><category><name>Spells &#x2022; Mana Molder Essence Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Mana Barriers</name></skill>
+                        <skill><name>Mana Items</name></skill>
+                        <skill><name>Mana Molding</name></skill>
+                        <skill><name>Mana Servants</name></skill>
+                        <skill><name>Mana Warriors</name></skill>
+                        <skill><name>Glyphs</name></skill>
+                </category><category><name>Spells &#x2022; Warrior Mage Essence Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Combat Ways</name></skill>
+                        <skill><name>Combat Illusions</name></skill>
+                        <skill><name>Spell Defence</name></skill>
+                        <skill><name>Warrior's Enhancements</name></skill>
+                        <skill><name>Warrior's Weapon</name></skill>
+                        <skill><name>Will of the Warrior</name></skill>
+                </category><category><name>Spells &#x2022; Priest Channeling Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                </category><category><name>Spells &#x2022; Other Priest Channeling Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Aquatic Forms</name></skill>
+                        <skill><name>Banishments</name></skill>
+                        <skill><name>Battlefield Healing</name></skill>
+                        <skill><name>Ceremonies</name></skill>
+                        <skill><name>Chants</name></skill>
+                        <skill><name>Crusade</name></skill>
+                        <skill><name>Death mastery</name></skill>
+                        <skill><name>Divine Aura</name></skill>
+                        <skill><name>Divine Magic</name></skill>
+                        <skill><name>Faiths Shield</name></skill>
+                        <skill><name>Holy Defences</name></skill>
+                        <skill><name>Holy Discipline</name></skill>
+                        <skill><name>Holy Element</name></skill>
+                        <skill><name>Holy Symbol</name></skill>
+                        <skill><name>Holy Trances</name></skill>
+                        <skill><name>Holy Weapon</name></skill>
+                        <skill><name>Holy Wind</name></skill>
+                        <skill><name>Holy Wrath</name></skill>
+                        <skill><name>Horse Mastery</name></skill>
+                        <skill><name>Hunting Mastery</name></skill>
+                        <skill><name>Insect Mastery</name></skill>
+                        <skill><name>Land Forms</name></skill>
+                        <skill><name>Nature Domination</name></skill>
+                        <skill><name>Proselytising</name></skill>
+                        <skill><name>Serpent Law</name></skill>
+                        <skill><name>Spirit Domination</name></skill>
+                        <skill><name>Spirit Law</name></skill>
+                        <skill><name>Spiritual Visions</name></skill>
+                        <skill><name>Stone Mastery</name></skill>
+                        <skill><name>The Hunter</name></skill>
+                        <skill><name>Time Lore</name></skill>
+                        <skill><name>Tree Mastery</name></skill>
+                        <skill><name>Voodoo Magic</name></skill>
+                </category><category><name>Spells &#x2022; Summoner Channeling-Essence Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Animal Summons</name></skill>
+                        <skill><name>Planar Summons</name></skill>
+                        <skill><name>Summoning Bond</name></skill>
+                        <skill><name>Summoning Circles</name></skill>
+                        <skill><name>Summoning Mastery</name></skill>
+                        <skill><name>Telportals</name></skill>
+                </category><category><name>Spells &#x2022; Warlock Mentalism-Channeling Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Doom's Law</name></skill>
+                        <skill><name>Faith Destruction</name></skill>
+                        <skill><name>Look of Terror</name></skill>
+                        <skill><name>Revenging Law</name></skill>
+                        <skill><name>Transformations</name></skill>
+                        <skill><name>Wyrd Mastery</name></skill>
+                </category><category><name>Spells &#x2022; Mythic Channeling Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Holy Mission</name></skill>
+                        <skill><name>The Defender</name></skill>
+                        <skill><name>The Eye</name></skill>
+                        <skill><name>The Mask</name></skill>
+                        <skill><name>The Will</name></skill>
+                        <skill><name>Vengeance</name></skill>
+                </category><category><name>Spells &#x2022; Taoist Monk Essence Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Body Renewal</name></skill>
+                        <skill><name>Evasions</name></skill>
+                        <skill><name>Inner Eye</name></skill>
+                        <skill><name>Natures Forms</name></skill>
+                        <skill><name>Natures Harmony</name></skill>
+                        <skill><name>Monk's Bridge</name></skill>
+                </category><category><name>Spells &#x2022; Zen Monk Mentalism Base</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Body renewal</name></skill>
+                        <skill><name>Evasions</name></skill>
+                        <skill><name>Body Control</name></skill>
+                        <skill><name>Zen Awareness</name></skill>
+                        <skill><name>Mind's Shadow</name></skill>
+                        <skill><name>Zen Focus</name></skill>
+                </category><category><name>Spells &#x2022; Evil Essence</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Dark contacts</name></skill>
+                        <skill><name>Dark summons</name></skill>
+                        <skill><name>Darkness</name></skill>
+                        <skill><name>Entity Summons</name></skill>
+                        <skill><name>Matter Disruption</name></skill>
+                        <skill><name>Physical Erosion</name></skill>
+                </category><category><name>Spells &#x2022; Evil Channeling</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Curses</name></skill>
+                        <skill><name>Dark Channels</name></skill>
+                        <skill><name>Dark Lore</name></skill>
+                        <skill><name>Disease</name></skill>
+                        <skill><name>Necromancy</name></skill>
+                        <skill><name>Wounding</name></skill>
+                </category><category><name>Spells &#x2022; Evil Mentalism</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Mind Death</name></skill>
+                        <skill><name>Mind Disease</name></skill>
+                        <skill><name>Mind Domination</name></skill>
+                        <skill><name>Mind Erosion</name></skill>
+                        <skill><name>Mind Illusions</name></skill>
+                        <skill><name>Mind Subversion</name></skill>
+                </category><category><name>Spells &#x2022; Evil Arcane</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Dark Entities</name></skill>
+                        <skill><name>Power Leech</name></skill>
+                        <skill><name>Power Subversion</name></skill>
+                        <skill><name>Terror</name></skill>
+                </category><category><name>Spells &#x2022; Gnoll Racial</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Glyph Stones</name></skill>
+                        <skill><name>Shelter Gnoll</name></skill>
+                </category><category><name>Spells &#x2022; Grey Orc Racial</name><statbonuses>realm</statbonuses><progression>Limited</progression>
+                        <skill><name>Scar Unbinding</name></skill>
+                        <skill><name>Create Ulogat Toram</name></skill>
+                        <skill><name>Pale Dogs Curse</name></skill>
+                </category><category><name>Subterfuge &#x2022; Attack</name><statbonuses>Ag+SD+In</statbonuses><progression>Standard</progression>
+                        <skill><name>Ambush</name></skill>
+                        <skill><name>Silent Attack</name></skill>
+                </category><category><name>Subterfuge &#x2022; Mechanics</name><statbonuses>In+Ag+Re</statbonuses><progression>Standard</progression>
+                        <skill><name>Camouflage</name></skill>
+                        <skill><name>Disarming Traps</name></skill>
+                        <skill><name>Disguise</name></skill>
+                        <skill><name>Counterfeiting</name></skill>
+                        <skillgroup>
+                                <name>Forgery (By Type)</name>
+                                <skill><name>Documents</name></skill>
+                                <skill><name>Painting</name></skill>
+                                <skill><name>Currancy</name></skill>
+                        </skillgroup>
+                        <skill><name>Hiding Items</name></skill>
+                        <skill><name>Picking Locks</name></skill>
+                        <skill><name>Setting Traps</name></skill>
+                        <skill><name>Trap Building</name></skill>
+                        <skill><name>Using/Removing Poison</name></skill>
+                </category><category><name>Subterfuge &#x2022; Stealth</name><statbonuses>Ag+SD+In</statbonuses><progression>Standard</progression>
+                        <skill><name>Hiding</name></skill>
+                        <skill><name>Picking Pockets</name></skill>
+                        <skill><name>Stalking</name></skill>
+                        <skill><name>Trickery</name></skill>
+                </category><category><name>Tech/Trade &#x2022; General</name><statbonuses>Re+Me+SD</statbonuses><progression>Standard</progression>
+                        <skill><name>Begging</name></skill>
+                        <skill><name>First Aid</name></skill>
+                        <skill><name>Gambling</name></skill>
+                        <skill><name>Mapping</name></skill>
+                        <skill><name>Operating Equipment</name></skill>
+                        <skill><name>Orienteering</name></skill>
+                        <skill><name>Sailing</name></skill>
+                        <skill><name>Tactical Games</name></skill>
+                        <skill><name>Using Prepared Herbs</name></skill>
+                </category><category><name>Tech/Trade &#x2022; Professional</name><statbonuses>Re+Me+In</statbonuses><progression>Combined</progression> 
+                        <skill><name>Advertising</name></skill>
+                        <skill><name>Architecture</name></skill>
+                        <skillgroup>
+                                <name>Diagnostics (By Race)</name>
+                                <skill><name>General Diagnostics</name></skill>
+                        </skillgroup>
+                        <skill><name>Dowsing</name></skill>
+                        <skillgroup>
+                                <name>Engineering (By Discipline)</name>
+                                <skill><name>Computing</name></skill>
+                                <skill><name>Electrical</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Mechanition (By Machine Type)</name>
+                                <skill><name>Electrical</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Military Organisation (By armed Force)</name>
+                                <skill><name>Aerial Forces</name></skill>
+                                <skill><name>Groud Forces</name></skill>
+                                <skill><name>Marine Forces</name></skill>
+                                <skill><name>Naval Forces</name></skill>
+                        </skillgroup>
+                        <skillgroup><name>Mining (By Method)</name>
+                                <skill><name>Dredging</name></skill>
+                                <skill><name>Open Pit</name></skill>
+                                <skill><name>Quarry</name></skill>
+                                <skill><name>Tunneling</name></skill>
+                        </skillgroup>
+                        <skillgroup>
+                                <name>Sanity Healing (By Race)</name>
+                                <skill><name>Laan</name></skill>
+                        </skillgroup>
+                        <skill><name>Second Aid</name></skill>
+                        <skill><name>Surgery</name></skill>
+                </category><category><name>Tech/Trade &#x2022; Vocational</name><statbonuses>Re+Me+In</statbonuses><progression>Combined</progression>
+                        <skill><name>Administration</name></skill>
+                        <skill><name>Appraisal - General</name></skill>
+                        <skillgroup>
+                                <name>Boat Pilot (By Water Course)</name>
+                                <skill><name>Bay of Urulan</name></skill>
+                        </skillgroup>
+                        <skill><name>Cartography</name></skill>
+                        <skill><name>Evaluate Armor</name></skill>
+                        <skill><name>Evaluate Metal</name></skill>
+                        <skill><name>Evaluate Stone</name></skill>
+                        <skill><name>Evaluate Weapon</name></skill>
+                        <skill><name>Gimmickry</name></skill>
+                        <skill><name>Hypnosis</name></skill>
+                        <skill><name>Midwifery</name></skill>
+                        <skill><name>Navigation</name></skill>
+                        <skill><name>Preparing Herbs</name></skill>
+                        <skill><name>Siege Engineering</name></skill>
+                        <skillgroup>
+                                <name>Tactics (By Situation)</name>
+                                <skill><name>Battle Field</name></skill>
+                                <skill><name>Naval</name></skill>
+                                <skill><name>Sabotage</name></skill>
+                                <skill><name>Siege</name></skill>
+                                <skill><name>Small Unit</name></skill>
+                        </skillgroup>
+                </category><category><name>Urban</name><statbonuses>In+Pr+Re</statbonuses><progression>Standard</progression>
+                        <skill><name>Contacting</name></skill>
+                        <skill><name>Mingling</name></skill>
+                        <skill><name>Scrounging</name></skill>
+                        <skill><name>Streetwise</name></skill>
+                </category><category><name>Weapon &#x2022; 1H Concussion</name><statbonuses>St+Ag+St</statbonuses><progression>Standard</progression>
+                        <skill><name>9-Section Whip</name></skill>
+                        <skill><name>Cat-o'-nine tails</name></skill>
+                        <skill><name>Club</name></skill>
+                        <skill><name>Cudgel</name></skill>
+                        <skill><name>Fan</name></skill>
+                        <skill><name>Flute</name></skill>
+                        <skill><name>Hammer - Copper</name></skill>
+                        <skill><name>Jlite</name></skill>
+                        <skill><name>Jo</name></skill>
+                        <skill><name>Mace</name></skill>
+                        <skill><name>Morning Star</name></skill>
+                        <skill><name>Net - Fishing</name></skill>
+                        <skill><name>Net - Gladiator</name></skill>
+                        <skill><name>Nunchaku</name></skill>
+                        <skill><name>Shangkana</name></skill>
+                        <skill><name>Tonfa</name></skill>
+                        <skill><name>Typh</name></skill>
+                        <skill><name>War Hammer</name></skill>
+                        <skill><name>Whip</name></skill>
+                </category><category><name>Weapon &#x2022; 1H Edged</name><statbonuses>St+Ag+St</statbonuses><progression>Standard</progression>
+                        <skill><name>Axe</name></skill>
+                        <skill><name>Bastard Sword</name></skill>
+                        <skill><name>Baw</name></skill>
+                        <skill><name>Broadsword</name></skill>
+                        <skill><name>Butterfly Knife</name></skill>
+                        <skill><name>Cabis</name></skill>
+                        <skill><name>Chinese Sword</name></skill>
+                        <skill><name>Circular Knife</name></skill>
+                        <skill><name>Claymore</name></skill>
+                        <skill><name>Cutlass</name></skill>
+                        <skill><name>Dag</name></skill>
+                        <skill><name>Dagger</name></skill>
+                        <skill><name>Dirk</name></skill>
+                        <skill><name>Falchion</name></skill>
+                        <skill><name>Foil</name></skill>
+                        <skill><name>Handaxe</name></skill>
+                        <skill><name>Katana</name></skill>
+                        <skill><name>Kris</name></skill>
+                        <skill><name>Kynac</name></skill>
+                        <skill><name>Long Knife</name></skill>
+                        <skill><name>Long Kynac</name></skill>
+                        <skill><name>Main Gauche</name></skill>
+                        <skill><name>Nin-Ring Sword</name></skill>
+                        <skill><name>Rapier</name></skill>
+                        <skill><name>Sabre</name></skill>
+                        <skill><name>Sai</name></skill>
+                        <skill><name>Saren</name></skill>
+                        <skill><name>Scimitar</name></skill>
+                        <skill><name>Short Sword</name></skill>
+                        <skill><name>Spring Sword</name></skill>
+                        <skill><name>Tomahawk</name></skill>
+                        <skill><name>Willowleaf Knife</name></skill>
+                        <skill><name>Yarkbalka</name></skill>
+                </category><category><name>Weapon &#x2022; 2 Handed</name><statbonuses>St+Ag+St</statbonuses><progression>Standard</progression>
+                        <skill><name>Bastard Sword</name></skill>
+                        <skill><name>Battle Axe</name></skill>
+                        <skill><name>Flail</name></skill>
+                        <skill><name>Irgaak</name></skill>
+                        <skill><name>Jo</name></skill>
+                        <skill><name>Katana</name></skill>
+                        <skill><name>No-dachi</name></skill>
+                        <skill><name>Nunchaku</name></skill>
+                        <skill><name>Pick</name></skill>
+                        <skill><name>Quarterstaff</name></skill>
+                        <skill><name>Two-Hand Sword</name></skill>
+                        <skill><name>War Mattock</name></skill>
+                </category><category><name>Weapon &#x2022; Missile</name><statbonuses>Ag+St+Ag</statbonuses><progression>Standard</progression>
+                        <skill><name>Blowpipe</name></skill>
+                        <skill><name>Composite Bow</name></skill>
+                        <skill><name>Crossbow - Heavy</name></skill>
+                        <skill><name>Crossbox - Light</name></skill>
+                        <skill><name>Kalta</name></skill>
+                        <skill><name>Longbow</name></skill>
+                        <skill><name>Short Bow</name></skill>
+                        <skill><name>Sling</name></skill>
+                </category><category><name>Weapon &#x2022; Missile Artillery</name><statbonuses>In+Ag+Re</statbonuses><progression>Standard</progression>
+                        <skill><name>Ballista - Arrow - Light</name></skill>
+                        <skill><name>Ballista - Arrow - Heavy</name></skill>
+                        <skill><name>Ballista - Stone - Light</name></skill>
+                        <skill><name>Ballista - Stone - Heavy</name></skill>
+                        <skill><name>Catapult - Light</name></skill>
+                        <skill><name>Catapult - Medium</name></skill>
+                        <skill><name>Catapult - Heavy</name></skill>
+                        <skill><name>Trebuchet - Light</name></skill>
+                        <skill><name>Trebuchet - Medium</name></skill>
+                        <skill><name>Trebuchet - Heavy</name></skill>
+                </category><category><name>Weapon &#x2022; Pole Arms</name><statbonuses>St+Ag+St</statbonuses><progression>Standard</progression>
+                        <skill><name>Boar Spear</name></skill>
+                        <skill><name>Halbard</name></skill>
+                        <skill><name>Javelin</name></skill>
+                        <skill><name>Lance</name></skill>
+                        <skill><name>Pilum</name></skill>
+                        <skill><name>Spear</name></skill>
+                        <skill><name>Trident</name></skill>
+                </category><category><name>Weapon &#x2022; Thrown</name><statbonuses>Ag+St+Ag</statbonuses><progression>Standard</progression>
+                        <skill><name>Bola</name></skill>
+                        <skill><name>Boomerang</name></skill>
+                        <skill><name>Chakram</name></skill>
+                        <skill><name>Chegrim</name></skill>
+                        <skill><name>Dagger</name></skill>
+                        <skill><name>Harpoon</name></skill>
+                        <skill><name>Ikasha</name></skill>
+                        <skill><name>Ge</name></skill>
+                        <skill><name>Javelin</name></skill>
+                        <skill><name>Lasso</name></skill>
+                        <skill><name>Net - Fishing</name></skill>
+                        <skill><name>Net - Gladiator</name></skill>
+                        <skill><name>Pilum</name></skill>
+                        <skill><name>Shuriken</name></skill>
+                        <skill><name>Spear</name></skill>
+                        <skill><name>Tomahawk</name></skill>
+                </category>
+                </skills>
+</rmssgenre>
+
+
+<!-- vim:set shiftwidth=4: -->

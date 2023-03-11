@@ -1,0 +1,60 @@
+<!--#set var="TITLE" value="Nebula" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Nebula</h1>
+
+<h2>What is Nebula?</h2>
+
+<p>Nebula is an open source Rolemaster character creator and maintainer.
+The goal of nebula is to allow you to totally manage your Rolemaster
+characters electronically.  Additionally as part of nebula there are <a
+href="other.shtml">other</a> programs to help manage the various data files
+and produce content for distributing amongst the RM community.  
+</p>
+
+<p>You can find a list of features and bugs on the 
+<a href="features.shtml">features</a> page.  Details of the format for data
+files can be found in the XML directory - see <a href="../XML/">XML</a> for
+details.  A few screenshots are available in the 
+<a href="screenshots/">screenshots</a> directory.
+
+<p>Additionally some questions are answered in the <a href="faq.shtml">faq</a>
+
+<h2>Requirements</h2>
+
+<p>Currently Nebula has only been tested on a x86 Linux box and OpenBSD 3.2,
+previous versions ran on FreeBSD, and windows.  It uses Gnome libraries and
+is compatible with <a href="http://www.gnome.org">Gnome 2</a>.  It uses the
+<a href="http://www.gtk.org">GTK+ 2</a>.  Additionally <a
+href="http://xml.apache.org">Xalan</a>, sablotron or similar XSLT processor
+may be useful for the output.</p>
+
+<h2>Getting Nebula</h2>
+
+<p>Nebula is currently hosted on sourceforge.  The best bet is to get a copy
+of the cvs version from there.  Instructions on getting an anonymous cvs
+checkout are available on 
+<a href="http://sourceforge.net/cvs/?group_id=45771">sourceforge</a>.</p>
+
+<p>A tar.gz of the 0.2.0 release is also available.  It is downloadable in
+two parts.  The first is at:
+        <a href="downloads/nebula-0.2.0.tar.gz"
+                >downloads/nebula-0.2.0.tar.gz</a>.  This contains the
+source files and example characters for Nebula. The second is the data files
+which are at:
+        <A href="downloads/nebula-data.tar.gz"
+                >downloads/nebula-data.tar.gz</a>.  These files are
+copyright <a href="http://www.ironcrown.com">ICE</a> and can only be used if
+you own RMSS or RMFRP source books.</p>
+                
+<h2>See also...</h2>
+
+<p>If you are interested in getting involved, but aren't a unix C
+programmer, maybe one of our <a href="volunteers.shtml"
+>projects for volunteers</a> is of interest to you.</p>
+
+<p>We have <a href="links.shtml">links</a> to other pages related to this
+project too!  Go take a look</p>
+
+<!--#include virtual="/.include/tail.shtml" -->
+

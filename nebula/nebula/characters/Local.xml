@@ -1,0 +1,660 @@
+<?xml version='1.0'?>
+<!--?xml-stylesheet type="text/css" href="rmsscharacter.css"?-->
+
+<rmsscharacter id="neb-0001">
+
+<data>
+        <name>Evant</name>
+        <playername>Nash (nash@nash.nu)</playername>
+        <playeremail>nash@nash.nu</playeremail>
+        <experience>30000</experience>
+        <level>3</level>
+        <profession>Runemage</profession>
+</data>
+
+<!-- 
+Character:Name:Evant
+Character:Profession:Runemage
+Character:XP:30000
+Character:Race:Common Urban Man
+Character:Realm:Essence - Nomenist
+Character:Skin:Mildly Tanned
+Character:Age:22
+Character:Gender:Male
+Character:Height:172
+Character:Weight:68
+Character:Eyes:Green
+Character:Hair:Brown
+
+
+%%%
+% Stats
+%%%
+-->
+
+<stats>
+        <stat>
+                <name>Agility</name>
+                <abbr>Ag</abbr>
+                <temp>62</temp>
+                <potential>81</potential>
+                <basic>0</basic>
+                <racial>0</racial>
+                <special>0</special>
+                <total>0</total>
+        </stat>
+        <stat>
+                <name>Constitution</name>
+                <abbr>Co</abbr>
+                <temp>82</temp>
+                <potential>91</potential>
+                <basic>3</basic>
+                <racial>0</racial>
+                <special>0</special>
+                <total>0</total>
+        </stat>
+        <stat>
+                <name>Memory</name>
+                <abbr>Me</abbr>
+                <temp>88</temp>
+                <potential>88</potential>
+                <basic>4</basic>
+                <racial>0</racial>
+                <special>0</special>
+                <total>4</total>
+        </stat>
+        <stat>
+                <name>Reasoning</name>
+                <abbr>Re</abbr>
+                <temp>95</temp>
+                <potential>95</potential>
+                <basic>7</basic>
+                <racial>0</racial>
+                <special>0</special>
+                <total>7</total>
+                <primestat />
+        </stat>
+        <stat>
+                <name>Self Discipline</name>
+                <abbr>SD</abbr>
+                <temp>93</temp>
+                <potential>94</potential>
+                <basic>6</basic>
+                <racial>2</racial>
+                <special>0</special>
+                <total>8</total>
+        </stat>
+        <stat>
+                <name>Empathy</name>
+                <abbr>Em</abbr>
+                <temp>94</temp>
+                <potential>94</potential>
+                <basic>7</basic>
+                <racial>0</racial>
+                <special>8</special>
+                <total>15</total>
+                <primestat />
+                <realmstat></realmstat>
+        </stat>
+        <stat>
+                <name>Intuition</name>
+                <abbr>In</abbr>
+                <temp>74</temp>
+                <potential>79</potential>
+                <basic>1</basic>
+                <racial>0</racial>
+                <special>0</special>
+                <total>1</total>
+        </stat>
+        <stat>
+                <name>Presence</name>
+                <abbr>Pr</abbr>
+                <temp>72</temp>
+                <potential>79</potential>
+                <basic>1</basic>
+                <racial>0</racial>
+                <special>0</special>
+                <total>1</total>
+        </stat>
+        <stat>
+                <name>Quickness</name>
+                <abbr>Qu</abbr>
+                <temp>58</temp>
+                <potential>65</potential>
+                <basic>0</basic>
+                <racial>0</racial>
+                <special>0</special>
+                <total>0</total>
+        </stat>
+        <stat>
+                <name>Strength</name>
+                <abbr>St</abbr>
+                <temp>58</temp>
+                <potential>65</potential>
+                <basic>0</basic>
+                <racial>2</racial>
+                <special>0</special>
+                <total>0</total>
+        </stat>
+</stats>
+
+<skills>
+        <category>
+                <name>Armor &#xb7; Heavy</name>
+                <statbonuses>St+Ag+St</statbonuses>
+                <progression>Standard</progression>
+                <cost>9</cost>
+                <professionbonus>0</professionbonus>
+                <statbonus>0<statbonus>
+                <specialbonus>0</specialbonus>
+                <ranks>0</ranks>
+                <rankbonus>0</rankbonus>
+                <total>0</total>
+                <skill>
+                        <name>Plate</name>
+                        <ranks>0</ranks>
+                        <class></class>
+                        <rankbonus>0</rankbonus>
+                        <itembonus>0</itembonus>
+                        <categorybonus>0</categorybonus>
+                        <specialbonus>0</specialbonus>
+                        <total>0</total>
+                </skill>
+        </category>
+</skills>
+<!--
+!Armor * Heavy { St+Ag+St : S } 
+	!Plate
+!Armor * Light { Ag+St+Ag : S } [9]
+	!Soft Leather
+	!Rigid Leather
+!Armor * Medium { St+Ag+St : S }
+	!Chain
+!Artistic * Active { Pr+Em+Ag : S } [2/5]
+	!Acting
+	!Dancing
+	!Mimery
+	!Mimicry
+	!Play Instrument (By Instrument) #
+	!Poetic Improvisation
+	!Singing
+	!Tale Telling
+	!Ventriloquism
+!Artistic * Passive { Em+In+Pr : S } [1/5]
+	!Music
+	!Painting
+	!Poetry
+	!Sculpting
+Athletic * Brawn { St+Co+Ag : S } [6] <1>
+	!Athletic Games - Brawn (By Game) #
+	!Jumping
+	!Power-Stroking
+	!Power Throwing
+	!Weight Lifting
+Athletic * Endurance { Co+Ag+St : S } [3] <1>
+	!Athletic Games - Endurance (By Game) #
+	Distance Running <1>
+	!Rowing
+	!Scaling
+	!Sprinting
+	Swimming <1>
+Athletic * Gymnastics { Ag+Qu+Ag : S } [3] <1>
+	!Acrobatics
+	!Athletic Games - Gymnastic (By Game) #
+	!Climbing
+	!Contortions
+	!Diving
+	!Flying/Gliding
+	!Juggling
+	!Pole-Vaulting
+	!Rappeling
+	!Skating
+	!Skiing
+	!Stilt Walking
+	!Surfing
+	!Tightrope-walking
+	!Tumbling
+Awareness * Perceptions {In+SD+In : L } [4] 
+	Alertness <3>
+	!Sense Ambush
+Awareness * Searching {In+Re+SD : S } [3/7] <4>
+	!Detect Traps 
+	Lie Perception <1>
+	Locate Hidden <1>
+	Observation <2>
+	!Poison Perception
+	!Reading Tracks
+	!Surveillance
+       !Tracking
+Awareness * Senses {In+SD+In : S} [3/7] <3>
+	!Direction Sense
+	!Reality Awareness [R]
+	!Situation Awareness (By Situation) #
+	!# Combat
+	!# Familiar
+	!# Feinting
+	!# Scouting
+	!# Sleep
+	!# Urban
+	!Spatial Location Awareness [R]
+	Sense Awareness (By Sense) #
+	!# Sight
+	# Hearing <2/10>
+	!# Smell
+	!# Taste
+	!# Touch
+	!# Other
+	Time Sense <1>
+Body Development { Co+SD+Co : R (0*6*4*2*1) } [15] <0/10>  
+	Body Development <3>
+!Combat Maneuvers { Ag+Qu+SD : C } [18]
+	!Adrenal Deflecting [R]
+	!Blind Fighting [R]
+	!Missile Deflecting [R]
+	!Mounted Combat
+	!Quickdraw
+	!Reverse Stroke (By Weapon Category) #
+	!Subdual
+	!Swashbuckling
+	!Tumbling Evasion [R]
+	!Two-weapon Fighting (By Weapon Combination) #
+	!Weapon Style - Advanced (By Style) [R] #
+	!Weapon Style - Basic (By Style) #
+Communications { Re+Me+Em : S  : +5 () } [1/1/1] <8>
+        Primal <40>
+	Language Spoken #
+	# Rhaya (Common) (Type I) <10>
+	# Erlin (Goblin) (Type I) <8>
+	# Cantonese (Type I)<3>
+	# Arabic (Type I) <3>
+	# Southran (Type I) <3>
+	# Romani (Type III) 
+	Language Written #
+	# Rhaya (Common) <6>
+	# Erlin (Goblin) <4>
+	# Cantonese <1>
+	# Arabic <1>
+        # Soutran <1>
+        # Romani 
+	Professional Spoken #
+	# Tongue of the Dance <1>
+	!# Faceted (Crystal) 
+	# Phonos (Nomenist) <8>
+	# Vegan (Herbalist) <1>
+	!# Phylos (Corpist)
+	Professional Written #
+	!# Tongue of the Dance
+	!# Faceted (Crystal)
+	# Phonos (Nomenist) <5>
+	!# Vegan (Herbalist)
+	!# Phylos (Corpist)
+	Lip Reading
+	Magical Language [R] #
+	!# Aisthasis (Detection)
+	!# Aster (Light)
+	!# Chaot (Inorg Mod)
+	# Empat (Charm) <3>
+        # Empat Written <1>
+	!# Gaia (Earth)
+	!# Gnosis (Control)
+	!# Graphay (Enhance)
+	!# Hudatos (Water)
+	!# Iruaric (Enchant)
+	!# Kubeia (Obfus)
+	!# Orbita (Scrying)
+	!# Parapateo (Move)
+	!# Petra (Protect)
+	!# Pneumatikos (Summon)
+	!# Shusha (Wind)
+	!# Skotia (Dark)
+	!# Soma (Personal)
+	!# Spoudazo (Org Mod)
+	!# Xzulou (Creation)
+	!Signalling
+!Crafts { Ag+Me+SD : C } [4/10]
+	!Drafting
+	!Cooking
+	!Fletching
+	!Horticulture
+	!Leather Crafts
+	!Metal-crafts
+	!Rope Mastery
+	!Scribing
+	!Service
+	!Sewing/Weaving
+	!Skinning
+	!Stone-crafts
+	!Trapping
+	!Wood-crafts
+	!Crafts #
+!Directed Spells {Ag+SD+Ag : S } [3/7]
+	!Fire Bolt
+	!Ice Bolt
+	!Lightning Bolt
+	!Mana Bolt
+	!Shock Bolt
+	!Void Bolt
+	!Water Bolt
+Influence { Pr+Em+In : S } [2/6] <2>
+        !Bribery 
+	!Diplomacy
+	!Duping
+	!Interrogation
+	!Leadership
+	!Propaganda
+	!Public Speaking
+	!Seduction
+	Teaching <2>
+	Trading <2>
+Lore * General { Me+Re+Me : S } [1/3] <9/10>
+	Culture Lore (By Culture/Race) #
+        # Cheevers <3>
+        # Goblin <2>
+	Fauna Lore <1>
+	Flora Lore <1>
+	!Heraldry
+	History (By Region/Group/Planet/Society/City) #
+	# World History <2>
+        # Cheevers 
+        # Goblin Nation
+	!Martial Arts Style Lore
+	!Philosophy
+	Region Lore (By Region) #
+        # Cheevers City <3>
+	Religion (By Pantheon/Religon/Culture) #
+        # Bane <1>
+        # Gilean <1>
+        # Kriel
+	!Weapon Style Lore
+Lore * Magical { Me+Re+Me : S  : +15 () } [1/3] <10/10>
+	Artifact Lore <2>
+	Circle Lore <5>
+	!Divination Lore (By Divination Method)#
+	!Dream Lore
+	!Dreamworld Lore
+	Glyph Lore <3>
+	Planar Lore <1>
+	Spell Lore <6>
+	Symbol Lore [E] <7>
+	Undead Lore <3>
+	Warding Lore [E] <5>
+Lore * Obscure { Me+Re+Me : S } [3/7] <1/10>
+	Demon /Devil Lore <1>
+	Dragon Lore <1>
+	!Faerie Lore
+	!Vital Points Lore (By General Type)#
+	!# Humanoid Vital Points
+	!Xeno-Lores (By Alien Skill)#
+Lore * Technical { Me+Re+Me : S } [2/6] <1/10>
+	!Corpus Lore
+	Herb Lore <1>
+	!Lock Lore
+	!Metal Lore
+	!Poison Lore
+	!Stone Lore
+!Martial Arts Combat Maneuvers { Ag+Qu+SD : C } [18]
+	!Adrenal Deflecting
+	!Adrenal Evasion
+	!Blind Fighting
+	!Martial Arts Style - Advanced (By Style) [R] #
+	!Martial Arts Style - Basic (By Style) #
+!Martial Arts * Strikes {St+Ag+St : S } [9] 
+	!Boxing
+	!Martial Arts Striking
+	!Nerve Strikes
+	!Tackling
+!Martial Arts * Sweeps {Ag+St+Ag : S } [9]
+	!Blocking
+	!Locking Holds
+	!Martial Arts Sweeps
+	!Wrestling
+!Outdoor * Animal { Em+Ag+Em : S } [3]
+	!Animal Handling (By Animal Type)#
+	!Animal Healing (By Animal Type)#
+	!Animal Mastery (By Animal Type) [R] #
+	!Animal Training (By Animal Type)#
+	!Animal Driving (By Animal Type) #
+	!Familiar Mastery (By Familiar) #
+	!Herding (By Animal Type)#
+	!Riding (By Mount Type)#
+Outdoor * Environmental { SD+In+Me : S } [3] <1>
+	!Caving 
+	!Foraging
+	!Hunting
+	!Star-gazing
+	!Survival (By Environment)#
+	!Weather Watching
+Power Awareness { Em+In+Pr : S  : +10 () } [1/4] <5>
+	Attunement <3>
+	!Divination (By divination method)#
+	!Power Perception [R]
+	Read Runes [E] <5>
+Power Manipulation {Em+In+Pr : C  : +10 () } [4/10] 
+	!Channeling [R]
+	!Mental Control - Assault
+	!Mental Control - Defence
+	Magic Ritual #
+	# Ess: Charm <1>
+	!# Ess: Control
+	!# Ess: Creation
+	!# Ess: Dark
+	!# Ess: Detection
+	!# Ess: Earth
+	!# Ess: Enhancement
+	!# Ess: Enchant - Perm
+	!# Ess: Enchant - Var
+	!# Ess: Inorganic
+	!# Ess: Light
+	!# Ess: Movement
+	!# Ess: Obfuscation
+	!# Ess: Organic
+	!# Ess: Personal
+	!# Ess: Protection
+	!# Ess: Scrying
+	!# Ess: Summons
+	!# Ess: Water
+	!# Ess: Wind
+	!# Ment: Self
+	!# Ment: Other Intelligent
+	!# Ment: Animals
+	!# Ment: Inanimate
+	!# Ment: Surroundings
+	!Spell Artistry
+	Spell Mastery (By Spell List) #
+        # Commanding Will <1/3>
+        # Lofty Bridge <1>
+	!Spell Trickery
+	!Summoning
+	!Targeting
+	!Transcend Armor [R]
+Power Point Development { Em : R (0*6*5*4*3)  : +5 () } [4]
+	Power Point Development <3>
+Science/Analytic * Basic { Re+Me+Re : S } [1/4] <5>
+	Basic Maths <1>
+	Research <4>
+!Science/Analytic * Specialised { Re+Me+Re : C } [6/14]
+	!Advanced Math
+	!Anthropology (By Race/Culture)#
+	!Alchemy
+	!Astronomy
+	!Biochemistry
+	!Psychology (By Race)#
+!Self Control { SD+Pr+SD : S } [6]
+	!Adrenal Balance
+	!Adrenal Concentration
+	!Adrenal Landing
+	!Adrenal Leaping
+	!Adrenal Quickdraw (By Weapon type)#
+	!Adrenal Speed
+	!Adrenal Stabilisation [R]
+	!Adrenal Strength
+	!Cleansing Trance [R]
+	!Control Lycanthropy [R]
+	!Death Trance [R]
+	!Dream Control
+	!Dreamworld Control
+	!Frenzy
+	!Healing Trance
+	!Meditation
+	!Mnemonics
+	!Sleep Trance
+	!Spell Concentration
+	!Stunned Maneuvering
+Special Attacks { St+Ag+SD : C } [15]
+	Brawling
+	!Disarm Foe - Armed #
+	!Disarm Foe - Unarmed #
+	!Feint - Armed
+	!Feint - Unarmed
+	!Jousting
+	!Racial Attack (By Natural Racial Attack)# [R]
+Spells * Runemage Base { Em : L  : +15 () } [3/3/3] <0/75>
+	Commanding Will <5/9>
+	Inscriptions <3>
+	Nomenclature Mastery <3/9>
+	Physical Manipulations <6>
+	Glyphs <5>
+	Warding Ways <3>
+	Circle Mastery <5>
+	Spell Reins <3>
+	Counterspells
+	Lofty Bridge <3>
+Spells * Open Essence { Em : L  : +10 () } [4/4/4] <0/75>
+	!Air Mastery
+	!Allurement
+	!Delving Ways
+	!Detecting Ways
+	!Elemental Shields
+	!Essence Hand
+	!Essence Perceptions
+	!Fey Conjury
+	Lesser Illusions <1>
+	!Physical Enhancement
+	!Rune Mastery
+	!Shadow Mastery
+	!Sound Mastery
+	!Spell Wall
+	!Sustain Body
+	!Unbarring Ways
+Spells * Closed Essence { Em : L  : +5 () } [4/4/4] <0/75>
+	!Dispelling Ways
+	!Earth Mastery
+	!Elemental Summons
+	!Familiar Mastery
+	!Fire Mastery
+	!Gate Mastery
+	!Invisible Ways
+	!Light Mastery
+	!Living Change
+	!Lofty Bridge
+	!Magic Staff
+	!Matter Shaping
+	!Mechanism's Way
+	!Rapid Ways
+	!Shield Mastery
+	!Spell Enhancement
+	!Spirit Mastery
+	!Water Mastery
+Spells * Essence TP { Em : L  : +5 () } <0/75>
+	!Arachnemancy [R]
+	!Brewing Lore [R]
+	!Corpist Casting [R]
+	!Crystalist Casting [R]
+	!Glass/Ceramic Crafting [R]
+	Guildcraft Mastery  <3>
+	!Hearth Magic [R]
+	!Herbalist Casting [R]
+	!Item Enchantments [R]
+	!Magical Ropes [R]
+	!Mending Ways [R]
+	!Metal Crafting [R]
+	Mirror Magic  <3>
+	!Nomenist Casting [R] 
+	!Ocean Law [R]
+	!Predictions [R]
+	!Stone Crafting [R]
+	!Structure Wardings [R]
+	!Traveller's Ways [R]
+	!Wood Crafting [R]
+	!Silent Attack
+!Subterfuge * Mechanics { In+Ag+Re : S } [6]
+	!Camouflage
+	!Disarming Traps
+	!Disguise
+	!Counterfeiting
+	!Forgery (By Type) #
+	!Hiding Items
+	!Picking Locks
+	!Setting Traps
+	!Trap Building
+	!Using/Removing Poison
+!Subterfuge * Stealth { Ag+SD+In : S } [4]
+	!Hiding
+	!Picking Pockets
+	!Stalking
+	!Trickery
+Tech/Trade * General {Re+Me+SD : S } [3/7] <2>
+	!Begging
+	First Aid <1>
+	!Gambling
+	Mapping <1>
+	!Operating Equipment 
+	!Orienteering
+	!Sailing
+	!Tactical Games
+	Using Prepared Herbs <1>
+!Tech/Trade * Professional { Re+Me+In : C }  [8]
+	!Advertising
+	!Architecture
+	!Diagnostics (By Race)#
+	!# General Diagnostics
+	!Dowsing
+	!Engineering (By Discipline) #
+	!Mechanition (By Machine Type) #
+	!Military Organisation (By armed Force)#
+	!# Aerial Forces
+	!# Groud Forces
+	!# Marine Forces
+	!# Naval Forces
+	!Mining (By Method) #
+ 	!# Dredging
+ 	!# Open Pit
+ 	!# Quarry
+ 	!# Tunneling
+	!Sanity Healing (By Race) #
+	!Second Aid
+	!Surgery
+!Tech/Trade * Vocational { Re+Me+In : C } [5/12]
+	!Administration
+	!Appraisal - General
+	!Boat Pilot (By Water Course)#
+	!Cartography
+	!Evaluate Armor
+	!Evaluate Metal
+	!Evaluate Stone
+	!Evaluate Weapon
+	!Gimmickry
+	!Hypnosis
+	!Midwifery
+	!Navigation
+	!Preparing Herbs
+	!Siege Engineering
+	!Tactics (By Situation)#
+	!# Battle Field
+	!# Naval
+	!# Sabotage
+	!# Siege
+	!# Small Unit
+Urban { In+Pr+Re : S } [3] <5>
+	Contacting [E] <2>
+	!Mingling [E]
+	!Scrounging [E]
+	!Streetwise [E]
+Weapon * 1h Edged { St+Ag+St : S } [9] <1>
+	Dagger <1>
+	!Broadsword
+	!Short Sword
+Weapon * Missile { Ag+St+Ag : S } [20] <1>
+	Sling <1>
+-->
+</rmsscharacter>

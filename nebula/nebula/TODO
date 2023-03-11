@@ -1,0 +1,62 @@
+A general to do list for nebula.
+Ideally each of these should be done before the next release.
+An allocated job has a <person> after it.
+
+ * Add talents/flaws
+ * Allow nebula to have multiple characters loaded (a window per
+         character)
+ * Define full profession, genre and TP formats.
+ * Make pretty-print formats for above
+ * Stardust: Write <nash>
+ * Alchemist: Write <Sylvain>
+ * WorldBuilder: Write (genre file editor)
+ * Coach (training package editor): Write
+ * Guild (profession editor): Write
+ * Redo creation to make more use of '<choice>' tags in the input
+         and genre files
+ * Equipment and inventory <Sylvain>
+ * TP support (the trick is being able to add and remove them)
+ * Spell list hooks
+ * Calculations like DB (I think we need a calculation language
+         so it can be generalised)
+ * i18n, gettext. Maybe hard to do, because it means changing 
+   *every* string in the program. (Partially done)
+ * Character images (say base 64 encoded, or a link)
+ * Race based profession limitations.
+ * Export/transform on inputs (nebula the filter basically):
+        nebula --export elvis.html elvis.xml
+ * Need a gconf schema file for configuration items
+ * Export menu items
+ * Save functions should return a value - 0 or -1 for success or failure.
+        Currently they just ignore errors
+ * Add The Psychomancer from Dec 2002 Guild companion issue to profession
+        files.  Should add other professions as well.
+ * Remove alena, and use libxml instead
+ * Move world builders semi-generalised creation into libneb
+
+ * Go through tree and skill code to see if an unitilazed field may cause a
+        crash.  Possibly an uninitialized variable or similar.
+ * Tree.c should have some sort of warning when creating new categories
+        at load time if a flag is set.  So a new category in a race file
+        should throw a warning, while a new category ina  genre file is
+        fine.
+
+Done:
+ * "nebula character.xml" and having nebula load "character.xml" on startup
+   would be something easy - also fixed loading bug with modifications
+ * Use of Gconf for storage of configuration
+ * User-defined data locations. Suppose I want to create a world
+   of my own, and use my own XML files for it. I should be able to tell
+   Nebula to use a different data dir, so I needn't to become root and
+   modify system files :-)
+        - Use the configuration item 'data path', : separate the paths
+ * Integrated with XALAN for printing
+ * Pretty-print character sheet for characters (XML)
+ * Seperation of Nebula, stardust (and other applications) preference items
+ * Finish the pretty-print spell lists (XML) <nash>
+ * Potential gain works again
+ * Skill based stat bonus, if the option is set, uses the stat specified
+ 	with the skill, instead of the third stat for the category.
+ * (Re)Add appearance/sanity/will
+ * Clean up printing code in print.c
+ * A proper lib nebula - [20021206] libneb.a now exists

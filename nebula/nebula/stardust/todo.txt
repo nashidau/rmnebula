@@ -1,0 +1,11 @@
+
+ToDo:
+        * Printing
+        * Spell list notes
+        * Create new spells
+        * Delete new spells
+Bugs:
+        * Doesn't handle refs in any way shape or form
+        * Clicking and double clicking are flakey
+        * level not shown in big window - can't edit because tree.c
+                popups do not support integers 

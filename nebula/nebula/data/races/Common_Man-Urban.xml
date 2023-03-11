@@ -1,0 +1,64 @@
+<?xml version='1.0'?>
+<rmssrace>
+	<stats>
+<!--
+%
+% Common Man - Urban
+%
+% Data for RMSS
+%
+% The common man with a Urban background.
+%
+Progression:Body Development:0&#x2022;6&#x2022;4&#x2022;2&#x2022;1
+Progression:Channeling:0&#x2022;6&#x2022;5&#x2022;4&#x2022;3
+Progression:Essence:0&#x2022;6&#x2022;5&#x2022;4&#x2022;3
+Progression:Mentalism:0&#x2022;7&#x2022;6&#x2022;5&#x2022;4
+Progression:Arcane:0&#x2022;6&#x2022;5&#x2022;4&#x2022;3
+-->
+		<stat>
+			<abbr>SD</abbr>
+			<racial>+2</racial>
+		</stat>
+		<stat>
+			<abbr>St</abbr>
+			<racial>+2</racial>
+		</stat>
+	</stats>
+	<rrs>
+		<rr>
+			<name>Essence</name>
+			<racialbonus>0</racialbonus>
+		</rr>
+		<rr>
+			<name>Channeling</name>
+			<racialbonus>0</racialbonus>
+		</rr>
+		<rr>
+			<name>Mentalism</name>
+			<racialbonus>0</racialbonus>
+		</rr>
+		<rr>
+			<name>Poison</name>
+			<racialbonus>0</racialbonus>
+		</rr>
+		<rr>
+			<name>Disease</name>
+			<racialbonus>0</racialbonus>
+		</rr>
+		<rr>
+			<name>Fear</name>
+			<racialbonus>0</racialbonus>
+		</rr>
+	</rrs>
+</rmssrace>
+<!-- 
+Background:Points:55
+Background:Options:6
+
+Skills:Everyman:Urban:Contacting
+Skills:Everyman:Urban:Mingling
+Skills:Everyman:Urban:Scrounging
+Skills:Everyman:Urban:Streetwise
+
+
+-->

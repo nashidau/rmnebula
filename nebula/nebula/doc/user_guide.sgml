@@ -1,0 +1,971 @@
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V4.1//EN" [
+<!ENTITY Nebula "<application>Nebula</application>">
+]>
+<book lang="en">
+<bookinfo>
+ <title>Nebula User Manual</title>
+ <edition>For nebula version 0.2.0-working</edition> 
+ <subtitle>A Rolemaster Character Editor</subtitle>
+ <pubdate>2002 10 03</pubdate>
+</bookinfo>
+<chapter>
+ <title>Introduction</title>
+ <section>
+  <title>What is Nebula ?</title>
+  <para>
+   &Nebula; is a Rolemaster character editor. It can create and maintain
+   Rolemaster characters, thus allowing to manage your PCs and
+   NPCs electronically. It is an open source application. But the
+   data are copyrighted by Iron Crown Enterprise (I.C.E). You have
+   to own the Rolemaster books to legally use the data for
+   &Nebula;.
+  </para>
+ </section>
+
+ <section>
+  <title>Getting Nebula</title>
+  <para>
+   &Nebula; is hosted on
+   <ulink url="http://sourceforge.net/projects/rmnebula/">sourceforge</ulink>.
+  </para>
+  <para>
+   The current stable release is the  
+   <ulink url="http://www.nash.nu/Rolemaster/Nebula/downloads/nebula-0.2.0.tar.gz">
+   0.2.0</ulink>. 
+   You have to get the
+   <ulink url="http://www.nash.nu/Rolemaster/Nebula/downloads/nebula-data.tar.gz">
+   data files</ulink>
+   too (you must have the Rolemaster books).
+  </para>
+
+  <para>
+   You can grab a release there, or checkout the
+   <application>CVS</application> version following
+   the instructions available on
+   <ulink url="http://sourceforge.net/cvs/?group\_id=45771">
+   http://sourceforge.net/cvs/?group\_id=45771
+   </ulink>.
+  </para>
+ </section>
+
+ <section>
+  <title>Compiling Nebula</title>
+  <para>
+   &Nebula; has only been tested on a x86 Linux box so far. It requires
+   an <application>ANSI C</application> compiler
+   (<application>gcc</application> works fine),
+   the <application>GTK+2</application> library
+   (<ulink url="http://www.gtk.org/">http://www.gtk.org/</ulink>)
+   and the <application>Gnome 2</application> library
+   (<ulink url="http://www.gnome.org/">http://www.gnome.org/</ulink>)
+   installed and working.
+   If you want to access the printing functions, you'll also need a
+   XSLT processor, as <application>Xalan</application> or
+   <application>Sablotron</application>.
+  </para>
+
+  <para>
+   Once you got either the CVS version or a release file, go to
+   the <filename>nebula/</filename> directory and type
+   <command>make</command> at the prompt. There
+   is no automatic configuration of the <application>Makefile</application>
+   at the moment. You might have to correct the
+   <application>Makefile</application> considering your own
+   installation if the compilation doesn't work properly. As the
+   <application>Makefile</application> uses the <command>pkg-config</command>
+   system, libraries should be correctly found.
+  </para>
+  <para>
+   If you want to install &Nebula; in a directory, edit the
+   <application>Makefile</application> in the <filename>nebula/</filename>
+   directory and change the PREFIX value according to your wishes
+   before calling <application>Makefile</application>.
+  </para>
+ </section>
+
+ <section>
+  <title>Running Nebula</title>
+  <para>
+   Run &Nebula; by launching the <command>nebula</command> application
+   found in the <filename>nebula/src</filename> directory or directly
+   if you've installed <command>nebula</command> in a directory
+   present in your path.
+  </para>
+
+  <para>
+   Each time you run &Nebula;, you are asked to agree to a legal text
+   due to the copyrighted material the application is using. Be
+   sure you can legally use this material before clicking the
+   <guibutton>I Agree</guibutton> button.
+  </para>
+ </section>
+
+</chapter>
+<chapter>
+ <title>Quick How-to's</title>
+
+ <section>
+  <title>Creating a new character</title>
+  <para>
+   This section explains how to create a Rolemaster character from scratch
+   using &Nebula;.
+  </para>
+
+  <itemizedlist>
+   <listitem>
+    <para>
+    First, select the
+    <menuchoice>
+     <shortcut>
+      <keycombo><keysym>Ctrl</keysym><keysym>N</keysym></keycombo>
+     </shortcut>
+     <guimenu>File</guimenu>
+     <guimenuitem>New</guimenuitem>
+    </menuchoice>
+    menu item ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    The first thing you have to do is to choose the <emphasis>Genre</emphasis>.
+    The <emphasis>Genre</emphasis> is a configuration file which discribes the
+    rules you want to use : what skills are available, what are the
+    specific realms,...
+    A <emphasis>Genre</emphasis> can be <emphasis>Shadow World</emphasis>
+    for example ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    Then you enter the character name. You can see on the main window
+    that once you've entered the name, it appears on the Character
+    panel ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    Choose a race. The possibilities are determined by the setting
+    you chose. If you chose the <emphasis>Shadow World genre</emphasis>,
+    then you'll be offered the <emphasis>Shadow World</emphasis>
+    races and cultures ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    Choose a profession ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    If there are choices to do concerning the special skills (everyman,
+    occupational or restricted), you'll be presented windows asking
+    for your choices ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    If the realm for the profession is not fixed, you will be asked
+    for it. If the subrealm for the professional realm is defined
+    in the chosen <emphasis>genre</emphasis>, you will be asked to choose one ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    Choose your weapon skill costs. You can swap skills by drag and
+    droping their names ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    If the character is a spell caster, you will be able to select
+    the base lists by clicking in the boxes you choose in the
+    '<guilabel>Base?</guilabel>'
+    column. Once you've selected the required number of lists, you'll
+    be able to validate the window ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    Next, a window with spell list names will ask which spell lists
+    you will want to be shown or not for your character. By default,
+    the base lists you've chosen will not be checked for deletion.
+    If the character has no base list, the lists of the realm are
+    unchecked. Validate the window when you're satisfied with your
+    choices. Be careful, in this version, you won't be able to add
+    spell lists you've deleted in this phase, unless you edit your
+    character file manually ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    Distribute points in your temporary stats. Depending on the option
+    you choose in the 
+    <menuchoice>
+     <guimenu>Edit</guimenu>
+     <guimenuitem>Preferences</guimenuitem>
+    </menuchoice>
+    menu you have either
+    660 or 600+10d10 points. &Nebula; sets
+    the prime-requisite stats for the profession to 90 and distributes
+    the remaining points among other stats equally. You can then
+    change the number according to your wishes. Prime-requisists
+    cannot be set under 90, other stats cannot be set under 20.
+    The maximum for all stats in this version is 100 ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    Once you've distributed all the remaining points, click the
+    <guibutton>Ok</guibutton> button ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    You are now on the <guilabel>Purchase List</guilabel> where you
+    will be able to spend
+    your hobby ranks. To allocate points to a skill or a category,
+    select it and click on the <guilabel>New</guilabel> column on the
+    row you've selected.
+    Enter the points you want to set for the skill or category and
+    press <guibutton>Enter</guibutton> ;
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    You can save or load your purchase list in or from an
+    <acronym>XML</acronym> file during this phase.
+    </para>
+   </listitem>
+  </itemizedlist>
+  <para>
+   Your new character is done, a window will tell it to you ! You can save it.
+  </para>
+ </section>
+
+ <section>
+  <title>Keeping preexisting characters</title>
+  <itemizedlist>
+   <listitem>
+    <para>
+    First, create a new character with the correct name, profession
+    and race. Adjust the temporary stats as close as you can and
+    don't buy any hobby rank.
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    Go to the
+    <menuchoice>
+     <guimenu>Edit</guimenu>
+     <guimenuitem>Stats</guimenuitem>
+    </menuchoice>
+    menu entry. A window will appear.
+    Click on the number you want to modify and type the modified
+    value. Validate if you're satisfied, cancel if you're not.
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+    Now edit the skill and category ranks. To do so, choose the
+    Skills panel and double click on the line of the skill or
+    category you want to edit. At the beginning of the edition,
+    only the categories are seen, you'll have to expend the tree
+    by clicking on the arrow at the beginning of the line to
+    see the skills.
+    </para>
+    <para>
+    When double-clicking the line you want to edit, a window with
+    the skill or category characteristics appears. Change the value
+    of the Ranks box.
+    </para>
+   </listitem>
+  </itemizedlist>
+  <para>
+   Now you have your character. You will have to choose
+    <menuchoice>
+     <guimenu>Character</guimenu>
+     <guimenuitem>Refresh</guimenuitem>
+    </menuchoice>
+   for the new bonus to be recalculated after your modifications.
+  </para>
+ </section>
+
+ <section>
+  <title>How to gain a level</title>
+   <para>
+    Choose the
+    <menuchoice>
+     <guimenu>Character</guimenu>
+     <guimenuitem>Level Up</guimenuitem>
+    </menuchoice>
+    menu. You'll be first
+    presented a stat gain window to view the new stats of the character.
+    Validate the window. If you cancel the window by closing it,
+    the new stats will be discarded.
+   </para>
+   <para>
+    You'll be then presented the <guilabel>Buy Skills</guilabel>
+    window where you'll be able to spend your development points.
+   </para>
+   <para>
+    Be careful ! In this version of &Nebula;, you can choose Level
+    Up as many time as you want. Each time the <guilabel>Buy Skills</guilabel>
+    window will be opened, you'll be offered the full development points
+    the character has for one level. So be sure to spend all your
+    development points when making the character gain a level, and
+    be sure not to buy the skills twice by using the
+    <menuchoice>
+     <guimenu>Character</guimenu>
+     <guimenuitem>Buy Skills</guimenuitem>
+    </menuchoice>
+    menu entry directly.
+   </para>
+ </section>
+</chapter>
+
+<chapter>
+<title>Reference</title>
+ <section id="menureference">
+ <title>Menu</title>
+  <section>
+  <title>File</title>
+   <section>
+   <title>New</title>
+   <para>
+    Creates a new character. You must close the current file
+    before opening a new one.
+   </para>
+   </section>
+
+   <section>
+   <title>Open</title>
+   <para>
+    Opens a saved character. Saved characters are in the
+    <filename>nebula/characters/</filename> directory.
+   </para>
+   </section>
+
+   <section>
+   <title>Save</title>
+   <para>
+    Saves the current character.
+   </para>
+   </section>
+
+   <section>
+   <title>Save As</title>
+   <para>
+    Saves the currect character with another name.
+   </para>
+   </section>
+
+   <section>
+   <title>Revert</title>
+   <para>
+    Reloads the currently opened file as saved on the disk.
+   </para>
+   </section>
+
+   <section>
+   <title>Print</title>
+   <para>
+    Print the character either in a postscript file or directly
+    on your printer. See the XSL preferences in
+    <menuchoice>
+     <guimenu>Edit</guimenu>
+     <guimenuitem>Preferences</guimenuitem>
+    </menuchoice>
+    to configure the printing (XSL panel).
+   </para>
+   </section>
+
+   <section>
+   <title>Close</title>
+   <para>
+    Close the current character.
+   </para>
+   </section>
+
+   <section>
+   <title>Quit</title>
+   <para>
+    Quits &Nebula;.
+   </para>
+   </section>
+  </section>
+
+  <section id="menureference.edit">
+  <title>Edit</title>
+   <section>
+   <title>Stats</title>
+   <para>
+    Open the <guilabel>Edit Stats</guilabel> window. You can assign any number
+    you want to either temporary or potential stat. The basic bonus
+    won't be recalculated when you validate this window. You'll have to ask a
+    in the
+    <menuchoice>
+     <guimenu>Character</guimenu>
+     <guimenuitem>Refresh</guimenuitem>
+    </menuchoice>
+    menu. Temporary stat below 20 or higher than 100 will be recalibrate.
+   </para>
+   </section>
+   <section>
+    <title>Preferences</title>
+    <para>
+     The Preferences window has four panels.
+    </para>
+    <section>
+     <title>Creation</title>
+     <para>
+      In this panel, you can choose options concerning the creation
+      of a character.
+      <itemizedlist>
+       <listitem>
+        <para>
+         Use RMSS Appearance : the character will use the Appearance stat
+	 with RMSS rule (Pr-25+5d10) instead of the Mentalism
+	 method (d100+3*Pr).
+        </para>
+       </listitem>
+       <listitem>
+        <para>
+	 Use fixed points : 
+          if selected, you have 660 points to distribute for stats
+	  when creating a character. If not selected, you have 600+10d10.
+        </para>
+       </listitem>
+       <listitem>
+        <para>
+	 Use fixed potential :
+          if selected, the fixed potiential rule is used. See your
+	  Rolemaster book to know about this optional rule.
+        </para>
+       </listitem>
+       <listitem>
+        <para>
+	 Ignore PR minimums :
+          if selected, the prime-requisite stats are not
+          verified, there minimum will not be set to 90 when creating
+          a character.
+        </para>
+       </listitem>
+      </itemizedlist>
+     </para>
+    </section>
+
+    <section>
+     <title>Stats</title>
+     <para>
+      This panel is about stats handling in &Nebula;.
+      <itemizedlist>
+       <listitem>
+        <para>
+	 Allow Potential gain :
+	 when rolling for stat gain, the potential stats
+	 can also be changes.
+	</para>
+       </listitem>
+       <listitem>
+        <para>
+	 Appearance :
+         uses the appearance stat for the character.
+	</para>
+       </listitem>
+       <listitem>
+        <para>
+	 Sanity :
+         uses the sanity stat for the character.
+	</para>
+       </listitem>
+       <listitem>
+        <para>
+	 Willpower :
+         uses the willpower stat for the character.
+	</para>
+       </listitem>
+      </itemizedlist>
+     </para>
+    </section>
+
+    <section>
+     <title>File</title>
+     <para>
+      This panel configures the paths where &Nebula; will
+      find its data.
+      <itemizedlist>
+       <listitem>
+        <para>
+	 Icon : path to the <filename>d10-16x16.png</filename> file.
+	</para>
+       </listitem>
+       <listitem>
+        <para>
+	 Logo : path to the <filename>igor.png</filename> file.
+	</para>
+       </listitem>
+       <listitem>
+        <para>
+	 Data Path : path to the data directory.
+	</para>
+       </listitem>
+       <listitem>
+        <para>
+	 Print Command : what is the print command used by your system,
+	  generally <application>lpr</application>.
+	</para>
+       </listitem>
+      </itemizedlist>
+     </para>
+    </section>
+
+    <section>
+     <title>XSL</title>
+     <para>
+      <itemizedlist>
+       <listitem>
+        <para>
+	 XSLT Processor : full path to the XSLT processor you want
+	 to use. For example, <application>xalan</application>,
+	 <application>xsltproc</application> or
+	 <application>sabcmd</application>.
+	</para>
+       </listitem>
+       <listitem>
+        <para>
+	 XSLT option flag : a flag your processor wants to treat
+	 XSL files (-XSL for <application>xalan</application>).
+	 This flag will be followed by the XSL file.
+	</para>
+       </listitem>
+       <listitem>
+        <para>
+	 In option flag : a flag your processor wants to designate
+	 the input file.
+	</para>
+       </listitem>
+       <listitem>
+        <para>
+	 Out option flag : a flag your processor wants to designate
+	 the output file.
+	</para>
+       </listitem>
+       <listitem>
+        <para>
+	 Postscript XSLT : path the the XSL file you want to use
+	 to generate a postscript file from a &Nebula; character
+	 file. The default one is called
+	 <application>ps.xsl</application>.
+	</para>
+       </listitem>
+       <listitem>
+        <para>
+	 HTML XSLT : path the the XSL file you want to use
+	 to generate a HTML file from a &Nebula; character
+	 file.
+	</para>
+       </listitem>
+      </itemizedlist>
+      <note>
+       <title>Note</title>
+       <para>
+        With or without flags (you can let the strings empty), the
+        processor will be called with the XSLT first, then the
+        input file, then the output file.
+       </para>
+      </note>
+     </para>
+    </section>
+   </section>
+  </section>
+
+  <section>
+  <title>Character</title>
+   <section>
+   <title>Level Up</title>
+   <para>
+    Automatize the character level up process by calling a
+    <guilabel>Stat Gain</guilabel> then a <guilabel>Buy Skills</guilabel>
+    window.
+   </para>
+   </section>
+
+   <section>
+   <title>Stat Gain</title>
+   <para>
+    Works on a loaded or created character. It will calculate the
+    new temporary stats. It will also calculate the new potential
+    stats if you chose this option (disabled in this version).
+    Press <guilabel>Ok</guilabel>
+    if you want to keep the new stats or close the window if you
+    don't want to keep them.
+   </para>
+   <para>
+    You use this function on some special cases as written in the
+    Rolemaster rules.
+   </para>
+   <para>
+    You can't make a stat gain on a single stat in this version (it
+    is sometimes asked by Training Packages). You'll have to edit
+    the saved file to change the value if you want it.
+   </para>
+   </section>
+
+   <section>
+   <title>Buy Skills</title>
+   <para>
+    Opens a window where you can buy skills. To buy levels, choose
+    a skill or a category by clicking on the line you want and then
+    cliking in the New column of this line. Enter the number of
+    level you want to buy and press enter. If this level is too
+    high for the costs of the profession, it will be canceled. Otherwise,
+    the cost will be calculated in the <guilabel>Spent</guilabel> column
+    and added to the total cost on the bottom of the window.
+   </para>
+   <para>
+    The skills and categories are organised as a tree. You can open
+    the skills of a category by clicking on the horizontal arrow
+    on the left of the category. You close the display of the skills
+    of a category by clicking on the arrow pointing down on the
+    left of the category.
+   </para>
+   <para>
+    When you're done with buying skills, click <guibutton>Ok</guibutton>.
+   </para>
+   <para>
+    Be careful, in this version of &Nebula;, you can open this window
+    as many times as you want for a level, and the developement
+    spent are renewed each time. You don't want that if you want
+    to level up a character normally.
+   </para>
+   <para>
+    You will be able to buy Training Packages from here by clicking
+    the <guibutton>Buy TP</guibutton> button, not active in this version.
+   </para>
+   <para>
+    You can save or load your purshased skills in or from a file.
+    Thus you can prepare templates for the skills you're buying
+    in a level.
+   </para>
+   </section>
+
+   <section>
+   <title>Refresh</title>
+   <para>
+    This is a safety function. It asks &Nebula; to recomputes all the
+    bonuses for stats, categories and skills. When loading a file,
+    this function is automatically called even if calculations are
+    already in the saved file, ensuring there has been no corruption
+    of this file.
+   </para>
+   <para>
+    You have to click the refresh button after editing the stats with the
+    <menuchoice>
+     <guimenu>Edit</guimenu>
+     <guimenuitem>Stats</guimenuitem>
+    </menuchoice>
+    in this version.
+    <note>
+     <title>Note</title>
+     <para>
+     This automatic call is why you can edit the stats manually
+     by editing the file. There is no need to fix the bonuses after
+     such an edition, they will be recomputed.
+     </para>
+    </note>
+   </para>
+   </section>
+  </section>
+
+  <section>
+  <title>Help</title>
+   <section>
+   <title>About</title>
+   <para>
+    Display the <guilabel>About</guilabel> window.
+   </para>
+   </section>
+
+   <section>
+   <title>License</title>
+   <para>
+    Does not work.
+   </para>
+   </section>
+
+   <section>
+   <title>Using</title>
+   <para>
+    Does not work.
+   </para>
+   </section>
+  </section>
+
+ </section>
+
+ <section>
+  <title>Panels</title>
+  <section>
+   <title>Character</title>
+   <para>
+    The character panel contains general informations on the character
+    like the name, player informations, the level, the personnality,...
+    These informations are organized as a tree : you can expend
+    and collapse categories by clicking of the arrows on the left.
+   </para>
+   <para>
+    To modify the values, select the line you want to modify then
+    click the value column for this line, enter the new value and
+    validate with enter.
+   </para>
+   <para>
+    In this version, there are no check on these values. There is
+    also no way to add categories others than those added while
+    creating a new character. You can still add categories by editing
+    the file directly, but be certain to know what you are doing.
+   </para>
+  </section>
+  <section>
+   <title>Stats</title>
+    <para>
+     This panel displays all the stats of the character. This panel
+     can handle as many stat you want. But only the first ten stats
+     will be handled in stat gain. Any file with less than ten stats
+     will be considered as invalid.
+   </para>
+   <para>
+    The first two columns are check boxes. The first column (P) shows
+    the prime-requisite stats. A checked 'P' box tells that the
+    statistic on this line is a prime-requisite. The second column
+    (R) shows the realm stats. A checked 'R' box tells that the
+    statistic on this line is a statistic for the realm of the character.
+   </para>
+   <para>
+    The next two columns tell the complete name of the stats and
+    there abbreviations.
+   </para>
+   <para>
+    Next are the temporary stat values, the potential stat values
+    and the different bonuses : basic, racial and special. At now,
+    you can't edit the special bonus directly, you have to edit
+    the saved file.
+   </para>
+   <para>
+    The last column shows the sum of the different bonuses.
+   </para>
+  </section>
+  <section>
+   <title>Skills</title>
+   <para>
+    This panels shows the different categories and skills, organized
+    as a tree : you can expend and collapse categories by clicking
+    of the arrows on the left.
+   </para>
+   <para>
+    After the name of the category or skill is displayed the different
+    stats used in the stat bonus. The class column tells if a given
+    skill is restricted, occupational or everyman. If nothing is
+    displayed in this column, the skill is normal. The prog column
+    shows the progression of the skill (see your Rolemaster book
+    to check the meaning of the different values). Then comes the
+    cost and the different bonus, with the sum at the end.
+   </para>
+   <para>
+    At the last column, on the right, a check box can promote a skill/category
+    to a primary skill/category.
+    If the box is checked, the skill/category will be a canditate, in character
+    sheets, to appear at some special place. For example, you can check the
+    skills the character often uses.
+   </para>
+   <para>
+    When you select a skill and right click, a pop-up menu appears.
+    In this menu, you can show, edit or delete the skill or category you've
+    selected. You can also add a new skill in the same category
+    of the skill which is selected.
+   </para>
+   <para>
+    When you double click on a skill or a category, a window appears
+    and allows the edit the characteristics of it (name, stats of the bonus,
+    everyman, occupational or restricted class, type of progression, cost,
+    profession bonus, special bonus and description). You can also change
+    the number of ranks the character has.
+   </para>
+  </section>
+
+  <section>
+   <title>Defense</title>
+   <para>
+    Shows the different Resistance Roll Bonuses of the character.
+   </para>
+  </section>
+
+  <section>
+   <title>Disabled Panel : Item</title>
+   <para>
+    Display items of the character.
+   </para>
+   <para>
+    Press the Add Item button to open a window asking for the item
+    description. Clicking Ok won't really add the item, this option
+    is broken in this version.
+   </para>
+   <para>
+    This is mostly unimplemented and is subject to change. Use with
+    care.
+   </para>
+  </section>
+
+  <section>
+   <title>Old Panel : Special</title>
+   <para>
+    Nothing.
+   </para>
+  </section>
+ </section>
+</chapter>
+
+<chapter>
+ <title>Stardust</title>
+ <section>
+  <title>What is Stardust</title>
+  <para>
+   <application>Stardust</application> is a Rolemaster spell list
+   editor. It is launched with the command stardust. You
+   can specify a file to be loaded as argument in the command line.
+  </para>
+ </section>
+ <section>
+  <title>How to create a list</title>
+  <para>
+   To create a new spell list, choose 
+    <menuchoice>
+     <shortcut>
+      <keycombo><keysym>Ctrl</keysym><keysym>N</keysym></keycombo>
+     </shortcut>
+     <guimenu>File</guimenu>
+     <guimenuitem>New</guimenuitem>
+    </menuchoice>
+    .
+    It will generate a blank list with entries for spell of level 1 to 20, 25, 30
+    and 50. Then edit the list as any one (see next section).
+  </para>
+ </section>
+ <section>
+  <title>How to edit a list</title>
+  <para>
+   The editor has two main parts. The top part shows the general section,
+   the bottom part shows the summary of the different spells.
+  </para>
+  <para>
+  The top part has :
+   <itemizedlist>
+    <listitem>
+     <para>
+      first line, the spell list name ;
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      second line, the type of the spell (realm, base, open,...) ;
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      third line, the list ID (?) ;
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      fourth line, the author of the spell list.
+     </para>
+    </listitem>
+   </itemizedlist>
+  </para>
+  <para>
+   You can edit the spells in the bottom part in two different ways. You can
+   edit the summary directly by clicking on the Name, AoE (Area of Effect), Duration,
+   Range, Type columns and edit them. You can also check the PP (spell doesn't
+   spend PPs) and the * (spell is instantaneous) columns.
+  </para>
+  <para>
+   You can also double click on a spell to edit the spell in details. In this newly
+   opened window, you can edit the same things as in the summary, plus a
+   description of the spell and annotations.
+  </para>
+ </section>
+</chapter>
+
+<chapter>
+ <title>Known Bugs</title>
+ <section>
+  <title>Bugs</title>
+  <itemizedlist>
+   <listitem>
+    <para>
+    You can't edit a character's skills (under developement).
+    </para>
+   </listitem>
+  </itemizedlist>
+ </section>
+
+ <section>
+  <title>Fixme's &amp; Todo's</title>
+  <itemizedlist>
+   <listitem>
+    <para>
+    Stat gain on a single stat for manual handling of Training Packages ;
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+    Possibility of adding entries in the character information tree ;
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+    Explanation when selection the everyman/occupational skills about
+    what is asked.
+    </para>
+   </listitem>
+  </itemizedlist>
+ </section>
+</chapter>
+
+<chapter>
+<title>Legal Stuff</title>
+<para>
+Rolemaster is a trademark owned by Iron Crown Enterprise
+(<acronym>I.C.E</acronym>,
+<ulink url="http://www.ironcrown.com">http://www.ironcrown.com</ulink>).
+</para>
+<para>
+ &Nebula; is copyrighted by
+ <author><firstname>Brett</firstname><surname>Nash</surname></author>
+ and is distributed under the <acronym>GPL</acronym> license,
+ you should find a copy of this license in the
+ &Nebula; archive.
+</para>
+<para>
+ This documentation by
+ <author><firstname>Sylvain</firstname><surname>Glaize</surname>
+ <affiliation><address><email>sglaize@free.fr</email></address></affiliation>
+ </author>.
+</para>
+</chapter>
+</book>
+

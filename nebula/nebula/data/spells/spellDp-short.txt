@@ -1,0 +1,12 @@
+<tr><td>Realm,Type,Level,Pure,Hybrid,Semi,Non,Arcane Pure,Arcane Semi</td></tr>
+<tr><td>Own Realm,Own Base,1-5,3/3/3,4/4/4,6/6/6,,,</td></tr>
+<tr><td>Own Realm,Open,1-5,4/4/4,4/4/4,8/8,x1,,</td></tr>
+<tr><td>Own Realm,Closed,1-5,4/4/4,4/4/4,10/10,x1,,</td></tr>
+<tr><td>Own Realm,Other Base,1-5,8/8,10/10,25,x1,,</td></tr>
+<tr><td>Other Realm,Open,1-5,10/10,12,30,x1,5/5,12</td></tr>
+<tr><td>Other Realm,Closed,1-5,20,25,45,x1,6/6,25</td></tr>
+<tr><td>Other Realm,Other Base,1-5,50,60,80,x1,10/10,60</td></tr>
+<tr><td>Arcane,Open,1-5,6/6,5/5,12,x1,4/4/4,11/11</td></tr>
+<tr><td>Arcane,Closed,1-5,10/10,8/8,18,x1,4/4/4,16/16</td></tr>
+<tr><td>Arcane,Own Base,1-5,,,,,3/3/3,6/6/6</td></tr>
+<tr><td>Arcane,Other Base,1-5,25,12,40,x1,12/12,25</td></tr>

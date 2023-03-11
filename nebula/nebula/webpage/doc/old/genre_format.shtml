@@ -1,0 +1,28 @@
+<!--#set var="TITLE" value="Nebula: Genre Format" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Genre Format</h1>
+
+<p>The genere files determine what base skills are availabel for the
+chracters.  It is important to note that:</p>
+<ul>
+  <li>There is no attempt to restrict classes or races based on genre &amp;</li>
+  <li>The genre has no effect after character creation.</li>
+</ul>
+
+<p>It is suggested that GMs provide a genre file for campaigns they run,
+addign or removing skills and languages as they see fit.  In particular they
+should make sure commonly available languages, lores and any special skills
+are in the data file. </p>
+
+<p>The format is identical to the skills section of the character files.
+Obviously you can't have ranks, but it supports things like Everyman
+progressions, and the same stat bonus format. </p>
+
+<p>The only other significant difference is the use of the stat
+<code> realm</code> to indicate the realm stat. </p>
+
+<p>See <a href="character_format.shtml">character_format.shtml</a> for mroe
+details.</p>
+
+<!--#include virtual="/.include/tail.shtml" -->

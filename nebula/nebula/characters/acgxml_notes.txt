@@ -1,0 +1,66 @@
+Hello Michael
+
+I've manually gone through you xml file (if you are interested and can run
+perl I have a script called xmlpretty.pl while makes it a lot more readable.
+
+And I have the following questions/comments/notes:
+
+        * Well formed XML documents should begin with '<?xml version='1.0'?>
+        * char -> rmsscharacter: Lets be namespace friendly to other xml
+documents - also I keep thinking of a signed or unsigned type guarenteed to
+be able to hold one character...
+        * charname -> name: Its the characters file - so it should just be 
+name also remove the phrase 'char' again.  
+        * 'Abilities': Can we change it to <stats>.  Abilities is not an
+RM term (it is a Storyteller term for the RM equiv of skills though).
+        * class -> profession: Class is the AD&D term - we should use RM
+vernicular hence profession.
+        * What are all the '+'s for?  is that an artifact of your xml engine?
+        * I've made realmstat a flag on a stat, also have done the same
+for prime requisites.  
+        * Can we use the full name for RRs?  As they say in the XML goals:
+'Terseness in XML markup is of minimal importance'. 
+        * I save the BD and PP progression with the skills themselves.
+Hence no need to duplication.  (If someone needs to tweak their character
+manually)
+        * Progressions : Your xml library seems to encode '/' as %2F for
+reason.  This is how you encode html chracters, so its rather confused - '/'
+in any position is valid in XML.  Secondly %2F should not be encoded or
+unencoded - it should be passed through as is.  
+        * Progression Replacement: May I suggest the use of either '*' or
+the ' ' - "Middle Dot" (also called bullet) character for iso 8859-1 (latin)
+(and hence also unicode).  This has the value of 183 (0267/0xB7).  I use it
+in my ps printouts and it appears quite nice.
+        * Progressions (Again): Can we use Standard/Combined/Limited for
+progressions that fall into those categories.  I use 'Racial(0*6*5*4*3)' for
+BD and PP.
+        * Appearance is a stat as far as I'm concerned, along with sanity
+and willpower.  Obviously I need to make sure that I handle them
+appropriatly.  
+        * Defensive  : what is 'da', 'dt' & 'ds'?  
+        * I use whitespace and get my parser to ignore it between elements -
+can  you easily do the same?  It makes it a _lot_ more readable.
+(essentially I set 'xml:space=default' on rmsscharacter
+        * (Bug?) 38742 XP is 3rd level - not 4th as Ragnor is...
+        
+        Now as for your skills - I'm afraid I don't understand what you have
+done at all!
+        My suggestion would be something like:
+<skills>
+        <category>
+                <catname>Awareness * Senses</name>
+                <progression>Limited</progression>
+                <catranks>2</catranks>
+                <!-- other stuff for category goes here -->
+                <skill>
+                        <skillname>Alertness</name>
+                        <skillranks>2</ranks>
+                        <!-- ... -->
+                </skill>
+                <skill>
+                        <skillname>Sensse Ambush>
+                        <!-- ... -->
+                </skill>
+        </category>
+        ...
+</skills>

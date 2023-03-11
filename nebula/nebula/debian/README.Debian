@@ -1,0 +1,11 @@
+nebula for Debian
+-----------------
+
+	The data files needed for Nebula are distributed in a separate
+	package, nebula-data (also available as Debian package). This is
+	because this files are copyrighted by ICE (Iron Crown Enterprises).
+
+	In the directory /usr/share/doc/nebula/characters you can find
+	some example characters created with this program.
+
+ -- Roberto Suarez Soto <turgon@debian.org>, Sun, 25 Aug 2002 11:52:43 +0200

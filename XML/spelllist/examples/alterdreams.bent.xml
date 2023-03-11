@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+
+<list name="Alter Dreams" realm="Channeling" type="Cleric Base">
+
+<description>
+This list focuses on the gradual altering of a dream to twist it into
+a dream more to the spell caster's liking. This can be used both to
+the benefit and to the detriment of the actual dreamer. If one wants
+to use the effects from this list to affect the dreamer's psyche in
+some way, they are best combined with psychology skills and some
+planning and research.
+</description>
+
+<spell level="1" name="Enter Dreams I">
+<area>self</area>
+<duration>C</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+This spell is normally used to track down the dream that the caster
+wishes to affect. The spell gives the caster a weak mental link into
+the
+dream world
+through which he can navigate dreams. The link does not yield much in
+the way of details, and precise identification of objects within the
+dream world is impossible. Only general ideas are transmitted. The
+skill "Area Knowledge: Dream World" is used to navigate the dream
+world, but a penalty of -20 is applied due to the low quality of the
+link. Note that the maintaining of concentration on this spell may
+cause additional negative modifiers to be applied to the navigation
+skill roll, as well as other activities undertaken within dreams.
+</description>
+<annotation>
+The serious dreamlord will employ spells on the Dream Traveller spell
+list for less restricted access to the Dream World.
+</annotation>
+</spell>
+
+<spell level="2" name="Gauge Dream">
+<area>1 dream</area>
+<duration>-</duration>
+<range>touch</range>
+<type>Um</type>
+<description>
+The caster receives an overview of the concepts that are in force in
+the dream he is currently visiting, and the sizes of each concept. He
+does not gain any understanding of the resilience of the concepts,
+however.
+</description>
+</spell>
+
+<spell level="3" name="Mutate Concept I">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+Allows the caster to cause one single concept within a dream to be
+mutated. The caster has no control over the direction of the mutation.
+The change will be one degree in a random direction.
+</description>
+</spell>
+
+<spell level="4" name="Tweak Concept I">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+Allows the caster to alter one single dream concept by one degree in
+the direction of his choosing.
+</description>
+</spell>
+
+<spell level="5" name="Reinforce Concept I">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Um</type>
+<description>
+Increases one single dream concept's resilience by 5. Any attempts to
+tweak or mutate 
+this concept in the future are therefore awarded a special -5 penalty.
+</description>
+</spell>
+
+<spell level="6" name="Weaken Concept I">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+Decreases any one single dream concept's resilience by 5. Any attempts
+to tweak or mutate this concept in the future are therefore awarded a
++5 bonus.
+</description>
+</spell>
+
+<spell level="7" name="Remove Concept I">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+This spell can completely remove a dream concept, regardless of the
+size of the concept. The dream is awarded a special +5 per size of the
+concept to resist this spell. A concept that is successfully removed
+stops playing any part in the dream, potentially changing the very
+contents of the dream.
+</description>
+</spell>
+
+<spell level="8" name="Add Concept I">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+Adds a new size 1 concept to the dream. The concept needs to not be in
+conflict with any concepts already present within the dream. While a
+size 1 concept isn't going to impress anyone, its appearance will have
+<em>some</em> impact upon the contents of the dream.
+</description>
+</spell>
+
+<spell level="9" name="Shifting Concept I">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+The caster may preprogram a repeatedly shifting nature of one single
+dream concept. The shifting may at most change a concept's size by one
+degree every five minutes. The direction of all future shifts for one
+single casting of this spell must be determined at the time of
+casting. Note that a "shifting" is considered a spell effect every
+time it occurs and so the casting of additional spells on the affected
+dream concept will cause the dream to become unstable. A period during
+which the caster has elected a shift not to occur, however, is safe
+for casting other spells on that concept.
+</description>
+</spell>
+
+<spell level="10" name="Mutate Concept III">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+As Mutate Concept I, except will shift the concept 1d3 sizes in a
+random diretion.
+</description>
+</spell>
+
+<spell level="11" name="Tweak Concept III">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+As Tweak Concept I, except can shift the concept 1-3 sizes in any
+direction, as the caster wishes.
+</description>
+</spell>
+
+<spell level="12" name="Reinforce Concept III">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Um</type>
+<description>
+As Reinforce Concept I, except bonus is +25
+</description>
+</spell>
+
+<spell level="13" name="Weaken Concept V">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+As Weaken Concept I, except malus is -25.
+</description>
+</spell>
+
+<spell level="14" name="Remove Concept II">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+As Remove Concept I, except removal attempt only gets -3 per size of
+the concept being removed.
+</description>
+</spell>
+
+<spell level="15" name="Add Concept II">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+As Add Concept I, except the new concept can start at any size from
+1-5, as the caster wishes.
+</description>
+</spell>
+
+<spell level="16" name="Shifting Concept III">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+As Shifting Concept I, except max shift is 3 per five minute period.
+</description>
+</spell>
+
+<spell level="17" name="Mutate Concept True">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+As Mutate Concept I, except the concept gains a random new size from 1-10.
+</description>
+</spell>
+
+<spell level="18" name="Add Concept True">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+As Add Concept I, except the new concept may have any size from 1 to
+10, as the caster desires.
+</description>
+</spell>
+
+<spell level="19" name="Remove Concept True">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+As Remove Concept I, except the malus is -1 per size of the concept.
+</description>
+</spell>
+
+<spell level="20" name="Warp Concept">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+The fundamental nature of any one concept is changed semi-randomly. The
+change will generally be towards a diametrically opposite concept, so
+that a size 5 "anger" concept might warp into a size 5 "joy" concept.
+The size remains the same and the concept retains any resilience
+bonues/maluses.
+</description>
+</spell>
+
+<spell level="25" name="Control Concept">
+<area>1 dream</area>
+<duration>C</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+The caster gains full conscious control of any one concept and may
+change its size from round to round without endangering the stability
+of the dream. Its fundamental nature may not be changed.
+</description>
+</spell>
+
+<spell level="30" name="Conceptual Fortress">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Um</type>
+<description>
+Any one concept is rendered completely immune to spell effects from
+this list (or similar lists).
+</description>
+</spell>
+
+<spell level="50" name="Dream Master">
+<area>self</area>
+<duration>1 rnd/level</duration>
+<range>self</range>
+<type>U</type>
+<description>
+The caster may cast any one spell from this list that is 20th level or
+lower every round for the duration of this spell.
+</description>
+</spell>
+
+<specialnote>
+In order to cast most of the spells on this list, the caster must
+"touch" the target, which is "1 dream". To "touch a dream", the caster
+must either be inside of that dream (by way of some dream travelling
+magic, such as the spell "Enter Dreams I"), or he must touch the actual
+dreamer that is having the dream in question.
+</specialnote>
+
+<specialnote>
+A dream's foundation is the concepts upon which it is based. The set
+of possible concepts is huge and certainly too large for us to
+enumerate here. Examples, however, may include "hungry", "fear",
+"beauty", "friendship", "pain", "confusion", "mother", etc. All dreams
+are based on at least one concept, most will have 3-4 or more. Each
+concept in a dream has a "size" that varies from 1 (almost
+insignificant impact) to 10 (totally dominates). A concept may not be
+grown beyond 10 nor may it be shrunk beneath 1 (although it can
+certainly be removed, which is something else entirely). The actual
+dream as seen by the dreamer (and any visitor) is only the
+visual/mental manifestation of the concepts that drive the dream.
+</specialnote>
+
+<specialnote>
+It is important to appreciate the difference between concept "size"
+and concept "resilience" when using this list. "Size" is a measure of
+the impact the concept has on the dream and is affected by the
+"tweak", "mutate" and "warp" spells (and indirectly by the "add" and
+"remove" spells). "Resilience" is a measure of how difficult it is to
+affect a concept by the use of spells, and is affected by the
+"reinforce" and "weaken" spells. It could be said that "size" is a
+concept's Strength stat while "resilience" is its Constituation stat.
+</specialnote>
+
+<specialnote>
+Once a dream concept has been affected by one of the "tweak",
+"mutate", "remove", "add" or "warp" spells on its list, it may not be
+affected again for a period of five minutes. If an attempt is made to
+do so, the dream will become unstable and the dreamer will either
+awake or else the dream will be replaced by an entirely new one.
+</specialnote>
+
+<specialnote>
+Any attempt to tweak, mutate or weaken a dream concept (actually, any
+F type spell on this list) needs to overcome the
+dream's inherent resistance to being tampered with. The dream resists
+with the level of the dreamer, and any applicable bonuses the dreamer
+can bring to bear. Note that special spells on this list may give
+additional bonuses/maluses.
+</specialnote>
+
+<specialnote>
+ Note that
+while the duration of some of the spells on this list is Permanent,
+the effect only lasts as long as the target
+concept does, and therefore it never outlasts the dream itself.
+</specialnote>
+
+
+
+</list>

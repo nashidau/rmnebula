@@ -1,0 +1,30 @@
+tr.category {
+        background-color: #e0e0e0;
+}
+
+td.numeric {
+        text-align: right;
+}
+td.abbr {
+        text-align: center;
+}
+
+td.category {
+        font-weight: bold;
+}
+td.skill {
+        padding-left: 2ex;
+}
+td.skillgroup {
+        padding-left: 2ex;
+        font-style: italic;
+}
+td.skillgroupmember {
+        padding-left: 4ex;
+}
+
+.title {
+        text-align: left;
+        font-weight: bold;
+}
+

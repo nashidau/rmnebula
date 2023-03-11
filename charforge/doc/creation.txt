@@ -1,0 +1,13 @@
+Character Creation Steps
+========================
+
+* Race
+* Profession
+* Realm
+* Additional base
+* temps
+* potentials
+* adolescence skills
+* background options
+* apprenticeship skills
+

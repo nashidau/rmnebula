@@ -1,0 +1,218 @@
+<?xml version='1.0'?>
+
+<!DOCTYPE spelllist SYSTEM
+        "/home/nash/work/rolemaster/XML/spelllist/spelllist.dtd">
+
+
+<spelllist>
+    <name>Spell list</name>
+    <listtype></listtype>
+    <author>Brett Nash</author>
+    <spell>
+        <level>1</level>
+        <name>Spell 1</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description> 
+    </spell>
+    <spell>
+        <level>2</level>
+        <name>Spell 2</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>3</level>
+        <name>Spell 3</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration> 
+        <range></range> 
+        <type></type> 
+        <description></description>
+    </spell>
+    <spell>
+        <level>4</level>
+        <name>Spell 4</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>5</level>
+        <name>Spell 5</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>6</level>
+        <name>Spell 6</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>7</level>
+        <name>Spell 7</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>8</level>
+        <name>Spell 8</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>9</level>
+        <name>Spell 9</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>10</level>
+        <name>Spell 10</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell> 
+        <level>11</level> 
+        <name>Spell 11</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration> 
+        <range></range>
+        <type></type>
+        <description></description> 
+    </spell>
+    <spell>
+        <level>12</level>
+        <name>Spell 12</name>
+        <duration></duration> 
+        <range></range> 
+        <type></type> 
+        <description></description>
+    </spell>
+    <spell>
+        <level>13</level>
+        <name>Spell 13</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>14</level>
+        <name>Spell 14</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>15</level>
+        <name>Spell 15</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>16</level>
+        <name>Spell 16</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>17</level>
+        <name>Spell 17</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>18</level>
+        <name>Spell 18</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>19</level>
+        <name>Spell 19</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>20</level>
+        <name>Spell 20</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>25</level>
+        <name>Spell 25</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell> 
+        <level>30</level>
+        <name>Spell 30</name>
+        <areaofeffect></areaofeffect> 
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+    <spell>
+        <level>50</level>
+        <name>Spell 50</name>
+        <areaofeffect></areaofeffect>
+        <duration></duration>
+        <range></range>
+        <type></type>
+        <description></description>
+    </spell>
+</spelllist>
+

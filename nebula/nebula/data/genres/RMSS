@@ -1,0 +1,961 @@
+%  All Skills
+%  A list of _all_ Rolemaster Standard system skills
+%  For Fantasy games.  #
+%
+%  Format:  Categorys start on a new line with no spaces
+%           Skills are listed after the categories with one of more
+%           spaces
+%
+%  Skills can be marked as restricted [r] or [R], Occupational [O], or
+%  Everyman [E]
+%  '*'s replace dots.
+%  A # means there multiple versions of this skill (eg play instrument
+%  is play harp, play lute, play oboe etc), a skill starting with # is a
+%  specific example
+%
+% If there any omissions from this table _please_ notify me.
+%
+% After the Category are: { Stat : Progression }
+% Stats can be either added eg SD + In or Averaged SD / In.  Realm is
+% casters realm stat (Em, In or Pr normally)
+% Progression is one of Standard (S), Combined (C), Racial (R) 
+%   or Limited (1 or L)  - Limited is 0*1*1*0.5*0
+
+% Notes: 
+%    - Added General TP lists to Essence TP.
+%    - Chi powers have _not_ been added
+
+Armor * Heavy { St+Ag+St : S } 
+	Plate
+Armor * Light { Ag+St+Ag : S }
+	Soft Leather
+	Rigid Leather
+Armor * Medium { St+Ag+St : S }
+	Chain
+Artistic * Active { Pr+Em+Ag : S }
+	Acting
+	Dancing
+	Mimery
+	Mimicry
+	Play Instrument (By Instrument) #
+	Poetic Improvisation
+	Singing
+	Tale Telling
+	Ventriloquism
+Artistic * Passive { Em+In+Pr : S }
+	Music
+	Painting
+	Poetry
+	Sculpting
+Athletic * Brawn { St+Co+Ag : S }
+	Athletic Games - Brawn (By Game) #
+	Jumping
+	Power-Striking
+	Power Throwing
+	Weight Lifting
+Athletic * Endurance { Co+Ag+St : S }
+	Athletic Games - Endurance (By Game) #
+	Distance Running
+	Rowing
+	Scaling
+	Sprinting
+	Swimming
+Athletic * Gymnastics { Ag+Qu+Ag : S }
+	Acrobatics
+	Athletic Games - Gymnastic (By Game) #
+	Climbing
+	Contortions
+	Diving
+	Flying/Gliding
+	Juggling
+	Pole-Vaulting
+	Rappeling
+	Skating
+	Skiing
+	Stilt Walking
+	Surfing
+	Tightrope-walking
+	Tumbling
+Awareness * Perceptions {In+SD+In : L }
+	Alertness
+	Sense Ambush
+Awareness * Searching {In+Re+SD : S }
+	Detect Traps
+	Lie Perception
+	Locate Hidden
+	Observation
+	Poison Perception
+	Reading Tracks
+	Surveillance
+	Tracking
+Awareness * Senses {In+SD+In : S}
+	Direction Sense
+	Reality Awareness [R]
+	Situation Awareness (By Situation) #
+	# Combat
+	# Familiar
+	# Feinting
+	# Scouting
+	# Sleep
+	# Urban
+	Spatial Location Awareness [R]
+	Sense Awareness (By Sense) #
+	# Sight
+	# Hearing
+	# Smell
+	# Taste
+	# Touch
+	# Other
+	Time Sense
+Body Development { Co+SD+Co : R }
+	Body Development
+Combat Maneuvers { Ag+Qu+SD : C }
+	Adrenal Deflecting [R]
+	Blind Fighting [R]
+	Missile Deflecting [R]
+	Mounted Combat
+	Quickdraw
+	Reverse Stroke (By Weapon Category) #
+	Subdual
+	Swashbuckling
+	Tumbling Evasion [R]
+	Two-weapon Fighting (By Weapon Combination) #
+	Weapon Style - Advanced (By Style) # [R]
+	Weapon Style - Basic (By Style) #
+Communications { Re+Me+Em : S }
+	Language Spoken #
+	# _
+	# _
+	# _
+	# _
+	# _
+	# _
+	Language Written #
+	# _
+	# _
+	# _
+	# _
+	Professional Spoken #
+	# Tongue of the Dance
+	# Faceted (Crystal)
+	# Phonos (Nomenist)
+	# Vegan (Herbalist)
+	# Phylos (Corpist)
+	Professional Written #
+	# Tongue of the Dance
+	# Faceted (Crystal)
+	# Phonos (Nomenist)
+	# Vegan (Herbalist)
+	# Phylos (Corpist)
+	Lip Reading
+	Magical Language [R] #
+	# Aisthasis (Detection)
+	# Aster (Light)
+	# Chaot (Inorg Mod)
+	# Empat (Charm)
+	# Gaia (Earth)
+	# Gnosis (Control)
+	# Graphay (Enhance)
+	# Hudatos (Water)
+	# Iruaric (Enchant)
+	# Kubeia (Obfus)
+	# Orbita (Scrying)
+	# Parapateo (Move)
+	# Petra (Protect)
+	# Pneumatikos (Summon)
+	# Shusha (Wind)
+	# Skotia (Dark)
+	# Soma (Personal)
+	# Spoudazo (Org Mod)
+	# Xzulou (Creation)
+	Signalling
+Crafts { Ag+Me+SD : C }
+	Drafting
+	Cooking
+	Fletching
+	Horticulture
+	Leather Crafts
+	Metal-crafts
+	Rope Mastery
+	Scribing
+	Service
+	Sewing/Weaving
+	Skinning
+	Stone-crafts
+	Trapping
+	Wood-crafts
+	Crafts #
+Directed Spells {Ag+SD+Ag : S }
+	Fire Bolt
+	Ice Bolt
+	Lightning Bolt
+	Mana Bolt
+	Shock Bolt
+	Void Bolt
+	Water Bolt
+Influence { Pr+Em+In : S }
+	Bribery 
+	Diplomacy
+	Duping
+	Interrogation
+	Leadership
+	Propaganda
+	Public Speaking
+	Seduction
+	Teaching
+	Trading
+Lore * General { Me+Re+Me : S }
+	Culture Lore (By Culture/Race) #
+	Fauna Lore
+	Flora Lore
+	Heraldry
+	History (By Region/Group/Planet/Society/City) #
+	# World History
+	Martial Arts Style Lore
+	Philosophy
+	Region Lore (By Region) #
+	Religion (By Pantheon/Religion) #
+	Weapon Style Lore
+Lore * Magical { Me+Re+Me : S }
+	Artifact Lore
+	Circle Lore
+	Divination Lore (By Divination Method)#
+	Dream Lore
+	Dreamworld Lore
+	Glyph Lore
+	Planar Lore
+	Spell Lore
+	Symbol Lore
+	Undead Lore
+	Warding Lore
+Lore * Obscure { Me+Re+Me : S }
+	Demon /Devil Lore
+	Dragon Lore
+	Faerie Lore
+	Vital Points Lore (By General Type)#
+	# Humanoid Vital Points
+	Xeno-Lores (By Alien Skill)#
+Lore * Technical { Me+Re+Me : S }
+	Corpus Lore
+	Herb Lore
+	Lock Lore
+	Metal Lore
+	Poison Lore
+	Stone Lore
+Martial Arts Combat Maneuverss { Ag+Qu+SD : C }
+	Adrenal Deflecting
+	Adrenal Evasion
+	Blind Fighting
+	Martial Arts Style - Advanced (By Style) # [R]
+	Martial Arts Style - Basic (By Style) #
+Martial Arts * Strikes {St+Ag+St : S }
+	Boxing
+	Martial Arts Striking
+	Nerve Strikes
+	Tackling
+Martial Arts * Sweeps {Ag+St+Ag : S }
+	Blocking
+	Locking Holds
+	Martial Arts Sweeps
+	Wrestling
+Outdoor * Animal { Em+Ag+Em : S }
+	Animal Handling (By Animal Type)#
+	Animal Healing (By Animal Type)#
+	Animal Mastery (By Animal Type)#[R]
+	Animal Training (By Animal Type)#
+	Animal Driving (By Animal Type) #
+	Familiar Mastery (By Familiar) #
+	Herding (By Animal Type)#
+	Riding (By Mount Type)#
+Outdoor * Environmental { SD+In+Me : S }
+	Caving 
+	Foraging
+	Hunting
+	Stargazing
+	Survival (By Environment)#
+	Weather Watching
+Power Awareness { Em+In+Pr : S }
+	Attunement
+	Divination (By divination method)#
+	Power Perception [R]
+	Read Runes
+Power Manipulation {Em+In+Pr : C }
+	Channeling
+	Mental Control - Assault
+	Mental Control - Defence
+	Magic Ritual #
+	# Ess: Charm
+	# Ess: Control
+	# Ess: Creation
+	# Ess: Dark
+	# Ess: Detection
+	# Ess: Earth
+	# Ess: Enhancement
+	# Ess: Enchant - Perm
+	# Ess: Enchant - Var
+	# Ess: Inorganic
+	# Ess: Light
+	# Ess: Movement
+	# Ess: Obfuscation
+	# Ess: Organic
+	# Ess: Personal
+	# Ess: Protection
+	# Ess: Scrying
+	# Ess: Summons
+	# Ess: Water
+	# Ess: Wind
+	# Ment: Self
+	# Ment: Other Intelligent
+	# Ment: Animals
+	# Ment: Inanimate
+	# Ment: Surroundings
+	Spell Artistry
+	Spell Mastery (By Spell List) #
+	Spell Trickery
+	Summoning
+	Targeting
+	Transcend Armor [R]
+Power Point Development { realm : R }
+	Power Point Development
+Science/Analytic * Basic { Re+Me+Re : S }
+	Basic Maths
+	Research
+Science/Analytic * Specialised { Re+Me+Re : C }
+	Advanced Math
+	Anthropology (By Race/Culture)#
+	Alchemy
+	Astronomy
+	Biochemistry
+	Psychology (By Race)#
+	Others #
+Self Control { SD+Pr+SD : S }
+	Adrenal Balance
+	Adrenal Concentration
+	Adrenal Landing
+	Adrenal Leaping
+	Adrenal Quickdraw (By Weapon type)#
+	Adrenal Speed
+	Adrenal Stabilisation [R]
+	Adrenal Strength
+	Cleansing Trance [R]
+	Control Lycanthropy [R]
+	Death Trance [R]
+	Dream Control
+	Dreamworld Control
+	Frenzy
+	Healing Trance
+	Meditation
+	Mnemonics
+	Sleep Trance
+	Spell Concentration
+	Stunned Manoeuvring
+Special Attacks { St+Ag+SD : C }
+	Brawling
+	Disarm Foe - Armed #
+	Disarm Foe - Unarmed #
+	Feint - Armed
+	Feint - Unarmed
+	Jousting
+	Racial Attack (By Natural Racial Attack)# [R]
+Special Defences { none : C }
+	Adrenal Defence
+	Adrenal Toughness [R]
+	Adrenal Resistance [R]
+Spells * Open Arcane { realm : L }
+	Arcane Barriers
+	Arcane Forces
+	Arcane Senses
+	Arcane Shield
+	Arcane Signs
+	Detection Law
+	Power Manipulation
+	Realm Lore
+	Spell Inhibitions
+	Spell Triggers
+Spells * Closed Arcane { realm : L }
+	Arcane Healing
+	Arcane Summons
+	Arcane Missions
+	Aura Lore
+	Bladerunes
+	Fire Manipulation
+	Gargoyle Mastery
+	Light Manipulation
+	Nature Manipulation
+	Power Mastery
+	Shifting Law
+Spells * Open Essence { realm : L }
+	Air Mastery
+	Allurement
+	Delving Ways
+	Detecting Ways
+	Elemental Shields
+	Essence Hand
+	Essence Perceptions
+	Fey Conjury
+	Lesser Illusions
+	Physical Enhancement
+	Rune Mastery
+	Shadow Mastery
+	Sound Mastery
+	Spell Wall
+	Sustain Body
+	Unbarring Ways
+Spells * Closed Essence { realm : L }
+	Circle Mastery
+	Counterspells
+	Dispelling Ways
+	Earth Mastery
+	Elemental Summons
+	Familiar Mastery
+	Fire Mastery
+	Gate Mastery
+	Invisible Ways
+	Light Mastery
+	Living Change
+	Lofty Bridge
+	Magic Staff
+	Matter Shaping
+	Mechanism's Way
+	Rapid Ways
+	Shield Mastery
+	Spell Enhancement
+	Spell Reins
+	Spirit Mastery
+	Water Mastery
+Spells * Essence TP { realm : L }
+	Arachnemancy [R]
+	Brewing Lore [R]
+	Corpist Casting [R]
+	Crystalist Casting [R]
+	Glass/Ceramic Crafting [R]
+	Guildcraft Mastery [R]
+	Hearth Magic [R]
+	Herbalist Casting [R]
+	Item Enchantments [R]
+	Magical Ropes [R]
+	Mending Ways [R]
+	Metal Crafting [R]
+	Mirror Magic [R]
+	Nomenist Casting [R]
+	Ocean Law [R]
+	Predictions [R]
+	Stone Crafting [R]
+	Structure Wardings [R]
+	Traveller's Ways [R]
+	Wood Crafting [R]
+Spells * Open Channelling { realm : L }
+	Barrier Law
+	Concussion's Ways
+	Detection Mastery
+	Light's Way
+	Lofty Movements
+	Nature's Ways
+	Purifications
+	Sound's Ways
+	Spell Defence
+	Weather Ways
+Spells * Closed Channelling { realm : L }
+	Blood Law
+	Bone Law
+	Calm Spirits
+	Creations
+	Locating Ways
+	Lore
+	Muscle Law
+	Nerve Law
+	Organ Law
+	Sacred Grounds
+	Symbolic Ways
+Spells * Channelling TP { realm : L }
+	Perimeter Wardings [R]
+Spells * Open Mentalism { realm : L }
+	Anticipations
+	Attack Avoidance
+	Brilliance
+	Cloaking
+	Damage Resistance
+	Delving
+	Detections
+	Illusions
+	Self Healing
+	Spell Resistance
+Spells * Closed Mentalism { realm : L }
+	Gas Manipulation
+	Liquid Manipulation
+	Mind Mastery 
+	Mind's Door
+	Movement
+	Sense Mastery
+	Shifting
+	Solid Manipulation
+	Speed
+	Telekinesis
+Spells * Mentalism TP { realm : L }
+	Animal Bonding [R]
+	Body Shifting [R]
+	Charades [R]
+	Dream Law [R]
+	Dream Lore [R]
+	Dream Travel [R]
+	Houri's Beguilement [R]
+	Houri's Kisses [R]
+	Knowledge Mastery [R]
+	Medical Law [R]
+	Mind Shifting [R]
+	Physics [R]
+	Sailing Mastery [R]
+	Seas Mastery [R]
+Spells * Animist Channeling Base { realm : L }
+	Animal Mastery
+	Herb mastery
+	Nature's Lore
+	Nature's Move/Senses
+	Nature's Protection
+	Plant Mastery
+Spells * Cleric Channeling Base { realm : L }
+	Channels
+	Communal Ways
+	Life Mastery
+	Protections
+	Repulsions
+	Summons
+Spells * Illusionist Essence Base { realm : L }
+	Feel-Taste-Smell
+	Guises
+	Illusion Mastery
+	Light Molding
+	Mind Sense Molding
+	Sound Molding
+Spells * Magician Essence Base { realm : L }
+	Earth Law
+	Fire Law
+	Ice Law
+	Light Law
+	Water Law
+	Wind Law
+Spells * Lay Healer Mentalism Base { realm : L }
+	Blood Mastery
+	Bone Mastery
+	Concussion Mastery
+	Muscle Mastery
+	Nerve/Organ Mastery
+	Prosthetics
+Spells * Mentalist Mentalism Base { realm : L }
+	Mind Attack
+	Mind Control
+	Mind Merge
+	Presence
+	Sense Control
+Spells * Arcanist Arcane Base { realm : L }
+	Mana Law
+	Power Focus
+	Power's Master
+	Spell Shaping
+	Void Law
+	Wards
+Spells * Wizard Arcane Base { realm : L }
+	Faith Breaker
+	Mind Breaker
+	Spell Bane
+	Spell Coordination
+	Spell Hand
+	Spell Shield
+Spells * Healer Chan/Ment Base { realm : L }
+	Blood Ways
+	Bone Ways
+	Cleansing
+	Muscle Ways
+	Organ Ways
+	Surface Ways
+Spells * Mystic Ment/Ess Base { realm : L }
+	Confusing Ways
+	Gas Alteration
+	Hiding
+	Liquid Alteration
+	Mystical Change
+	Solid Alteration
+Spells * Sorcerer Chan/Ess Base { realm : L }
+	Flesh Destruction
+	Fluid Destruction
+	Gas Destruction
+	Mind Destruction
+	Solid Destruction
+	Soul Destruction
+Spells * Paladin Channeling Base { realm : L }
+	Communion
+	Exorcism
+	Holy Arms
+	Holy Healing
+	Holy Shields
+	Inspiring Ways
+Spells * Ranger Channeling Base { realm : L }
+	Inner Walls
+	Moving Ways
+	Nature's Guises
+	Nature's Summons
+	Nature's Way
+	Path Mastery
+Spells * Dabbler Essence Base { realm : L }
+	Concealment Mastery
+	Influences
+	Mechanisms
+	Movement Mastery
+	Senses
+	Thieving Law
+Spells * Monk Essence Base { realm : L }
+	Body Reins
+	Body Renewal
+	Evasions
+	Mind Over Matter
+	Monk's Bridge
+	Monk's Sense
+Spells * Bard Essence Base { realm : L }
+	Controlling Songs
+	Entertaining Ways
+	Item Lore
+	Lores
+	Sound Control
+	Sound Projection
+Spells * Magent Mentalism Base { realm : L }
+	Assassination Mastery
+	Disguises
+	Escapes
+	Gathering Secrets
+	Misdirections
+	Poison Mastery
+Spells * Chaotic Arcane Base { realm : L }
+	Arcane Motions
+	Arcane Senses
+	Changes
+	Hand of Chaos
+Spells * Magehunter Arcane Base { realm : L }
+	Amplifications
+	Containing Ways
+	Hunter's Call
+	Power Lore
+	Spell Protection
+	Spell Tracker
+Spells * Seer Mentalism Base { realm : L }
+	Far Visions
+	Future Visions
+	Mind Visions
+	Past Visions
+	Vision Borrowing
+	Vision Guard
+Spells * Astrologer Chan/Ment Base { realm : L }
+	Far Voice
+	Holy Vision
+	Starlights
+	Starlore
+	Starsense
+	Way of the Voice
+Spells * Enchanter Ment/Ess Base { realm : L }
+	Seeming Defences
+	Seeming Enhancement
+	Seeming Law
+	Seeming Mastery
+	Seeming Memories
+	Seeming Projection
+Spells * Armsmaster Mentalism Base { realm : L }
+	Armoury Mastery
+	Battle Law
+	Fortress Law
+	Martial Law
+	Warriors Law
+	Weapon Mastery
+Spells * Runemage Essence Base { realm : L }
+	Commanding Will
+	Inscriptions
+	Nomenclature Mastery
+	Physical Manipulations
+	Symbolism
+	Warding ways
+Spells * Mana Molder Essence Base { realm : L }
+	Mana Barriers
+	Mana Items
+	Mana Molding
+	Mana Servants
+	Mana Warriors
+	Glyphs
+Spells * Warrior Mage Essence Base { realm : L }
+	Combat Ways
+	Combat Illusions
+	Spell Defence
+	Warrior's Enhancements
+	Warrior's Weapon
+	Will of the Warrior
+Spells * Priest Channeling Base { realm : L }
+Spells * Other Priest Channeling Base { realm : L }
+	Aquatic Forms
+	Banishments
+	Battlefield Healing
+	Ceremonies
+	Chants
+	Crusade
+	Death mastery
+	Divine Aura
+	Divine Magic
+	Faiths Shield
+	Holy Defences
+	Holy Discipline
+	Holy Element
+	Holy Symbol
+	Holy Trances
+	Holy Weapon
+	Holy Wind
+	Holy Wrath
+	Horse Mastery
+	Hunting Mastery
+	Insect Mastery
+	Land Forms
+	Nature Domination
+	Proselytising
+	Serpent Law
+	Spirit Domination
+	Spirit Law
+	Spiritual Visions
+	Stone Mastery
+	The Hunter
+	Time Lore
+	Tree Mastery
+	Voodoo Magic
+Spells * Summoner Chan/Ess Base { realm : L }
+	Animal Summons
+	Planar Summons
+	Summoning Bond
+	Summoning Circles
+	Summoning Mastery
+	Telportals
+Spells * Warlock Ment/Chan Base { realm : L }
+	Doom's Law
+	Faith Destruction
+	Look of Terror
+	Revenging Law
+	Transformations
+	Wyrd Mastery
+Spells * Mythic Channeling Base { realm : L }
+	Holy Mission
+	The Defender
+	The Eye
+	The Mask
+	The Will
+	Vengeance
+Spells * Taoist Monk Essence Base { realm : L }
+	Body Renewal
+	Evasions
+	Inner Eye
+	Natures Forms
+	Natures Harmony
+	Monk's Bridge
+Spells * Zen Monk Mentalism Base { realm : L }
+	Body renewal
+	Evasions
+	Body Control
+	Zen Awareness
+	Mind's Shadow
+	Zen Focus
+Spells * Evil Essence { realm : L }
+	Dark contacts
+	Dark summons
+	Darkness
+	Entity Summons
+	Matter Disruption
+	Physical Erosion
+Spells * Evil Channelling { realm : L }
+	Curses
+	Dark Channels
+	Dark Lore
+	Disease
+	Necromancy
+	Wounding
+Spells * Evil Mentalism { realm : L }
+	Mind Death
+	Mind Disease
+	Mind Domination
+	Mind Erosion
+	Mind Illusions
+	Mind Subversion
+Spells * Evil Arcane { realm : L }
+	Dark Entities
+	Power Leech
+	Power Subversion
+	Terror
+Spells * Gnoll Racial { realm : L }
+	Glyph Stones
+	Shelter Gnoll
+Spells * Grey Orc Racial { realm : L }
+	Scar Unbinding
+	Create Ulogat Toram
+	Pale Dogs Curse
+Subterfuge * Attack { Ag+SD+In : S }
+	Ambush
+	Silent Attack
+Subterfuge * Mechanics { In+Ag+Re : S }
+	Camouflage
+	Disarming Traps
+	Disguise
+	Counterfeiting
+	Forgery (By Type) #
+	Hiding Items
+	Picking Locks
+	Setting Traps
+	Trap Building
+	Using/Removing Poison
+Subterfuge * Stealth { Ag+SD+In : S }
+	Hiding
+	Picking Pockets
+	Stalking
+	Trickery
+Tech/Trade * General {Re+Me+SD : S }
+	Begging
+	First Aid
+	Gambling
+	Mapping
+	Operating Equipment
+	Orienteering
+	Sailing
+	Tactical Games
+	Using Prepared Herbs
+Tech/Trade * Professional { Re+Me+In : C } 
+	Advertising
+	Architecture
+	Diagnostics (By Race)#
+	# General Diagnostics
+	Dowsing
+	Engineering (By Discipline) #
+	Mechanition (By Machine Type) #
+	Military Organisation (By armed Force)#
+	# Aerial Forces
+	# Groud Forces
+	# Marine Forces
+	# Naval Forces
+	Mining (By Method) #
+ 	# Dredging
+ 	# Open Pit
+ 	# Quarry
+ 	# Tunneling
+	Sanity Healing (By Race) #
+	Second Aid
+	Surgery
+Tech/Trade * Vocational { Re+Me+In : C }
+	Administration
+	Appraisal - General
+	Boat Pilot (By Water Course)#
+	Cartography
+	Evaluate Armor
+	Evaluate Metal
+	Evaluate Stone
+	Evaluate Weapon
+	Gimmickry
+	Hypnosis
+	Midwifery
+	Navigation
+	Preparing Herbs
+	Siege Engineering
+	Tactics (By Situation)#
+	# Battle Field
+	# Naval
+	# Sabotage
+	# Siege
+	# Small Unit
+Urban { In+Pr+Re : S }
+	Contacting
+	Mingling
+	Scrounging
+	Streetwise
+Weapon * 1H Concussion { St+Ag+St : S }
+	9-Section Whip
+	Cat-o'-nine tails
+	Club
+	Cudgel
+	Fan
+	Flute
+	Hammer - Copper
+	Jlite
+	Jo
+	Mace
+	Morning Star
+	Net - Fishing
+	Net - Gladiator
+	Nunchaku
+	Tonfa
+	War Hammer
+	Whip
+Weapon * 1H Edged { St+Ag+St : S }
+	Axe
+	Bastard Sword
+	Broadsword
+	Butterfly Knife
+	Chinese Sword
+	Circular Knife
+	Claymore
+	Cutlass
+	Dagger
+	Dirk
+	Falchion
+	Foil
+	Handaxe
+	Katana
+	Kris
+	Main Gauche
+	Nin-Ring Sword
+	Rapier
+	Sabre
+	Sai
+	Scimitar
+	Short Sword
+	Spring Sword
+	Tomahawk
+	Willowleaf Knife
+Weapon * 2 Handed { St+Ag+St : S }
+	Bastard Sword
+	Battle Axe
+	Flail
+	Jo
+	Katana
+	No-dachi
+	Nunchaku
+	Pick
+	Quarterstaff
+	Two-Hand Sword
+	War Mattock
+Weapon * Missile { Ag+St+Ag : S }
+	Blowpipe
+	Composite Bow
+	Crossbow - Heavy
+	Crossbox - Light
+	Longbow
+	Short Bow
+	Sling
+Weapon * Missile Artillery { In+Ag+Re : S }
+	Ballista - Arrow - Light
+	Ballista - Arrow - Heavy
+	Ballista - Stone - Light
+	Ballista - Stone - Heavy
+	Catapult - Light
+	Catapult - Medium
+	Catapult - Heavy
+	Trebuchet - Light
+	Trebuchet - Medium
+	Trebuchet - Heavy
+Weapon * Pole Arms { St+Ag+St : S }
+	Boar Spear
+	Halbard
+	Javelin
+	Lance
+	Pilum
+	Spear
+Weapon * Thrown { Ag+St+Ag : S }
+	Bola
+	Boomerang
+	Dagger
+	Harpoon
+	Javelin
+	Lasso
+	Net - Fishing
+	Net - Gladiator
+	Pilum
+	Shuriken
+	Spear
+	Tomahawk

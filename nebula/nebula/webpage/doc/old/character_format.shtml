@@ -1,0 +1,97 @@
+<!--#set var="TITLE" value="Nebula: Format" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Nebula: Data Format</h1>
+
+<h2>Character Format</h2>
+
+<p>The most significant data format in Nebula.  The character file stores all
+the information about a character.  Generally speakign if ther eis a bug in
+a character manually editing the relevant chracter file will solve the
+problem.</p>
+
+<p>By default character files end in the extension <code>.neb</code> and
+stored in the directory <code>$NEBULA/characters</code>.</p>
+
+
+<blockquote><pre>
+% Nebula Data File
+%
+% Nebula was written by Brett Nash &lt;nash@nash.nu&gt;
+% And is distributed under the GNU GPL
+</pre></blockquote>
+<p>Any line beginning with a % is a comment.  Also blank lines are ignored.</p>
+
+<blockquote><pre>  
+Character:Name:Evant
+Character:Class:Runemage
+</pre></blockquote>
+
+<p>
+Lines beginning with <tt>Character:</tt> are used to create the character
+details on the front page.  These may change in the future.</p>
+
+<blockquote> <pre> 
+Stat:Agility:Ag:69:81: ~: ~: ~: ~
+Stat:Constitution:Co:82:91: 3: ~: ~: 3
+</pre></blockquote>
+
+<p>Stats are surprisingly enough stats.  The first is the temporary, the second
+the potential, then there is basic, racial, special and total bonuses.  Note
+that the program recalculates all bonuses on reload, so basic and total are
+just for show.</p>
+
+<blockquote> <pre> 
+Lore * Magical { Me+Re+Me : S : +15 }  [1/3] &lt;10/10&gt;
+        Artifact Lore  &lt;2&gt; 
+        Circle Lore  &lt;5&gt; 
+!       Divination Lore (By Divination Method)  #
+!       Dream Lore 
+!       Dreamworld Lore 
+        Glyph Lore  &lt;3&gt; 
+        Planar Lore  &lt;1&gt; 
+        Spell Lore  &lt;6&gt; 
+        Symbol Lore  &lt;7&gt; [E] 
+</pre></blockquote>
+<p>Categories and skills make up the bulk of the data file.  A category begins
+in the first column.  In this case we have <em>Lore * Magical</em> (note
+that a * replaces the dot used by RM).  After that we have in braces the
+stat bonus for the skill, and the progression type.  <tt>S</tt> is  for
+standard in this case but all progressions are supported (at the time of
+writing the racial developments are always 0*6*5*4*3).  Finally the +15 is
+the profession bonus.  This field is optional.  After that there is the
+progression cost for the category.  Finally there is the number of ranks
+(the first 10), followed by any special bonuses from talents, items or other
+sources.  In this case the +10 comes from a talent.</p>
+
+<p>Skills follow and are fairly similar.  In this case the character has 2
+ranks in <em>Artifact Law</em>.  Like the category there is an optional
+special bonus, eg <tt>&lt;4/10&gt;</tt> is 4 ranks, and a bonus of 10. </p>
+
+<p>An <tt>[E]</tt> indicates an everyman skill, while an <tt>[O]</tt> is
+occupational, and an <tt>[R]</tt> is restricted.</p>
+
+<p>The hash character deserves a special note.  In Rolemaster many skills
+are in fact many skills with the same name.  For instance <tt>Spell Mastery</tt>
+is in fact one skill for every spell list.  To allow for this I have created
+skill groups.  For instance:</p>
+
+<blockquote><pre>
+        Spell Mastery (By Spell List)   #
+        # Commanding Will  &lt;1/+3&gt; 
+        # Lofty Bridge  &lt;1&gt; 
+</pre></blockquote>
+
+<p>The hash (<tt>#</tt>) indicates the beginning of a group, and all skills
+that follow with a leading hash are in the group. </p>
+
+<p>Finally the use of <tt>!</tt> should be explained.  The bang (or
+exclamation mark) indicates that this skill/category should not be listed on
+printouts.  This can be toggled on and off by the user, but the system has
+rules for choosing skills to be hidden.  For instance all fire arms are
+hidden for fantasy characters. </p>
+
+<p>&nbsp;<br>&nbsp;</p>
+
+
+<!--#include virtual="/.include/tail.shtml" -->

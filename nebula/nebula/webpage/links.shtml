@@ -1,0 +1,54 @@
+<!--#set var="TITLE" value="Nebula: Projects for Volunteers" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Links</h1>
+
+<p>There are a lot of other interesting resources related to Nebula on the
+web.</p>
+
+<h2>Rolemaster</h2>
+
+<dl>
+<dt>Iron Crown Enterprises</dt>
+        <dd><p>Iron Crown publishes Rolemaster and the related products.</p>
+
+        <p><b>Link</b>: <a href="http://www.ironcrown.com/"
+                >http://www.ironcrown.com/</a>.</p>
+        </dd>
+
+</dl>
+
+<h2>Software and Libraries for Nebula</h2>
+
+<dl>
+<dt>GTK</dt>
+
+<dt>Gnome</dt>
+
+<dt>The Apache projects Xalan</dt>
+
+<dt>Ghost View</dt>
+
+</dl>
+
+
+
+<h2>Relevant Standards</h2>
+
+<dl>
+<dt>Extensable Markup Language: XML</dt>
+
+<dt>XML Transformations: XSLT</dt>
+
+<dt>Hypertext Markup Language: HTML</dt>
+
+</dl>
+
+
+<h2>Other</h2>
+
+<dl>
+<dt>jonathan dale's XSL</dt>
+</dl>
+
+<!--#include virtual="/.include/tail.shtml" -->

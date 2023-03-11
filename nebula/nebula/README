@@ -1,0 +1,37 @@
+Nebula
+------
+
+What is Nebula?
+
+        Nebula is a Open Source character generator for Rolemaster Standard
+        System (RMSS) and Rolemaster Fantasy Roleplay (RMFRP).  It allows
+        you to create, modify and maintain rolemaster characters.  Data is
+        stored in a publically available XML format.  For more information
+        on the format see http://nash.nu/Rolemaster/XML/
+
+Building Nebula.
+
+        To build nebula enter the source directory, and try typing make.
+        Ideally it should build out of the box.  This version of nebula does
+        not contain autoconf scripts or anything similar, so you will need
+        to play with the Makefile.  Hopefully all you will need to change is
+        the 
+
+Requirements.
+
+        Nebula is a Gnome 2 application, to run the program you will need
+        Gnome 2 libraries, and their dependancies.
+        
+        Otherwise you will need the data files, available seperatly, for
+        this application.  Note the data files are not covered by the GPL.
+
+Licence.
+        
+        The source for Nebula (ie everything in the src and alena
+        directories) are covered under GPL version 2.  See COPYING for more
+        details.  
+
+        Data files (distributed seperately) are copyright Iron Crown
+        Enterprises (http://www.ironcrown.com).  Thet are not covered under
+        the GPL.
+

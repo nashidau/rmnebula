@@ -1,0 +1,65 @@
+Spelllist
+=========
+
+The spelllist mini-project of Charforge is designed to produce pretty-print
+style spell lists from a variety of input formats.  The primary use is to
+print the known spells of a particular PC or NPC.  Other uses include
+printing a spell list of your own creation in a printable format, or
+producing a list of a particular classes base list.  Even more estoric use
+include printing all Illusion related lists to 10th level for comparison
+purposes, or finding out which 1st level spell is most useful for a first
+level channeller.
+
+Overview
+========
+
+The design of the printing format is to allow as much flexibility as
+possible.  In particular we should allow multiple output and input formats. 
+To accomplish this the processing is thus split into 3 stages.  
+
+In the first stage we take a character in some format and produce a list of
+known spells.  Currently this is implemented in extractspells.xsl for one
+format.  As other character formats are also supported new extraction
+scripts can be implemented.  
+
+The first stage processing produces a spellllistsummary (sls) document.  It
+is a fairly basic XML format:
+	<spelllistsummary> as the root.
+	Beneath this list elements:
+		<list name="List Name" level="ranks/max level known" />
+	That is all...
+Level is just the integer version of the maximum level known:
+	<list name="Loft Bridge" level="50" />
+
+
+
+In the second stage we take the sls document, and the master spells data
+file and produce a new spell data file contianing only the spells listed in
+the sls document.  This is fairly trivial, and there is no need to add new
+implementations for different formats.  This 'short spell list' (ssl) format 
+is then passed on to the formater.  This transform/extraction is produced by
+extractlist.xsl.  
+
+Note currently this has a hardcoded reference to spells.xml file.  This
+should be fixed in the future.
+
+
+In the final stage the short spell list format is transformed into the
+output document.  Currently the only implemented output format is
+postscript, although there is an older HTML version which should not be too
+hard to adapt.  Future output formats may include a direct PDF format, or
+XSL-FO.
+
+The PS transform is done by spelllisttops.xsl, and requires spelllistbase.ps
+for many of the postscript commands it uses.  Note these could be combined
+if required.  Also note the system makes use of the C pre-processor to
+incoperate the PS document.
+
+Future work
+===========
+
+Make the spi format have support for ranges of levels, For example
+print the 3-8th level magician lists.
+
+Make the spi format support some simple grouping - eg Magician Base, or Open
+Arcane spells.

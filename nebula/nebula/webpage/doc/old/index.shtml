@@ -1,0 +1,23 @@
+<!--#set var="TITLE" value="Nebula: Format" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Data Formats</h1>
+
+<p>Nebula reads a number of formats for various items of data.  In all cases
+they are text files and can be manually editied with any text editor
+(<code>vi</code>, <code>emacs</code> or <code> Notepad</code>).</p>
+
+<p>All formats are intended to be documented and should appear here.  If you
+have any corrections for any of the files please notify me (click contact to
+the right).</p>
+
+<p>Current formats:</p>
+<ul>
+  <li><a href="character_format.shtml">Character Files</a></li>
+  <li><a href="genre_format.shtml">Genre/Setting Files</a></li>
+  <li><a href="profession_format.shtml">Profession Files</a></li>
+  <li><a href="race_format.shtml">Race Files</a></li>
+<ul>
+
+
+<!--#include virtual="/.include/tail.shtml" -->

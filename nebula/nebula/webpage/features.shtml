@@ -1,0 +1,90 @@
+<!--#set var="TITLE" value="Nebula: Features" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Nebula: Features</h1>
+
+<p>Updates of individual items appear in brackets - form is YYYYMMDD.</p>
+
+<h2>Features</h2>
+
+<p>These features are complete.  Note in some cases they have associated
+bugs or similar</p>
+
+<ul>
+  <li>Character format in XML - (mostly) compatible with ACG!</li>
+  <li>Loading,</li>
+  <li>Saving,</li>
+  <li>Name, Race, class etc.,</li>
+  <li>Stats - all 10 + Appearance, Willpower &amp; Sanity,</li>
+  <li>Stat bonuses,</li>
+  <li>Stat Gain,</li>
+  <li>Skill categories, skills and skill groups,</li>
+  <li>Skill bonus calculations (including stats, ranks, special bonuses,
+  profession bonuses and progression types),</li>
+  <li>Can buy skills,</li>
+  <li>DP calculation (both total, and skill purchasing),</li>
+  <li>Saves skills back to character,</li>
+  <li>Creation:
+    <ul>
+      <li>Choose Genre/Setting,</li>
+      <li>Character Name,</li>
+      <li>Choose Race,</li>
+      <li>Choose Profession,</li>
+      <li>Choose Realm (for Non spell users),</li>
+      <li>Choose Religion (for channelers),</li>
+      <li>Choose Essence school (for Essense users),</li>
+      <li>Choose Extra Base lists (for pure spell users)</li>
+      <li>Delete unwanted spell lists,</li>
+      <li>Select weapon costs,</li>
+      <li>Choose Stats,</li>
+      <li>Roll Potentials,</li>
+      <li>Purchase hobby ranks</li>
+    </ul></li>
+  <li>Everyman, Occupational Restricted skill purchase</li>
+  <li>Support restricted half ranks</li>
+  <li>Ability to create a 'Level Template' so you can save the skills you
+        have purchased, and reapply them for later levels</li>
+  <li>Can add skills in right click menu</li>
+</ul>
+
+<h2>Unimplemented Features</h2>
+
+<ul>
+  <li>Toggle for extra stats (Sn, Wl, Ap)</li>
+  <li>Equipment,</li>
+  <li>Encumbrance,</li>
+  <li>Training Packages,</li>
+  <li>Talents and Flaws,</li>
+  <li>Addition of categories</li>
+  <li>Logging of changes</li>
+</ul>
+
+<h2>Bugs</h2>
+
+<p>Known bugs and problems.  In some cases these are internal only bugs, and
+should not be noticed by the user.  If you are aware of any more please
+contact me.  They are in no particular order.</p>
+
+<p>(int) means internal, (cos) is cosmetic only, (format) is a 
+problem with the data format, (GTK+) is a gui/gtk+ problem.</p>
+
+<ul>
+  <li>Load/Save/Save As... have problems.</li>
+  <li>Help non-existant</li>
+  <li>Skill gain will allow arbitrary expenditure</li>
+  <li>Can no longer toggle hide/show of skills </li>
+  <li>Restricted skills bonuses not calculated correctly</li>
+  <li>Optional Potential gains and test stat gain,</li>
+  <li>Choice of appearance algorithms (original or <em>Mentalism
+  Companion</em>),</li>
+</ul>
+
+<!--
+<h2>Fixed Bugs</h2>
+
+<p>Things that have been fixed.</p>
+<ul>
+</ul>
+-->
+
+<!--#include virtual="/.include/tail.shtml" -->

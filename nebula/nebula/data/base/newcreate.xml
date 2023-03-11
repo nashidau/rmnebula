@@ -1,0 +1,59 @@
+<?xml version='1.0' ?>
+
+<creation>
+  <create>
+    <choice>
+      <!-- Set the title -->
+      <title>Select Genre</title>
+
+      <!-- A heading -->
+      <heading>Select the Games Genre</heading>
+
+      <!-- A quick description of what you are doing -->
+      <description>Genre describs the setting you are playing.  If you
+are not sure what Genre you are playing, check with your GM.</description>
+                
+      <!-- Combo box selection --> 
+      <selection />
+      <!-- Show a description box for each -->
+      <hasdescription /> 
+      <!-- The options the files 'files'.  A descripiton can be found in
+        description -->
+      <files descriptionpath="/rmssgenre/description">genres</files>
+    </choice>
+
+    <choice>
+      <title>Chacracter Name</title>
+      <heading>Select a name for you character</heading>
+
+      <description>Everyone needs a name - now add one to your character.
+      </description>
+
+      <entry />
+
+      <field label="Name:">[characteristics]\name</field>
+    </choice>
+    <choice>
+      <title>Apperance</title>
+      <heading>Set your characters appearance.</heading>
+
+      <description>Now you select personal details about your characters
+      appearance.  Obviously some may be set by racial defaults (and shuld
+      be shown here).  Feel free to change these as you see fit.
+      </description>
+
+
+      <entry />
+      <field label="Skin tone:">[char]\apperance\skin</field>
+      <field label="Age:">[char]\apperance\age</field>
+      <field label="Gender:">[char]\apperance\gender</field>
+      <field label="Height">[char]\apperance\height</field>
+      <field label="weight">[char]\apperance\weight</field>
+      <field label="Eyes:">[char]\apperance\eyes</field>
+      <field label="Hair:">[char]\apperance\hair</field>
+    </choice>
+  </create>
+</creation>
+
+<!-- vim:shiftwidth=2: 
+-->

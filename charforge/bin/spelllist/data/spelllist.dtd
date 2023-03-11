@@ -1,0 +1,102 @@
+<!--
+        Rolemaster Spell list DTD class
+
+        This was originally written by Brett Nash <nash@nash.nu>
+
+        More information, and the most recent version of this document
+        can be found at:
+                http://www.nash.nu/Rolemaster/XML/spelllist
+
+        Copyright 2002 Brett Nash & Bent Dalager
+
+        Changes 
+        * Version 1.03
+            - Added <ref> to description tags (references to other
+                spell lists
+            - Allowed multiple spell descriptions.
+        * Version 1.0.2
+            - Added <annotation> after descriptions
+            - Added <rrmod> 
+        * Version 1.0.1
+            - No changes
+-->
+
+
+
+<!-- Top level element - spelllist.
+        This contains the name of the spell list, various optional
+        pieces of meta-data, and the list of spells themselves
+-->
+<!ELEMENT spelllist (name,
+                     listtype,
+                     id?,
+                     author*,
+                     description*,
+                     spell+,
+                     notes?)>
+
+<!-- The spelllist (or spell name).  A simple string... -->
+<!ELEMENT name (#PCDATA)>
+
+<!-- What type of spelllist it is - for instance a Enchanter Base, or
+        Closed Essence. -->
+<!ELEMENT listtype (#PCDATA)>
+
+<!-- id is the spellist id number if it is a RMSS list
+        This tag is not used in other lists currently -->
+<!ELEMENT id (#PCDATA)>
+
+<!-- author is a list of people who wrote the list, or hold the copyright
+        for the list.  For multiple authors use multiple tags -->
+<!ELEMENT author (#PCDATA)>
+
+<!--  description is a short description of the list.  Most lists won't
+        use this field. -->
+<!ELEMENT description (#PCDATA | ref )*>
+
+<!-- spell entries themselves.  Spells are listed in order from 
+        lowest to highest level.  if there are multiple spells of
+        the same order they can be listed in any order.
+-->
+<!ELEMENT spell (level,
+                 name,
+                 areaofeffect?,
+                 duration?,
+                 range?,
+                 type,
+                 description+,
+                 annotation?,
+                 nopp?,
+                 instantaneous?,
+                 rrmod?)>
+<!-- Level - the level of the spell 
+        Should be one of 1-20, 25, 30, 50 -->
+<!ELEMENT level (#PCDATA)>
+
+<!-- Spell name (same as spelllistname) -->
+
+<!ELEMENT areaofeffect (#PCDATA)>
+<!ELEMENT duration (#PCDATA)>
+<!ELEMENT range (#PCDATA)>
+
+<!-- Spell type - F, P, I, U, E (DE BE), 
+        subtypes, optional (lower case following) one of s or m -->
+<!ELEMENT type (#PCDATA)>
+
+<!-- Any special notes for the spell - that which is not appropriate for the
+normal descritpion. -->
+<!ELEMENT annotation (#PCDATA)>
+
+<!ELEMENT nopp EMPTY>
+<!ELEMENT instantaneous EMPTY>
+
+<!-- An interger bonus or penalty pplied to RRs for the spell -->
+<!ELEMENT rrmod (#PCDATA)>
+
+
+<!-- A reference to a spell somewhere else on the list -->
+<!ELEMENT ref (#PCDATA)>
+
+
+<!ELEMENT notes (note+)>
+<!ELEMENT note (#PCDATA)>

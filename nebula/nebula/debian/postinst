@@ -1,0 +1,41 @@
+#!/bin/sh -e
+
+# This is probably a wrong way to know the version of the package that we're
+# installing, but ... O:-)
+VERSION=`zcat /usr/share/doc/nebula/changelog.Debian.gz | egrep ^nebula | head -n 1 | sed 's/nebula (\(.*\)).*$/\1/'`
+
+FILE=nebula-data_"$VERSION"_all.deb
+URL=http://ceu.fi.udc.es/~robe/nebula/$FILE
+
+SUCCESS=
+
+. /usr/share/debconf/confmodule
+
+if [ "$RET" = "yes" ]
+then
+	echo -n "Looking for wget ... "
+	if [ "`which wget`" ]
+	then
+		echo "found!"
+		echo -n "Downloading $FILE ... "
+		(cd /tmp && wget $URL)
+		echo "done."
+		SUCCESS=yes
+	else
+		echo "not found!"
+		echo "You will have to download manually the file, from"
+		echo "$URL"
+	fi
+
+	if [ "$SUCCESS"="yes" ]
+	then
+		echo "To install this package, type (as root) "
+		echo "    dpkg -i /tmp/$FILE"
+		echo "when the installation of this package finishes."
+	else
+		echo "Some error ocurred during the download."
+	fi
+fi
+
+#DEBHELPER#
+

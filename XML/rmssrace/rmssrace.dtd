@@ -1,0 +1,87 @@
+<!--
+
+        rmssrace
+
+        DTD for Rolemaster cultures/races.
+
+-->
+
+<!-- The top level element 
+        rmssrace is the prefered, race is acceptable-->
+<!ELEMENT rmssrace (data,stats?,rrs,skills)>
+
+<!-- The racial stat bonuses
+        The field is optional -
+        If is in place it must contain at least one stat bonus
+        The possible abbriviations are:
+                Ag,Co,Me,Re,SD,Em,In,Pr,Qu,St,Ap,Wl,Sn
+        Names are:
+                Agility, Constitution, Memory, Reasoning, Self Discipline,
+                Empathy,Intuition, Presence, Quickness, Strength,
+                Appearance, Willpower, Sanity
+-->
+<!ELEMENT stats (stat)+>
+
+<!-- stat
+        This contains the stat and bonus.  It must contain one or both of 
+        name and abbr, and a bonus (racial) -->
+<!ELEMENT stat ((name|abbr)+,racial)>
+
+<!-- 
+        Resistance Rolls
+        
+        This represents a races inate resistances
+-->
+<!ELEMENT rrs (rr)+>
+
+<!-- name is the what is the resistence is against, racialbonus is the bonus
+        for this race 
+
+        Possible resistences are:
+        Essence, Channeling, Mentalism,
+        Essence/Mentalism, Channeling/Essence, Essence/Mentalism, Arcane
+        Poison, Disease, Fear, 
+        Heat, Cold
+
+-->
+<!ELEMENT rr (name,racialbonus)>
+
+<!ELEMENT data (fixed,raceinfo)>
+
+<!ELEMENT fixed (race)>
+<!-- race
+ The name of the race
+-->
+<!ELEMENT race (#PCDATA)>
+
+<!ELEMENT raceinfo (exhaustionbonus,lifespan,souldeparture,recoverymultiplier,
+             racetype,startinglanguages,talentpoints,hobbyranks,   
+             bodydevelopment,arcane,channeling,essence,mentalism)>
+
+<!ELEMENT exhaustionbonus (#PCDATA)>
+<!ELEMENT lifespan (#PCDATA)>
+<!ELEMENT souldeparture (#PCDATA)>
+<!ELEMENT recoverymultiplier (#PCDATA)>
+<!ELEMENT racetype (#PCDATA)>
+<!ELEMENT startinglanguages (#PCDATA)>
+<!ELEMENT talentpoints (#PCDATA)>
+<!ELEMENT hobbyranks (#PCDATA)>
+<!ELEMENT bodydevelopment (#PCDATA)>
+<!ELEMENT arcane (#PCDATA)>
+<!ELEMENT channeling (#PCDATA)>
+<!ELEMENT essence (#PCDATA)>
+<!ELEMENT mentalism (#PCDATA)>
+
+<!ELEMENT skills (category)+>
+<!ELEMENT category (name,ranks?,(skill|skillgroup)*)>
+<!ELEMENT skill (name,ranks?,class?)>
+<!ELEMENT skillgroup (name,class?,skill*)>
+
+
+<!ELEMENT name  (#PCDATA)>
+<!ELEMENT abbr (#PCDATA)>
+<!ELEMENT racialbonus (#PCDATA)>
+<!ELEMENT racial (#PCDATA)>
+<!ELEMENT ranks (#PCDATA)>
+
+

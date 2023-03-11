@@ -1,0 +1,127 @@
+<!--#set var="TITLE" value="Nebula: FAQ" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Nebula FAQ</h1>
+
+<ol>   
+  <li><b>General</b></li>
+    <ol type="a">
+      <li><b>Why the names: Nebula, Stardust and the like?</b></li>
+      <p>Because some time ago I got fed up with programs like 'RMCSGP' and
+      'GCP' as programs.  Nebula was the first word that came to mind.</p>
+      <p>Stardust is what nebula's are made from, and it sounds cool.</p> 
+    </ol>
+
+  <li><b>Legal</b></li>
+    <ol type="a">
+      <li><b>What licence is Nebula under?</b></li> 
+      <p>GNU General Public Licence - however this only applies to the 
+      code.</p>
+
+      <li><b>And the data in the <code>data</code> directory</b></li>
+      <p>I'm not 100% sure.  It is mostly raw data, however the numbers come 
+      from ICE's books.  If you own the books it is no problem.  If you
+      don't you may not use the data.</p>
+    </ol>
+
+  <li><b>Features</b></li>
+    <ol type="a">
+      <li><b>Why doesn't nebula do Y?</b></li>
+      <p>For one of a couple of reasons.  Maybe I haven't implemented it
+      yet, I may not of thought it was useful, I may have forgotten about it
+      or I may not use it my games.  In any case contact me with a
+      suggestion or even better a patch!</p>
+    </ol>
+
+  <li><b>Platforms</b></li>
+    <ol type="a">
+      <li><b>It currently runs on?</b></li>
+      <p>The main version runs on x86 Linux, and OpenBSD 3.2. However I have
+      also compiled older versions under x86 FreeBSD, Alpha OSF1/Tru64 (64
+      bit Unix), and Sparc Solaris.  It is designed to be clean and (mostly)
+      sticks to ANSI-C, glib and GTK+ calls.  It has compiled and runs on
+      win32, but is rather unstable.   It has only used it on a Linux,
+      FreeBSD and OpenBSD machines since the move to GTK+ 2.0.  Any reports
+      of success or failure on other platforms would be appreciated.</p>
+      
+      <li><b>When will a version for X be available?</b></li> <p>Hopefully
+      soon :)  However if you are willing to try I'm willing to accept
+      patches for the main tree.  Additionally I'm willing to do
+      modifications to remove/simplify GTK dependanncies if needed.  Also
+      I'll host binary files and libraries for other platforms.</p>
+
+      <p>Additionally a Jonathan Dale has a microsoft excel spreadsheet 
+      which can outputs to nebulas native XML format. See
+                <a href="http://www.vsf.cape.com/~jdale/rpg/rpg.htm"
+                                >http://www.vsf.cape.com/~jdale/rpg/rpg.htm</a>
+        <p>
+
+
+    </ol>
+  <li><b>Stat Questions</b></li>
+    <ol type="a">
+      <li><b>What are those ticks in the stat list?</b></li>
+      <p>The ticks in the P column are Prime Requisites.  
+      They have no effect on the program after character ceration.
+      <br />
+      The ticks in the 'R' are your chracters <em>realm</em> stats.  The
+      average of these stats bonus is stat bonus for realm related skills.
+      </p>
+
+      <li><b>(Stat Gain) My potential for X just went up!?</b></li>
+      <p>You have the 'potentials can gain' option on.  On a stat gain roll
+      of 10/10 (ie 2 natural 10s) your pot is increased by 2d10 after the
+      temp raises.  Note for skills above 90 the cost is the same as for
+      initial purchase.</p>
+ 
+    </ol>
+
+  <li><b>Skill Questions</b></li>
+    <ol type="a">
+      <li><b>What is the hidden?</b></li>
+      <p>A hidden skill.  Used for printing.  A skill with an X will not be
+      printed in most modes.  An X on a category is automatically applied to
+      the skills <em>when printing</em>.  Since printing is external, at the
+      moment nothing uses these.</p>
+ 
+      <li><b>How do I toggle a hidden skill?</b></li>
+      <p>You can't - but don't worry it doesn't do anything.
+      
+    </ol>
+  <li><b>Data Files</b></li>
+    <ol type="a">
+      <li>
+
+      <li><b>Where is the data for Class A/Race B/TP C/Talent D?</b></li>
+      <p>Typing lots of these things up is a major pain in the rear.  If you
+      need a class/race/TP not listed have a look at the format.  You should
+      take less then 10 minutes to do it.  Email it to me, and I'll add it
+      to the database here for others to use.  Soon the entire system will
+      be available.</p>
+      
+    </ol>
+  <li><b>Security</b></li>
+    
+    <ol type="a">
+      <li><b>But some of these options make it possible for my players to
+      cheat!</b></li> 
+      <p>If you don't trust your players - don't play with them!  However I
+      do intent to implement logging on many operations - which helps a
+      bit.</p>
+
+      <li><b>XML makes it easy to cheat!</b></li>
+      <p>Correct.  But most database formats are not an improvement.  More
+      significantly it makes many other things easier, without providing a
+      <em>false sense of security</em>.
+
+      <li><b>But it is so much easier to cheat electronically!</b></li>
+      <p>Easier then changing a 12 to a 22 on a paper character sheet?  I
+      think not.  Unless you run a game where only the GM has physical
+      access to the character sheets, does all the dice rolling himself, and
+      gets the players write down all their characters
+      actions/words/activities cheating is possible. </p>
+
+    </ol>
+</ol>
+
+<!--#include virtual="/.include/tail.shtml" -->

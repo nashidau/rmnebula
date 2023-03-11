@@ -1,0 +1,141 @@
+<?xml version='1.0'?>
+
+<!DOCTYPE spelllist SYSTEM "spelllist.dtd">
+
+<spelllist>
+        <name>Mind Visions</name>
+        <listtype>Seer Base List</listtype>
+        <author>I.C.E</author>
+        <spell>
+                <level>1</level>
+                <name>Origins</name>
+                <areaofeffect>1 object</areaofeffect>
+                <duration>-</duration>
+                <range>touch</range>
+                <type>I</type>
+                <description>
+                   Gives a general idea of the place of origin of an item.
+                </description>
+        </spell>
+        <spell>
+                <level>2</level>
+                <name>Detect Curse</name>
+                <areaofeffect>varies</areaofeffect>
+                <duration>-</duration>
+                <range>touch</range>
+                <type>I</type>
+                <description>
+                   Detects if a curse is upon a person, place or object.
+                </description>
+        </spell>
+        <spell>
+                <level>3</level>
+                <name>Vision Behind I</name>
+                <areaofeffect>varies</areaofeffect>
+                <duration>varies</duration>
+                <range>touch</range>
+                <type>I</type>
+                <description>
+                   Caster gets a vision of up to 1 minute per level into the
+                   past. The caster must select the point in the past to be
+                   viewed (and the vision will be accurate within one
+                   minute). The vision must be associated with a person,
+                   place, or object touched at the time of casting. The
+                   vision includes sight and sound. The vision will last up
+                   to 1 round per level if the caster concentrates and
+                   remains inactive. Time passes at a rate of one round of
+                   real time for 10 rounds of vision.
+                </description>
+        </spell>
+        <spell>
+                <level>4</level>
+                <name>Power Lore</name>
+                <areaofeffect>1 item</areaofeffect>
+                <duration>-</duration>
+                <range>touch</range>
+                <type>I</type>
+                <description>
+                   Gives the origin of an item's power.
+                </description>
+        </spell>
+        <spell>
+                <level>5</level>
+                <name>Vision Guide</name>
+                <areaofeffect>1 spell</areaofeffect>
+                <duration>varies</duration>
+                <range>self</range>
+                <type>I</type>
+                <description>
+                   This spell gives the caster the ability to scan the past
+                   by "feeling the temporal location for significant
+                   events". This translates to the caster knowing the
+                   approximate time-frames of significant events, without
+                   knowing the nature of the events. If the caster casts a
+                   Vision Behind spells within one minute of casting this
+                   spell, she will be able to see the specific events.
+                </description>
+        </spell>
+        <spell>
+                <level>6</level>
+                <name>Item Vision</name>
+                <areaofeffect>1 item</areaofeffect>
+                <duration>varies</duration>
+                <range>touch</range>
+                <type>I</type>
+                <description>
+                   Gives a vision of a significant event in the item's past.
+                </description>
+        </spell>
+        <spell>
+                <level>7</level>
+                <name>Vision Behind II</name>
+                <areaofeffect>varies</areaofeffect>
+                <duration>varies</duration>
+                <range>touch</range>
+                <type>I</type>
+                <description>
+                   As Vision Behind I, except time range is up to 10 minutes
+                   per level (with an accuracy of +5 minutes) and the trance
+                   can last up to 1 minute per level.
+                </description>
+        </spell>
+        <spell>
+                <level>8</level>
+                <name>Vision Enhancement</name>
+                <areaofeffect>1 spell</areaofeffect>
+                <duration>varies</duration>
+                <range>self</range>
+                <type>I</type>
+                <description>
+                   When cast before a Vision Behind spell, this allows the
+                   caster to perceive the past using one (and only one)
+                   additional sense, or to use one and only one perceptive
+                   skill (in addition to the normal vision and hearing).
+                </description>
+        </spell>
+        <spell>
+                <level>9</level>
+                <name>Vision Behind III</name>
+                <areaofeffect>varies</areaofeffect>
+                <duration>varies</duration>
+                <range>touch</range>
+                <type>I</type>
+                <description>
+                   As Vision Behind I, except time range is up to 1 hour per
+                   level (with an accuracy of +30 minutes) and the trance
+                   can last up to 5 minute per level.
+                </description>
+        </spell>
+        <spell>
+                <level>10</level>
+                <name>Delving</name>
+                <areaofeffect>1 item</areaofeffect>
+                <duration>-</duration>
+                <range>touch</range>
+                <type>I</type>
+                <description>
+                   Gives significant details about an item's construction
+                   and purpose (not specific powers).
+                </description>
+        </spell>
+</spelllist>

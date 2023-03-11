@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+
+<professionlist>
+	<profession ref="Mana_Molder.xml">Mana Molder</profession>
+	<profession ref="newrune.xml">Runemage (Ess/Chan)</profession>
+</professionlist>

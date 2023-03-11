@@ -1,0 +1,7 @@
+This file contains a list of todos for the spell list part of this project.
+
+Currently the print algorithm doesn't copy notes across - this should be
+fixed.  I'm not sure if the PS output will contain notes nicely either.
+
+<ref> tags in spell descriptions are not turned italic in ps/pdf output.
+

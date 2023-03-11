@@ -1,0 +1,236 @@
+<!--
+	Rolemaster Items Description DTD
+
+	Draft by Sylvain Glaize (mokona@puupuu.org)
+
+	For Nebula
+
+	Version 1.0
+
+-->
+
+<!-- Top level element -->
+<!ELEMENT items (item+)>
+
+<!-- One item -->
+<!-- the item id should be unique, at least in a catalog -->
+<!ELEMENT item (name,
+		skills?,
+                effects?,
+		description?,
+		weight?,
+		size?,
+		type?,
+		spells?,
+		value?,
+		intelligence?)>
+<!ATTLIST item id	CDATA #REQUIRED>
+
+<!-- Value in gold -->
+<!ELEMENT value (#PCDATA)>
+<!ATTLIST value unit CDATA #REQUIRED>
+
+<!-- Weight -->
+<!ELEMENT weight (normal?,magic?)>
+<!ATTLIST weight unit	CDATA #REQUIRED>
+
+<!-- Size -->
+<!ELEMENT size (#PCDATA)>
+
+<!-- A name -->
+<!ELEMENT name (#PCDATA)>
+
+<!--
+	Skills
+	A list a categores and skills that are
+	modified by the object
+-->
+<!ELEMENT skills (category+)>
+<!ELEMENT category (name,
+                    skill+,
+		    normal?,
+                    magic?,
+		    ranks?)>
+<!ELEMENT skill (name,
+                 normal?,
+		 magic?
+		 ranks?)>
+
+<!-- Normal bonus -->
+<!ELEMENT normal (#PCDATA)>
+<!-- Magic bonus -->
+<!ELEMENT magic (#PCDATA)>
+<!-- Rank bonus -->
+<!ELEMENT ranks (#PCDATA)>
+
+<!-- Spells
+	Describes spell modifications given by
+	the object
+-->
+<!ELEMENT spells (multiplier?,
+                  adder?,
+		  constant?,
+		  daily?,
+		  charged?)>
+<!ELEMENT multiplier (times)>
+<!ELEMENT adder (number)>
+<!ELEMENT constant (cast-as,
+                    spelllist+)>
+<!ELEMENT daily (level,
+                 spelllist+,
+		 cast-as)>
+<!ELEMENT charged (spelllist+,
+                   cast-as,
+		   charges)>
+<!ELEMENT spelllist (name,
+                     spell+)>
+<!ELEMENT spell (name)>
+<!ELEMENT cast-as (level)>
+<!ELEMENT level (#PCDATA)>
+<!ELEMENT times (#PCDATA)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT charges (#PCDATA)>
+
+
+<!-- Intelligence
+	Describes intelligence characteristics
+	of the object
+
+	Alignement, purpose and level of the object
+-->
+<!ELEMENT intelligence (alignement,
+                        purpose,
+			level)>
+<!ELEMENT alignement (#PCDATA)>
+<!ELEMENT purpose (#PCDATA)>
+<!ELEMENT level (#PCDATA)>
+
+<!ELEMENT description (#PCDATA)>
+
+<!-- Type of object
+-->
+<!ELEMENT type (container?,
+                misc,
+		gem?,
+		poison?,
+		herb?,
+		armor?,
+		weapon?,
+		shield?)
+<!ELEMENT container EMPTY>
+<!ELEMENT gem EMPTY>
+<!ELEMENT poison EMPTY>
+<!ELEMENT herb EMPTY>
+<!ELEMENT misc (name)>
+
+<!-- Armor description -->
+<!ELEMENT armor (at,
+                 manoeuver)>
+<!ELEMENT at (#PCDATA)>
+<!ELEMENT manoeuver (quickness,
+                     missile,
+		     maximum,
+		     minimum)>
+<!ELEMENT quickness (#PCDATA)>
+<!ELEMENT missile (#PCDATA)>
+<!ELEMENT maximum (#PCDATA)>
+<!ELEMENT minimum (#PCDATA)>
+
+<!-- Weapon description -->
+<!ELEMENT weapon (strength,
+                  breakage,
+		  fumble,
+		  reloading?,
+		  range?,
+		  categ)>
+<!ELEMENT strength (wooden?,
+                    normal?,
+		    magic?)>
+<!ELEMENT wooden EMPTY>
+<!ELEMENT breakage (#PCDATA)>
+<!ELEMENT fumble (normal?,magic?)>
+<!ELEMENT categ (#PCDATA)>
+<!ELEMENT reloading (round+)>
+<!ELEMENT round (normal?,magic?)>
+<!ATTLIST round num CDATA #REQUIRED>
+<!ELEMENT range (extreme,
+                 long,
+		 medium,
+		 short,
+		 pointblank)>
+<!ATTLIST range unit CDATA #REQUIRED>
+<!ELEMENT extreme (#PCDATA)>
+<!ELEMENT long (#PCDATA)>
+<!ELEMENT medium (#PCDATA)>
+<!ELEMENT short (#PCDATA)>
+<!ELEMENT pointblank (#PCDATA)>
+
+<!-- Shield Description, versus can be melee or missile -->
+<!ELEMENT shield (db+)>
+<!ELEMENT db (normal,
+              rear,
+              surprised)>
+<!ATTLIST db versus CDATA #REQUIRED>
+<!ELEMENT normal (#PCDATA)>
+<!ELEMENT surprised (#PCDATA)>
+<!ELEMENT rear (#PCDATA)>
+
+<!-- Effects -->
+<!ELEMENT effects (hitpoints?,
+		   attack-as?,
+		   resistance?,
+		   range-mod?,
+		   damage?,
+		   initiative?,
+		   protect-as?,
+		   critical+,
+		   special*)>
+
+<!ELEMENT hitpoints (absorber?,multiplier?)>
+<!ELEMENT absorber (amount)>
+<!ELEMENT amount (#PCDATA)>
+<!ELEMENT multiplier (#PCDATA)>
+
+<!ELEMENT attack-as (#PCDATA)>
+
+<!ELEMENT resistance (poison?)>
+<!ELEMENT poison (#PCDATA)>
+
+<!ELEMENT damage (magic?,normal?)>
+
+<!ELEMENT range-mod (all?,
+                     extreme?,
+		     long?,
+		     medium?,
+		     short?,
+		     pointblank?,
+		     magic?,
+		     nonmagic?)>
+<!ATTLIST range-mod unit CDATA #REQUIRED>
+
+<!ELEMENT special (description,name)>
+<!ELEMENT initiative (magic?,normal?)>
+<!ELEMENT protect-as (shield?,at?)>
+
+<!ELEMENT critical (add?,
+		    inflict?,
+		    receive?,
+		    negate?,
+		    replace?,
+		    level?,
+		    chance?,
+		    against?,
+		    key?,
+		    table?)>
+<!ELEMENT inflict EMPTY>
+<!ELEMENT receive EMPTY>
+
+<!ELEMENT add EMPTY>
+<!ELEMENT negate EMPTY>
+<!ELEMENT replace EMPTY>
+
+<!ELEMENT chance (#PCDATA)>
+<!ELEMENT against (#PCDATA)>
+<!ELEMENT key (#PCDATA)>
+<!ELEMENT table (#PCDATA)>
+

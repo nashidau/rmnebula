@@ -1,0 +1,656 @@
+%!PS
+%
+% Postscript test file for my XML conversion
+% 
+% Future work:
+% * When doing end of line conversion should check for whitespace and
+%   subtract one from the wordcount for each one rather then assuming
+%   1 and just subtracting that
+% * Justification code needs to be integrated into a function
+%
+% Not formating related
+% * Need to support tags for different fonts (markup)
+% * Suport for paragraph indents
+%
+
+/fontsize 8 def
+/titlefontsize 16 def
+/wordbreak ( ) def
+
+/pagewidth 595 def
+/marginwidth 20 def
+
+/leftmargin 20 def
+/parindent -5 def
+/rightmargin pagewidth marginwidth sub 2 div def
+/normalfont /Times-Roman findfont fontsize scalefont def
+/boldfont /Times-Bold findfont fontsize scalefont def
+/titlefont /Helvitica findfont titlefontsize scalefont def
+
+/lastyline 10000 def % Used by justify word 
+
+/BreakIntoLines {
+        /proc exch def
+        /textstring exch def
+
+        /linewidth rightmargin leftmargin sub def
+
+        /breakwidth wordbreak stringwidth pop def
+        /lastwordbreak 0 def
+        /wordcount 0 def % How many words on this line
+
+        /startchar 0 def
+        /curwidth parindent def
+       
+        /restoftext textstring def
+
+        {
+                restoftext wordbreak search
+                { 
+                        /nextword exch def pop
+                        /restoftext exch def
+                        /wordwidth nextword stringwidth pop def
+
+                        curwidth wordwidth add linewidth gt
+                        {
+                                textstring startchar
+                                lastwordbreak startchar sub
+                                getinterval 
+                                % Print the current line
+                                curwidth wordcount
+                                proc
+                                /startchar lastwordbreak def
+                                /curwidth wordwidth breakwidth add def
+                                /wordcount 1 def 
+                        }
+                        {
+                                /curwidth curwidth wordwidth add
+                                breakwidth add def
+                                /wordcount wordcount 1 add def
+                        } ifelse
+                        /lastwordbreak lastwordbreak 
+                                        nextword length add 1 add def
+                }
+                { pop exit }
+                ifelse
+        } loop
+        /lastchar textstring length def
+        textstring startchar lastchar startchar sub getinterval 
+        curwidth 0 proc % No justification on the last line
+} def
+
+/substitestring {
+        /replacement exch def
+        /searchstr exch def
+        /string exch def
+        
+        /diff searchstr length replacement length sub def
+        {
+                string searchstr search
+                {
+                        /prefix exch def
+                        /match exch def
+                        /post exch def
+         
+                        % Make room for the new array
+                        /moved 
+                                string 
+                                prefix length searchstr length add
+                                post length getinterval
+                        def
+                        string
+                                prefix length replacement length add
+                                moved putinterval
+                        % Copy in replacement
+                        string prefix length replacement putinterval
+                        % Space out any surplus
+                        diff 0 gt {
+                                1 1 diff {
+                                        /loopcounter exch def
+                                        string
+                                                string length loopcounter sub
+                                                32 put
+                                } for
+                        } if
+                }        
+                {
+                        pop
+                        % not found
+                        exit
+                } ifelse
+        } loop
+        string
+} def
+
+/typeset {
+         %(ffi) (\256) substitestring
+         %(ffl) (\256) substitestring
+         %(ff) (\256) substitestring
+         (\n) ( ) substitestring
+         (\t) ( ) substitestring
+         (fi) (\256) substitestring
+         (fl) (\257) substitestring
+         (\342\200\242) (\267) substitestring % Bullet 
+} def
+
+
+/Times-Roman findfont fontsize scalefont setfont 
+
+/yline 800 def
+
+
+/justifyprint {
+        {
+                /width rightmargin leftmargin sub def
+                dup 1 gt  {
+                        exch width sub neg exch 
+                        1 sub div
+                        /movedist exch def
+                }
+                {
+                        pop pop
+                        /movedist 0 def
+                } ifelse
+
+                leftmargin 
+                newpar { 
+                        /newpar false def
+                        parindent add
+                } if
+                yline moveto 
+                movedist exch 0 exch wordbreak 0 get exch widthshow 
+                /yline yline fontsize 2 add sub def 
+                yline 50 lt { newcolumn } if
+        } 
+} def
+ 
+/newcolumn {
+        /leftmargin rightmargin marginwidth add def
+        /rightmargin pagewidth marginwidth sub def
+        /yline 800 def
+} def
+
+
+/print {
+        /newpar true def
+        typeset
+        justifyprint
+        BreakIntoLines
+} def
+/parprint {
+        /newpar true def
+        /oldparindent parindent def
+        /parindent 12 def
+        typeset justifyprint BreakIntoLines
+        /parindent oldparindent def
+} def
+
+
+/printhere {
+        /newpar true def
+        /partmp parindent def
+        /parindent currentpoint pop leftmargin sub def
+        /yline yline fontsize 2 add add def
+        typeset
+        justifyprint
+        BreakIntoLines
+        /parindent partmp def
+} def
+%
+% printspell
+%
+% Prints a spell description
+% (Lvl) (spellname) (description) [printspell] -
+% 
+
+/printspell {
+        /description exch def
+        /spellname exch def
+        /lvl exch def 
+
+        yline 60 lt { newcolumn } if
+        
+        lvl print (. ) printhere
+        boldfont setfont spellname printhere
+        normalfont setfont
+        ( \320 ) printhere
+        description printhere
+} def
+
+% 
+% Justifies a single word or phrase in a box 
+% Will not overlap other justifyword printings
+% (pos) (width) (word) [justifyword] -
+/justifyword {
+        /word exch def
+        /boxwidth exch def
+        /pos exch def 
+        
+        yline lastyline ne {
+                /xpos 0 def 
+                /lastyline yline def
+        } if
+        
+        % Fixme
+        /thiswidth word stringwidth pop def
+        pos boxwidth 2 div add % Center of box
+        thiswidth 2 div sub % position correctly
+        yline moveto
+        word show
+} def
+% Justifies a single word or phrase in a box 
+% Will not overlap other justifyword printings
+% (pos) (width) (word) [justifyright] -
+/justifyright {
+        /word exch def
+        /boxwidth exch def
+        /pos exch def 
+        
+        yline lastyline ne {
+                /xpos 0 def 
+                /lastyline yline def
+        } if
+        
+        % Fixme
+        /thiswidth word stringwidth pop def
+        pos boxwidth add % Center of box
+        thiswidth sub % position correctly
+        yline moveto
+        word show
+} def
+
+
+/beginspellsummary {
+        /yline yline 3 sub def
+        boldfont setfont
+        (Lvl) (Name) (Area Of Effect) (Duration) (Range) (Type) printsummary
+        normalfont setfont
+        /yline yline 1 sub def
+} def
+/endspellsummary {
+        /yline yline fontsize sub def
+
+} def
+%
+% printsummary
+% (lvl) (spellname) (aoe) (Duration) (Range) (Type)
+/printsummary {
+        /spelltype exch def
+        /spellrange exch def
+        /spellduration exch def
+        /spellarea exch def
+        /spellname exch def
+        /spelllvl exch def
+
+        /lvlwidth 15 def
+        /namewidth 100 def
+        /areawidth 50 def
+        /durwidth 50 def
+        /rangewidth 30 def
+        /typewidth 15 def
+        
+
+        /lvlstart 20 def  % leftmargin
+        /namestart lvlstart lvlwidth add def 
+        /areastart namestart namewidth add def 
+        /durstart areastart areawidth add def
+        /rangestart durstart durwidth add def
+        /typestart rangestart rangewidth add def
+
+        (6) spelllvl eq 
+        (11) spelllvl eq 
+        (16) spelllvl eq 
+        (21) spelllvl eq  or or or
+        {  /yline yline fontsize 2 div sub def } if
+
+
+        lvlstart lvlwidth spelllvl justifyright % Should be justify right
+        currentfont
+        boldfont setfont
+        namestart 4 add yline moveto spellname show % Note different
+        setfont % restore previous font
+        areastart areawidth spellarea justifyword
+        durstart durwidth spellduration justifyword
+        rangestart rangewidth spellrange justifyword
+        typestart typewidth spelltype justifyword
+
+        /yline yline fontsize 1 add sub def
+
+} def
+        
+
+%
+% printtitle
+%
+% Prints the Spell list name - centered in current column
+% (name) [printtitle] -
+/printtitle {
+        /title exch def
+        
+        titlefont setfont
+        title stringwidth
+        pop 2 div 
+        leftmargin rightmargin add 2 div
+        exch sub
+        yline moveto title show
+        /yline yline titlefontsize 2 add sub def 
+        normalfont setfont
+} def
+
+
+
+   
+    % The spell list name
+    (Alter Dreams) printtitle
+    
+    (This list focuses on the gradual altering of a dream to twist it into a dream more to the spell caster's liking. This can be used both to the benefit and to the detriment of the actual dreamer. If one wants to use the effects from this list to affect the dreamer's psyche in some way, they are best combined with psychology skills and some planning and research.)
+        parprint
+   
+    % The spellist summary table
+    beginspellsummary
+    
+    (1)
+    (Enter Dreams I \267*)
+    (self)
+    (C)
+    (self)
+    (Um)
+    printsummary
+  
+    (2)
+    (Gauge Dream \267)
+    (1 dream)
+    (-)
+    (touch)
+    (Um)
+    printsummary
+  
+    (3)
+    (Mutate Concept I *)
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (4)
+    (Tweak Concept I )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (5)
+    (Reinforce Concept I )
+    (1 dream)
+    (P)
+    (touch)
+    (Um)
+    printsummary
+  
+    (6)
+    (Weaken Concept I )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (7)
+    (Remove Concept I )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (8)
+    (Add Concept I )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (9)
+    (Shifting Concept I )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (10)
+    (Mutate Concept III )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (11)
+    (Tweak Concept III )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (12)
+    (Reinforce Concept III )
+    (1 dream)
+    (P)
+    (touch)
+    (Um)
+    printsummary
+  
+    (13)
+    (Weaken Concept V )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (14)
+    (Remove Concept II )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (15)
+    (Add Concept II )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (16)
+    (Shifting Concept III )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (17)
+    (Mutate Concept True )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (18)
+    (Add Concept True )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (19)
+    (Remove Concept True )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (20)
+    (Warp Concept )
+    (1 dream)
+    (P)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (25)
+    (Control Concept )
+    (1 dream)
+    (C)
+    (touch)
+    (Fm)
+    printsummary
+  
+    (30)
+    (Conceptual Fortress )
+    (1 dream)
+    (P)
+    (touch)
+    (Um)
+    printsummary
+  
+    (50)
+    (Dream Master )
+    (self)
+    (1 rnd/level)
+    (self)
+    (U)
+    printsummary
+   
+    endspellsummary
+    
+    % Spell descriptions 
+    
+    (1) 
+    (Enter Dreams I)
+    (This spell is normally used to track down the dream that the caster wishes to affect. The spell gives the caster a weak mental link into the dream world through which he can navigate dreams. The link does not yield much in the way of details, and precise identification of objects within the dream world is impossible. Only general ideas are transmitted. The skill "Area Knowledge: Dream World" is used to navigate the dream world, but a penalty of -20 is applied due to the low quality of the link. Note that the maintaining of concentration on this spell may cause additional negative modifiers to be applied to the navigation skill roll, as well as other activities undertaken within dreams. ) 
+        printspell
+  
+    (2) 
+    (Gauge Dream)
+    (The caster receives an overview of the concepts that are in force in the dream he is currently visiting, and the sizes of each concept. He does not gain any understanding of the resilience of the concepts, however. ) 
+        printspell
+  
+    (3) 
+    (Mutate Concept I)
+    (Allows the caster to cause one single concept within a dream to be mutated. The caster has no control over the direction of the mutation. The change will be one degree in a random direction. ) 
+        printspell
+  
+    (4) 
+    (Tweak Concept I)
+    (Allows the caster to alter one single dream concept by one degree in the direction of his choosing. ) 
+        printspell
+  
+    (5) 
+    (Reinforce Concept I)
+    (Increases one single dream concept's resilience by 5. Any attempts to tweak or mutate this concept in the future are therefore awarded a special -5 penalty. ) 
+        printspell
+  
+    (6) 
+    (Weaken Concept I)
+    (Decreases any one single dream concept's resilience by 5. Any attempts to tweak or mutate this concept in the future are therefore awarded a +5 bonus. ) 
+        printspell
+  
+    (7) 
+    (Remove Concept I)
+    (This spell can completely remove a dream concept, regardless of the size of the concept. The dream is awarded a special +5 per size of the concept to resist this spell. A concept that is successfully removed stops playing any part in the dream, potentially changing the very contents of the dream. ) 
+        printspell
+  
+    (8) 
+    (Add Concept I)
+    (Adds a new size 1 concept to the dream. The concept needs to not be in conflict with any concepts already present within the dream. While a size 1 concept isn't going to impress anyone, its appearance will have some impact upon the contents of the dream. ) 
+        printspell
+  
+    (9) 
+    (Shifting Concept I)
+    (The caster may preprogram a repeatedly shifting nature of one single dream concept. The shifting may at most change a concept's size by one degree every five minutes. The direction of all future shifts for one single casting of this spell must be determined at the time of casting. Note that a "shifting" is considered a spell effect every time it occurs and so the casting of additional spells on the affected dream concept will cause the dream to become unstable. A period during which the caster has elected a shift not to occur, however, is safe for casting other spells on that concept. ) 
+        printspell
+  
+    (10) 
+    (Mutate Concept III)
+    (As Mutate Concept I, except will shift the concept 1d3 sizes in a random diretion. ) 
+        printspell
+  
+    (11) 
+    (Tweak Concept III)
+    (As Tweak Concept I, except can shift the concept 1-3 sizes in any direction, as the caster wishes. ) 
+        printspell
+  
+    (12) 
+    (Reinforce Concept III)
+    (As Reinforce Concept I, except bonus is +25 ) 
+        printspell
+  
+    (13) 
+    (Weaken Concept V)
+    (As Weaken Concept I, except malus is -25. ) 
+        printspell
+  
+    (14) 
+    (Remove Concept II)
+    (As Remove Concept I, except removal attempt only gets -3 per size of the concept being removed. ) 
+        printspell
+  
+    (15) 
+    (Add Concept II)
+    (As Add Concept I, except the new concept can start at any size from 1-5, as the caster wishes. ) 
+        printspell
+  
+    (16) 
+    (Shifting Concept III)
+    (As Shifting Concept I, except max shift is 3 per five minute period. ) 
+        printspell
+  
+    (17) 
+    (Mutate Concept True)
+    (As Mutate Concept I, except the concept gains a random new size from 1-10. ) 
+        printspell
+  
+    (18) 
+    (Add Concept True)
+    (As Add Concept I, except the new concept may have any size from 1 to 10, as the caster desires. ) 
+        printspell
+  
+    (19) 
+    (Remove Concept True)
+    (As Remove Concept I, except the malus is -1 per size of the concept. ) 
+        printspell
+  
+    (20) 
+    (Warp Concept)
+    (The fundamental nature of any one concept is changed semi-randomly. The change will generally be towards a diametrically opposite concept, so that a size 5 "anger" concept might warp into a size 5 "joy" concept. The size remains the same and the concept retains any resilience bonues/maluses. ) 
+        printspell
+  
+    (25) 
+    (Control Concept)
+    (The caster gains full conscious control of any one concept and may change its size from round to round without endangering the stability of the dream. Its fundamental nature may not be changed. ) 
+        printspell
+  
+    (30) 
+    (Conceptual Fortress)
+    (Any one concept is rendered completely immune to spell effects from this list (or similar lists). ) 
+        printspell
+  
+    (50) 
+    (Dream Master)
+    (The caster may cast any one spell from this list that is 20th level or lower every round for the duration of this spell. ) 
+        printspell
+  
+
+showpage

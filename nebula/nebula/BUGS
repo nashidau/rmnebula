@@ -1,0 +1,24 @@
+This file lists known bugs.  Also you should list any fixed bugs.
+This will also eventually form the basis for a set of regression tests.
+
+Outstanding:
+ * Closing the preferences dialog should save all values.
+        [Currently you need to hit enter in the current field to get
+         it to save]
+ * Character sheets should have Race at the top.
+ * Alena exits on a malformed XML file - make it return an error instead
+ * Paths to data files don't seem to work
+ * Files for printing characters not part of Nebula
+ 
+Fixed:
+ * Selecting languages properly on creation (20021130)
+ 	[Supported, just no race file uses it ;-)]
+ * Freeze if you select Rogue or Thief when creating (??)
+ * Limited progression for 0 ranks is -30 (20020928)
+ * Progressions with spaces screw up badly (20020928)
+ * The description in the right click on skill and the description in
+        the double click on skill doesn't seem to correspond (20021005).
+        [Fixed; previously right click popups were skill specific, and 
+         totally ignored the <description> tag]
+ * Clicking 'cancel' on buy skills during level up exits nebula
+        [Can't reproduce]

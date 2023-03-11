@@ -1,0 +1,37 @@
+Source: nebula
+Section: games
+Priority: optional
+Maintainer: Roberto Suarez Soto <turgon@debian.org>
+Build-Depends: debhelper (>> 3.0.0), liborbit2-dev, libatspi-dev, libatk1.0-dev, libaudiofile-dev, libbonobo-activation-dev, esound, libgail-dev, gnome-common, gnome-mime-data, libgnomevfs2-dev, gtk-doc-tools, intltool, libidl-dev, libbonobo2-dev, libglade2-dev, libgnomeui-dev, libxml2-dev, libxslt1-dev, liblinc-dev, libpango1.0-dev, pkg-config, libgnomeprint2.2-dev, libgnomeprintui2.2-dev
+Standards-Version: 3.5.9
+
+Package: nebula
+Architecture: any
+Depends: ${shlibs:Depends}, debconf
+Description: open source character generator for Rolemaster
+ Nebula is an Open Source character generator for Rolemaster Standard
+ System (RMSS) and Rolemaster Fantasy Roleplay, both copyright by Iron
+ Crown Enterprises (ICE). It allows you to create, modify and maintain
+ rolemaster characters. Data is stored in a publically available XML
+ format.
+ .
+ This package also includes other utilities belonging to the 
+ "Nebula Suite":
+ .
+ - Stardust, the spell list editor
+ - Worldbuilder, the genre editor
+ - Alchemist, the item editor
+ .
+ This package doesn't work without another one, nebula-data. This is
+ not officially included into Debian for copyright issues, but when
+ you install this you will be prompted to download it from a
+ "unofficial" mirror.
+
+Package: nebula-data
+Architecture: all
+Recommends: nebula
+Description: data files for Nebula, the Rolemaster Character Generator
+ These are the XML files needed for creating characters with Nebula, the
+ Rolemaster Character Generator. They are distributed separately for copyright
+ issues.
+

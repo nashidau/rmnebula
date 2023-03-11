@@ -1,0 +1,77 @@
+This is a rough plan of what features should be in each release.
+Odd versions are generally not released, as they are development versions.
+Also we can put proposed release names in there
+
+0.2 Released
+	* Character loading, creation, most basic features
+	
+	
+0.4 The "Will you be my friend, Mr Faceless Creature of Evil" Release
+	* Stardust added (done)
+	* Alchemist added (partially done)
+	* Worldbuilder added (partially done)
+	* Printing for nebula (done)
+	* Items in nebula (maybe - possibly remove the item window instead).
+	* Appearance (done)
+	* Sanity (done)
+	* Will (done)
+	* GConf configuration storage (done)
+	* Paths for data files (done)
+	* Skill based stat bonuses (done)
+	* [maybe] Redo creation (with gnome druid)
+        * [maybe] Spanish and French translations
+        * Documentation updates
+	
+0.6 "As yet to be named"
+	* Creation rewrite
+	* Training packages
+	* Integration with spell lists on printing
+	* Printing for all apps (done in nebula and stardust)
+	* Tighter integration
+	* Online context sensitive help (ie working help buttons on 
+	 	most features)
+	* Coach, and Guild applications
+	* Full il8n
+	* Inclusion in Debian unstable
+	* apt repository for Debian systems to track CVS
+	* Remove alena, and only use libxml
+	* [maybe] Talents/Flaws
+        * A speciifc look for and removal of memory leaks
+
+0.8 "As yet to be named"
+	* Complete character printing
+        * Printing and recording of character background, history, 
+                adventure notes.
+	* Printing of 'item sheets' and the like
+	* Multiple document interface?
+	* nebula as a filter (nebula --export nash.html nash.xml)
+	* Character images
+
+1.0 "Always the buggiest" Release
+	* Fully working version!!
+	* Integration into gnome
+
+Other outstanding items and post 1.0 plans:
+	* ICE approval.  I've requested this 3 times, I am yet to get a
+	confirmation for any.
+                - We have permission to say we don't have permission.
+                  I kid you not.
+                
+	* Introduction into Debian.
+	* Release of rpms and similar.
+	* Port to windows
+
+        * NPC generator (including groups)
+                - Also levels for NPCs and monsters
+
+        * Encounter Generator
+        * General table roller and mini RM helper apps.
+
+        * A Campaign Manager program (GM helper)
+                - Manages NPCS
+                - Town/region history and events (and NPCs of course)
+                - Weather?
+                - maps
+                - story history
+                - characters
+

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<rmssprofession>
+  <description>
+    Fighters are non spell users who will it relatively esdy to develop a
+    variety of different weapons and to wear heavier types of armor.  They
+    are less skilled n manuevering and manipulating mechanical devices such
+    as locks and traps (although they are still superior to most spell users
+    in these areas).  They have the greatest difficulty learning anythinbg
+    connected with spells.  Some litery examples of Fighters might include
+    Conan the Barbarian, Little John, and Gimli the Dwarf.
+  </description>
+  <quote>
+    Kohrist hefted his battleaxe.  It was time for battle.  The enemy may
+    defeat him today, but they will also remember he who is the Warlord.
+  </quote>
+    <skills>
+	<category name="Armor &#x2022; Light" cost="1/1/1" bonus="+10"/>
+	<category name="Armor &#x2022; Heavy" cost="2/2/2" bonus="+10"/>
+	<category name="Armor &#x2022; Medium" cost="2/2/2" bonus="+10"/>
+	<category name="Artistic &#x2022; Active" cost="2/5"/>
+	<category name="Artistic &#x2022; Passive" cost="2/5"/>
+	<category name="Athletic &#x2022; Brawn" cost="2/5"/>
+	<category name="Athletic &#x2022; Endurance" cost="2/6"/>
+	<category name="Athletic &#x2022; Gymnastics" cost="2/5"/>
+	<category name="Awareness &#x2022; Perceptions" cost="2/9"/>
+	<category name="Awareness &#x2022; Searching" cost="2/5"/>
+	<category name="Awareness &#x2022; Senses" cost="2/6">
+	  <skill name="Situational Awareness">
+	    <specialisation name="Combat" class="
+	</category>
+	<category name="Body Development" cost="2/5" bonus="+10"/>
+	<category name="Combat Maneuvers" cost="3/9" bonus="+10">
+	  <skill choice="Improve" name="Any one non-restricted"
+	  class="Everyman"/>
+	</category>
+	<category name="Communications" cost="3/3/3"/>
+	<category name="Crafts" cost="4/10"/>
+	<category name="Directed Spells" cost="20"/>
+	<category name="Influence" cost="2/7">
+	  <skill name="Leadership" class="Everyman"/></category>
+	<category name="Lore &#x2022; General" cost="1/3"/>
+	<category name="Lore &#x2022; Magical" cost="6"/>
+	<category name="Lore &#x2022; Obscure" cost="3/7"/>
+	<category name="Lore &#x2022; Technical" cost="2/6"/>
+	<category name="Martial Arts Combat Maneuvers" cost="5/12"/>
+	<category name="Martial Arts &#x2022; Strikes" cost="3/5">
+	  <skill name="Boxing" class="Everyman"/></category>
+	<category name="Martial Arts &#x2022; Sweeps" cost="3/5">
+	  <skill name="Wrestling" class="Everyman"/></category>
+	<category name="Outdoor &#x2022; Animal" cost="1/4"/>
+	<category name="Outdoor &#x2022; Environmental" cost="2/5"/>
+	<category name="Power Awareness" cost="8"/>
+	<category name="Power Manipulation" cost="18"/>
+	<category name="Power Point Development" cost="20"/>
+	<category name="Science/Analytic &#x2022; Basic" cost="3/6"/>
+	<category name="Science/Analytic &#x2022; Specialised" cost="12"/>
+	<category name="Self Control" cost="2/6">
+	  <skill name="Frenzy" class="Everyman"/></category>
+	<category name="Special Attacks" cost="2/6"/>
+	<category name="Special Defences" cost="35"/>
+	<category name="Subterfuge &#x2022; Attack" cost="6/10"/>
+	<category name="Subterfuge &#x2022; Mechanics" cost="2/5"/>
+	<category name="Subterfuge &#x2022; Stealth" cost="3/8"/>
+	<category name="Tech/Trade &#x2022; General" cost="3/7"/>
+	<category name="Tech/Trade &#x2022; Professional" cost="8"/>
+	<category name="Tech/Trade &#x2022; Vocational" cost="5/12"/>
+	<category name="Urban" cost="2/4"/>
+	<category name="Weapon &#x2022; 1H Concussion" cost="1/5" bonus="+20"/>
+	<category name="Weapon &#x2022; 1H Edged" cost="2/5" bonus="+20"/>
+	<category name="Weapon &#x2022; 2 Handed" cost="2/7" bonus="+20"/>
+	<category name="Weapon &#x2022; Missile" cost="2/7" bonus="+20"/>
+	<category name="Weapon &#x2022; Missile Artillery" cost="2/7" bonus="+20"/>
+	<category name="Weapon &#x2022; Pole Arms" cost="5" bonus="+20"/>
+	<category name="Weapon &#x2022; Thrown" cost="5" bonus="+20"/>
+      </skills></rmssprofession><!-- vim:set sw=2 : -->

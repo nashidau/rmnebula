@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+
+<list name="Dream Walls" realm="Channeling" type="Cleric Base">
+
+<description>
+This spell list is primarly used for protecting someone's dreams from
+intrusion, and for getting rid of unwanted interference. It can also,
+however, be put to good use invading the minds of others and should be
+considered a definite maybe for any would-be usurper of dreams.
+</description>
+
+<spell level="1" name="Dream Sentry I">
+<area>1 dream</area>
+<duration>P</duration>
+<range>10'</range>
+<type>F</type>
+<description>
+This spell creates a special type of dream fragment - a dream creature
+with a purpose outside of that of the dream itself. This creature will
+seek out and attack visitors within the dream. It is considered to
+have a skill bonus equal to five times its level when it comes to
+detecting visitors. The caster may designate one specific visitor per
+level of the creature that will be spared the creature's wrath. The
+creature will attempt not to interfere with the dream itself, but will
+do so if it proves necessary in order to get rid an unwanted visitor.
+The creature will exist until it is destroyed or the dream it was
+created in ends. The sentry created with this spell cannot be higher
+than first level (a class I entity). It will have physical and combat
+stats comparable to a created undead of its own level.
+</description>
+</spell>
+
+<spell level="2" name="Detect Visitor">
+<area>5'R</area>
+<duration>1 min/lvl(C)</duration>
+<range>100'</range>
+<type>P</type>
+<description>
+Cast from within a dream, detects the presence of any visitor. Caster
+can concentrate on a 5'R area of the dream every round.
+</description>
+</spell>
+
+<spell level="3" name="Dream Sentry II">
+<area>1 dream</area>
+<duration>P</duration>
+<range>10'</range>
+<type>F</type>
+<description>
+As Dream Sentry I, except max creature level is 3 (a class II entity).
+</description>
+</spell>
+
+<spell level="4" name="Monitor Dream">
+<area>1 dream</area>
+<duration>C</duration>
+<range>touch</range>
+<type>P</type>
+<description>
+Caster goes into a trance where he can monitor the entry or exit of
+visitors in a dream. If any visitor enters or exits the dream, the
+caster will know that this has happened. No details are learned, only
+the number of visitors and whether they entered or left. The caster
+does specifically not learn who it was or where they are/were.
+</description>
+</spell>
+
+<spell level="5" name="Expell Visitor I">
+<area>1 visitor</area>
+<duration>-</duration>
+<range>50'</range>
+<type>Fm</type>
+<description>
+If target visitor does not resist, he is immediately expelled from the
+dream. He will typically end up in another dream that is similar.
+</description>
+</spell>
+
+<spell level="6" name="Waiting Wall">
+<area>1 spell</area>
+<duration>P</duration>
+<range>-</range>
+<type>U</type>
+<description>
+When cast prior to the casting of any other spell (which
+must be cast within one minute of casting "Waiting Wall"), the actual
+effect of the second spell is delayed. 
+Alternatively, this spell can be cast without an
+accompanying spell, in which case it will simply alert the caster that
+the trigger action occurs. The duration is until the spell is
+triggered, or until the dream it is cast in ends.
+The spell may trigger on any
+one of the following conditions; time, a specific observable
+occurrence or
+information that could be gleaned through the use of "Detect Visitor"
+or "Monitor Dream". Note that if a "Detect Visitor" trigger is
+chosen, a specific non-moving 5'R must be chosen and this area will be
+constantly monitored. The caster need not cast or pay power points for
+the detection spells if such a trigger is chosen - it is built into
+this spell.
+</description>
+
+<annotation>
+While it may be tempting to use this spell to delay an "Expell
+Visitor" spell on a "Monitor Dream" type of trigger, that will not
+work.
+"Monitor Dream" does not supply the information needed to accurately
+target the visitor and so the "Expell Visitor" spell will fizzle. One
+could in stead use a "Detect Visitor" trigger, but this does of course
+quite drastically limit the area that can be monitored.
+</annotation>
+
+<annotation>
+It is possibly to nest "Waiting Wall" spells for sophisticated effects.
+That is, one could cast a "Waiting Wall" spell that triggers on a
+"Monitor Dream" trigger of "a visitor has entered the dream". The
+spell triggered could be another "Waiting Wall" spell set up to
+trigger on "Detect Visitor" and launch an "Expell Visitor" spell
+when a visitor is detected. While it is not clear why this
+particular case would be useful, it does illustrate the concept.
+</annotation>
+
+<annotation>
+A common spell mastering of this spell might be to introduce other
+means of triggering. For instance, one might want the spell to trigger
+when the sun in the real world comes out from behind the clouds. This
+information is not readily available within the dream world and so the
+caster would have to join this spell with either another spell or else
+some unconventional forms of perception to detect that occurrence. In
+these cases, this spell should be considered to have been originally
+designed with these cases in mind, and so introducing new forms of
+triggers into it shouldn't be excessively difficult. In the cases when
+these triggers rely upon another spell known by the caster, he may
+need to cast that spell in addition to this one. This costs extra
+power points and it might make him a bit pressed for time as he only
+has one minute from the casting of this spell until he must cast the
+waiting spell. This puts a natural limit on how many fancy effects he
+can introduce.
+</annotation>
+</spell>
+
+<spell level="7" name="Terminate Dream">
+<area>1 dream</area>
+<duration>-</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+The dreamer gets to resist this spell. If the spell is successful, the
+targetted dream ends. The dreamer will most often enter a new dream,
+but may awaken at the GM's discretion. Any visitors within the old
+dream will be expelled as it ends and will have to track down the new
+dream if they want back to the same dreamer.
+</description>
+</spell>
+
+<spell level="8" name="Dream Sentry III">
+<area>1 dream</area>
+<duration>P</duration>
+<range>10'</range>
+<type>F</type>
+<description>
+As Dream Sentry I, except max creature level is 6 (a class III entity).
+</description>
+</spell>
+
+<spell level="9" name="True Insomnia">
+<area>1 target</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+While under the effect of this spell, the target is completely
+incapable of falling asleep. After suffering the effect of this spell
+for two days, the target is at -25 to all actions. If the effect
+continues for a prolonged period of time, the target risks losing his
+mind. This spell will detect as a curse and is dispellable as such.
+</description>
+
+<annotation>
+Some times the cure is as bad as the disease, but if you have demons
+infesting your dreams, "True Insomnia" may be just what the doctor
+ordered.
+</annotation>
+</spell>
+
+<spell level="10" name="Dream Barrier I">
+<area>1 dream</area>
+<duration>C</duration>
+<range>touch</range>
+<type>F</type>
+<description>
+A magical barrier is erected around the dream that prevents visitors
+from entering it. It does not prevent visitors from leaving. Anyone
+attempting to enter the dream will need to resist this spell or their
+attempt will fail.
+</description>
+</spell>
+
+<spell level="11" name="Expell Visitor II">
+<area>1 visitor</area>
+<duration>1 day</duration>
+<range>50'</range>
+<type>Fm</type>
+<description>
+As Expell Visitor I, except that the target, if he does not resist,
+may not reenter the dream for a period of one day. Should the dreamer
+start dreaming another dream, however, the visitor may enter that
+dream whether a day has passed or not. Note that "Prolonged
+Protection" will not affect this. This effect will register as a curse
+on the target and may be dispelled as such.
+</description>
+
+<annotation>
+For most dreams, one day is much longer than the dream is ever going
+to last.
+</annotation>
+</spell>
+
+<spell level="12" name="Prolonged Protection">
+<area>1 dream</area>
+<duration>8 hours</duration>
+<range>touch</range>
+<type>U</type>
+<description>
+This spell can be used to enhance other spells from this list. Any
+spell on this list that would normally end when a dream ends will have
+its duration extended to the duration of this spell. In order to
+achieve this effect, this spell must be cast prior to and within one
+minute of the spell to be affected.
+</description>
+
+<annotation>
+This spell will not affect other factors that might cause a spell to
+end. As an example, if a "Waiting Wall" spell terminates due to it
+being triggered, then this spell will not cause it to live on. The
+"Waiting Wall" spell will, however, last a full 8 hours if nothing
+should happen to trigger it until then.
+</annotation>
+</spell>
+
+<spell level="13" name="Dream Sentry IV">
+<area>1 dream</area>
+<duration>P</duration>
+<range>10'</range>
+<type>F</type>
+<description>
+As Dream Sentry I, except max creature level is 9 (a class IV entity).
+</description>
+</spell>
+
+<spell level="14" name="Dream Barrier II">
+<area>1 dream</area>
+<duration>C</duration>
+<range>touch</range>
+<type>F</type>
+<description>
+As "Dream Barrier I", except anyone failing will also receive a A
+shock critical. The main purpose of this is to cause them to end up in
+a dream with a strong "pain" concept, which can be pretty nasty.
+Visitors for which pain does not exist (undead or entities without
+physical bodies perhaps) are immune to this effect.
+</description>
+</spell>
+
+<spell level="15" name="Dream Perimeter">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>F</type>
+<description>
+This spell sets up a perimeter around a dream through which any
+visitor that wishes to enter or leave must pass. As they do so, they
+must resist this spell or be immobilized for 1 minute
+per 10% failure. While they are immobilized, they will not be able to
+hide or otherwise meld into the dream and so they will be easier to
+find. This spell lasts until the end of the dream in which it was
+cast.
+</description>
+
+<annotation>
+This spell works well in combination with roaming Dream Sentries.
+</annotation>
+</spell>
+
+<spell level="16" name="Expell Visitor III">
+<area>1 visitor</area>
+<duration>1 day</duration>
+<range>50'</range>
+<type>Fm</type>
+<description>
+As "Expell Visitor II", except the target may not return to any dream
+of the dreamer for the duration.  It is still possible to
+dispell this
+effect as a curse.
+</description>
+</spell>
+
+<spell level="17">
+</spell>
+
+<spell level="18" name="Dream Sentry V">
+<area>1 dream</area>
+<duration>P</duration>
+<range>10'</range>
+<type>F</type>
+<description>
+As Dream Sentry I, except max creature level is 13 (a class V entity).
+</description>
+</spell>
+
+<spell level="19">
+</spell>
+
+<spell level="20" name="Dream Fortress">
+<area>1 spell</area>
+<duration>P</duration>
+<range>touch</range>
+<type>U</type>
+<description>
+When cast before a "Dream Barrier" spell, the target spell will last
+until the end of the dream it was cast in. The target spell must be
+cast within one minute of this spell.
+</description>
+</spell>
+
+<spell level="25" name="Expell Visitor True">
+<area>1 visitor</area>
+<duration>P</duration>
+<range>50'</range>
+<type>Fm</type>
+<description>
+As "Expell Visitor III", except for duration. It is still possible to
+dispell this
+effect as a curse.
+</description>
+</spell>
+
+<spell level="30" name="Dream Garrison">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>F</type>
+<description>
+As "Dream Sentry I", except a number of sentries can be created at
+once. The
+total entity class of all sentries combined may not exceed the level
+of the caster and any one sentry may not be above entity class V (13th
+level). The sentries created from one casting of this spell will
+function together much like a military unit and will not stray far
+from one another.
+</description>
+</spell>
+
+<spell level="50" name="Dream Perimeter True">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>F</type>
+<description>
+As "Dream Perimeter", except the effect suffered is not
+immobilization. Rather, the caster may choose a spell he is capable of
+casting that will affect any non-resisting targets. The caster must
+expend the PPs for this spell as he chooses to use it, but does not
+need to actually cast it (that is handled by this spell). The target
+needs to resist the spell chosen for him, not the "Dream Perimeter
+True" spell. The caster may either designate one single spell that
+will be used on all intruders, or he may elect to choose a different
+spell per occurrence. The caster will be aware when a visitor passes
+through the barrier, but will not know who it is or where he is
+located.
+</description>
+</spell>
+
+<specialnote>
+In order to cast most of the spells on this list, the caster must
+"touch" the target, which is "1 dream". To "touch a dream", the caster
+must either be inside of that dream (by way of some dream travelling
+magic, such as the spell "Enter Dreams I"), or he must touch the actual
+dreamer that is having the dream in question.
+</specialnote>
+
+
+</list>

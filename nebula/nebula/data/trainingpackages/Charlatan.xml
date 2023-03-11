@@ -1,0 +1,63 @@
+<?xml version='1.0'?>
+
+<trainingpackage>
+        <skills>
+                <category>
+                        <name>Artistic • Active</name>
+                        <ranks>1</ranks>
+                        <skill>
+                                <name>Acting</name>
+                                <ranks>1</ranks>
+                        </skill>
+                </category>
+                <category>
+                        <name>Awareness • Searching</name>
+                        <ranks>1</ranks>
+                        <skill>
+                                <name>Lie Perception</name>
+                                <ranks>1</ranks>
+                        </skill>
+                </category>
+                <category>
+                        <name>Influence</name>
+                        <ranks>4</ranks>
+                        <skill>
+                                <name>Duping</name>
+                                <ranks>4</ranks>
+                        </skill>
+                </category>
+                <category>
+                        <name>Lore • General</name>
+                        <ranks>1</ranks>
+                </category>
+                <category>
+                        <name>Spells • Mentalism TP</name>
+                        <skill>
+                                <name>Charades</name>
+                                <ranks>3</ranks>
+                        </skill>
+                </category>
+                <category>
+                        <name>Subterfuge • Mechanics</name>
+                        <ranks>1</ranks>
+                        <skill>
+                                <name>Disguise</name>
+                                <ranks>2</ranks>
+                        </skill>
+                </category>
+                <category>
+                        <name>Subterfuge • Stealth</name>
+                        <ranks>2</ranks>
+                        <skill>
+                                <name>Trickery</name>
+                                <ranks>1</ranks>
+                        </skill>
+                </category>
+        </skills>
+        <choices>
+                <choice>
+                        <ranks>1</ranks>
+                        <group>Lore • General</group>
+                </choice>
+        </choices>
+</trainingpackage>

@@ -1,0 +1,119 @@
+Protocols
+=========
+
+
+This file documents the protocols to be used in communicating with various
+applications.
+The exact method of establighing communication is not (yet) discussed -
+allowing the possiblity or network sockets or similar - in fact it could be
+quite cool to have a rm character server somewhere - I'm sure even ICE would
+be impressed with that ;-)
+
+Assumptions
+-----------
+
+The use of client and frontend are interchangable, as is server and backend.
+
+The client may be over the web, or anywhere else - thus the client is NOT
+trusted - all results from the client are tested.  Also nothign is rolled on
+the client side - all rolling and final calculations should be done on the
+server side.
+
+Protocols are designed to be really easy to parse - not designed for
+flexibility, or neatness of design - also elegance is not necessay, nor is
+things like being able to trace audit trails - that is for hte main
+document.
+
+
+Level Up
+--------
+
+Level up is the first protocol to be implemented.
+
+The general level up procedure is as follows:
+	- Generate new stats
+	  	- Apply stats and calculate new stat/skill bonuses.
+	- Generate new skills
+	- Apply training package changes.
+	
+The procedure for leveling up thus becomes:
+	Client inits level up
+	Server generates a new set of stats
+		- writes to stat update file
+		- applies stat update file to tmp file
+		- opens tmp file
+	Server sends client new stats
+	server sends client skill list
+	
+		  
+Format of messages
+* Client request level up
+	<levelup />
+* Server sending back new stats 
+	<stats>
+		<stat name="StatName" abbr="abbr" 
+			temporary="23" potential="33" 
+			oldtemporary="23" oldpotential="33" 
+			bonus="+19" />
+		...
+	</stats>
+	<dp>78</dp>
+	<skills>
+		<cat name="blah" ranks="3" total="3" cost="2/5"
+				bonus="2/1">
+			<skill name="foo" ranks="1" total="23" 
+				cost="2/5" bonus="6/6" multiply="2"/>
+		</cat>
+	</skills>
+Some explanation:
+	In a stat name and abbr are the stats name and abbrieviation
+	(unsurprisingly).  Temporary and potential are the new temp and pot
+	values, while oldtemporary and oldpotential are the values before
+	level up.
+	If no old value is supplied - the value did not change.  Note that a 
+	server can supply old values if the value did not change.  It is
+	suggested that the client display such items in a different colour
+	or similar.
+	Bonus is the new stat bonus, added to RRs and skills and the like.
+	It is displayed merely for convinience.
+	
+	DP is the number of development points for going up the new level.
+
+	Skills
+	Skills are grouped as:
+		<cat>
+			<name>Awareness * Senses</name> 
+			<group>
+				<name>Awareness</name>
+				<bonus>+20</bonus> /* Profession */
+			</group>
+			<skill>
+				<specialisation>
+	Group may be empty/missing, in which case it is ignored.
+	Groups has the fields name in this case (no bonuses).
+	Cat is short for categories.  
+	A group with no name is the same as a non-existant group.  
+	Categories must have a name field.  The ranks attribute is the
+	current number of ranks.  Cost is the cost (non-culmulative) cost
+	for ranks, seperated by '/'.  Bonus is the (non-culmulative) bonus
+	for buying that number of ranks.  Note that in some cases the number
+	of fields for a bonus may be greater then the number of ranks that
+	can be purchased.  
+	Skills have similar fields, except may also have a multiply field.
+	All rank purchases have to multiplied to this amount.  Note that
+	half-ranks ARE allowed.  
+	The number of fields in the bonus column must be > the number of
+	ranks that can be purchased * the mutiply field.
+	A half rank uses the bonus of the lesser value.
+	
+		
+	
+Other Questions
+===============
+
+Other questions:  Logging in and authentication?  If we wish to use a server
+we need to be able to specify how to log in and authenticate a user to have
+access to the character.
+
+
+

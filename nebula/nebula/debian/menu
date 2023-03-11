@@ -1,0 +1,2 @@
+?package(nebula):needs=X11 section=Games/Adventure\
+  title="nebula" command="/usr/bin/nebula"

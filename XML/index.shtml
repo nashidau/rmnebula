@@ -1,0 +1,42 @@
+<!--#set var="TITLE" value="Rolemaster XML" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>XML</h1>
+
+<p>Welcome to rolemaster XML page.  I am attempting to produce a XML format
+for all RMSS/RMFRP (and in the future RM2) data.</p>
+
+<p>So far I have a RMSS character format, as well as a Spell list format.
+Additionally I have partial formats for races, genres, professions,
+monsters, training packages and other data.</p>
+
+<p>The RMSS character format is available <a href="rmsscharacter">here</a>.
+It contains a DTD for parsing, and a XSLT to convert to HTML for viewing.
+Note that <a href="../Nebula">Nebula</a> can read and generate files in this
+format.</p>
+
+<p>Additionally I have a spell list format <a
+href="spelllist">available</a>.  It also has a DTD and an XSLT for HTML
+conversion.  The XSLT has a number of parameters you can use to convert to
+HTML.</p>
+
+<p>The other formats have yet to be finalised (although many are related
+closely to rmsscharacter).</p>  
+
+<p>A note on the DTDs presented here: They all make extensive use of
+elements, with few attributes.  I follow the convention of useing attributes
+only for meta-data, and consider most of the information on the character
+sheet data.  Additionally as a side effect it means you can use a CSS
+directly on the XML document to produce useful output (CSS can't display
+attributes).</p>
+
+<h2>Available Formats</h2>
+
+<ul>
+        <li><a href="rmsscharacter">Rmsscharacter</a></li>
+        <li><a href="spelllist">Spellist</a></li>
+        <li><a href="rmmsrace">Rmss Race</a></li>
+</ul>
+
+
+<!--#include virtual="/.include/tail.shtml" -->

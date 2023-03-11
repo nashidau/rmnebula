@@ -1,0 +1,238 @@
+<?xml version='1.0'?>
+
+<profession>
+	<data>
+		<fixed>
+			<profession>Wizard</profession>
+			<type>Pure</type>
+			<realm>Arcane</realm>
+		</fixed>
+	</data>
+	<stats>
+		<stat>
+			<name>Self Discipline</name>
+			<primestat />
+		</stat>
+		<stat>
+			<name>Empathy</name>
+			<primestat />
+		</stat>
+		<stat>
+			<name>Intuition</name>
+			<primestat />
+		</stat>
+		<stat>
+			<name>Presence</name>
+			<primestat />
+		</stat>
+        </stats>
+        <skills>
+		<category>
+			<name>Armor &#x2022; Light</name>
+			<cost>11</cost>
+		</category>
+		<category>
+			<name>Armor &#x2022; Heavy</name>
+			<cost>9</cost>
+		</category>
+		<category>
+			<name>Armor &#x2022; Medium</name>
+			<cost>10</cost>
+		</category>
+		<category>
+			<name>Artistic &#x2022; Active</name>
+			<cost>2/5</cost>
+		</category>
+		<category>
+			<name>Artistic &#x2022; Passive</name>
+			<cost>2/5</cost>
+		</category>
+		<category>
+			<name>Athletic &#x2022; Brawn</name>
+			<cost>7</cost>
+		</category>
+		<category>
+			<name>Athletic &#x2022; Endurance</name>
+			<cost>3</cost>
+		</category>
+		<category>
+			<name>Athletic &#x2022; Gymnastics</name>
+			<cost>3</cost>
+		</category>
+		<category>
+			<name>Awareness &#x2022; Perceptions</name>
+			<cost>4</cost>
+		</category>
+		<category>
+			<name>Awareness &#x2022; Searching</name>
+			<cost>2</cost>
+		</category>
+		<category>
+			<name>Awareness &#x2022; Senses</name>
+			<cost>1/4</cost>
+		</category>
+		<category>
+			<name>Body Development</name>
+			<cost>16</cost>
+		</category>
+		<category>
+			<name>Combat Maneuvers</name>
+			<cost>18</cost>
+		</category>
+		<category>
+			<name>Communications</name>
+			<cost>2/2/2</cost>
+		</category>
+		<category>
+			<name>Crafts</name>
+			<cost>4/10</cost>
+		</category>
+		<category>
+			<name>Directed Spells</name>
+			<cost>3</cost>
+		</category>
+		<category>
+			<name>Influence</name>
+			<cost>2/5</cost>
+		</category>
+		<category>
+			<name>Lore &#x2022; General</name>
+			<cost>1/3</cost>
+		</category>
+		<category>
+			<name>Lore &#x2022; Magical</name>
+			<cost>1/4</cost>
+			<professionbonus>+10</professionbonus>
+		</category>
+		<category>
+			<name>Lore &#x2022; Obscure</name>
+			<cost>3/6</cost>
+		</category>
+		<category>
+			<name>Lore &#x2022; Technical</name>
+			<cost>2/6</cost>
+		</category>
+		<category>
+			<name>Martial Arts Combat Maneuvers</name>
+			<cost>18</cost>
+		</category>
+		<category>
+			<name>Martial Arts &#x2022; Strikes</name>
+			<cost>9</cost>
+		</category>
+		<category>
+			<name>Martial Arts &#x2022; Sweeps</name>
+			<cost>9</cost>
+		</category>
+		<category>
+			<name>Outdoor &#x2022; Animal</name>
+			<cost>3</cost>
+		</category>
+		<category>
+			<name>Outdoor &#x2022; Environmental</name>
+			<cost>3</cost>
+		</category>
+		<category>
+			<name>Power Awareness</name>
+			<cost>1/3</cost>
+			<professionbonus>+10</professionbonus>
+		</category>
+		<category>
+			<name>Power Manipulation</name>
+			<cost>3/7</cost>
+			<professionbonus>+15</professionbonus>
+                        <skill>
+                                <name>Spell Mastery (By Spell List)</name>
+                                <class>Everyman</class>
+                        </skill>
+		</category>
+		<category>
+			<name>Power Point Development</name>
+			<cost>4</cost>
+			<professionbonus>+5</professionbonus>
+		</category>
+		<category>
+			<name>Science/Analytic &#x2022; Basic</name>
+			<cost>1/4</cost>
+			<professionbonus>+5</professionbonus>
+		</category>
+		<category>
+			<name>Science/Analytic &#x2022; Specialised</name>
+			<cost>6/12</cost>
+			<professionbonus>+5</professionbonus>
+		</category>
+		<category>
+			<name>Self Control</name>
+			<cost>5</cost>
+		</category>
+		<category>
+			<name>Special Attacks</name>
+			<cost>18</cost>
+		</category>
+		<category>
+			<name>Special Defences</name>
+			<cost>30</cost>
+		</category>
+		<category>
+			<name>Spells &#x2022;</name>
+			<cost></cost>
+			<professionbonus>+5</professionbonus>
+		</category>
+		<category>
+			<name>Subterfuge &#x2022; Attack</name>
+			<cost>16</cost>
+		</category>
+		<category>
+			<name>Subterfuge &#x2022; Mechanics</name>
+			<cost>7</cost>
+		</category>
+		<category>
+			<name>Subterfuge &#x2022; Stealth</name>
+			<cost>5</cost>
+		</category>
+		<category>
+			<name>Tech/Trade &#x2022; General</name>
+			<cost>3/7</cost>
+		</category>
+		<category>
+			<name>Tech/Trade &#x2022; Professional</name>
+			<cost>8</cost>
+		</category>
+		<category>
+			<name>Tech/Trade &#x2022; Vocational</name>
+			<cost>5/12</cost>
+		</category>
+		<category>
+			<name>Urban</name>
+			<cost>4</cost>
+		</category>
+		<category>
+			<name>Weapon &#x2022; 1H Concussion</name>
+			<cost>9</cost>
+		</category>
+		<category>
+			<name>Weapon &#x2022; 1H Edged</name>
+			<cost>20</cost>
+		</category>
+		<category>
+			<name>Weapon &#x2022; 2 Handed</name>
+			<cost>20</cost>
+		</category>
+		<category>
+			<name>Weapon &#x2022; Missile</name>
+			<cost>20</cost>
+		</category>
+		<category>
+			<name>Weapon &#x2022; Missile Artillery</name>
+			<cost>20</cost>
+		</category>
+		<category>
+			<name>Weapon &#x2022; Pole Arms</name>
+			<cost>20</cost>
+		</category>
+		<category>
+			<name>Weapon &#x2022; Thrown</name>
+			<cost>20</cost>
+		</category>
+        </skills>
+</profession>

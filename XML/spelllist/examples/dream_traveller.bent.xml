@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+
+<list name="Dream Traveller" realm="Channeling" type="Cleric Base">
+
+<description>
+This list facilitates travel through the dream world. It lets the
+spell caster move his mind into the realm of dreams and it makes it
+easier for him to move around once there.
+</description>
+
+<spell level="1" name="Enter Dreams I">
+<area>self</area>
+<duration>C</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+This spell gives the caster a weak mental link into
+the
+dream world
+through which he can navigate dreams. The link does not yield much in
+the way of details, and precise identification of objects within the
+dream world is impossible. Only general ideas are transmitted. The
+skill "Area Knowledge: Dream World" is used to navigate the dream
+world, but a penalty of -20 is applied due to the low quality of the
+link. Note that the maintaining of concentration on this spell may
+cause additional negative modifiers to be applied to the navigation
+skill roll, as well as other activities undertaken within dreams.
+</description>
+</spell>
+
+<spell level="2" name="Remember Dream">
+<area>1 dream</area>
+<duration>P</duration>
+<range>touch</range>
+<type>Um</type>
+<description>
+The caster memorizes the nature and contents of one dream in order to
+use other spells on this list on that dream later. Even if the dream
+has ended, this spell can be useful should that dream come again. It
+is therefore mostly useful for long dreams or recurring dreams. The
+caster can memorize any number of dreams by the use of this spell.
+</description>
+</spell>
+
+<spell level="3" name="Visit Dreams I">
+<area>self</area>
+<duration>1 min/level</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+As Enter Dreams I except for duration.
+</description>
+</spell>
+
+<spell level="4" name="Seek Dream I">
+<area>self</area>
+<duration>-</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+Can only be cast on dreams that are remembered as per the spell
+"Remember Dream". The spell will mold the caster's mind so that one
+single concept from the target dream will be present in his mind at
+the appropriate size. This
+will effectively bring the caster "closer" to that dream.
+</description>
+</spell>
+
+<spell level="5" name="Travel Link I">
+<area>1 target</area>
+<duration>special</duration>
+<range>touch</range>
+<type>Um</type>
+<description>
+Caster links his mind to the target (who must be awake at the time of
+casting), allowing the target to travel
+into the dream world together with the caster, and molding the state
+of his own mind in synchronization with the caster. In effect, the
+target becomes a hitchhiker on the caster's journey into the dream
+world. While the target will have freedom of action and movement
+within the environment of any one dream, his state of mind is
+inextricably linked to that of the caster, and so his travel between
+different dreams is also linked to that of the caster. Any successful
+attempt by
+the target to change his own state of mind will break the spell and
+thrust him back into the waking world. The duration of the spell
+is so long as the caster remains within the dream world, or 2 minutes
+if the caster has not yet entered it. This means that the caster can
+cast this spell upon a target and wait up to two minutes before
+entering the dream world. The caster can cast this spell on multiple
+targets and take them all with him.
+</description>
+</spell>
+
+<spell level="6" name="Mold Mind V">
+<area>self</area>
+<duration>-</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+Caster introduces, removes, strengthens or weakens one single dream
+concept in his own
+state of mind. A newly introduced concept must enter at size 1-5. An
+already existing one can be strengthened or weakened by 5 sizes. One
+that is size 5 or smaller can be removed entirely. This can be used to
+bring the caster's state of mind closer to that of his target dream.
+</description>
+</spell>
+
+<spell level="7" name="Enter Dreams II">
+<area>self</area>
+<duration>C</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+As Enter Dreams I, except the dream world is experienced with great
+clarity and there is no special penalty to interacting with it. There
+may still be a penalty for maintaining concentration on this spell
+though.
+</description>
+</spell>
+
+<spell level="8" name="Travel Link V">
+<area>5 targets</area>
+<duration>special</duration>
+<range>10'</range>
+<type>Um</type>
+<description>
+As Travel Link I, except for area of effect.
+</description>
+</spell>
+
+<spell level="9" name="Visit Dreams II">
+<area>self</area>
+<duration>10 min/level</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+As Enter Dreams II, except for duration.
+</description>
+</spell>
+
+<spell level="10" name="Remain">
+<area>self</area>
+<duration>1 min/level</duration>
+<range>self</range>
+<type>Fm</type>
+<description>
+Caster roots himself firmly within a dream. Any attempt to dislodge
+the caster or visitors "Travel Linked" to him will face a -50
+penalty to doing so.
+</description>
+</spell>
+
+<spell level="11" name="Mold Mind X">
+<area>self</area>
+<duration>-</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+As Mold Mind V, except any existing concept can be removed regardless
+of size, any new concept can be introduced to any size and any
+existing concept can be resized to any size.
+</description>
+</spell>
+
+<spell level="12" name="Dream Agent">
+<area>1 target</area>
+<duration>C</duration>
+<range>touch</range>
+<type>Fm</type>
+<description>
+As Visit Dreams I, except for area of effect.
+</description>
+</spell>
+
+<spell level="13" name="Seek Dream V">
+<area>self</area>
+<duration>-</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+As Seek Dream I, except up to five concepts are put in place.
+</description>
+</spell>
+
+<spell level="14" name="Resist Concept">
+<area>self</area>
+<duration>special</duration>
+<range>self</range>
+<type>Fm</type>
+<description>
+The caster must choose one specific concept that is not currently
+present within his frame of mind. Any attempt to introduce that
+concept upon the caster will suffer a -50 penalty. The duration lasts
+so long as the caster remains within the dream world or until the
+concept is successfully forced upon the caster.
+</description>
+</spell>
+
+<spell level="15" name="Travel Link True">
+<area>1 target/level</area>
+<duration>special</duration>
+<range>100'</range>
+<type>Um</type>
+<description>
+As Travel Link I, except for area of effect.
+</description>
+</spell>
+
+<spell level="16" name="Filter Dreams">
+<area>self</area>
+<duration>C</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+Gives the caster mental images of a whole specter of active dreams
+that match his current state of mind. This spell effectively negates
+the need for the caster to
+actually visit a myriad of dreams to find one specific target dream.
+He will only need to get to one out of the myraid if similar dreams
+and then employ this spell.
+Note that the maintaining of concentration of this
+spell does not give penalties to any skill checks used to filter out
+the dreams.
+</description>
+</spell>
+
+<spell level="17" name="Hide">
+<area>self</area>
+<duration>1 round/level</duration>
+<range>self</range>
+<type>F</type>
+<description>
+The caster becomes difficult to detect by normal means within the
+dream world. Any attempts to detect him will suffer a -70 (Sheer
+Folly) penalty.
+</description>
+</spell>
+
+<spell level="18" name="Visit Dreams III">
+<area>self</area>
+<duration>1 hour/level</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+As Visit Dreams II except for duration.
+</description>
+</spell>
+
+<spell level="19" name="Avoid Visitors">
+<area>self</area>
+<duration>1 min/level</duration>
+<range>self</range>
+<type>U</type>
+<description>
+For the duration of this spell, the caster will be predisposed towards
+entering dreams that do not contain overt visitors. Covert visitors
+may reduce the probability of being avoided, depending upon the
+quality of their covertness. Any dream with visitors in it that would
+otherwise have been chosen as the caster's next dream has a base 95%
+chance of not being entered and the caster will end up in another
+similar dream in stead. The caster does not know when this
+has happened.
+</description>
+</spell>
+
+<spell level="20" name="Dream Army">
+<area>1 target/level</area>
+<duration>C</duration>
+<range>100'</range>
+<type>Fm</type>
+<description>
+As Dream Agent, except for area of effect and range.
+</description>
+</spell>
+
+<spell level="25" name="Seek Dream True">
+<area>self</area>
+<duration>-</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+As Seek Dream I, except all dream concepts are put into place, thereby
+putting the caster's state of mind in exact sync with the remembered
+dream.
+</description>
+</spell>
+
+<spell level="30" name="Mold Mind True">
+<area>self</area>
+<duration>-</duration>
+<range>self</range>
+<type>Um</type>
+<description>
+As Mold Mind X, except can affect any number of dream concepts in one go.
+</description>
+</spell>
+
+<spell level="50" name="Preparation">
+<area>self</area>
+<duration>C</duration>
+<range>self</range>
+<type>U</type>
+<description>
+While under the influence of this spell, the caster may cast any "Seek
+Dream" and "Mold Mind"
+spells on this list without first entering
+the dream world. He must still cast them normally and pay the power
+point costs, etc. Concentration on the maintenance of this spell does
+not negatively affect his ability to cast such spells. What this spell
+gives the caster is basically a way of achieving the correct mental
+state before entering the dream world, thereby potentially avoiding a
+lot of grief.
+</description>
+</spell>
+
+<specialnote>
+All "Seek Dream" and "Mold Mind" spells on this list require the
+caster to already
+be within the dream world. The 50th level spell "Preparation" negates
+this requirement.
+</specialnote>
+</list>

@@ -1,0 +1,111 @@
+/* CSS for Rolemaster characters */
+
+
+rmsscharacter { background-color: white }
+
+/* Use the character name as heading */
+data > name { font-size: x-large;
+              text-align: center; 
+              font-weight : bold; 
+              display: block 
+}
+/* Hide all this crud... */
+data * {
+        display: none
+}
+
+/* Player info */
+player:before {
+       content: 'Player: '
+}
+player {
+        display: block;
+}
+player name {
+        font-weight: normal
+}
+email {
+        margin-left: 5ex;
+        font-family: monospace
+}
+
+/* Campaign */
+
+
+/* Fixed */
+trainingpackages:before {
+        display: block;
+        content: 'Training Packages:'
+}
+trainingpackages {
+        list-style-type: circle;
+}
+tp {
+        display: list-item;
+        list-style-type: circle;
+}
+
+/* Stats */
+stats { display: table }
+stats > stat  { display: table-row  }
+stat name {   display: table-cell ;
+                font-weight: bold }
+stat abbr { display: table-cell;
+                font-style: italic }
+stat *       { display: table-cell ;
+                padding-left: 2ex;
+                text-align: right }
+stat total {   display: table-cell ;
+                text-align: right ;
+                 font-weight: bold }
+
+/* Categories and skills */
+category { 
+        display: block;
+}
+skills name {
+        font-weight: bold;
+}
+statbonuses:before {
+        padding-left: 5ex; 
+        content: 'Stats: ';
+}
+statbonuses {
+        font-style: italic
+} 
+progression:before {
+        padding-left: 5ex;
+        content: 'Progression: ';
+}
+cost:before {
+        padding-left: 1ex;
+        content: 'Cost: ';
+}
+ranks:before { 
+        padding-left: 1ex;
+        content: 'Ranks: ';
+}
+
+professionbonus, statbonus, specialbonus, rankbonus,
+        itembonus, categorybonus {
+        display: none
+}
+total:before {
+        content: 'Bonus: '
+}
+
+skill {
+        display: block;
+        margin-left: 10ex;
+}
+skillgroup {
+        display: block;
+        margin-left: 10ex;
+}
+skillgroup > name {
+        font-style: italic;
+}
+skillgroup > skill {
+        margin-left: 5ex;
+}
+        

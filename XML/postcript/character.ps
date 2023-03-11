@@ -1,0 +1,642 @@
+%!PS
+
+
+/pagewidth 595 def
+/pageheight 840 def
+
+
+/margin 20 def
+
+/topofpage pageheight margin sub def
+/indent 8 def
+
+/fontsize 9 def
+/titlefontsize 12 def
+
+/topofpage pageheight margin sub def
+
+/colwidth pagewidth margin margin add sub 3 div def
+/topcolwidth pagewidth margin margin add sub 4 div def
+
+/norm /Times-Roman findfont fontsize scalefont def
+/bold /Times-Bold findfont fontsize scalefont def
+/italic /Times-Italic findfont fontsize scalefont def
+/titlefontbold /Times-Bold findfont titlefontsize scalefont def
+/titlefontnorm /Times-Roman findfont titlefontsize scalefont def
+
+
+/col1 {
+        /xpos margin def
+        /ypos topofpage def
+} def
+/newcol {
+        /xpos xpos colwidth add def
+        /ypos topofpage def
+
+               stroke
+         (Cat/Skill) (Ranks) (Bonus) cat       
+        
+        xpos 3 sub ypos fontsize add 2 sub moveto
+        colwidth 0 rlineto
+        stroke
+        
+        /ypos ypos 2 sub def
+} def
+/newline {
+        /ypos ypos fontsize sub def
+        ypos margin lt {
+                newcol
+        } if
+} def
+
+/rightshow {
+        /rs_string exch def
+        rs_string stringwidth
+        pop
+        neg 0 rmoveto
+        rs_string show
+} def
+
+% Cat
+% (name) (ranks) (bonus) 
+/cat {
+        /bonus exch def
+        /ranks exch def
+
+        bold setfont
+        xpos ypos moveto 
+        <c2b7> (\267) substitute
+        (\342\200\242) (\267) substitute show
+        shownumbers
+        
+        norm setfont
+        newline
+} def
+/stat {
+        /bonus exch def
+        /ranks exch def
+
+        xpos ypos moveto 
+        show
+        xpos topcolwidth 38 sub add ypos moveto
+               ranks rightshow
+        xpos topcolwidth 8 sub add ypos moveto
+                 bonus rightshow
+
+        newline
+} def
+/rr {
+        /bonus exch def
+        xpos ypos moveto
+        show 
+        
+        xpos topcolwidth 8 sub add ypos moveto
+                bonus rightshow
+        newline
+} def
+
+
+/skill {
+        /bonus exch def
+        /ranks exch def
+
+        xpos indent add ypos moveto
+        show
+        shownumbers        
+        newline
+} def
+/skillgroup {
+        xpos indent add ypos moveto
+        italic setfont
+        show
+        norm setfont
+        newline
+} def
+/skillgroupitem {
+        /bonus exch def
+        /ranks exch def
+        xpos indent indent add add ypos moveto
+        show
+        shownumbers        
+        newline
+} def
+
+/shownumbers {
+        xpos colwidth 38 sub add ypos moveto
+                ranks rightshow
+        xpos colwidth 8 sub add ypos moveto
+                bonus rightshow
+} def
+
+%%%
+% substitute
+%%%
+% Substitutes all occurances of a substring in a string
+% (string) (search) (replace) substitute (string)
+%%%
+/substitute {
+        /replacement exch def
+        /searchstr exch def
+        /string exch def
+        
+        /diff searchstr length replacement length sub def
+
+        % Begin loop...
+        {
+                string searchstr search
+                % String found:
+                {
+                        /prefix exch def
+                        /match exch def
+                        /post exch def
+         
+                        % Make room for the new array
+                        /moved 
+                                string 
+                                prefix length searchstr length add
+                                post length getinterval
+                        def
+                        string
+                                prefix length replacement length add
+                                moved putinterval
+                        % Copy in replacement
+                        string prefix length replacement putinterval
+                        % Space out any surplus
+                        diff 0 gt {
+                                1 1 diff {
+                                        /loopcounter exch def
+                                        string
+                                                string length loopcounter sub
+                                                32 put
+                                } for
+                        } if
+                }
+                % Not found
+                {
+                        pop
+                        % not found
+                        exit % Exit loop
+                } ifelse
+        } loop
+
+        % return the string
+        string
+} def
+
+
+/printborder {
+        /leftedge margin 4 sub def
+        /rightedge pagewidth margin sub 4 add def
+        /topedge pageheight margin sub def
+        /bottomedge margin 4 sub def
+       
+        2 setlinewidth
+       
+        leftedge topedge moveto
+        rightedge topedge        lineto
+        rightedge bottomedge lineto
+        leftedge bottomedge lineto
+        closepath
+
+        stroke
+} def
+
+/titleshow {
+        /xp exch def
+        /prof exch def
+        /level exch def
+        /name exch def
+       
+        titlefontbold setfont
+        margin ypos titlefontsize sub moveto
+        name show
+        titlefontnorm setfont
+        (, ) show 
+        level show (th level ) show 
+        prof show
+        10 0 rmoveto
+        italic setfont
+        xp show ( xp) show
+        norm setfont
+
+        1 setlinewidth
+        margin 4 sub ypos titlefontsize sub 2 sub moveto
+        pagewidth margin sub 4 add ypos titlefontsize sub 2 sub  lineto
+        stroke
+        
+        /ypos ypos titlefontsize sub 2 sub fontsize sub def
+        /topofpage ypos def
+       
+} def
+/beginstats {
+        norm setfont
+        /endoftop topofpage def
+
+        
+        bold setfont
+                (Stat (abbr)) (Temp) (Bonus) stat
+        norm setfont
+
+        /ypos ypos 2 sub def
+} def
+/beginrrs {
+        newtopcol
+
+        bold setfont
+                (Resistance Roll) (Bonus) rr
+        norm setfont
+        /ypos ypos 2 sub def
+} def
+/newtopcol {
+        ypos endoftop lt {
+                /endoftop ypos def
+        } if
+      
+        /xpos xpos topcolwidth add def 
+        /ypos topofpage def
+} def
+/topline {
+        1 setlinewidth
+        xpos 3 sub ypos fontsize add 2 sub moveto
+        xpos 3 sub topcolwidth add ypos fontsize add 2 sub lineto
+        stroke
+
+        /ypos ypos 2 sub def
+} def
+/beginskills {
+        ypos endoftop lt {
+                /endoftop ypos def
+        } if
+      
+        % Draw the line accross
+        margin 4 sub endoftop fontsize add 2 sub moveto
+        pagewidth margin sub 4 add endoftop fontsize add 2 sub lineto
+        stroke
+       
+        % Draw lines up to divide the 4 columns
+        /tpos topcolwidth margin add 3 sub def
+        tpos topofpage fontsize add moveto
+        tpos endoftop fontsize add 2 sub lineto
+        /tpos tpos topcolwidth add def
+        tpos topofpage fontsize add moveto
+        tpos endoftop fontsize add 2 sub lineto
+        /tpos tpos topcolwidth add def
+        tpos topofpage fontsize add moveto
+        tpos endoftop fontsize add 2 sub lineto
+        stroke
+ 
+        stroke
+       
+        /topofpage endoftop 3 sub def
+
+        
+        col1
+
+        % Print the 3 borders
+        xpos colwidth add 3 sub dup  ypos fontsize add 1 add moveto
+                margin 4 sub lineto
+        xpos colwidth 2 mul add 3 sub dup  ypos fontsize add 1 add moveto
+                margin 4 sub lineto
+
+
+        (Cat/Skill) (Ranks) (Bonus) cat
+        margin 4 sub ypos fontsize add 2 sub moveto
+        colwidth 0 rlineto
+        stroke
+        /ypos ypos 2 sub def
+        
+} def
+/printline {
+        xpos ypos moveto
+        show
+        newline
+} def
+
+/beginrecover {
+        xpos ypos moveto
+        (Recover: ) show
+        currentpoint pop
+        /oldxpos xpos def
+        /xpos exch def
+} def
+/endrecover {
+        /xpos oldxpos def
+} def
+
+%%Page: 1 1
+
+    
+
+    printborder
+    
+    col1
+    (Dhrun) 
+    (1) 
+    (Fighter)
+    (10000) titleshow
+  
+    beginstats
+    
+    (Agility (Ag))
+    (64) (-2) stat
+  
+    (Constitution (Co))
+    (93) (12) stat
+  
+    (Memory (Me))
+    (74) (0) stat
+  
+    (Reasoning (Re))
+    (72) (1) stat
+  
+    (Self Discipline (SD))
+    (66) (1) stat
+  
+    (Empathy (Em))
+    (65) (-4) stat
+  
+    (Intuition (In))
+    (73) (1) stat
+  
+    (Presence (Pr))
+    (62) (-4) stat
+  
+    (Quickness (Qu))
+    (64) (-2) stat
+  
+    (Strength (St))
+    (92) (8) stat
+  
+    (Appearance (Ap))
+    (0) (-8) stat
+  
+    beginrrs 
+    
+    (Channeling) (3) rr
+  
+    (Essence) (28) rr
+  
+    (Mentalism) (23) rr
+  
+    (Channeling/Essence) (-3) rr
+  
+    (Channeling/Mentalism) (-3) rr
+  
+    (Essence/Mentalism) (-8) rr
+  
+    (Arcane) (-7) rr
+  topline
+    (Poison) (56) rr
+  
+    (Disease) (51) rr
+  
+    (Fear) (3) rr
+  
+    (Heat) (30) rr
+  
+    (Cold) (30) rr
+  
+  
+    newtopcol
+    (Hits: 63) printline
+     ( (-10) 47) printline
+     ( (-20) 32) printline 
+     ( (-30) 16) printline 
+     topline
+    (PP: 7) printline
+     ( (-10) 5) printline
+     ( (-20) 4) printline 
+     ( (-30) 2) printline 
+     beginrecover
+     (1 Hits/3 hour active) printline
+     (6 Hits/hour resting) printline
+     (24 Hits/sleep cycle) printline
+     (1 PP/3 hours active) printline
+     (1 PP/hour) printline
+     (4 PP/sleep cycle) printline
+     endrecover
+
+
+  
+    beginskills
+    
+    (Armor • Heavy) (6) (36) cat
+    
+      (Plate) (6) (54) skill
+    
+    (Armor • Light) (2) (18) cat
+    
+      (Soft Leather) (2) (24) skill
+    
+      (Rigid Leather) (1) (21) skill
+    
+    (Armor • Medium) (10) (44) cat
+    
+      (Chain) (10) (74) skill
+    
+    (Artistic • Active) (1) (-8) cat
+    
+      (Singing) (1) (-5) skill
+    
+    (Artistic • Passive) (2) (-3) cat
+    
+      (Sculpting) (2) (3) skill
+    
+    (Athletic • Brawn) (2) (22) cat
+    
+      (Power-Striking) (1) (25) skill
+    
+      (Power Throwing) (1) (25) skill
+    
+      (Weight Lifting) (2) (28) skill
+    
+    (Athletic • Endurance) (1) (20) cat
+    
+      (Sprinting) (1) (23) skill
+    
+    (Athletic • Gymnastics) (1) (-4) cat
+    
+    (Awareness • Perceptions) (0) (3) cat
+    
+      (Alertness) (4) (7) skill
+    
+      (Sense Ambush) (1) (4) skill
+    
+    (Awareness • Searching) (2) (7) cat
+    
+      (Lie Perception) (1) (10) skill
+    
+      (Locate Hidden) (1) (10) skill
+    
+      (Observation) (2) (13) skill
+    
+      (Reading Tracks) (1) (10) skill
+    
+      (Tracking) (1) (10) skill
+    
+    (Awareness • Senses) (2) (7) cat
+    
+      (Time Sense) (1) (10) skill
+    
+    (Body Development) (0) (35) cat
+    
+      (Body Development) (4) (63) skill
+    
+    (Combat Maneuvers) (0) (7) cat
+    
+    (Communications) (3) (3) cat
+    
+    (Language Spoken) skillgroup
+    
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+      (Uluka) (3) (12) skillgroupitem
+    
+                        
+    (Crafts) (0) (-1) cat
+    
+    (Directed Spells) (0) (-18) cat
+    
+    (Influence) (0) (-22) cat
+    
+    (Lore • General) (2) (5) cat
+    
+    (Culture Lore (By Culture/Race)) skillgroup
+    
+                                
+                                
+                                
+                                
+      (Rhaakhaan) (2) (11) skillgroupitem
+    
+                                
+      (Sel-Kai) (2) (11) skillgroupitem
+    
+                        
+      (Heraldry) (2) (11) skill
+    
+    (Lore • Magical) (0) (-14) cat
+    
+    (Lore • Obscure) (0) (-14) cat
+    
+    (Lore • Technical) (0) (-14) cat
+    
+    (Martial Arts Combat Maneuvers) (0) (-3) cat
+    
+    (Martial Arts • Strikes) (0) (-1) cat
+    
+    (Martial Arts • Sweeps) (0) (-11) cat
+    
+    (Outdoor • Animal) (0) (-25) cat
+    
+    (Outdoor • Environmental) (0) (-13) cat
+    
+    (Power Awareness) (0) (-22) cat
+    
+    (Power Manipulation) (0) (-7) cat
+    
+    (Power Point Development) (0) (1) cat
+    
+      (Power Point Development) (1) (7) skill
+    
+    (Science/Analytic • Basic) (2) (6) cat
+    
+      (Basic Maths) (1) (9) skill
+    
+      (Research) (1) (9) skill
+    
+    (Science/Analytic • Specialised) (0) (2) cat
+    
+    (Self Control) (0) (-17) cat
+    
+    (Special Attacks) (0) (7) cat
+    
+    (Special Defences) (0) (0) cat
+    
+    (Spells • Open Channeling) (0) (56) cat
+    
+    (Subterfuge • Attack) (0) (-15) cat
+    
+    (Subterfuge • Mechanics) (0) (-15) cat
+    
+    (Subterfuge • Stealth) (1) (2) cat
+    
+      (Hiding) (2) (8) skill
+    
+      (Stalking) (1) (5) skill
+    
+    (Tech/Trade • General) (0) (-13) cat
+    
+    (Tech/Trade • Professional) (0) (2) cat
+    
+    (Tech/Trade • Vocational) (0) (2) cat
+    
+    (Urban) (2) (2) cat
+    
+      (Contacting) (1) (5) skill
+    
+      (Mingling) (1) (5) skill
+    
+    (Weapon • 1H Concussion) (0) (19) cat
+    
+    (Weapon • 1H Edged) (2) (38) cat
+    
+      (Axe) (1) (41) skill
+    
+      (Bastard Sword) (1) (41) skill
+    
+      (Baw) (1) (41) skill
+    
+      (Broadsword) (1) (41) skill
+    
+      (Butterfly Knife) (1) (41) skill
+    
+      (Cabis) (1) (41) skill
+    
+    (Weapon • 2 Handed) (6) (46) cat
+    
+      (Bastard Sword) (1) (49) skill
+    
+      (Battle Axe) (6) (64) skill
+    
+      (Irgaak) (2) (52) skill
+    
+      (Pony) (12) (110) skill
+    
+    (Weapon • Missile) (0) (9) cat
+    
+    (Weapon • Missile Artillery) (0) (5) cat
+    
+    (Weapon • Pole Arms) (0) (19) cat
+    
+    (Weapon • Thrown) (0) (9) cat
+
+
+        showpage
+        
+%%Trailer
+
+

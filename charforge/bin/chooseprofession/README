@@ -1,0 +1,53 @@
+Choose Profession
+=================
+
+Choose profession is part of the Character Forge (CharForge) suit of
+programs.  It is designed to be run as the profession selection and
+customisation step for character creation.
+
+Operation
+=========
+
+Selection
+---------
+
+When chooseprofession is first run it displays a window summarising the
+selected profession.  The user can click on the drop down box at the top of
+the window to select a new profession.  The main window displays quick
+introductory notes about the profession, a quote, the professions skill and
+category costs, and the base spell lists of the professions
+
+Once the user is happy with their choice of profession, they may click 'Ok'
+to enter the customisation phase.
+
+Customisation
+-------------
+
+Customisation transforms any choice functions in the source into a concrete
+selections.  Once they have been chosen the choice
+
+
+Future Work
+===========
+
+Network:
+	Chooseprofession should be able to source it's files from a remote
+	server, so the GM can control the files corectly.
+
+	Additionally the choices given should be controlled by the server,
+	not the client.
+
+External Verification: 
+	Check that the generated output is a valid file.
+
+GUI:
+	Hide empty fields - ie no quote box if hte profession has no quote.
+	In particular hide spell lists
+
+Format:
+	Choices - how to specify...
+	<list choice="/spells/essence/[open|closed]" /> ???
+
+
+
+

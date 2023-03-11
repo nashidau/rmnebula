@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spelllist><name>Dream Reality</name><listtype>Channeling Cleric Base </listtype><author>Bent Dalager</author><description>
+This list focuses on taking items and creatures from a dream and using
+the power behind them to recreate them in the real world. One ends up
+with a highly flexible source of stuff, at the price of stuff that can
+behave strangely and that isn't altogether sturdy.
+</description><spell><level>1</level><name>Enter Dreams I</name><areaofeffect>self</areaofeffect><duration>C</duration><range>self</range><type>Um</type><description>
+This spell is normally used to track down the dream from which the
+spell caster extracts the objects created by other spells on this
+list. The spell gives the caster a mental link into the dream world
+through which he can navigate dreams. The link does not yield much in
+the way of details, and precise identification of objects within the
+dream world is impossible. Only general ideas are transmitted. The
+skill "Area Knowledge: Dream World" is used to navigate the dream
+world, but a penalty of -20 is applied due to the low quality of the
+link. Note that the maintaining of concentration on this spell may
+cause additional negative modifiers to be applied to the navigation
+skill roll, as well as other activities undertaken within dreams.
+</description><annotation>
+The serious dreamlord will employ spells on the Dream Traveller spell
+list for less restricted access to the Dream World.
+</annotation></spell><spell><level>2</level><name>Dream Form I</name><areaofeffect>1 item</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+Once the caster has located a dream containing the item he requires,
+he may cast this spell to create a replica of that item in the real
+world. The item will form on his person or very near him, at his
+discretion. The item created by this spell will only roughly resemble
+the desired item. No fine detail (such as a keen edge) is possible
+and items relying on 
+moving parts (like a crossbow) will generally not be functional. The
+item will have the texture and general nature of the desired item
+though. A rope or a club, for instance, would be quite functional. The
+item may
+not weigh more than 0.5 lbs.
+</description></spell><spell><level>3</level><name>Dream Item I</name><areaofeffect>1 item</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+As Dream Form I, except fine detail is possible. Thus, functional
+knives and
+crossbows are quite feasible. Note, however, that the functionality
+depends on the dreamer's familiarity with the design of the type of
+item in question. As an example, a skeleton key procured from a master
+locksmith's dream might be a wonderful tool but a skeleton key
+obtained from a foot soldier's dream might be rather useless even if
+it does <em>look</em> pretty fancy (the foot soldier's key is still
+perfectly functional <em>within his dream</em> though, but that's
+a different matter).
+</description></spell><spell><level>4</level><name>Dream Creature II</name><areaofeffect>1 creature</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+As Dream Form I, except a creature can be created. The creature will
+never be intelligent, and will generally behave in the manner in which
+the
+original dreamer thinks consistent with its nature. The creature
+cannot communicate meaningfully and it is not under the control of the
+caster. It is considered an "entity" from the dream world for the
+purposes of control,
+banishing, etc. If the creature attacks, it will have the OBs of a
+Created Undead of its level. This spell can create creatures that
+weigh no more than 1 pound per level of the caster and that are no
+more than level 3 (a class II entity).
+</description></spell><spell><level>5</level><name>Improve Integrity I</name><areaofeffect>1 target</areaofeffect><duration>P</duration><range>self</range><type>F</type><description>
+When cast upon a dream object or creature created by other spells on
+this list, the integrity of that object or creature is improved by 10%.
+Normally, this will result in a 40% chance of the target dissipating
+after a violent blow as opposed to the normal 50%. Multiple castings
+of this type of spell upon the same item do <em>not</em> yield
+cumulative 
+bonuses.
+</description></spell><spell><level>6</level><name>Dream Form II</name><areaofeffect>1 item</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+As Dream Form I, except weight limit is 5 pounds.
+</description></spell><spell><level>7</level><name>Prolong Dream I</name><areaofeffect>1 dream</areaofeffect><duration>1 min/level</duration><range>-</range><type>F</type><description>
+When cast upon a dream, will ensure that any items or creatures
+obtained from that dream will have a duration of at least 1 minute per
+level of the caster. After this duration ends, normal chance of the
+item or creature disappearing will resume.
+ Note that if the caster
+maintains this spell for an extended period of time (which is only
+really an issue for the higher level versions), the effect on the
+dreamer is that he will not wake up. From the outside, this will
+appear like a disease or a curse and any attempts to cure the malady
+as one of these have a chance of being successful. The Prolong Dream
+spell will use its own level to resist any such attempts.
+</description></spell><spell><level>8</level><name>Magical Dreams</name><areaofeffect>special</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+When cast before any of the "Dream ...." spells on this list, will
+allow the created item or creature to have innate magical abilities.
+Such enchantments must be of a nature that directly affects only the
+created item. They can only indirectly affect other items or beings,
+and they cannot project more than a few inches from the item itself.
+A flying carpet, a self-tying rope or a glowing cat is ok but a wand
+of firebolts, a 
+spell adder or a fire-breathing lizard is not. The magical effect can
+not be of a higher level 
+than one fifth that of the caster.
+</description></spell><spell><level>9</level><name>Dream Item II</name><areaofeffect>1 item</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+As Dream Item I except weight limit is 5 lbs.
+</description></spell><spell><level>10</level><name>Improve Integrity II</name><areaofeffect>1 target</areaofeffect><duration>P</duration><range>self</range><type>F</type><description>
+As Improve Integrity I, except integrity improvement is 20%.
+</description></spell><spell><level>11</level><name>Dream Creature III</name><areaofeffect>1 creature</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+As Dream Creature II, except max weight is 5 lbs pr level of the
+caster, and max creature level is 6 (a class III enitity).
+</description></spell><spell><level>12</level><name>Dream Form III</name><areaofeffect>1 item</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+As Dream Form I, except max weight is 20 lbs.
+</description></spell><spell><level>13</level><name>Prolong Dream II</name><areaofeffect>1 dream</areaofeffect><duration>5 min/level</duration><range>-</range><type>F</type><description>
+As Prolong Dream I except for duration.
+</description></spell><spell><level>14</level><name>Dream Item III</name><areaofeffect>1 item</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+As Dream Item, except max weight is 20 lbs.
+</description></spell><spell><level>15</level><name>Improve Integrity III</name><areaofeffect>1 target</areaofeffect><duration>P</duration><range>self</range><type>F</type><description>
+As Improve Integrity, except integrity bonus is 30%.
+</description></spell><spell><level>16</level><name>Dream Creature IV</name><areaofeffect>1 creature</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+As Dream Creature II, except max weight is 10 lbs pr level of the
+caster and max creature level is 9 (a class IV entity).
+</description></spell><spell><level>17</level><name>Dream Form X</name><areaofeffect>1 item</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+As Dream Form I except max weight is 100 lbs.
+</description></spell><spell><level>18</level><name>Prolong Dream III</name><areaofeffect>1 dream</areaofeffect><duration>30 min/level</duration><range>-</range><type>F</type><description>
+As Prolong Dream I except for duration.
+</description></spell><spell><level>19</level><name>Dream Item X</name><areaofeffect>1 item</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+As Dream Item I, except max weight is 100 lbs.
+</description></spell><spell><level>20</level><name>Dream Creature V</name><areaofeffect>1 creature</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+As Dream Creature II, except max weight is 100 lbs pr level of the
+caster and max creature level is 13 (a class V entity).
+</description></spell><spell><level>25</level><name>Improve Integrity True</name><areaofeffect>1 target</areaofeffect><duration>P</duration><range>self</range><type>F</type><description>
+As Improve Integrity I, except decreases fragility to 0%, therefore
+giving no chance of the item breaking when struck. It should still
+check for normal breakage when called for, however.
+</description></spell><spell><level>30</level><name>Prolong Dream True</name><areaofeffect>1 dream</areaofeffect><duration>C</duration><range>-</range><type>F</type><description>
+As Prolong Dream I, except for the duration.
+</description></spell><spell><level>50</level><name>Dream World</name><areaofeffect>2'R/level</areaofeffect><duration>special</duration><range>self</range><type>F</type><description>
+As Dream Item X and Dream Creature V, except an entire scene can be
+created and will replace the real scenery at the target location for
+the duration. Any number of items and creatures needed to populate the
+scene will be created. In addition, for each magical effect desired
+in the scene, the spell Magical Dreams can be cast once before the
+casting of this spell.
+</description></spell><notes><note>
+Before anything can be created by the spells on this list, a dream
+must successfully have been located that contains the item(s) desired.
+This requires a means of navigating the dream world and the skill to
+do so successfully. The former is provided as the first level spell
+"Enter Dreams I", although enterprising spell casters may find better
+ways of accomplishing the same. The latter requires a successful "Area
+Knowledge: Dream World" once the former has been taken care of. The
+difficulty of this skill roll should be determined by the GM based
+upon how specific or obscure the requested item is. The more specific and
+the more obscure, the more difficult. If it's something noone ever
+dreams about, it's simply impossible. This shouldn't happen a lot
+though, there's lots of totally weird stuff in people's dreams.
+</note><note>
+The duration of a created item is special. The item is formed from the
+dreams of some individual, and dreams are fickle things. One moment
+it's there, the next moment it's gone. If the identity or nature of
+the individual having the dream from which the item is collected is
+not known or not of interest, the following duration should be used.
+For every five minutes, there is a 50% chance that the dream shifts in
+such a way that the item no longer exists within it in its original
+form and the item disappears. The exact moment within the five minute
+period at which the item disappears should be determined randomly.
+This means that there is a risk the item will disappear immediately,
+and one shouldn't expect it to last more than 5-7 minutes on the
+average. Note that the "Prolong Dream" spells on this list give some
+guaranteed duration.
+</note><note>
+Stuff created from dreams can be as fickle as the dreams themselves.
+They only have a weak link to the real world and, in addition, they are
+subject to the whims of the dreamer. The result is that they are
+rather fragile. The fragility of a dream item is 50% by default. Each
+time a dream item or creature receives a violent blow, this is the
+chance that it 
+will disappear. Note that the "Improve Integrity" spells on this list
+can affect the fragility of an item or creature.
+</note><note>
+Items or creatures created from dreams are still under the power of
+the dream they originated from. The most interesting effect of this is
+that they will perform consistently with how they would have performed
+within the dream, not with how similar items perform in the real
+world. This means that if the caster chooses the "wrong" dream, the
+knife he created might prove to be an excellent flute, but useless at
+puncturing things, etc. This would depend to a large extent on the
+strength of the "reality" concept in the source dream, and casters are
+well advised to seek out dreams that are strong in "reality" if they
+desire items that perform predictably.
+</note></notes></spelllist>

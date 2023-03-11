@@ -1,0 +1,117 @@
+<?xml version='1.0'?>
+
+<spelllist>
+        <name>Dreamscape</name>
+        <type>Reann Cleric Special list</type>
+        <author>Wade Aaron</author>
+        <description>
+	There is a special list that sometimes Clerics of Reann
+receive.  It is called Dreamscape:
+        </description>
+
+	<spell>
+                <level>1</level>
+                <name>Nightmare</name>
+                <range>1 sleep period</range>
+                <duration>25' +5'/lvl</duration>
+                Target has one night of
+very bad dreams.  If the being wakes up, the nightmares will resume if
+sleep is resumed.
+
+	</spell><spell><level>2</level><name>Daydream</name><range>up to 1 hour</range><duration>S</duration>Caster has short daydream on a topic
+decided upon just before fading out.  Liminted to 1x/day.
+
+	</spell><spell><level>3</level><name>Dream Other</name><range>1 sleep period</range><duration>T</duration>Willing target will have a dream
+on a topic decided upon by the caster.  Limited to 1x/night.
+
+	</spell><spell><level>4</level><name>Sleep Detection</name><range>1 min/lvl</range><duration>100'</duration>R Caster knows if there is
+sentient sleeping beings within the range of this spell and their
+general direction.
+
+	</spell><spell><level>5</level><name>Find Dreamer</name><range>C</range><duration>100'</duration>R Caster knows the direction of a
+particular person who is sleeping and their general state of being.
+Caster must either know the person or have an article of the person
+(bedding item, nightgown, hair, etc.)
+
+	</spell><spell><level>6</level><name>Recall Dream</name><range>V</range><duration>T</duration>A dream can be recalled in exact detail and
+clear of post-dream embellishment.  Dreams up to 1 month per level can
+be recalled.
+
+	</spell><spell><level>7</level><name>Sleepwalk</name><range>1 min/lvl</range><duration>100'</duration>Target will rise and walk in their
+sleep to a general area or direction as determined by the caster.
+Target can do simple functions (opening and/or unbarring a door) to
+achieve goal.  If target is target is shaken strongly or caused pain,
+the spell is broken.
+
+	</spell><spell><level>8</level><name>Sleeptalking</name><range>1 min/lvl</range><duration>10'</duration>Caster can speak to target and
+target will respond aloud seeing the questioner (caster) as any person
+the caster so desires.  If the caster changes direction of
+questioning, the targets dreams change to match.
+
+	</spell><spell><level>9</level><name>Share Dream</name><range>1 hour/lvl</range><duration>10'</duration>+ 2'/lvl Caster enters targets
+dreams and can be either an unseen observer or active participant.
+
+	</spell><spell><level>10</level><name>Protect Sleeper</name><range>1 sleep period</range><duration>T</duration>Recipient of this spell is
+protected from magical spells that would harm the sleeper.  Creatures
+that would attack the sleeper's psyche or spirit are also repelled.
+This spell can be cast while sleeping, if the priest is under attack
+that would be warded by this spell.  The sleeper does not necessarily
+know that an attack was made.
+
+	</spell><spell><level>12</level><name>Dream Interpretation</name><range>-</range><duration>S</duration>Caster knows the meaning and origin
+or cause of any dream told to or dreamed by him by the caster.  Caster
+also knows if portions missing or have been embellished.  Used upon
+oneself, immediately upon awaking it has the added benefit of giving a
+timeframe for prophetic dreams.
+
+	</spell><spell><level>14</level><name>Night Terror</name><range>special</range><duration>25'</duration>+5'/lvl Target is marked by an
+invisible symbol that draws the angry attention of a 'Carrier of
+Dreams'.  The next time the target is asleep, unconcious, or in a
+dream-like state, they receive that is so real it cannot be
+distinguished in life.  In this dream, that which they fear the most
+comes forth.  Often, the dream begins with the target dreaming they
+have awakened.  Failure to truly awaken (RR fail miss by 50 or more)
+means they die.  Failure less than 50, the target acts as if under a confusion
+spell, for 1 minute per 5 failure.  Anything that decreases the chance
+of the target awakening increases the likelihood of the target dying.
+DM note: People who live through such traumatic experiences may
+receive XP, DM's call.
+
+	</spell><spell><level>15</level><name>Dream Talk</name><range>1 min/lvl</range><duration>S</duration>Caster 'wakes up' in the target's
+dream and can speak to the person.  Of course target must be asleep
+when the spell is cast, or all is for naught.  Base 50% chance that
+the spell will succeed, modified by the following factors:
+Previous Dream Talk, or shared dream:  +50
+Previous Dream Interpretation or Other:  +40
+Caster knows person well:  +40
+Caster knows person casually:  +20
+Caster has met person once:  +0
+Caster has seen person:  -20
+Person has been described to caster:  -40
+Caster's lvl = +1 bonus/lvl
+
+	</spell><spell><level>17</level><name>Sleeplessness</name><range>1 day/lvl</range><duration>S</duration>Caster can go without sleep with
+no detrimental effects for as many days as he has levels.
+
+	</spell><spell><level>18</level><name>Dream Share True</name><range>1 hour/lvl</range><duration>S</duration>As Dream Share, except caster
+can share dreams with someone who is unwilling.  Note this can be cast
+in conjunction with Dream Walk.
+
+	</spell><spell><level>20</level><name>Dream Walk</name><range>10 min/lvl</range><duration>S</duration>Caster's dream body arises from
+sleeping body, and he may project himself anywhere it is night.
+Caster is immaterial, and has no effect on objects.  He can be seen
+only be people who are alseep, and the Carriers.
+
+	</spell><spell><level>25</level><name>Dreamless</name><range>P</range><duration>100'</duration>+10'/lvl Target ceases to dream.  Insanity
+follows.  Target can attone for wrongdoing.
+
+	</spell><spell><level>30</level><name>Dream with Dead</name><range>V</range><duration>S</duration>Caster lays down among the dead, in
+their crypt, or the clothes they died in.  He then dreams the dreams
+they have just prior to death.  Target must have died withing 1
+month/lvl of caster.  It is possible to dream with the long deceased
+by a ritual that is comprised in part of this spell.
+
+	</spell><spell><level>50</level><name>Dream Cast</name><range>1 sleep period</range><duration>S</duration>Caster can cast any spell on his
+Dreams list that he so desires, limited to 1 spell/lvl of caster.
+        </spell>
+</spelllist>

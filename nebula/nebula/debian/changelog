@@ -1,0 +1,95 @@
+nebula (0.3.0.cvs20030622-1) unstable; urgency=low
+
+  * CVS update.
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Sun, 22 Jun 2003 17:33:23 +0200
+
+nebula (0.3.0.cvs20030521-1) unstable; urgency=low
+
+  * Recompiling with gcc 3.3. 
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Wed, 21 May 2003 16:16:49 +0200
+
+nebula (0.3.0.cvs20030408-1) unstable; urgency=low
+
+  * CVS update.
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Tue,  8 Apr 2003 20:37:09 +0200
+
+nebula (0.3.0.cvs20030406-1) unstable; urgency=low
+
+  * CVS update. Now printing works though libxslt, not through an external
+    XLST processor.
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Sun,  6 Apr 2003 14:47:12 +0200
+
+nebula (0.3.0.cvs20030311-1) unstable; urgency=low
+
+  * CVS update. 
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Tue, 11 Mar 2003 11:43:31 +0100
+
+nebula (0.3.0.cvs20021227-1) unstable; urgency=low
+
+  * CVS update. Beginnings of migration to libxml.
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Fri, 27 Dec 2002 21:02:07 +0100
+
+nebula (0.3.0.cvs20021207-1) unstable; urgency=low
+
+  * CVS update: some code splitted to libneb(ula).
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Sat,  7 Dec 2002 13:14:07 +0100
+
+nebula (0.3.0.cvs20021201-1) unstable; urgency=low
+
+  * CVS update (some heavy changes)
+  * Changed more stupid stuff in files under debian/.
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Sat, 30 Nov 2002 23:43:15 +0100
+
+nebula (0.3.0.cvs20021128-1) unstable; urgency=low
+
+  * CVS update. 
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Thu, 28 Nov 2002 22:40:20 +0100
+
+nebula (0.3.0.cvs20021118-1) unstable; urgency=low
+
+  * CVS update.
+  * Bumped version to 0.3.etc, which is the proper for development releases.
+  * Changed the way of automaticly downloading nebula-data. Now it's prettier
+    and makes more sense.
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Mon, 18 Nov 2002 12:41:11 +0100
+
+nebula (0.2.0.cvs20021016-1) unstable; urgency=low
+
+  * CVS update.
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Wed, 16 Oct 2002 09:20:57 +0200
+
+nebula (0.2.0.cvs20020928-1) unstable; urgency=low
+
+  * CVS update. Some more cleaning.
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Sat, 28 Sep 2002 13:45:56 +0200
+
+nebula (0.2.0.cvs20020923-1) unstable; urgency=low
+
+  * Cleaning of some files in debian/.
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Mon, 23 Sep 2002 12:12:03 +0200
+
+nebula (0.2.0.cvs20020922-1) unstable; urgency=low
+
+  * CVS update. 
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Sun, 22 Sep 2002 13:28:52 +0200
+
+nebula (0.2.0-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Roberto Suarez Soto <turgon@debian.org>  Sun, 25 Aug 2002 11:52:43 +0200
+

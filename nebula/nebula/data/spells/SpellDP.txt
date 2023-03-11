@@ -1,0 +1,56 @@
+Realm,Type,Level,Pure,Hybrid,Semi,Non,Arcane Pure,Arcane Semi
+Own Realm,Own Base,1-5,3/3/3,4/4/4,6/6/6,,,
+Own Realm,Own Base,6-10,3/3/3,4/4/4,6/6/6,,,
+Own Realm,Own Base,11-15,3/3/3,4/4/4,6/6/6,,,
+Own Realm,Own Base,16-20,3/3/3,4/4/4,6/6/6,,,
+Own Realm,Own Base,21+,3/3/3,4/4/4,6/6/6,,,
+Own Realm,Open,1-5,4/4/4,4/4/4,8/8,x1,,
+Own Realm,Open,6-10,4/4/4,4/4/4,8/8,x2,,
+Own Realm,Open,11-15,4/4/4,6/6/6,12,x3,,
+Own Realm,Open,16-20,4/4/4,8/8,18,x4,,
+Own Realm,Open,21+,6/6/6,12,25,x5,,
+Own Realm,Closed,1-5,4/4/4,4/4/4,10/10,x1,,
+Own Realm,Closed,6-10,4/4/4,6/6/6,12,x2,,
+Own Realm,Closed,11-15,4/4/4,8/8,25,x3,,
+Own Realm,Closed,16-20,4/4/4,10/10,40,x4,,
+Own Realm,Closed,21+,8/8,25,60,x5,,
+Own Realm,Other Base,1-5,8/8,10/10,25,x1,,
+Own Realm,Other Base,6-10,10/10,12,40,x2,,
+Own Realm,Other Base,11-15,12,25,60,x3,,
+Own Realm,Other Base,16-20,25,40,80,x4,,
+Own Realm,Other Base,21+,40,60,100,x5,,
+Other Realm,Open,1-5,10/10,12,30,x1,5/5,12
+Other Realm,Open,6-10,12,25,60,x2,6/6,25
+Other Realm,Open,11-15,25,40,80,x3,8/8,40
+Other Realm,Open,16-20,40,60,100,x4,10/10,60
+Other Realm,Open,21+,60,80,120,x5,12,80
+Other Realm,Closed,1-5,20,25,45,x1,6/6,25
+Other Realm,Closed,6-10,25,40,60,x2,8/8,40
+Other Realm,Closed,11-15,40,60,80,x3,10/10,60
+Other Realm,Closed,16-20,60,80,100,x4,12,80
+Other Realm,Closed,21+,80,100,120,x5,25,100
+Other Realm,Other Base,1-5,50,60,80,x1,10/10,60
+Other Realm,Other Base,6-10,70,80,100,x2,12,80
+Other Realm,Other Base,11-15,90,100,120,x3,25,100
+Other Realm,Other Base,16-20,110,120,140,x4,40,120
+Other Realm,Other Base,21+,130,140,160,x5,60,140
+Arcane,Open,1-5,6/6,5/5,12,x1,4/4/4,11/11
+Arcane,Open,6-10,8/8,6/6,25,x2,4/4/4,11/11
+Arcane,Open,11-15,10/10,8/8,40,x3,4/4/4,12
+Arcane,Open,16-20,12,10/10,60,x4,4/4/4,18
+Arcane,Open,21+,18,12,80,x5,6/6,25
+Arcane,Closed,1-5,10/10,8/8,18,x1,4/4/4,16/16
+Arcane,Closed,6-10,12,10/10,25,x2,4/4/4,18
+Arcane,Closed,11-15,25,12,40,x3,4/4/4,25
+Arcane,Closed,16-20,40,25,60,x4,4/4/4,40
+Arcane,Closed,21+,60,40,80,x5,8/8,60
+Arcane,Own Base,1-5,,,,,3/3/3,6/6/6
+Arcane,Own Base,6-10,,,,,3/3/3,7/7/7
+Arcane,Own Base,11-15,,,,,3/3/3,7/7/7
+Arcane,Own Base,16-20,,,,,3/3/3,7/7/7
+Arcane,Own Base,21+,,,,,4/4/4,8/8/8
+Arcane,Other Base,1-5,25,12,40,x1,12/12,25
+Arcane,Other Base,6-10,40,25,60,x2,16/16,40
+Arcane,Other Base,11-15,60,40,80,x3,18,60
+Arcane,Other Base,16-20,80,60,100,x4,25,80
+Arcane,Other Base,21+,100,80,120,x5,40,100

@@ -1,0 +1,19 @@
+Template: nebula/data
+Type: select
+Default: yes
+Choices: yes, no
+Description: Would you like to download now the needed nebula-data package?
+ This program *WON'T* work just as installed, because it needs
+ the "nebula-data" package. For copyright issues, it couldn't
+ be included in the official Debian distribution.
+ .
+ Would you like to download it now? Remember that, even if you do, 
+ you still have to install it by hand (it will be downloaded in 
+ /tmp directory).
+ .
+ If you don't want to download it now, you can do it afterwards from:
+ .
+ http://ceu.fi.udc.es/~robe/nebula
+ .
+ There will be a nebula-data package with version equal to each of
+ the releases, so you can choose the right for you.

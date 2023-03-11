@@ -1,0 +1,197 @@
+<!-- 
+        The RMSS character class
+-->
+
+
+
+<!-- Top level: the chracter itself -->
+<!ELEMENT rmsscharacter (data,
+                        stats,
+                        skills,
+                        rrs,
+                        items?,
+                        other?)>
+<!ATTLIST rmsscharacter id      CDATA   #IMPLIED
+                        version NMTOKEN #REQUIRED>
+<!-- Note that id must be unique,
+        and vrsion must be 0.2 -->
+
+<!-- **** -->
+<!-- Data -->
+<!-- **** -->
+<!-- Generic character data -->
+<!ELEMENT data (name,
+                player,
+                campaign?,
+                fixed,
+                experience,
+                raceinfo,
+                appearance,
+                role,
+                background)>
+<!ELEMENT name (#PCDATA)>
+
+<!-- Inoformation about the player of the character -->
+<!ELEMENT player (name,email?,application)>
+<!ELEMENT email (#PCDATA)>  <!-- Optional email address -->
+<!ELEMENT application (#PCDATA)> <!-- The application that created the 
+                                        character -->
+
+<!ELEMENT campaign (name,gm*,genre?)>
+<!ELEMENT gm (#PCDATA)>  <!-- Who _normally_ gms this character -->
+<!ELEMENT genre (#PCDATA)> <!-- the genre file for hte skillset -->
+
+<!ELEMENT fixed (race,
+                 profession,
+                 trainingpackages?,
+                 realm,
+                 type)>
+<!ELEMENT race (#PCDATA)>   <!-- eg Common Man - Urban -->
+<!ELEMENT profession (#PCDATA)> <!-- eg Zen Monk -->
+<!ELEMENT trainingpackages (tp*)> <!-- a list of all TPs -->
+<!ELEMENT realm (#PCDATA)> <!-- What realm - includes casting method for
+                                        Essence users -->
+<!ELEMENT type (#PCDATA)> <!-- Non, semi, pure, hybrid - FIXME: should make
+                                this one of the specific values -->
+<!ELEMENT tp (#PCDATA)>  <!-- an individual tp -->
+
+<!ELEMENT experience (level,dp?,dpspent?,experiencepoints)> 
+<!ELEMENT level (#PCDATA)> <!-- natural numbers only -->
+<!ELEMENT dp (#PCDATA)> <!-- used for continual development -->
+<!ELEMENT dpspent (#PCDATA)>
+<!ELEMENT experiencepoints (#PCDATA)> 
+
+<!ELEMENT raceinfo (exhaustionbonus,
+                        lifespan,
+                        souldeparture,
+                        recoverymultiplier,
+                        racetype,
+                        startinglanguages,
+                        backgroundpoints,
+                        bodydevelopment,
+                        arcane,
+                        channeling,
+                        essence,
+                        mentalism)>
+<!ELEMENT exhaustionbonus (#PCDATA)>
+<!ELEMENT lifespan (#PCDATA)>
+<!ELEMENT souldeparture (#PCDATA)>
+<!ELEMENT recoverymultiplier (#PCDATA)>
+<!ELEMENT racetype (#PCDATA)>
+<!ELEMENT startinglanguages (#PCDATA)>
+<!ELEMENT backgroundpoints (#PCDATA)>
+<!ELEMENT bodydevelopment (#PCDATA)>
+<!ELEMENT arcane (#PCDATA)>
+<!ELEMENT channeling (#PCDATA)>
+<!ELEMENT essence (#PCDATA)>
+<!ELEMENT mentalism (#PCDATA)>
+
+
+<!ELEMENT appearance (skin,age,sex,height,weight,eyes,hair)>
+<!ELEMENT skin (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT sex (#PCDATA)>
+<!ELEMENT height (#PCDATA)>
+<!ELEMENT weight (#PCDATA)>
+<!ELEMENT eyes (#PCDATA)>
+<!ELEMENT hair (#PCDATA)>
+
+<!ELEMENT role (personality,motivations,alignment)>
+<!ELEMENT personality (#PCDATA)>
+<!ELEMENT motivations (#PCDATA)>
+<!ELEMENT alignment (#PCDATA)>
+
+<!ELEMENT background (nationality,
+                      hometown,
+                      religon,
+                      lord?,
+                      parents,
+                      spouse?,
+                      children?,
+                      mentor?,
+                      patron?)>
+<!ELEMENT nationality (#PCDATA)>
+<!ELEMENT hometown (#PCDATA)>
+<!ELEMENT religon (#PCDATA)>
+<!ELEMENT lord (#PCDATA)>
+<!ELEMENT parents (father?,mother?)>
+<!ELEMENT father (#PCDATA)>
+<!ELEMENT mother (#PCDATA)>
+<!ELEMENT spouse (#PCDATA)>
+<!ELEMENT children (name*)>
+<!ELEMENT mentor (#PCDATA)>
+<!ELEMENT patron (#PCDATA)>
+
+<!-- ***** -->
+<!-- Stats -->
+<!-- ***** -->
+<!ELEMENT stats (stat+)>
+<!ELEMENT stat (name, abbr, temp, potential,basic,racial,
+                special, total, primestat?, realmstat?)>
+<!-- name is PCDATA as usual -->
+<!ELEMENT abbr (#PCDATA)>
+<!ELEMENT temp (#PCDATA)>
+<!ELEMENT potential (#PCDATA)>
+<!ELEMENT basic (#PCDATA)>
+<!ELEMENT racial (#PCDATA)>
+<!ELEMENT special (#PCDATA)>
+<!ELEMENT total (#PCDATA)>
+<!ELEMENT primestat EMPTY>
+<!ELEMENT realmstat EMPTY>
+
+<!-- ****** -->
+<!-- Skills -->
+<!-- ****** -->
+<!ELEMENT skills (category+)>
+<!-- categories -->
+<!ELEMENT category (name,
+                    statbonuses,
+                    progression,
+                    cost,
+                    professionbonus,
+                    statbonus,
+                    specialbonus,
+                    ranks,
+                    rankbonus,
+                    total,
+                    hidden?,
+                    halfrank?,
+                    (skill|skillgroup)+)>
+<!ELEMENT rankbonus (#PCDATA)>
+<!ELEMENT categorybonus (#PCDATA)>
+<!ELEMENT statbonuses (#PCDATA)>
+<!ELEMENT progression (#PCDATA)>
+<!ELEMENT cost (#PCDATA)>
+<!ELEMENT professionbonus (#PCDATA)>
+<!ELEMENT statbonus (#PCDATA)>
+<!ELEMENT specialbonus (#PCDATA)>
+<!ELEMENT hidden EMPTY>
+<!ELEMENT halfrank EMPTY>
+
+<!-- skillgroup -->
+<!ELEMENT skillgroup (name,class?,specialbonus?,hidden?,skill*)>
+
+<!-- skills -->
+<!ELEMENT skill (name,
+                class?,
+                specialbonus?,
+                ranks,
+                rankbonus,
+                categorybonus,
+                total,
+                hidden?,
+                halfrank?)>
+<!ELEMENT ranks (#PCDATA)>
+<!ELEMENT class (#PCDATA)>
+<!ELEMENT itembonus (#PCDATA)>
+
+<!-- Resisteance Rolls -->
+<!ELEMENT rrs (rr+)>
+<!ELEMENT rr (name,statbonuses?,statbonus?,racialbonus,specialbonus,totalbonus)>
+
+<!ELEMENT racialbonus (#PCDATA)>
+<!ELEMENT totalbonus (#PCDATA)>
+
+<!ELEMENT items EMPTY>
+<!-- currently undefined -->
+<!ELEMENT other EMPTY>

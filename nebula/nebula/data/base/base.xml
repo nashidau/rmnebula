@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding="iso-8859-1"?>
+
+<base>
+    <data>
+        <name />
+        <player>
+                <name></name>
+                <email></email>
+                <application></application>
+        </player>
+        <campaign>
+                <name></name>
+                <gm></gm>
+                <genre></genre>
+        </campaign>
+        <fixed>
+                <race></race>
+                <profession></profession>
+                <trainingpackages>
+                </trainingpackages>
+                <realm></realm>
+        </fixed>
+        <experience>
+                <level></level>
+                <dp></dp> <!-- for continual dev people -->
+                <dpspent></dpspent>
+                <experiencepoints>10000</experiencepoints>
+        </experience>
+        <raceinfo>
+                <exhaustionbonus></exhaustionbonus>
+                <lifespan></lifespan>
+                <souldeparture></souldeparture>
+                
+                <recoverymultiplier></recoverymultiplier>
+                <!-- BD and PP in relevant skills -->
+        </raceinfo>
+        <appearance>
+                <!-- I have appearance as a stat normally?
+                        Agree? -->
+                
+                <skin></skin>
+                <age></age>
+                <gender></gender>
+                <height></height>
+                <weight></weight>
+                <eyes></eyes>
+                <hair></hair>
+        </appearance>
+        <role> <!-- Not sure about these - maybe they belong somewhere
+        else... -->
+                <personality> </personality>
+                <motivations> </motivations>
+                <alignment>   </alignment>
+        </role>
+        <background>
+                <nationality></nationality>
+                <hometown></hometown>
+                <religon></religon>
+                <lord></lord>
+                <parents>
+                        <father></father> <!-- xlink to parents -->
+                        <mother></mother>
+                </parents>
+                <spouse></spouse>
+                <children>
+                        <name></name>  <!-- xlink to child :) -->
+                </children>
+                <mentor></mentor>
+              <patron></patron>
+        </background>
+    </data>
+
+    <stats>
+        <stat>
+                <name>Agility</name>
+                <abbr>Ag</abbr>
+        </stat>
+        <stat>
+                <name>Constitution</name>
+                <abbr>Co</abbr>
+        </stat>
+        <stat>
+                <name>Memory</name>
+                <abbr>Me</abbr>
+        </stat>
+        <stat>
+                <name>Reasoning</name>
+                <abbr>Re</abbr>
+        </stat>
+        <stat>
+                <name>Self Discipline</name>
+                <abbr>SD</abbr>
+        </stat>
+        <stat>
+                <name>Empathy</name>
+                <abbr>Em</abbr>
+        </stat>
+        <stat>
+                <name>Intuition</name>
+                <abbr>In</abbr>
+        </stat>
+        <stat>
+                <name>Presence</name>
+                <abbr>Pr</abbr>
+        </stat>
+        <stat>
+                <name>Quickness</name>
+                <abbr>Qu</abbr>
+        </stat>
+        <stat>
+                <name>Strength</name>
+                <abbr>St</abbr>
+        </stat>
+        <stat>
+                <name>Appearance</name>
+                <abbr>Ap</abbr>
+        </stat>
+    </stats>
+    <skills>
+        <category>
+                <name>Body Development</name>
+                <specialbonus>10</specialbonus>
+        </category>
+    </skills>
+    <rrs>
+        <rr>
+                <name>Channeling</name>
+                <statbonuses>In+In+In</statbonuses>
+        </rr>
+        <rr>
+                <name>Essence</name>
+                <statbonuses>Em+Em+Em</statbonuses>
+        </rr>
+        <rr>
+                <name>Mentalism</name>
+                <statbonuses>Pr+Pr+Pr</statbonuses>
+        </rr>
+        <rr>
+                <name>Channeling/Essence</name>
+                <statbonuses>In+Em</statbonuses>
+        </rr>
+        <rr>
+                <name>Channeling/Mentalism</name>
+                <statbonuses>In+Pr</statbonuses>
+        </rr>
+        <rr>
+                <name>Essence/Mentalism</name>
+                <statbonuses>Em+Pr</statbonuses>
+        </rr>
+        <rr>
+                <name>Arcane</name>
+                <statbonuses>In+Em+Pr</statbonuses>
+        </rr>
+        <rr>
+                <name>Poison</name>
+                <statbonuses>Co+Co+Co</statbonuses>
+        </rr>
+        <rr>
+                <name>Disease</name>
+                <statbonuses>Co+Co+Co</statbonuses>
+        </rr>
+        <rr>
+                <name>Fear</name>
+                <statbonuses>SD+SD+SD</statbonuses>
+        </rr>
+        <rr>
+                <name>Heat</name>
+        </rr>
+        <rr>
+                <name>Cold</name>
+        </rr>
+    </rrs>
+</base>

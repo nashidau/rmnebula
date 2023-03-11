@@ -1,0 +1,95 @@
+<!--#set var="TITLE" value="Nebula: Other Programs" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Other Programs</h1>
+
+<p>The Nebula Suite is composed of a number of different programs.  They
+are:
+<ul>
+  <li><a href="#Nebula">Nebula</a>: Character editor - the main program.</li>
+  <li><a href="#Stardust">Stardust</a>: Spell list editor.</li>
+  <li><a href="#Alchemist">Alchemist</a>: Item editor and treasure
+        generator.</li>
+  <li><a href="#WorldBuilder">World Builder</a>: Genre (world) file editor.</li>
+  <li><a href="#Genome">Genome</a>: A race editor.</li>
+  <li><a href="#Guild">Guild</a>: A professions editor.</li>
+  <li><a href="#Coach">Coach</a>: A Training package editor.</li>
+</ul>
+
+
+<h2><a id="Nebula"></a>Nebula</h2>
+
+<p>Nebula is the center-piece of the aplication suite.  Nebula is designed
+to allow you to create, manage and manipulate rolemaster characters.</p>  
+
+<p><b>Status</b>: Mostly complete.</p>
+
+
+<h2><a id="Stardust"></a>Stardust</h2>
+
+<p>Stardust is a spell list editor.  The name comes from what nebula's are
+made from (star dust) and as well as vague notions on the idea of fairy dust
+(the stuff of magic in Peter Pan).</p>
+
+<p>Stardust allows you to read, modify and create spell lists.  More
+information on the spell list can be found at 
+        <a href="http://www.nash.nu/Rolemaster/XML/spelllist/">spelllist</a>
+XML page.
+
+<p><b>Status</b>: Mostly complete: implemented</p>
+        <ul>
+                <li>Loading, saving etc</li>
+                <li>Edit spell paramaters (name, range, description)</li>
+                <li>Edit spell lists paramaters (name etc)</li>
+                <li>Delete spells</li>
+        </ul>
+<p>Unimplemented:
+        <ul>
+                <li>Spell list notes</li>
+                <li>Spell references (eg As Foo I, but 100' level)</li>
+        </ul>
+
+<h2><a id="Alchemist"></a>Alchemist</h2>
+
+<p>Alchemist is priamrily written by Sylvain Glaize.  It allows you create,
+modify, and view all the properties of items - from description,
+inteligence, magical and non-magical bonuses, plus pretty much anything you
+can think of.</p>
+
+<p><b>Status</b>: Partially complete.</p>
+
+
+<h2><a id="WorldBuilder"></a>World Builder</h2>
+
+
+<p><b>Status</b>: Partially complete.  Implemented:
+        <ul>
+                <li>loads and saves genre files happily</li>
+                <li>General genre info</li>
+                <li>Regions</li>
+                <li>Realms (includes religions)</li>
+                <li>Skills</li>
+        </ul>
+        Unimplemented:
+        <ul>
+                <li>Creation (partially complete)</li>
+                <li>Auto generation of skills from regions and realms</li>
+        </ul>
+</p>
+
+<h2><a id="Genome"></a>Genome: A race editor.</h2>
+
+<p>A race/culture editor.  This covers racial bonuses, as well as adolescent
+skills and development.</p>
+
+<p><b>Status</b>: Currently not implemented.</p>
+
+<h2><a id="Guild"></a>Guild</h2>
+
+
+<p><b>Status</b>: Currently not implemented.</p>
+
+<h2><a id="Coach"></a>Coach</h2>
+
+<p><b>Status</b>: Currently not implemented.</p>
+<!--#include virtual="/.include/tail.shtml" -->

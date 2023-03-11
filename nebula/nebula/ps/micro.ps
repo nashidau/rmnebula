@@ -1,0 +1,721 @@
+%!PS-Adobe-
+%%DocumentFonts: Times-Roman Times-Bold Times-Italic
+%%Title: Nebula Character Sheet
+%%Creator: Nebula by Brett Nash <nash\@nash.nu>
+%%CreationDate: 5th June 2001
+%%Pages: (atend)
+%%EndComments
+
+% Size defines
+/fontsize 9 def
+/Fontsize 11 def
+/linespace fontsize 1 add def
+/Linespace 12 def
+/minx 12 def
+/maxx 582 def
+/midx minx maxx add 2 div def
+/maxy 825 def
+/miny 15 def
+/midy maxy miny add 2 div def
+/bonuswidth 30 def
+/colwidth midx minx sub def
+/skillwidth 120 def
+/progressionwidth 80 def
+/smallwidth 22 def
+
+/topsection 40 def
+/leftsection 200 def
+/rightwidth maxx minx sub leftsection sub def
+
+
+
+% Functions
+/str { 20 string } def
+
+% Fonts
+/getnorm /Times-Roman findfont fontsize scalefont def
+/getbold /Times-Bold findfont fontsize scalefont def
+/getemph /Times-Italic findfont fontsize scalefont def
+/norm { getnorm setfont } def 
+/bold { getbold setfont } def
+/emph { getemph setfont } def
+/getNorm /Times-Roman findfont Fontsize scalefont def
+/getBold /Times-Bold findfont Fontsize scalefont def
+/getEmph /Times-Italic findfont Fontsize scalefont def
+/Norm { getNorm setfont } def 
+/Bold { getBold setfont } def
+/Emph { getEmph setfont } def
+
+% Lines
+/thickline { 2 setlinewidth } def
+/thinline  { 1 setlinewidth } def
+/reallythinline  { 0.5 setlinewidth } def
+
+
+/upline { 
+    12 2 add
+    currentpoint
+    exch pop
+    linespace add 
+    moveto 
+} def
+
+/downline { 
+    12 2 add
+    currentpoint
+    exch pop
+    linespace sub
+    moveto 
+    3 12 add setx
+} def
+/topleft {
+    12 825 moveto
+} def
+/init {
+    newpath 
+    0 0 moveto
+} def
+/setx {
+    currentpoint exch pop moveto
+} def
+
+
+/drawoutline {
+    newpath
+    thickline
+    12 15 moveto
+    12 825 lineto
+    582 825 lineto
+    582 15 lineto
+    closepath
+    stroke
+    297 15 moveto
+    297 825 lineto
+    stroke
+    topleft
+} def
+
+
+% Justify right
+% Draw string right from the current point
+% (string) justifyright
+/justifyright {
+    dup stringwidth currentpoint 4 2 roll
+    exch neg 4 3 roll
+    add  3 1 roll sub
+    moveto show
+} def
+
+
+% Justify center
+% (string) width justifycenter
+/justifycenter {
+    exch dup (_) eq 
+       { pop gsave reallythinline 6  sub 3 -1 rmoveto 0 rlineto stroke grestore 
+       }
+       { exch exch dup 3 1 roll 
+         stringwidth pop sub 2 div 0 rmoveto show
+       }
+    ifelse 
+}def
+
+
+
+%%%
+% Functions used to drazw in the left column
+%%%
+% lcolumnprint
+% Pritns a string, followed by an underline in teh left column
+% (sting) lcolumnprint
+/lcolumnprint {
+    10 3 add setx 
+    show
+    gsave
+    2 -1 rmoveto
+    reallythinline 
+    200 5 sub currentpoint exch pop lineto
+    stroke
+    grestore
+    downline
+} def
+% Prints a string on the right of the line
+/lcolumnrightprint {
+        gsave
+        leftsection 5 sub setx 
+        justifyright
+        grestore
+        downline
+} def
+/lcolumnprintstring {
+        minx 3 add setx
+        show
+        lcolumnrightprint
+} def
+
+/lcolumnline {
+    12 setx
+    thinline
+    gsave 
+    200 12 sub 0 rlineto 
+    stroke
+    grestore
+    downline
+}def
+/lcolumnthickline {
+    12 setx
+    thickline
+    gsave 
+    200 12 sub 0 rlineto 
+    stroke
+    grestore
+    downline
+} def
+/rcolumnline {
+    12 setx
+    gsave
+    582 200 sub 0 rlineto
+    stroke
+    grestore
+    downline
+} def
+
+
+%  Draw front page
+/drawfrontpage {
+    newpath
+    thickline
+    12 15 moveto
+    12 825 lineto
+    582 825 lineto
+    582 15 lineto
+    closepath
+    stroke
+    thickline
+    % Border between name and main body
+    12 825 40 sub moveto 582 12 sub 0 rlineto stroke
+    % Divide of left column
+    newpath
+    200 825 40 sub moveto 200 15 lineto 
+    stroke 
+
+} def
+/frontskill {
+    dup (_) eq
+      { pop gsave reallythinline 1 -1 rmoveto 110 0 rlineto stroke grestore }
+      { show }
+    ifelse
+    130 setx shortline
+    160 setx shortline
+    downline
+} def
+/shortline {
+    dup (_) eq
+      { pop gsave reallythinline 1 -1 rmoveto 18 0 rlineto stroke grestore
+                         22 0 rmoveto }
+      { 20 justifycenter }
+    ifelse
+} def
+
+%%%
+% printstat functions
+%%%
+% These functiosn print stats in the method approriate for the mode
+% all take the same arguments.
+% (Total) (Special) (Racial) (basic) (Pot) (Temp) (Abbr) (Stat) printstat
+/printstat {
+        show                 % Stat
+         80 setx shortline   % Abbr
+        120 setx shortline   % Temp
+        160 setx shortline   % Pot
+                               % Gap
+        220 setx shortline   % Basic
+        260 setx shortline   % Racial
+        300 setx shortline   % Special
+        340 setx shortline   % total
+        downline
+} def
+/micro_stat {
+        show                    % stat
+         90 setx shortline      % Abbr
+        120 setx shortline      % Temp
+        145 setx shortline      % Pot
+        pop	                % Basic
+        pop		        % Racial
+        pop		        % Special
+        lcolumnrightprint       % total
+} def
+
+/printrr {
+        show
+        120 setx shortline      % stat bonus
+        145 setx shortline      % spec bonus (racial & other)
+        lcolumnrightprint       % total
+} def
+
+%%%
+% Drawcat
+%%%
+% Prints the categories.  
+% All take the folowing arguments
+% (total bonus) (Skill prog) (special bonus) (cat prog) (rank #)  \
+%               (rank bonus) (cost) (stat bonus) (stats) 
+%               (prof bonus) (Cat name) drawcat -
+% Choices are: drawcat, microcat, rmsscat
+%%%
+/microtitle {
+        Bold
+        (Skill/Category) show          % cat name
+        (Ranks) 125 setx 30 justifycenter                % rank #
+        (Bonus) 160 setx 30 justifycenter  % rank bonus
+        norm
+        downline
+} def
+/microcat {
+        gsave
+        bold 
+        show          % cat name
+        currentpoint
+        grestore
+        moveto
+        
+        pop             % prof bonus
+        pop                % stats
+        pop             % stat bonus
+        pop             % cost
+        125 setx 30 justifycenter                % rank #
+        pop                % rank bonus
+        pop             % cat prog
+        pop             % special bonus
+        pop             % skill prog
+        160 setx 30 justifycenter  % rank bonus
+        downline
+} def
+/drawcat {
+    gsave
+    minx setx thickline
+    midx currentpoint exch pop lineto
+    stroke
+    grestore 
+
+    % Print the cat name
+    downline
+    bold show
+    % move to the middle
+    norm
+    midx bonuswidth sub currentpoint exch pop moveto
+    bonuswidth justifycenter % the profession bonus
+    midx bonuswidth sub currentpoint exch pop moveto
+    (Profession Bonus:) justifyright
+
+        % Stat Line
+        downline 
+        colwidth 2.5 div setx show % the stats involved
+        midx bonuswidth sub setx
+        bonuswidth justifycenter % the stat bonus
+        midx bonuswidth sub setx
+        (Stat Bonus:) justifyright
+
+    downline
+    (Rank Cost: ) show
+    bonuswidth justifycenter
+    colwidth 2.5 div setx (# Ranks: ) show
+    % rank progress
+    bonuswidth 	justifycenter
+    midx bonuswidth sub setx
+    % rank progress
+     bonuswidth justifycenter
+    midx bonuswidth sub setx
+    (Rank Bonus:) justifyright
+
+    downline
+    (Category Progression: ) show ( ) show show
+    midx bonuswidth sub setx
+     bonuswidth justifycenter   % Special bonus
+    midx bonuswidth sub setx
+    (Special Bonus:) justifyright
+
+    % The skill Prorgession and Total lines
+    % Skill Progression: 0 * 5 * 3 * 3       Total :  86
+    downline
+    (Skill Progression: ) show (        ) show show 
+    midx bonuswidth sub setx
+       bonuswidth justifycenter  % The Total Bonus
+    midx bonuswidth sub setx
+    (Total Bonus:) justifyright
+			    
+    downline
+    minx setx
+    gsave
+    thinline
+    0 fontsize  2 sub 2 div rmoveto
+    colwidth 0 rlineto 
+    stroke
+    grestore	   
+
+    downline
+    bold
+    (Skill) show
+    skillwidth setx
+    (# Ranks) bonuswidth justifycenter
+    skillwidth bonuswidth add setx (Class.)  bonuswidth justifycenter
+    
+    (Total) (Spec) (Cat) (Item) (Rank)
+    midx smallwidth 5 mul sub smallwidth midx 1 sub {
+        currentpoint exch pop moveto smallwidth justifycenter
+    } for
+
+    downline
+
+} def
+
+%%%
+% Skill
+%%%
+% Prints a skill
+% All take the following arguments
+% ($totalbonus) ($skillspecbonus) ($catbonus) (itembonus)
+%               ($rankbonus) ($class) ($skillranks) ($name) skill
+%%%
+/microskill {
+        5 0 rmoveto  
+        show   % name
+        125 setx 30 justifycenter  % ranks
+        pop    % class
+        pop    % rankbonus
+        pop    % itembonus  
+        pop    % catbonus
+        pop    % special bonus
+        160 setx 30 justifycenter % totalbonus
+        downline
+} def
+/skill {
+        dup (Other) eq { emph } { norm } ifelse
+        dup (_) eq 
+        { skillline pop }
+        { dup (    _) eq {skillline2 pop} {show} ifelse }
+        ifelse
+        skillwidth setx
+        shortline
+        skillwidth bonuswidth add setx shortline
+    
+        midx smallwidth 5 mul sub smallwidth midx 1 sub {
+                currentpoint exch pop moveto  shortline 
+        } for
+        downline    
+} def
+
+
+% Prints a subgrouped skill
+% (skill name) skillgroup
+/skillgroup {
+    emph
+    show
+    downline
+    norm
+} def
+/microgroup {
+        5 0 rmoveto
+        skillgroup
+} def
+
+% prints the character name
+% (name) charactername -
+/charactername {
+        gsave
+        newpath 
+        minx maxy moveto downline
+        Bold (Character:  ) show 
+        Norm show % print the name 
+        downline downline
+        stroke
+        grestore
+} def
+
+% Print RR
+/printrr {
+        show 
+        135 setx justifyright  % stat
+        165 setx justifyright  % special
+        195 setx justifyright  % total
+        downline
+} def
+
+% Begin the left column on the first page
+/beginleftcolumn {
+        minx maxy topsection sub moveto downline
+        Norm
+} def
+/beginfrontfirst {
+        leftsection minx sub  maxy topsection sub translate
+        0 0 moveto
+        downline
+} def
+/beginfrontsecond {
+        rightwidth 2 div 0 translate
+        0 0 moveto
+        downline
+        microtitle
+        norm
+} def
+
+/topleft {
+    minx maxy moveto
+} def
+
+/col2 {
+    midx minx sub 0 translate
+    topleft
+} def
+
+%%EndProlog
+
+
+%%Page: 1 1
+
+init
+drawfrontpage
+beginleftcolumn
+Norm
+
+%%%%%%%%%%%%%%%
+
+(Tiel) charactername
+beginleftcolumn % Start the left column
+Bold (Bonus) (-) (-) (-) (Pot) (Temp) (Abbr) (Stat) micro_stat Norm
+(8) (~) (~) (8) (96) (96) (Ag) (Agility) micro_stat 
+(1) (~) (~) (1) (71) (71) (Co) (Constitution) micro_stat 
+(2) (~) (~) (2) (80) (77) (Me) (Memory) micro_stat 
+(~) (~) (~) (~) (63) (54) (Re) (Reasoning) micro_stat 
+(8) (~) (2) (6) (93) (93) (SD) (Self Discipline) micro_stat 
+lcolumnline
+(4) (~) (~) (4) (88) (88) (Em) (Empathy) micro_stat 
+(9) (~) (~) (9) (98) (98) (In) (Intuition) micro_stat 
+(9) (~) (~) (9) (98) (98) (Pr) (Presence) micro_stat 
+(4) (~) (~) (4) (85) (85) (Qu) (Quickness) micro_stat 
+(7) (~) (2) (5) (90) (90) (St) (Strength) micro_stat 
+lcolumnthickline
+Bold 
+(Total) (Spec) (Stat) (Resistance Rolls) printrr
+Norm
+(+27) (0) (27) (Channeling:) printrr
+(+12) (0) (12) (Essence:) printrr
+(+27) (0) (27) (Mentalism:) printrr
+(+13) (0) (13) (Chan/Ess:) printrr
+(+18) (0) (18) (Chan/Ment:) printrr
+(+13) (0) (13) (Ess/Ment:) printrr
+(+22) (0) (22) (Arcane:) printrr
+(+3) (0) (3) (Poison:) printrr
+(+3) (0) (3) (Disease:) printrr
+(+24) (0) (24) (Fear:) printrr
+lcolumnthickline
+bold (Name: ) show norm (Tiel) show downline
+bold (Player) show downline
+bold (  Name: ) show norm (Taryn) show downline
+bold (  Email: ) show norm (taryn@nash.nu) show downline
+bold (  Application: ) show norm (Nebula) show downline
+bold (Campaign) show downline
+bold (  Name: ) show norm (Cheevers) show downline
+bold (  Gm: ) show norm (Denzil) show downline
+bold (  Genre: ) show norm (Denzil) show downline
+bold (Fixed) show downline
+bold (  Race: ) show norm (Common-Man (Urban)) show downline
+bold (  Profession: ) show norm (Zen Monk) show downline
+bold (  Realm: ) show norm (Mentalism) show downline
+bold (Experience) show downline
+bold (  Level: ) show norm (5) show downline
+bold (  Dp: ) show norm (0) show downline
+bold (  Dpspent: ) show norm (0) show downline
+bold (  Experiencepoints: ) show norm (50000) show downline
+bold (Raceinfo) show downline
+bold (  Souldepart: ) show norm (12) show downline
+bold (  Recoverymultiplier: ) show norm (1) show downline
+bold (Appearance) show downline
+bold (  Skin: ) show norm (Fair - slightly tanned) show downline
+bold (  Age: ) show norm (22) show downline
+bold (  Sex: ) show norm (Male) show downline
+bold (  Height: ) show norm (5'8") show downline
+bold (  Weight: ) show norm (150 lbs) show downline
+bold (  Eyes: ) show norm (Green) show downline
+bold (  Hair: ) show norm (Brown) show downline
+bold (Role) show downline
+bold (Background) show downline
+bold (  Nationality: ) show norm (Chee Freel) show downline
+bold (  Hometown: ) show norm (Cheevers) show downline
+bold (  Religon: ) show norm (Gilean) show downline
+bold (  Mentor: ) show norm (Rotando) show downline
+
+% Start main body - the skill list 
+beginfrontfirst
+microtitle
+(25) (Standard) (0) (Standard) (2) (1) (9) (23) (Ag+St+Ag) (0) (Armor · Light) microcat
+(23) (Standard) (0) (Standard) (2) (1) (2/5) (21) (Pr+Em+Ag) (0) (Artistic · Active) microcat
+(26) (0) (23) () (3) () (1) (Dancing) microskill
+(Play Instrument (By Instrument)   ) microgroup % New group
+(18) (Standard) (0) (Standard) (2) (1) (2/7) (16) (Co+Ag+St) (0) (Athletic · Endurance) microcat
+(Athletic Games - Endurance (By Game)   ) microgroup % New group
+(3) (0) (18) () (-15) () (0) (Distance Running) microskill
+(21) (0) (18) () (3) () (1) (Swimming) microskill
+(27) (Standard) (0) (Standard) (2) (1) (1/5) (20) (Ag+Qu+Ag) (5) (Athletic · Gymnastics) microcat
+(Athletic Games - Gymnastic (By Game)   ) microgroup % New group
+(30) (0) (27) () (3) () (1) (Climbing) microskill
+(31) (Limited) (0) (Limited) (~) (~) (4/12) (26) (In+SD+In) (5) (Awareness · Perceptions) microcat
+(33) (0) (31) () (2) () (2) (Alertness) microskill
+(26) (Standard) (0) (Standard) (4) (2) (2/6) (17) (In+Re+SD) (5) (Awareness · Searching) microcat
+(11) (0) (26) () (-15) () (0) (Lie Perception) microskill
+(11) (0) (26) () (-15) () (0) (Locate Hidden) microskill
+(29) (0) (26) () (3) () (1) (Observation) microskill
+(33) (Standard) (0) (Standard) (2) (1) (2/6) (26) (In+SD+In) (5) (Awareness · Senses) microcat
+(Situation Awareness (By Situation)   ) microgroup % New group
+(Sense Awareness (By Sense)   ) microgroup % New group
+(28) (10) (33) () (-15) () (0) (    Hearing) microskill
+(18) (0) (33) () (-15) () (0) (Time Sense) microskill
+(25) (Other) (10) (Other) (~) (~) (4/14) (10) (Co+SD+Co) (5) (Body Development) microcat
+(71) (10) (25) () (36) () (6) (Body Development) microskill
+(12) (Standard) (0) (Standard) (6) (3) (3/3/3) (6) (Re+Me+Em) (0) (Communications) microcat
+(Language Spoken   ) microgroup % New group
+(33) (0) (12) () (21) () (7) (    Rhaya (Common) (Type I)) microskill
+(-3) (0) (12) () (-15) () (0) (    Erlin (Goblin) (Type I)) microskill
+(-3) (0) (12) () (-15) () (0) (    Cantonese (Type I)) microskill
+(-3) (0) (12) () (-15) () (0) (    Arabic (Type I)) microskill
+(-3) (0) (12) () (-15) () (0) (    Southran (Type I)) microskill
+(-3) (0) (12) () (-15) () (0) (    Romani (Type III)) microskill
+(Language Written   ) microgroup % New group
+(21) (0) (12) () (9) () (3) (    Rhaya (Common)) microskill
+(-3) (0) (12) () (-15) () (0) (    Erlin (Goblin)) microskill
+(-3) (0) (12) () (-15) () (0) (    Cantonese) microskill
+(-3) (0) (12) () (-15) () (0) (    Arabic) microskill
+(-3) (0) (12) () (-15) () (0) (    Soutran) microskill
+(-3) (0) (12) () (-15) () (0) (    Romani) microskill
+(Professional Spoken   ) microgroup % New group
+(-3) (0) (12) () (-15) () (0) (    Tongue of the Dance) microskill
+(-3) (0) (12) () (-15) () (0) (    Faceted (Crystal)) microskill
+(-3) (0) (12) () (-15) () (0) (    Phonos (Nomenist)) microskill
+(-3) (0) (12) () (-15) () (0) (    Vegan (Herbalist)) microskill
+(-3) (0) (12) () (-15) () (0) (    Phylos (Corpist)) microskill
+(Professional Written   ) microgroup % New group
+(-3) (0) (12) () (-15) () (0) (    Tongue of the Dance) microskill
+(-3) (0) (12) () (-15) () (0) (    Faceted (Crystal)) microskill
+(-3) (0) (12) () (-15) () (0) (    Phonos (Nomenist)) microskill
+(-3) (0) (12) () (-15) () (0) (    Vegan (Herbalist)) microskill
+(-3) (0) (12) () (-15) () (0) (    Phylos (Corpist)) microskill
+(-3) (0) (12) () (-15) () (0) (Lip Reading) microskill
+(Magical Language  ) microgroup % New group
+(-3) (0) (12) () (-15) () (0) (    Empat (Charm)) microskill
+(-3) (0) (12) () (-15) () (0) (    Empat Written) microskill
+(26) (Standard) (0) (Standard) (4) (2) (2/7) (22) (Pr+Em+In) (0) (Influence) microcat
+(11) (0) (26) () (-15) () (0) (Teaching) microskill
+(32) (0) (26) () (6) () (2) (Trading) microskill
+(22) (Standard) (10) (Standard) (8) (4) (1/3) (4) (Me+Re+Me) (0) (Lore · General) microcat
+(Culture Lore (By Culture/Race)   ) microgroup % New group
+(31) (0) (22) () (9) () (3) (    Home City) microskill
+(7) (0) (22) () (-15) () (0) (    Goblin) microskill
+(7) (0) (22) () (-15) () (0) (Fauna Lore) microskill
+(25) (0) (22) () (3) () (1) (Flora Lore) microskill
+(History (By Region/Group/Planet/Society/City)   ) microgroup % New group
+(7) (0) (22) () (-15) () (0) (    World History) microskill
+(7) (0) (22) () (-15) () (0) (    Cheevers) microskill
+(25) (0) (22) () (3) () (1) (Martial Arts Style Lore) microskill
+(Region Lore (By Region)   ) microgroup % New group
+(31) (0) (22) () (9) () (3) (    Home City) microskill
+(Religion (By Pantheon/Religon/Culture)   ) microgroup % New group
+(7) (0) (22) () (-15) () (0) (    Bane) microskill
+(7) (0) (22) () (-15) () (0) (    Gilean) microskill
+(25) (0) (22) () (3) () (1) (Weapon Style Lore) microskill
+beginfrontsecond % New column
+(14) (Standard) (10) (Standard) (-15) (0) (3/6) (4) (Me+Re+Me) (15) (Lore · Magical) microcat
+(-1) (0) (14) () (-15) () (0) (Artifact Lore) microskill
+(-1) (0) (14) () (-15) () (0) (Circle Lore) microskill
+(Divination Lore (By Divination Method)  ) microgroup % New group
+(-1) (0) (14) () (-15) () (0) (Glyph Lore) microskill
+(-1) (0) (14) () (-15) () (0) (Planar Lore) microskill
+(-1) (0) (14) () (-15) () (0) (Spell Lore) microskill
+(-1) (0) (14) () (-15) () (0) (Symbol Lore) microskill
+(-1) (0) (14) () (-15) () (0) (Undead Lore) microskill
+(-1) (0) (14) () (-15) () (0) (Warding Lore) microskill
+(-1) (Standard) (10) (Standard) (-15) (0) (3/7) (4) (Me+Re+Me) (0) (Lore · Obscure) microcat
+(-16) (0) (-1) () (-15) () (0) (Demon /Devil Lore) microskill
+(-16) (0) (-1) () (-15) () (0) (Dragon Lore) microskill
+(Vital Points Lore (By General Type)  ) microgroup % New group
+(2) (0) (-1) () (3) () (1) (    Humanoid Vital Points) microskill
+(Xeno-Lores (By Alien Skill)  ) microgroup % New group
+(-1) (Standard) (10) (Standard) (-15) (0) (2/6) (4) (Me+Re+Me) (0) (Lore · Technical) microcat
+(-16) (0) (-1) () (-15) () (0) (Herb Lore) microskill
+(30) (Combined) (0) (Combined) (~) (~) (4/9) (20) (Ag+Qu+SD) (10) (Martial Arts Combat Maneuvers) microcat
+(35) (0) (30) () (5) () (1) (Adrenal Deflecting) microskill
+(35) (0) (30) () (5) () (1) (Blind Fighting) microskill
+(Martial Arts Style - Advanced (By Style)  ) microgroup % New group
+(70) (0) (30) () (40) () (8) (    Drunken Style) microskill
+(Martial Arts Style - Basic (By Style)   ) microgroup % New group
+(60) (0) (30) () (30) () (6) (    Wing Chun) microskill
+(40) (Standard) (0) (Standard) (8) (4) (2/5) (22) (St+Ag+St) (10) (Martial Arts · Strikes) microcat
+(58) (0) (40) () (18) () (6) (Martial Arts Striking) microskill
+(43) (0) (40) () (3) () (1) (Nerve Strikes) microskill
+(41) (Standard) (0) (Standard) (8) (4) (2/5) (23) (Ag+St+Ag) (10) (Martial Arts · Sweeps) microcat
+(26) (0) (41) () (-15) () (0) (Blocking) microskill
+(56) (0) (41) () (15) () (5) (Martial Arts Sweeps) microskill
+(4) (Standard) (0) (Standard) (-15) (0) (2/7) (19) (SD+In+Me) (0) (Outdoor · Environmental) microcat
+(Survival (By Environment)  ) microgroup % New group
+(31) (Standard) (0) (Standard) (4) (2) (3/7) (22) (Em+In+Pr) (5) (Power Awareness) microcat
+(16) (0) (31) () (-15) () (0) (Attunement) microskill
+(Divination (By divination method)  ) microgroup % New group
+(16) (0) (31) () (-15) () (0) (Read Runes) microskill
+(32) (Combined) (0) (Combined) (~) (~) (6/12) (22) (Em+In+Pr) (10) (Power Manipulation) microcat
+(Magic Ritual   ) microgroup % New group
+(2) (0) (32) () (-30) () (0) (    Ess: Charm) microskill
+(Spell Mastery (By Spell List)   ) microgroup % New group
+(5) (3) (32) () (-30) () (0) (    Commanding Will) microskill
+(2) (0) (32) () (-30) () (0) (    Lofty Bridge) microskill
+(4) (Other) (0) (Other) (~) (~) (8) (4) (Em) (0) (Power Point Development) microcat
+(22) (0) (4) () (18) () (3) (Power Point Development) microskill
+(4) (Standard) (0) (Standard) (2) (1) (2/5) (2) (Re+Me+Re) (0) (Science/Analytic · Basic) microcat
+(10) (0) (4) () (6) () (2) (Basic Maths) microskill
+(-11) (0) (4) () (-15) () (0) (Research) microskill
+(37) (Standard) (0) (Standard) (2) (1) (2/4) (25) (SD+Pr+SD) (10) (Self Control) microcat
+(Adrenal Quickdraw (By Weapon type)  ) microgroup % New group
+(40) (0) (37) () (3) () (1) (Adrenal Speed) microskill
+(0) (Combined) (0) (Combined) (~) (~) (6) (0) () (0) (Special Defenses) microcat
+(34) (9) (0) () (25) () (5) (Adrenal Defense) microskill
+(64) (Limited) (50) (Limited) (~) (~) (3/3/3) (4) (Em) (10) (Spells · Runemage Base) microcat
+(73) (9) (64) () (0) () (0) (Commanding Will) microskill
+(64) (0) (64) () (0) () (0) (Inscriptions) microskill
+(73) (9) (64) () (0) () (0) (Nomenclature Mastery) microskill
+(64) (0) (64) () (0) () (0) (Physical Manipulations) microskill
+(64) (0) (64) () (0) () (0) (Glyphs) microskill
+(64) (0) (64) () (0) () (0) (Warding Ways) microskill
+(64) (0) (64) () (0) () (0) (Circle Mastery) microskill
+(64) (0) (64) () (0) () (0) (Spell Reins) microskill
+(64) (0) (64) () (0) () (0) (Counterspells) microskill
+(64) (0) (64) () (0) () (0) (Lofty Bridge) microskill
+(4) (Limited) (0) (Limited) (~) (~) (4/4/4) (4) (Em) (0) (Spells · Open Essence) microcat
+(4) (0) (4) () (0) () (0) (Lesser Illusions) microskill
+(4) (Limited) (0) (Limited) (~) (~) (0) (4) (Em) (0) (Spells · Essence TP) microcat
+(4) (0) (4) () (0) () (0) (Guildcraft Mastery) microskill
+(4) (0) (4) () (0) () (0) (Mirror Magic) microskill
+(32) (Standard) (0) (Standard) (2) (1) (2/7) (25) (Ag+SD+In) (5) (Subterfuge · Stealth) microcat
+(35) (0) (32) () (3) () (1) (Hiding) microskill
+(35) (0) (32) () (3) () (1) (Stalking) microskill
+stroke showpage % New Page!
+%%Page: 3 3
+drawoutline
+(12) (Standard) (0) (Standard) (2) (1) (3/7) (10) (Re+Me+SD) (0) (Tech/Trade · General) microcat
+(15) (0) (12) () (3) () (1) (First Aid) microskill
+(-3) (0) (12) () (-15) () (0) (Mapping) microskill
+(15) (0) (12) () (3) () (1) (Orienteering) microskill
+(-3) (0) (12) () (-15) () (0) (Using Prepared Herbs) microskill
+(11) (Combined) (0) (Combined) (~) (~) (5/12) (11) (Re+Me+In) (0) (Tech/Trade · Vocational) microcat
+(16) (0) (11) () (5) () (1) (Appraisal - General) microskill
+(Boat Pilot (By Water Course)  ) microgroup % New group
+(16) (0) (11) () (5) () (1) (Preparing Herbs) microskill
+(Tactics (By Situation)  ) microgroup % New group
+(28) (Standard) (0) (Standard) (10) (5) (3/7) (18) (In+Pr+Re) (0) (Urban) microcat
+(31) (0) (28) () (3) () (1) (Contacting) microskill
+(34) (0) (28) () (6) () (2) (Streetwise) microskill
+(29) (Standard) (0) (Standard) (2) (1) (6) (22) (St+Ag+St) (5) (Weapon · 1h Edged) microcat
+(38) (0) (29) () (9) () (3) (Sai) microskill
+(32) (0) (29) () (3) () (1) (Dagger) microskill
+(32) (Standard) (0) (Standard) (4) (2) (8) (23) (Ag+St+Ag) (5) (Weapon · Missile) microcat
+(41) (0) (32) () (9) () (3) (Dai-Kyu) microskill
+stroke
+showpage
+%%Trailer
+%%Pages 1

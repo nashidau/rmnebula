@@ -1,0 +1,70 @@
+<!--#set var="TITLE" value="XML: RMSS Character" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>RMSS Character</h1>
+
+<p>The <tt>rmsscharacter</tt> DTD is a implementation of the base mechanical
+stats for rolemaster.  It currently contains data on:</p>
+<ul>
+        <li>Basic Character information (name, class, race)</li>
+        <li>Stats</li>
+        <li>Skills</li>
+        <li>Resistance Rolls</li>
+</ul>
+
+<p>I hope to add equipemnt, as well as the rest of things required for a
+full character later.  However currently you have 95% of the mechanical
+information need for a rolemaster character - you still need to calculate
+things like DB yourself however.</p>
+
+<p>The DTD for this class is available at:
+<a href="http://www.nash.nu/Rolemaster/XML/rmsscharacter/rmsscharacter.dtd">
+"http://www.nash.nu/Rolemaster/XML/rmsscharacter/rmsscharacter.dtd"</a>.
+Feel free to use this in your own documents 
+(<tt>&lt;!DOCTYPE rmsscharacter SYSTEM http://www.nash.nu/Rolemaster/XML/rmsscharacter/rmsscharacter.dtd&gt;</tt>).  It has no public address yet (and I am not about to fake one).</p>
+
+<p>Of course such a document is useless unless it can be turned into
+something useful. The first thing you can do with it currently is use it in
+<a href="../../Nebula/">Nebula</a>.  This allows you to add and remove
+skills and skills, gain levels, and otherwise manage your character.  It
+will automatically update any calculations for the character.</p>
+
+<p>The second use at the moment is to convert it to 
+<a href="http://www.w3.org/TR/html4/">HTML</a>.   This can be done by using
+the supplied style sheet, <a href="html.xsl">html.xsl</a>.  
+The output makes use of 
+<a href="http://www.nash.nu/Rolemaster/XML/rmsscharacter/rmsschracterhtml.css">
+http://www.nash.nu/Rolemaster/XML/rmsscharacter/rmsschracter.css</a> for
+style elements. </p>
+
+<h2>News</h2>
+
+<dl>
+        <dt>November 14th</dt>
+<dd>Jonathan Dale (<a href="http://www.vsf.cape.com/~jdale/rpg/rpg.htm"
+        >http://www.vsf.cape.com/~jdale/rpg/rpg.htm</a> has an microsoft
+excel spreadsheet which can output in this XML format.</dd>
+</dl>
+
+
+
+<h2>Future Work</h2>
+
+<p>The complete character needs to be represented.  XSLT needs more
+formating options.</p>
+
+
+<h2>Examples</h2>
+
+<p>There are a few examples here.  The first is a character created in
+Nebula compliant with the format.  Note this is an example character and is
+not a complete character in any sense.  You can see him <a
+href="examples/dhrun.xml">here</a>.  You may with to view the source to
+avoid the CSS.  I have also provided a HTML version of the character - view
+that <a href="examples/dhrun.html">here</a>.  This will (effectively) only
+be viewable if you have a CSS browser.  Otherwise it will quite plain.</p>
+
+
+
+
+<!--#include virtual="/.include/tail.shtml" -->

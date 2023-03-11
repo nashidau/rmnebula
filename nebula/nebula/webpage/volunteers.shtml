@@ -1,0 +1,57 @@
+<!--#set var="TITLE" value="Nebula: Projects for Volunteers" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Projects for Volunteers</h1>
+
+<p>As with most projects there are more things to be done in nebula then
+there are people to do them.  Additionally we may not have all the skills
+for a particular project.</p>
+
+<dl>
+<dt>Jonathan Dale's MSExcel Spreadsheet on Gnumeric</dt>
+        <dd>
+        <p>The <a href="http://www.gnome.org/projects/gnumeric/"
+                >Gnumeric</a> spreadsheet can load and handle a lot 
+                of MSExcel documents.  Unfortunatly it throws a lot
+                of wanring when loading the spreadsheet.  It would be nice
+                to be able to fix it so it works with both Excel and
+                Gnumeric, or failing that so it handles at least gnumeric
+                cleanly.
+                </p>
+
+        <p>Gnumeric is avaible at the <a
+         href="http://www.gnome.org/projects/gnumeric/">Gnumeric</a> home
+         page.  You can get Jonathan Dale's spreadsheet from Jonathan's
+         <a href="http://www.vsf.cape.com/~jdale/rpg/rpg.htm"
+         >roleplaying</a> page.</p>
+        </dd>
+
+<dt>Nebula on a microsoft platform</dt>
+        <dd><p>Nebula is written in ANSI-C using GTK+2.0 and some Gnome
+        libraries.  Nearly everything has been ported to windows, but it
+        would be nice to have nebula ported as well.  You will need a
+        compiler on windows, either gcc or maybe a microsoft compiler, and
+        preferably some experience with porting unix apps to windows.
+        We can provide help on nebula itself, can host binaries, and will
+        check in appropriate patchs into the main tree.
+        </p>
+
+        <p>Instructions for getting nebula is available on the main
+        page of this site.  For GTK+2 on windows see <a 
+        href="http://www.gimp.org/~tml/gimp/win32/">Tor Lillqvist's</a>
+        site.  Compilers and other windows binaries are available at the
+        <a href="http://www.cygwin.com/">Cygwin</a> page, and their list of
+        <a href="http://www.cygwin.com/ported.html">ported</a> applications
+        may be helpful.  Additionally see <a
+        href="http://homepage.ntlworld.com/steven.obrien2/">Steven
+        Obrien's</a> pages on <a href="http://www.gnome.org/">Gnome</a>.
+        </p>
+
+<dt>Improve and Maintain the nebula webpage</dt>
+        <dd><p>I admit, these pages bite.  Please feel free to update their
+        form, content and style...</p></dd>
+
+</dl>
+
+
+<!--#include virtual="/.include/tail.shtml" -->

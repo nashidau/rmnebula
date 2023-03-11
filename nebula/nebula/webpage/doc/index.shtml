@@ -1,0 +1,31 @@
+<!--#set var="TITLE" value="Nebula: Format" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Data Formats</h1>
+
+<p>Nebula now supports an XML format in addition to the old format.  The old
+format is now considered deprecated, and although still supported, it may
+not be in the future.  It is recommended you convert all your old format
+characters to the new XML format.  Details of the old format are in 
+<a href="old/">old</a>.</p>
+
+<h2>Character Format</h2>
+
+<ul>
+  <li><a href="rmsscharacter.shtml">HTML</a>: description of the character
+  format, this is designed as the human reference,</li>
+  <li><a href="../xml/rmsscharacter.dtd">DTD</a>: for the character format,
+  electronic reference for the format.</li>
+  <li><a href="../xml/rmsscharacter.css">CSS</a>: a simple style sheet to
+  render a character,</li>
+  <li><a href="../xml/rmsscharacter.xsl">XSLT</a>: a more complicated
+  rendering for the character</li>
+</ul>
+
+<h2>Other</h2>
+
+<p>Currently on other document formats have been converted to XML.
+Links to documentation will appear here as work proceeds.</p>
+
+
+<!--#include virtual="/.include/tail.shtml" -->

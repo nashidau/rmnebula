@@ -1,0 +1,29 @@
+
+table {
+        border: outset;
+        border-width: thin;
+        background: #eeeeee;
+}
+
+td {
+        text-align: center;
+}
+
+td.numeric,th.numeric { 
+        text-align: right;
+}
+
+td.name,th.name {
+        padding-left: 1ex;
+        text-align: left;
+}
+
+/* For printing the spells themselves */
+p.spell {
+        text-indent: -1ex; 
+        padding-left: 1ex;
+        text-align: left;
+}
+.spellname {
+        font-weight: bold;
+}

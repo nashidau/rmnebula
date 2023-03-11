@@ -1,0 +1,30 @@
+<!--#set var="TITLE" value="Nebula: Screenshots" -->
+<!--#include virtual="/.include/head.shtml" -->
+
+<h1>Nebula: Screenshots</h1>
+
+<p>To give you some idea of what nebula looks like before you download I
+have provided a few screenshots.</p>
+
+<ul>
+  <li><a href="welcome.png">Welcome</a>: After agreeing to the licence this
+  is what nebula shows.</li>
+
+  <li><a href="base-selection.png">Base List Selection</a>: While creating a
+        character you may have to choose amongst a various options.  Here is
+        the dialog for selecting base lists.</li>
+  <li><a href="created.png">Created</a>:  Finished character creation!</li>
+  <li><a href="chracteristics.png">Chracteristics</a>: Characteristics of a
+        character.</li>
+  <li><a href="statlist.png">statlist.png</a>: A characters stats.  Note the
+  ticks for prime requisite and realm stats.</li>
+  <li><a href="skills.png">skills.png</a>: Part of a characters skills.
+  Note that similar skills are in sub categories. </li>
+</ul>
+
+<p>Click here to <a href="screenshots/browse.shtml">Browse</a> with
+thumbnails.</p>
+
+
+<!--#include virtual="/.include/tail.shtml" -->
+

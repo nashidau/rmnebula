@@ -1,0 +1,481 @@
+%!PS-Adobe-
+%%DocumentFonts: Times-Roman Times-Bold Times-Italic
+%%Title: Nebula Character Sheet
+%%Creator: Nebula by Brett Nash <nash\@nash.nu>
+%%CreationDate: 5th June 2001
+%%Pages: (atend)
+%%EndComments
+
+% Size defines
+/fontsize 9 def
+/Fontsize 11 def
+/linespace fontsize 1 add def
+/Linespace 12 def
+/minx 12 def
+/maxx 582 def
+/midx minx maxx add 2 div def
+/maxy 825 def
+/miny 15 def
+/midy maxy miny add 2 div def
+/bonuswidth 30 def
+/colwidth midx minx sub def
+/skillwidth 120 def
+/progressionwidth 80 def
+/smallwidth 22 def
+
+/topsection 40 def
+/leftsection 200 def
+/rightwidth maxx minx sub leftsection sub def
+
+
+
+% Functions
+/str { 20 string } def
+
+% Fonts
+/getnorm /Times-Roman findfont fontsize scalefont def
+/getbold /Times-Bold findfont fontsize scalefont def
+/getemph /Times-Italic findfont fontsize scalefont def
+/norm { getnorm setfont } def 
+/bold { getbold setfont } def
+/emph { getemph setfont } def
+/getNorm /Times-Roman findfont Fontsize scalefont def
+/getBold /Times-Bold findfont Fontsize scalefont def
+/getEmph /Times-Italic findfont Fontsize scalefont def
+/Norm { getNorm setfont } def 
+/Bold { getBold setfont } def
+/Emph { getEmph setfont } def
+
+% Lines
+/thickline { 2 setlinewidth } def
+/thinline  { 1 setlinewidth } def
+/reallythinline  { 0.5 setlinewidth } def
+
+
+/upline { 
+    12 2 add
+    currentpoint
+    exch pop
+    linespace add 
+    moveto 
+} def
+
+/downline { 
+    12 2 add
+    currentpoint
+    exch pop
+    linespace sub
+    moveto 
+    3 12 add setx
+} def
+/topleft {
+    12 825 moveto
+} def
+/init {
+    newpath 
+    0 0 moveto
+} def
+/setx {
+    currentpoint exch pop moveto
+} def
+
+
+/drawoutline {
+    newpath
+    thickline
+    12 15 moveto
+    12 825 lineto
+    582 825 lineto
+    582 15 lineto
+    closepath
+    stroke
+    297 15 moveto
+    297 825 lineto
+    stroke
+    topleft
+} def
+
+
+% Justify right
+% Draw string right from the current point
+% (string) justifyright
+/justifyright {
+    dup stringwidth currentpoint 4 2 roll
+    exch neg 4 3 roll
+    add  3 1 roll sub
+    moveto show
+} def
+
+
+% Justify center
+% (string) width justifycenter
+/justifycenter {
+    exch dup (_) eq 
+       { pop gsave reallythinline 6  sub 3 -1 rmoveto 0 rlineto stroke grestore 
+       }
+       { exch exch dup 3 1 roll 
+         stringwidth pop sub 2 div 0 rmoveto show
+       }
+    ifelse 
+}def
+
+
+
+%%%
+% Functions used to drazw in the left column
+%%%
+% lcolumnprint
+% Pritns a string, followed by an underline in teh left column
+% (sting) lcolumnprint
+/lcolumnprint {
+    10 3 add setx 
+    show
+    gsave
+    2 -1 rmoveto
+    reallythinline 
+    200 5 sub currentpoint exch pop lineto
+    stroke
+    grestore
+    downline
+} def
+% Prints a string on the right of the line
+/lcolumnrightprint {
+        gsave
+        leftsection 5 sub setx 
+        justifyright
+        grestore
+        downline
+} def
+/lcolumnprintstring {
+        minx 3 add setx
+        show
+        lcolumnrightprint
+} def
+
+/lcolumnline {
+    12 setx
+    thinline
+    gsave 
+    200 12 sub 0 rlineto 
+    stroke
+    grestore
+    downline
+}def
+/lcolumnthickline {
+    12 setx
+    thickline
+    gsave 
+    200 12 sub 0 rlineto 
+    stroke
+    grestore
+    downline
+} def
+/rcolumnline {
+    12 setx
+    gsave
+    582 200 sub 0 rlineto
+    stroke
+    grestore
+    downline
+} def
+
+
+%  Draw front page
+/drawfrontpage {
+    newpath
+    thickline
+    12 15 moveto
+    12 825 lineto
+    582 825 lineto
+    582 15 lineto
+    closepath
+    stroke
+    thickline
+    % Border between name and main body
+    12 825 40 sub moveto 582 12 sub 0 rlineto stroke
+    % Divide of left column
+    newpath
+    200 825 40 sub moveto 200 15 lineto 
+    stroke 
+
+} def
+/frontskill {
+    dup (_) eq
+      { pop gsave reallythinline 1 -1 rmoveto 110 0 rlineto stroke grestore }
+      { show }
+    ifelse
+    130 setx shortline
+    160 setx shortline
+    downline
+} def
+/shortline {
+    dup (_) eq
+      { pop gsave reallythinline 1 -1 rmoveto 18 0 rlineto stroke grestore
+                         22 0 rmoveto }
+      { 20 justifycenter }
+    ifelse
+} def
+
+%%%
+% printstat functions
+%%%
+% These functiosn print stats in the method approriate for the mode
+% all take the same arguments.
+% (Total) (Special) (Racial) (basic) (Pot) (Temp) (Abbr) (Stat) printstat
+/printstat {
+        show                 % Stat
+         80 setx shortline   % Abbr
+        120 setx shortline   % Temp
+        160 setx shortline   % Pot
+                               % Gap
+        220 setx shortline   % Basic
+        260 setx shortline   % Racial
+        300 setx shortline   % Special
+        340 setx shortline   % total
+        downline
+} def
+/micro_stat {
+        show                    % stat
+         90 setx shortline      % Abbr
+        120 setx shortline      % Temp
+        145 setx shortline      % Pot
+        pop	                % Basic
+        pop		        % Racial
+        pop		        % Special
+        lcolumnrightprint       % total
+} def
+
+/printrr {
+        show
+        120 setx shortline      % stat bonus
+        145 setx shortline      % spec bonus (racial & other)
+        lcolumnrightprint       % total
+} def
+
+%%%
+% Drawcat
+%%%
+% Prints the categories.  
+% All take the folowing arguments
+% (total bonus) (Skill prog) (special bonus) (cat prog) (rank #)  \
+%               (rank bonus) (cost) (stat bonus) (stats) 
+%               (prof bonus) (Cat name) drawcat -
+% Choices are: drawcat, microcat, rmsscat
+%%%
+/microtitle {
+        Bold
+        (Skill/Category) show          % cat name
+        (Ranks) 125 setx 30 justifycenter                % rank #
+        (Bonus) 160 setx 30 justifycenter  % rank bonus
+        norm
+        downline
+} def
+/microcat {
+        gsave
+        bold 
+        show          % cat name
+        currentpoint
+        grestore
+        moveto
+        
+        pop             % prof bonus
+        pop                % stats
+        pop             % stat bonus
+        pop             % cost
+        125 setx 30 justifycenter                % rank #
+        pop                % rank bonus
+        pop             % cat prog
+        pop             % special bonus
+        pop             % skill prog
+        160 setx 30 justifycenter  % rank bonus
+        downline
+} def
+/drawcat {
+    gsave
+    minx setx thickline
+    midx currentpoint exch pop lineto
+    stroke
+    grestore 
+
+    % Print the cat name
+    downline
+    bold show
+    % move to the middle
+    norm
+    midx bonuswidth sub currentpoint exch pop moveto
+    bonuswidth justifycenter % the profession bonus
+    midx bonuswidth sub currentpoint exch pop moveto
+    (Profession Bonus:) justifyright
+
+        % Stat Line
+        downline 
+        colwidth 2.5 div setx show % the stats involved
+        midx bonuswidth sub setx
+        bonuswidth justifycenter % the stat bonus
+        midx bonuswidth sub setx
+        (Stat Bonus:) justifyright
+
+    downline
+    (Rank Cost: ) show
+    bonuswidth justifycenter
+    colwidth 2.5 div setx (# Ranks: ) show
+    % rank progress
+    bonuswidth 	justifycenter
+    midx bonuswidth sub setx
+    % rank progress
+     bonuswidth justifycenter
+    midx bonuswidth sub setx
+    (Rank Bonus:) justifyright
+
+    downline
+    (Category Progression: ) show ( ) show show
+    midx bonuswidth sub setx
+     bonuswidth justifycenter   % Special bonus
+    midx bonuswidth sub setx
+    (Special Bonus:) justifyright
+
+    % The skill Prorgession and Total lines
+    % Skill Progression: 0 * 5 * 3 * 3       Total :  86
+    downline
+    (Skill Progression: ) show (        ) show show 
+    midx bonuswidth sub setx
+       bonuswidth justifycenter  % The Total Bonus
+    midx bonuswidth sub setx
+    (Total Bonus:) justifyright
+			    
+    downline
+    minx setx
+    gsave
+    thinline
+    0 fontsize  2 sub 2 div rmoveto
+    colwidth 0 rlineto 
+    stroke
+    grestore	   
+
+    downline
+    bold
+    (Skill) show
+    skillwidth setx
+    (# Ranks) bonuswidth justifycenter
+    skillwidth bonuswidth add setx (Class.)  bonuswidth justifycenter
+    
+    (Total) (Spec) (Cat) (Item) (Rank)
+    midx smallwidth 5 mul sub smallwidth midx 1 sub {
+        currentpoint exch pop moveto smallwidth justifycenter
+    } for
+
+    downline
+
+} def
+
+%%%
+% Skill
+%%%
+% Prints a skill
+% All take the following arguments
+% ($totalbonus) ($skillspecbonus) ($catbonus) (itembonus)
+%               ($rankbonus) ($class) ($skillranks) ($name) skill
+%%%
+/microskill {
+        5 0 rmoveto  
+        show   % name
+        125 setx 30 justifycenter  % ranks
+        pop    % class
+        pop    % rankbonus
+        pop    % itembonus  
+        pop    % catbonus
+        pop    % special bonus
+        160 setx 30 justifycenter % totalbonus
+        downline
+} def
+/skill {
+        dup (Other) eq { emph } { norm } ifelse
+        dup (_) eq 
+        { skillline pop }
+        { dup (    _) eq {skillline2 pop} {show} ifelse }
+        ifelse
+        skillwidth setx
+        shortline
+        skillwidth bonuswidth add setx shortline
+    
+        midx smallwidth 5 mul sub smallwidth midx 1 sub {
+                currentpoint exch pop moveto  shortline 
+        } for
+        downline    
+} def
+
+
+% Prints a subgrouped skill
+% (skill name) skillgroup
+/skillgroup {
+    emph
+    show
+    downline
+    norm
+} def
+/microgroup {
+        5 0 rmoveto
+        skillgroup
+} def
+
+% prints the character name
+% (name) charactername -
+/charactername {
+        gsave
+        newpath 
+        minx maxy moveto downline
+        Bold (Character:  ) show 
+        Norm show % print the name 
+        downline downline
+        stroke
+        grestore
+} def
+
+% Print RR
+/printrr {
+        show 
+        135 setx justifyright  % stat
+        165 setx justifyright  % special
+        195 setx justifyright  % total
+        downline
+} def
+
+% Begin the left column on the first page
+/beginleftcolumn {
+        minx maxy topsection sub moveto downline
+        Norm
+} def
+/beginfrontfirst {
+        leftsection minx sub  maxy topsection sub translate
+        0 0 moveto
+        downline
+} def
+/beginfrontsecond {
+        rightwidth 2 div 0 translate
+        0 0 moveto
+        downline
+        microtitle
+        norm
+} def
+
+/topleft {
+    minx maxy moveto
+} def
+
+/col2 {
+    midx minx sub 0 translate
+    topleft
+} def
+
+%%EndProlog
+
+
+%%Page: 1 1
+
+init
+drawfrontpage
+beginleftcolumn
+Norm
+
+%%%%%%%%%%%%%%%
+

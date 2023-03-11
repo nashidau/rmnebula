@@ -1,0 +1,11 @@
+
+
+Own Realm, Own Base:  +10
+Own Realm, Open:       +5
+Own Realm, Closed:      0
+Arcane Lists:           -5
+Own Realm, Other Base: -10
+Other Realm, Open:      -10
+Other Realm, Closed:    -20
+Other Realm, Base:      -30
+

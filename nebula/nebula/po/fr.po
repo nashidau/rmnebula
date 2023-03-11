@@ -1,0 +1,978 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: nebula/src/character.c:422 nebula/worldbuilder/skills.c:31
+#: src/character.c:422 worldbuilder/skills.c:31
+msgid	""
+msgstr	"Project-Id-Version: Nebula 0.3\n"
+	"POT-Creation-Date: 2002-12-12 20:39+0100\n"
+	"PO-Revision-Date: 2002-12-12 20:39+0100\n"
+	"Last-Translator: Sylvain Glaize <mokona@puupuu.org>\n"
+	"Language-Team: French <fr@li.org>\n"
+	"MIME-Version: 1.0\n"
+	"Content-Type: text/plain; charset=ISO-8859-1\n"
+	"Content-Transfer-Encoding: 8bit\n"
+
+#: alchemist/general.c:42 nebula/alchemist/general.c:42
+#: nebula/worldbuilder/skills.c:45 worldbuilder/skills.c:45
+msgid	"Name"
+msgstr	"Nom"
+
+#: alchemist/general.c:43 nebula/alchemist/general.c:43 nebula/src/skills.c:46
+#: nebula/worldbuilder/realms.c:28 nebula/worldbuilder/realms.c:36
+#: nebula/worldbuilder/regions.c:23 nebula/worldbuilder/regions.c:31
+#: nebula/worldbuilder/skills.c:78 src/skills.c:46 worldbuilder/realms.c:28
+#: worldbuilder/realms.c:36 worldbuilder/regions.c:23
+#: worldbuilder/regions.c:31 worldbuilder/skills.c:78
+msgid	"Description"
+msgstr	"Description"
+
+#: alchemist/general.c:44 nebula/alchemist/general.c:44
+msgid	"Weight"
+msgstr	"Poids"
+
+#: alchemist/general.c:45 nebula/alchemist/general.c:45
+msgid	"Size"
+msgstr	"Taille"
+
+#: alchemist/general.c:46 nebula/alchemist/general.c:46
+msgid	"Value"
+msgstr	"Valeur"
+
+#: alchemist/general.c:56 nebula/alchemist/general.c:56
+msgid	"Type"
+msgstr	"Type"
+
+#: alchemist/general.c:63 nebula/alchemist/general.c:63
+msgid	"Container"
+msgstr	"Conteneur"
+
+#: alchemist/general.c:64 nebula/alchemist/general.c:64
+msgid	"Misc"
+msgstr	"Divers"
+
+#: alchemist/general.c:65 nebula/alchemist/general.c:65
+msgid	"Gem"
+msgstr	"Gemme"
+
+#: alchemist/general.c:66 nebula/alchemist/general.c:66
+msgid	"Poison"
+msgstr	"Poison"
+
+#: alchemist/general.c:67 nebula/alchemist/general.c:67
+msgid	"Herb"
+msgstr	"Herbe"
+
+#: alchemist/general.c:68 nebula/alchemist/general.c:68
+msgid	"Armor"
+msgstr	"Armure"
+
+#: alchemist/general.c:69 nebula/alchemist/general.c:69
+msgid	"Weapon"
+msgstr	"Arme"
+
+#: alchemist/general.c:70 nebula/alchemist/general.c:70
+msgid	"Shield"
+msgstr	"Bouclier"
+
+#: alchemist/general.c:72 alchemist/intelligence.c:73 alchemist/spells.c:51
+#: alchemist/spells.c:52 nebula/alchemist/general.c:72
+#: nebula/alchemist/intelligence.c:73 nebula/alchemist/spells.c:51
+#: nebula/alchemist/spells.c:52
+msgid	"toggled"
+msgstr	""
+
+#: alchemist/general.c:74 nebula/alchemist/general.c:74
+msgid	"Misc. Name"
+msgstr	"Nom divers"
+
+#: alchemist/general.c:79 nebula/alchemist/general.c:79
+msgid	"General"
+msgstr	"Général"
+
+#: alchemist/intelligence.c:36 nebula/alchemist/intelligence.c:36
+msgid	"Intelligent Object"
+msgstr	"Objet intelligent"
+
+#: alchemist/intelligence.c:38 nebula/alchemist/intelligence.c:38
+msgid	"Alignement"
+msgstr	"Aligenement"
+
+#: alchemist/intelligence.c:39 nebula/alchemist/intelligence.c:39
+msgid	"Purpose"
+msgstr	"But"
+
+#: alchemist/intelligence.c:40 alchemist/spells.c:90
+#: nebula/alchemist/intelligence.c:40 nebula/alchemist/spells.c:90
+msgid	"Level"
+msgstr	"Niveau"
+
+#: alchemist/intelligence.c:51 alchemist/intelligence.c:64
+#: nebula/alchemist/intelligence.c:51 nebula/alchemist/intelligence.c:64
+msgid	"Empathic"
+msgstr	"Empatique"
+
+#: alchemist/intelligence.c:52 nebula/alchemist/intelligence.c:52
+msgid	"Low Intelligence"
+msgstr	"basse intelligence"
+
+#: alchemist/intelligence.c:53 nebula/alchemist/intelligence.c:53
+msgid	"Medium Intelligence"
+msgstr	"Intelligence moyenne"
+
+#: alchemist/intelligence.c:54 nebula/alchemist/intelligence.c:54
+msgid	"High Intelligence"
+msgstr	"Haute intelligence"
+
+#: alchemist/intelligence.c:55 nebula/alchemist/intelligence.c:55
+msgid	"Very High Intelligence"
+msgstr	"Très haute intelligence"
+
+#: alchemist/intelligence.c:56 nebula/alchemist/intelligence.c:56
+msgid	"Artifact"
+msgstr	"Artefact"
+
+#: alchemist/intelligence.c:57 nebula/alchemist/intelligence.c:57
+msgid	"Legendary Artifact"
+msgstr	"Artefact légendaire"
+
+#: alchemist/intelligence.c:66 nebula/alchemist/intelligence.c:66
+msgid	"Intelligence"
+msgstr	"Intelligence"
+
+#: alchemist/intelligence.c:101 nebula/alchemist/intelligence.c:101
+msgid	"alignment"
+msgstr	"alignement"
+
+#: alchemist/intelligence.c:102 nebula/alchemist/intelligence.c:102
+msgid	"purpose"
+msgstr	"but"
+
+#: alchemist/intelligence.c:103 nebula/alchemist/intelligence.c:103
+msgid	"level"
+msgstr	"niveau"
+
+#: alchemist/spells.c:48 nebula/alchemist/spells.c:48
+msgid	"Multiplier"
+msgstr	"Multiplicateur"
+
+#: alchemist/spells.c:49 nebula/alchemist/spells.c:49
+msgid	"Adder"
+msgstr	"Additionneur"
+
+#: alchemist/spells.c:54 alchemist/spells.c:113 nebula/alchemist/spells.c:54
+#: nebula/alchemist/spells.c:113
+msgid	"times"
+msgstr	"fois"
+
+#: alchemist/spells.c:55 nebula/alchemist/spells.c:55
+msgid	"plus"
+msgstr	"plus"
+
+#: alchemist/spells.c:86 nebula/alchemist/spells.c:86
+msgid	"Add Spell..."
+msgstr	"Ajouter un sort..."
+
+#: alchemist/spells.c:87 nebula/alchemist/spells.c:87
+msgid	"Constant"
+msgstr	"Constant"
+
+#: alchemist/spells.c:88 nebula/alchemist/spells.c:88
+msgid	"Daily"
+msgstr	"Quotidien"
+
+#: alchemist/spells.c:91 nebula/alchemist/spells.c:91
+msgid	"Cast As Level"
+msgstr	"Lance comme niveau"
+
+#: alchemist/spells.c:92 nebula/alchemist/spells.c:92
+msgid	"Charges"
+msgstr	"Charges"
+
+#: alchemist/spells.c:99 nebula/alchemist/spells.c:99
+msgid	"Spells"
+msgstr	"Sorts"
+
+#: libneb/gui.c:240 nebula/libneb/gui.c:240
+msgid	"data is NULL\n"
+msgstr	"data est NULL\n"
+
+#: libneb/gui.c:267 nebula/libneb/gui.c:267
+#, c-format
+msgid	"File failed to parse %s\n"
+msgstr	"Le fichier %s n'a pas pu être parsé\n"
+
+#: libneb/gui.c:319 nebula/libneb/gui.c:319
+#, c-format
+msgid	"Are you sure you want to %s"
+msgstr	"Êtes vous sure de vouloir %s"
+
+#: libneb/gui.c:399 nebula/libneb/gui.c:399
+msgid	"Can't delete\n"
+msgstr	"Ne peut pas effacer\n"
+
+#: libneb/gui.c:409 libneb/gui.c:541 nebula/libneb/gui.c:409
+#: nebula/libneb/gui.c:541
+msgid	"nothing selected\n"
+msgstr	"rien n'est selectionné\n"
+
+#: libneb/gui.c:419 nebula/libneb/gui.c:419
+#, c-format
+msgid	"delete the %s %s and its children?"
+msgstr	"effacer le %s %s et ses enfants ?"
+
+#: libneb/gui.c:422 nebula/libneb/gui.c:422
+#, c-format
+msgid	"delete the %s %s?"
+msgstr	"effacer le %s %s ?"
+
+#: libneb/gui.c:467 nebula/libneb/gui.c:467
+msgid	"Can't add any more children\n"
+msgstr	"Ne peut plus ajouter d'enfant\n"
+
+#: libneb/gui.c:494 nebula/libneb/gui.c:494
+msgid	"unknown position\n"
+msgstr	"position inconnue\n"
+
+#: libneb/gui.c:530 nebula/libneb/gui.c:530
+msgid	"Can't edit\n"
+msgstr	"Ne peut pas éditer\n"
+
+#: libneb/gui.c:567 nebula/libneb/gui.c:567
+#, c-format
+msgid	"<span weight=\"bold\" size=\"larger\">Do you wish to create a "
+	"sibling or a child?</span>\n"
+	"\n"
+	"A sibling will be created at the same level as %s.\n"
+	"A child will be added beneath the %s '%s'."
+msgstr	"<span weight=\"bold\" size=\"larger\"> Voulez-vous créer un"
+	"frêre ou un enfant ?</span>\n"
+	"\n"
+	"Un frêre sera créé au même niveau que %s.\n"
+	"Un enfant sera créé sous %s '%s'."
+
+#: libneb/gui.c:575 nebula/libneb/gui.c:575
+msgid	" "
+msgstr	" "
+
+#: libneb/gui.c:589 nebula/libneb/gui.c:589
+msgid	"Child"
+msgstr	"Enfant"
+
+#: libneb/gui.c:591 nebula/libneb/gui.c:591
+msgid	"Sibling"
+msgstr	"Frêre"
+
+#: nebula/src/character.c:18 nebula/src/skills.c:35
+#: nebula/worldbuilder/skills.c:72 src/character.c:18 src/skills.c:35
+#: worldbuilder/skills.c:72
+msgid	"Name: "
+msgstr	"Nom :"
+
+#: nebula/src/character.c:20 src/character.c:20
+msgid	"Value:"
+msgstr	"Valeur :"
+
+#: nebula/src/character.c:27 src/character.c:27
+msgid	"/_New Characteristic..."
+msgstr	"/_Nouvelle charactéristique..."
+
+#: nebula/src/character.c:32 src/character.c:32
+msgid	"/_Edit Characteristic..."
+msgstr	"/_Editer charactéristique..."
+
+#: nebula/src/character.c:42 src/character.c:42
+msgid	"/_Delete Characteristic"
+msgstr	"E/_ffacer charactéristique"
+
+#: nebula/src/character.c:247 src/character.c:247
+msgid	"can't save\n"
+msgstr	"ne peut pas sauver\n"
+
+#: nebula/src/character.c:251 nebula/src/nebula.c:21 src/character.c:251
+#: src/nebula.c:21
+msgid	"data"
+msgstr	"données"
+
+#: nebula/src/character.c:372 src/character.c:372
+#, c-format
+msgid	"selected is %s=%s\n"
+msgstr	"séléctionné est %s=%s\n"
+
+#: nebula/src/character.c:405 src/character.c:405
+#, c-format
+msgid	"delete the characteristic %s"
+msgstr	"effacer la charactéristique %s"
+
+#: nebula/src/character.c:420 nebula/src/character.c:421 src/character.c:420
+#: src/character.c:421
+msgid	"Characteristic"
+msgstr	"Charactéristique"
+
+#: nebula/src/nebula.c:19 src/nebula.c:19
+msgid	"prefix"
+msgstr	"préfixe"
+
+#: nebula/src/nebula.c:20 nebula/worldbuilder/realms.c:131 src/nebula.c:20
+#: worldbuilder/realms.c:131
+msgid	"realms"
+msgstr	"royaumes"
+
+#: nebula/src/nebula.c:22 src/nebula.c:22
+msgid	"stats"
+msgstr	"stats"
+
+#: nebula/src/nebula.c:23 src/nebula.c:23
+msgid	"rrs"
+msgstr	"rrs"
+
+#: nebula/src/nebula.c:24 nebula/src/skills.c:450
+#: nebula/worldbuilder/skills.c:194 src/nebula.c:24 src/skills.c:450
+#: worldbuilder/skills.c:194
+msgid	"skills"
+msgstr	"compétences"
+
+#: nebula/src/nebula.c:25 src/nebula.c:25
+msgid	"items"
+msgstr	"objets"
+
+#: nebula/src/nebula.c:26 src/nebula.c:26
+msgid	"choices"
+msgstr	"choix"
+
+#: nebula/src/nebula.c:31 nebula/src/nebula.c:59 src/nebula.c:31
+#: src/nebula.c:59
+msgid	"appearance"
+msgstr	"apparence"
+
+#: nebula/src/nebula.c:32 src/nebula.c:32
+msgid	"Use RMSS Appearance"
+msgstr	"Utiliser l'apparence de RMSS"
+
+#: nebula/src/nebula.c:33 src/nebula.c:33
+msgid	"Use the RMMS (Pr - 25 + 5d10) instead of\n"
+	"the mentalism companion method (d100 + 3*Pr)"
+msgstr	"Utiliser RMSS (Pr - 25 + 5d10) au lieu de \n"
+	"de la méthode du companion mentaliste (d100 + 3*Pr)"
+
+#: nebula/src/nebula.c:38 src/nebula.c:38
+msgid	"Use fixed points"
+msgstr	"Utiliser des points fixes"
+
+#: nebula/src/nebula.c:39 src/nebula.c:39
+msgid	"Use 660 points instead of the default\n"
+	"default of 600+10d0"
+msgstr	"Utiliser 660 points au lieu des 600_10d10\n"
+	"par défaut"
+
+#: nebula/src/nebula.c:44 src/nebula.c:44
+msgid	"Use fixed potentials"
+msgstr	"Utiliser des potentielles fixes"
+
+#: nebula/src/nebula.c:45 src/nebula.c:45
+msgid	"Use the RMSS option to give a fixed potential\n"
+	"rather then the dice based system"
+msgstr	"Utiliser l'option RMSS pour des potentielles\n"
+	"fixes plutôt que le système basé sur des dés."
+
+#: nebula/src/nebula.c:50 src/nebula.c:50
+msgid	"Ignore PR minimums"
+msgstr	"Ignorer les minimums de PR"
+
+#: nebula/src/nebula.c:51 src/nebula.c:51
+msgid	"Ignore the requirement of 90 in your Prime Requisites"
+msgstr	"Ingore le minimum de 90 pour une charactéristique primaire"
+
+#: nebula/src/nebula.c:55 src/nebula.c:55
+msgid	"Allow Potential gain"
+msgstr	"Permette le gain des potentielles"
+
+#: nebula/src/nebula.c:56 src/nebula.c:56
+msgid	"Allow Potential stats to increase with stat gain"
+msgstr	"Permettre aux charactéristiques potentielles d'augmenter avec le gain de stats"
+
+#: nebula/src/nebula.c:60 src/nebula.c:60
+msgid	"Appearance"
+msgstr	"Apparence"
+
+#: nebula/src/nebula.c:61 src/nebula.c:61
+msgid	"Use the Appearance stat"
+msgstr	"Utiliser la charactéristique Apparence"
+
+#: nebula/src/nebula.c:65 src/nebula.c:65
+msgid	"Sanity"
+msgstr	"Santé mentale"
+
+#: nebula/src/nebula.c:66 src/nebula.c:66
+msgid	"Use the Sanity stat (from Mentalism Companion)"
+msgstr	"Utiliser la charactéristique Santé mentale (du Companion Mentaliste)"
+
+#: nebula/src/nebula.c:70 src/nebula.c:70
+msgid	"Willpower"
+msgstr	"Volonté"
+
+#: nebula/src/nebula.c:71 src/nebula.c:71
+msgid	"Use the Willpower stat (from Treasure Compantion)"
+msgstr	"Utiliser le charactéristique Volonté (du Companion des Trésors)"
+
+#: nebula/src/nebula.c:75 src/nebula.c:75
+msgid	"Individual skill stat bonuses"
+msgstr	"Bonus individuels pour les compétences"
+
+#: nebula/src/nebula.c:76 src/nebula.c:76
+msgid	"Each individual skill has a stat bonus, instead ofthe third listed "
+	"in the category"
+msgstr	"Chaque compétence possède son propre bonus de charactéristique "
+	"au lieu du troisième bonus de la catégorie"
+
+#: nebula/src/nebula.c:81 src/nebula.c:81
+msgid	"Icon"
+msgstr	"Icône"
+
+#: nebula/src/nebula.c:82 src/nebula.c:82
+msgid	"The icon shown for Nebula"
+msgstr	"L'icône de Nebula"
+
+#: nebula/src/nebula.c:86 src/nebula.c:86
+msgid	"Logo"
+msgstr	"Logo"
+
+#: nebula/src/nebula.c:87 src/nebula.c:87
+msgid	"The logo shown for Nebula in About"
+msgstr	"Le logo de Nebula dans le À propos"
+
+#: nebula/src/nebula.c:91 src/nebula.c:91
+msgid	"Data path"
+msgstr	"Chemin des données"
+
+#: nebula/src/nebula.c:92 src/nebula.c:92
+msgid	"Where to look for data files\n"
+	"Use : to separate items"
+msgstr	"Où trouver les fichiers de données\n"
+	"Utiliser : afin de séparer les objets"
+
+#: nebula/src/nebula.c:97 src/nebula.c:97
+msgid	"Print Command"
+msgstr	"Commande d'impression"
+
+#: nebula/src/nebula.c:98 src/nebula.c:98
+msgid	"What command to use for printing,\n"
+	"includes printer (-P<name>)"
+msgstr	"Quelle commande utiliser pour l'impression.\n"
+	"inclue l'imprimante (-P<name>)"
+
+#: nebula/src/nebula.c:103 src/nebula.c:103
+msgid	"XSLT Processor"
+msgstr	"Processeur XSLT"
+
+#: nebula/src/nebula.c:104 src/nebula.c:104
+msgid	"Path to the XSLT processor\n"
+	"/usr/bin/xalan"
+msgstr	"Chemin du processeur XSLT\n"
+	"/usr/bin/xalan"
+
+#: nebula/src/nebula.c:109 src/nebula.c:109
+msgid	"XSLT option flag"
+msgstr	"Drapeau d'option XSLT"
+
+#: nebula/src/nebula.c:110 src/nebula.c:110
+msgid	"Flag translator uses to indicate XSLT file"
+msgstr	"Drapeau utilisé pour indiquer le fichier XSLT"
+
+#: nebula/src/nebula.c:114 src/nebula.c:114
+msgid	"In option flag"
+msgstr	"Drapeau d'option d'entrée"
+
+#: nebula/src/nebula.c:115 nebula/src/nebula.c:120 src/nebula.c:115
+#: src/nebula.c:120
+msgid	"Flag translator uses to indicate input file"
+msgstr	"Drapeau utilisé pour indiquer le fichier d'entrée"
+
+#: nebula/src/nebula.c:119 src/nebula.c:119
+msgid	"Out option flag"
+msgstr	"Drapeau d'option de sortie"
+
+#: nebula/src/nebula.c:124 src/nebula.c:124
+msgid	"Postscript XSLT"
+msgstr	"Postscript XSLT"
+
+#: nebula/src/nebula.c:125 src/nebula.c:125
+msgid	"XSLT to convert to postscript"
+msgstr	"XSLT afin de convertir vers du postscript"
+
+#: nebula/src/nebula.c:130 src/nebula.c:130
+msgid	"XSLT to convert to Hyper-Text Markup Language"
+msgstr	"XSLT afin de convertir vers du HTML"
+
+#: nebula/src/nebula.c:192 src/nebula.c:192
+msgid	"None"
+msgstr	"Aucun"
+
+#: nebula/src/nebula.c:198 src/nebula.c:198
+msgid	"I Agree"
+msgstr	"J'accepte"
+
+#: nebula/src/nebula.c:199 src/nebula.c:199
+msgid	"I Don't agree"
+msgstr	"Je n'accepte pas"
+
+#: nebula/src/nebula.c:201 src/nebula.c:201
+msgid	"Welcome to Nebula version "
+msgstr	"Bienvenue dans Nebula version "
+
+#: nebula/src/nebula.c:202 src/nebula.c:202
+msgid	"Copyright 2001-2002 Brett Nash\n"
+	"\n"
+	"Nebula (the program and source files) comes with ABSOLUTELY NO "
+	"WARRANTY; This is free software, and you are welcome to redistribute "
+	"it under certain conditions; See COPYING for details.  This excludes "
+	"data files\n"
+	"\n"
+msgstr	"Copyright 2001-2002 Brett Nash\n"
+	"\n"
+	"Nebula (le programme et les fichiers sources) est livré SANS "
+	"AUCUNE GARANTIE ; C'est un logiciel libre and vous pouvez le "
+	"redistribuer sous certaines conditions ; voir COPYING pour les détails ."
+	"Les fichiers de données ne sont pas concernés\n"
+	"\n"
+
+#: nebula/src/nebula.c:209 src/nebula.c:209
+msgid	"Additionally certain components are copyright I.C.E (Or other "
+	"individuals).  Thus you agree that you either own the relevant "
+	"materials or have obtained an appropriate licence from such bodies.  "
+	"These materials are not 'free'."
+msgstr	"De plus, certaines partie sont sous copyright I.C.E (Ou d'autres "
+	"personnes). Vous devez donc soit posséder les livres correspondants "
+	"ou avoir obtenu une license appropriée pour l'utilisation de ces données.  "
+	"Ces données ne sont pas 'libres'."
+
+#: nebula/src/nebula.c:214 src/nebula.c:214
+msgid	"Don't show this again"
+msgstr	"Ne plus afficher"
+
+#: nebula/src/nebula.c:311 src/nebula.c:311
+msgid	"Warning: No app icon\n"
+msgstr	"Attention : pas d'icône d'application\n"
+
+#: nebula/src/nebula.c:316 nebula/src/nebula.c:332 src/nebula.c:316
+#: src/nebula.c:332
+#, c-format
+msgid	"Unable to read %s: %s\n"
+msgstr	"Impossible de lire %s : %s\n"
+
+#: nebula/src/skills.c:26 nebula/src/skills.c:1250
+#: nebula/worldbuilder/skills.c:55 nebula/worldbuilder/skills.c:235
+#: src/skills.c:26 src/skills.c:1250 worldbuilder/skills.c:55
+#: worldbuilder/skills.c:235
+msgid	"Normal"
+msgstr	"Normal"
+
+#: nebula/src/skills.c:27 nebula/src/skills.c:1019
+#: nebula/worldbuilder/skills.c:56 src/skills.c:27 src/skills.c:1019
+#: worldbuilder/skills.c:56
+msgid	"Everyman"
+msgstr	"Everyman"
+
+#: nebula/src/skills.c:28 nebula/src/skills.c:1021
+#: nebula/worldbuilder/skills.c:57 src/skills.c:28 src/skills.c:1021
+#: worldbuilder/skills.c:57
+msgid	"Occupational"
+msgstr	"Occupational"
+
+#: nebula/src/skills.c:29 nebula/src/skills.c:1023
+#: nebula/worldbuilder/skills.c:58 src/skills.c:29 src/skills.c:1023
+#: worldbuilder/skills.c:58
+msgid	"Restricted"
+msgstr	"Restricted"
+
+#: nebula/src/skills.c:36 nebula/worldbuilder/skills.c:73 src/skills.c:36
+#: worldbuilder/skills.c:73
+msgid	"Stats: "
+msgstr	"Stats : "
+
+#: nebula/src/skills.c:37 nebula/worldbuilder/skills.c:74 src/skills.c:37
+#: worldbuilder/skills.c:74
+msgid	"Class: "
+msgstr	"Classe : "
+
+#: nebula/src/skills.c:38 nebula/worldbuilder/skills.c:75 src/skills.c:38
+#: worldbuilder/skills.c:75
+msgid	"Progression: "
+msgstr	"Progression : "
+
+#: nebula/src/skills.c:39 src/skills.c:39
+msgid	"Cost: "
+msgstr	"Coût :"
+
+#: nebula/src/skills.c:40 src/skills.c:40
+msgid	"Profession Bonus: "
+msgstr	"Bonus de profession : "
+
+#: nebula/src/skills.c:41 nebula/worldbuilder/skills.c:77 src/skills.c:41
+#: worldbuilder/skills.c:77
+msgid	"Special Bonus: "
+msgstr	"Bonus spécial : "
+
+#: nebula/src/skills.c:42 src/skills.c:42
+msgid	"Ranks: "
+msgstr	"Rangs : "
+
+#: nebula/src/skills.c:43 src/skills.c:43
+msgid	"Total Bonus: "
+msgstr	"Bonus total : "
+
+#: nebula/src/skills.c:44 src/skills.c:44
+msgid	"Skill is frequently used"
+msgstr	"La compétence est fréquemment utilisée"
+
+#: nebula/src/skills.c:45 src/skills.c:45
+msgid	"Has a half rank"
+msgstr	"A la moitié des rangs"
+
+#: nebula/src/skills.c:53 nebula/worldbuilder/skills.c:88 src/skills.c:53
+#: worldbuilder/skills.c:88
+msgid	"/_New Skill..."
+msgstr	"/_Nouvelle compétence..."
+
+#: nebula/src/skills.c:58 nebula/worldbuilder/skills.c:93 src/skills.c:58
+#: worldbuilder/skills.c:93
+msgid	"/_Edit Skill..."
+msgstr	"/_Editer la compétence..."
+
+#: nebula/src/skills.c:67 nebula/worldbuilder/skills.c:102 src/skills.c:67
+#: worldbuilder/skills.c:102
+msgid	"/_Delete Skill"
+msgstr	"E/_ffacer la compétence"
+
+#: nebula/src/skills.c:226 src/skills.c:226
+msgid	"using individual stats\n"
+msgstr	"utilise les stats individuelles\n"
+
+#: nebula/src/skills.c:293 src/skills.c:293
+msgid	"prog not found\n"
+msgstr	"programme non trouvé\n"
+
+#: nebula/src/skills.c:294 nebula/src/skills.c:1251
+#: nebula/worldbuilder/skills.c:64 nebula/worldbuilder/skills.c:236
+#: src/skills.c:294 src/skills.c:1251 worldbuilder/skills.c:64
+#: worldbuilder/skills.c:236
+msgid	"Standard"
+msgstr	"Standard"
+
+#: nebula/src/skills.c:324 src/skills.c:324
+msgid	"Progression is not defined\n"
+msgstr	"La progression n'est pas définie\n"
+
+#: nebula/src/skills.c:376 src/skills.c:376
+#, c-format
+msgid	"Prog %s unknown\n"
+msgstr	"Programme %s inconnu\n"
+
+#: nebula/src/skills.c:394 src/skills.c:394
+#, c-format
+msgid	"%s is not valid\n"
+msgstr	"%s n'est pas valide\n"
+
+#: nebula/src/skills.c:531 src/skills.c:531
+msgid	"Warning: Skill with no stat\n"
+msgstr	"Attention : compétence sans stat\n"
+
+#: nebula/src/skills.c:632 src/skills.c:632
+#, c-format
+msgid	"Skill %s is not found\n"
+msgstr	"Compétence %s non trouvée\n"
+
+#: nebula/src/skills.c:671 nebula/worldbuilder/skills.c:366 src/skills.c:671
+#: worldbuilder/skills.c:366
+#, c-format
+msgid	"Could not find:\n"
+	"\t'%s' in \n"
+	"\t'%s'\n"
+msgstr	"N'a pas pu trouver :\n"
+	"\t'%s' dans \n"
+	"\t'%s'\n"
+
+#: nebula/src/skills.c:718 src/skills.c:718
+#, c-format
+msgid	"Unknown buymode %d\n"
+msgstr	"Mode d'achat inconnu %d\n"
+
+#: nebula/src/skills.c:734 src/skills.c:734
+msgid	"Purchase List"
+msgstr	"List d'achat"
+
+#: nebula/src/skills.c:749 src/skills.c:749
+msgid	"Buy TP"
+msgstr	"Acheter un TP"
+
+#: nebula/src/skills.c:759 src/skills.c:759
+msgid	"You have spent:"
+msgstr	"Vous avez dépensé :"
+
+#: nebula/src/skills.c:769 src/skills.c:769
+#, c-format
+msgid	" of %d DP\n"
+msgstr	" parmi %d DP\n"
+
+#: nebula/src/skills.c:771 src/skills.c:771
+#, c-format
+msgid	" of %d Hobby ranks"
+msgstr	" parmi %d rangs de hobbies"
+
+#: nebula/src/skills.c:773 src/skills.c:773
+msgid	" of something"
+msgstr	" parmi quelque chose"
+
+#: nebula/src/skills.c:781 src/skills.c:781
+msgid	"Load a list of skills"
+msgstr	"Charger une liste de compétences"
+
+#: nebula/src/skills.c:784 src/skills.c:784
+msgid	"Save this list of skills"
+msgstr	"Sauver une liste de compétences"
+
+#: nebula/src/skills.c:789 src/skills.c:789
+msgid	"Apply these purchaess"
+msgstr	"Appliquer ces achats"
+
+#: nebula/src/skills.c:792 src/skills.c:792
+msgid	"Cancel these purchases"
+msgstr	"Annuler ces achats"
+
+#: nebula/src/skills.c:865 src/skills.c:865
+#, c-format
+msgid	"Warning: Attempt to buy %d extra ranks\n"
+msgstr	"Attention : essai d'achat de %d rangs supplémentaires\n"
+
+#: nebula/src/skills.c:906 nebula/src/skills.c:950 src/skills.c:906
+#: src/skills.c:950
+msgid	"Save skill purchases"
+msgstr	"Sauver les achats de compétences"
+
+#: nebula/src/skills.c:923 nebula/src/skills.c:967 src/skills.c:923
+#: src/skills.c:967
+#, c-format
+msgid	"Got response %d from dialog run\n"
+msgstr	"A eu la réponse %d du dialogue\n"
+
+#: nebula/src/skills.c:1004 src/skills.c:1004
+msgid	"Buyinfo is null\n"
+msgstr	"Buyinfo est NULL\n"
+
+#: nebula/src/skills.c:1029 src/skills.c:1029
+#, c-format
+msgid	"Class %s unknown\n"
+msgstr	"Classe %s inconnue\n"
+
+#: nebula/src/skills.c:1065 src/skills.c:1065
+msgid	"Can't search for NULL prefix\n"
+msgstr	"Ne peut pas chercher un prefix NULL\n"
+
+#: nebula/src/skills.c:1077 src/skills.c:1077
+msgid	"Invalid name\n"
+msgstr	"Nom invalide\n"
+
+#: nebula/src/skills.c:1182 src/skills.c:1182
+#, c-format
+msgid	"Skill %s not found\n"
+msgstr	"La compétence %s n'est pas trouvée\n"
+
+#: nebula/src/skills.c:1247 nebula/worldbuilder/skills.c:232 src/skills.c:1247
+#: worldbuilder/skills.c:232
+msgid	"New Skill"
+msgstr	"Nouvelle compétence"
+
+#: nebula/src/skills.c:1253 nebula/worldbuilder/realms.c:258
+#: nebula/worldbuilder/regions.c:189 nebula/worldbuilder/skills.c:238
+#: src/skills.c:1253 worldbuilder/realms.c:258 worldbuilder/regions.c:189
+#: worldbuilder/skills.c:238
+msgid	"Put your description here"
+msgstr	"Ajouter votre description ici"
+
+#: nebula/worldbuilder/create.c:133 nebula/worldbuilder/create.c:233
+#: worldbuilder/create.c:133 worldbuilder/create.c:233
+msgid	"Create Genre"
+msgstr	"Créer un genre"
+
+#: nebula/worldbuilder/create.c:234 worldbuilder/create.c:234
+msgid	"This is where you create a genre"
+msgstr	"C'est ici que vous créez votre genre"
+
+#: nebula/worldbuilder/create.c:272 worldbuilder/create.c:272
+msgid	"<b>Could not load Base Genre File</b>\n"
+	"\n"
+	"Check your data path\n"
+msgstr	"<b>N'a pas pu charger le Fichier de Base des Genres</b>\n"
+	"\n"
+	"Vérifiez votre chemin de données\n"
+
+#: nebula/worldbuilder/create.c:285 worldbuilder/create.c:285
+msgid	"Genre Choices"
+msgstr	"Choix de genre"
+
+#: nebula/worldbuilder/create.c:289 worldbuilder/create.c:289
+msgid	"Genre Name:"
+msgstr	"Nom du Genre :"
+
+#: nebula/worldbuilder/create.c:309 worldbuilder/create.c:309
+msgid	"You must name your genre\n"
+msgstr	"Vous devez donner un nom à votre genre\n"
+
+#: nebula/worldbuilder/create.c:347 worldbuilder/create.c:347
+msgid	"Create Regions"
+msgstr	"Créer les Régions"
+
+#: nebula/worldbuilder/create.c:355 worldbuilder/create.c:355
+msgid	"Insert your regions"
+msgstr	"Insérez vos Régions"
+
+#: nebula/worldbuilder/create.c:361 nebula/worldbuilder/create.c:462
+#: worldbuilder/create.c:361 worldbuilder/create.c:462
+msgid	"Add Child"
+msgstr	"Ajouter un enfant"
+
+#: nebula/worldbuilder/create.c:362 nebula/worldbuilder/create.c:463
+#: worldbuilder/create.c:362 worldbuilder/create.c:463
+msgid	"Add Sibling"
+msgstr	"Ajouter un frêre"
+
+#: nebula/worldbuilder/create.c:418 worldbuilder/create.c:418
+#, c-format
+msgid	"Unknwn value (%d) from button press\n"
+msgstr	"Valeur inconnue (%d) du bouton appuyé\n"
+
+#: nebula/worldbuilder/create.c:448 worldbuilder/create.c:448
+msgid	"Create Realms"
+msgstr	"Créer les Royaumes"
+
+#: nebula/worldbuilder/create.c:456 worldbuilder/create.c:456
+msgid	"Insert your realms"
+msgstr	"Insérez vos royaumes"
+
+#: nebula/worldbuilder/create.c:514 worldbuilder/create.c:514
+msgid	"Finish Genre"
+msgstr	"Terminer le Genre"
+
+#: nebula/worldbuilder/create.c:515 worldbuilder/create.c:515
+msgid	"This is the last step in creating a Genre"
+msgstr	"Ceci est la dernière étape de création d'un Genre"
+
+#: nebula/worldbuilder/realms.c:27 worldbuilder/realms.c:27
+msgid	"Realm"
+msgstr	"Royaume"
+
+#: nebula/worldbuilder/realms.c:35 nebula/worldbuilder/regions.c:30
+#: worldbuilder/realms.c:35 worldbuilder/regions.c:30
+msgid	"Name:"
+msgstr	"Nom :"
+
+#: nebula/worldbuilder/realms.c:45 worldbuilder/realms.c:45
+msgid	"/_New Realm..."
+msgstr	"/_Nouveau Royaume..."
+
+#: nebula/worldbuilder/realms.c:50 worldbuilder/realms.c:50
+msgid	"/_Edit Realm..."
+msgstr	"/_Editer le Royaume..."
+
+#: nebula/worldbuilder/realms.c:59 worldbuilder/realms.c:59
+msgid	"/_Delete Realm"
+msgstr	"E/_ffacer le Royaume"
+
+#: nebula/worldbuilder/realms.c:78 worldbuilder/realms.c:78
+msgid	"Magical Realms"
+msgstr	"Royaumes magiques"
+
+#: nebula/worldbuilder/realms.c:79 worldbuilder/realms.c:79
+msgid	"Realms"
+msgstr	"Royaumes"
+
+#: nebula/worldbuilder/realms.c:189 worldbuilder/realms.c:189
+msgid	"Channeling"
+msgstr	"Théurgie"
+
+#: nebula/worldbuilder/realms.c:198 worldbuilder/realms.c:198
+msgid	"No 'Channeling', hence no religions!"
+msgstr	"Pas de Théurgie, donc pas de religions !"
+
+#: nebula/worldbuilder/realms.c:204 worldbuilder/realms.c:204
+msgid	"No children to Channeling!"
+msgstr	"Aucun enfant à Théurgie !"
+
+#: nebula/worldbuilder/realms.c:257 worldbuilder/realms.c:257
+msgid	"New Realm"
+msgstr	"Nouveau Royaume"
+
+#: nebula/worldbuilder/regions.c:22 nebula/worldbuilder/regions.c:79
+#: worldbuilder/regions.c:22 worldbuilder/regions.c:79
+msgid	"Regions"
+msgstr	"Régions"
+
+#: nebula/worldbuilder/regions.c:41 worldbuilder/regions.c:41
+msgid	"/_New Region..."
+msgstr	"/_Nouvelle Région..."
+
+#: nebula/worldbuilder/regions.c:46 worldbuilder/regions.c:46
+msgid	"/_Edit Region..."
+msgstr	"/_Editer la Région..."
+
+#: nebula/worldbuilder/regions.c:55 worldbuilder/regions.c:55
+msgid	"/_Delete Region"
+msgstr	"E/_ffacer la Région"
+
+#: nebula/worldbuilder/regions.c:78 worldbuilder/regions.c:78
+msgid	"Major Regions"
+msgstr	"Régions principales"
+
+#: nebula/worldbuilder/regions.c:188 worldbuilder/regions.c:188
+msgid	"New Region"
+msgstr	"Nouvelle Région"
+
+#: nebula/worldbuilder/skills.c:46 worldbuilder/skills.c:46
+msgid	"Stats"
+msgstr	"Stats"
+
+#: nebula/worldbuilder/skills.c:47 worldbuilder/skills.c:47
+msgid	"Class"
+msgstr	"Classe"
+
+#: nebula/worldbuilder/skills.c:48 worldbuilder/skills.c:48
+msgid	"Prog"
+msgstr	"Prog"
+
+#: nebula/worldbuilder/skills.c:49 worldbuilder/skills.c:49
+msgid	"Spec"
+msgstr	"Spec"
+
+#: nebula/worldbuilder/skills.c:65 worldbuilder/skills.c:65
+msgid	"Limited"
+msgstr	"Limitée"
+
+#: nebula/worldbuilder/skills.c:66 worldbuilder/skills.c:66
+msgid	"Combined"
+msgstr	"Combinée"
+
+#: nebula/worldbuilder/skills.c:67 worldbuilder/skills.c:67
+msgid	"Racial"
+msgstr	"Raciale"
+
+#: nebula/worldbuilder/skills.c:124 worldbuilder/skills.c:124
+msgid	"Basic Skills"
+msgstr	"Compétences basiques"
+
+#: nebula/worldbuilder/skills.c:125 worldbuilder/skills.c:125
+msgid	"Skills"
+msgstr	"Compétences"
+
+#: nebula/worldbuilder/skills.c:257 worldbuilder/skills.c:257
+msgid	"Nothing to insert\n"
+msgstr	"Rien à insérer\n"
+
+#: nebula/worldbuilder/skills.c:264 worldbuilder/skills.c:264
+#, c-format
+msgid	"Warning skill %s not available!\n"
+msgstr	"Attention, compétence %s non disponible !\n"
+
+#: nebula/worldbuilder/skills.c:280 worldbuilder/skills.c:280
+msgid	"Error - invalid name\n"
+msgstr	"Erreur - nom invalide\n"

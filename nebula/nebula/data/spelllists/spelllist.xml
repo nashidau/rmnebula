@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+
+<!DOCTYPE spelllist SYSTEM "spelllist.dtd">
+
+<spelllist>
+        <name>Seeming Memories</name>
+        <listtype>Enchanter Base</listtype>
+        <author>I.C.E</author>
+        <spell>
+                <level>1</level>
+                <name>Relive Experience</name>
+                <areaofeffect>1 target</areaofeffect>
+                <duration>1 rnd/5 fail</duration>
+                <range>100'</range>
+                <type>Fm</type>
+                <description>
+                   The caster causes the target to relive an experience
+                   chosen by the caster at the of casting.  If the target is
+                   in a relaxed state of mind, the target will be in a
+                   reverie and obvlivious to his surroundigs unless
+                   disturbed (loud noise, physical prod, etc).  If the
+                   target is active, the target will remain active but be
+                   distracted by momentary flashbacks and the attempts of
+                   his mind to relate the exxperience to the current
+                   situation (-20 to all actions).  This spell will also
+                   provide the target with a +25 bonus to recalling specific
+                   details of the remembered experience.  This bonus is not
+                   cumulative with Force Recall or Recall spells.
+                </description>
+        </spell>
+        <spell>
+                <level>2</level>
+                <name>Memory Cue</name>
+                <areaofeffect>1 target</areaofeffect>
+                <range>100'</range>
+                <type>Fm</type>
+                <description>The caster can select a topic and obtain one
+                cue per level of the caster from the target.  Each cue will
+                relate to an experience of the target with respect to the
+                topic.  These cues are used as the triggers for the Relive
+                or and Share Experience Spells
+                </description>
+        </spell>
+</spelllist>
